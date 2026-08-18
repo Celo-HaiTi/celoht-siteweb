@@ -6,6 +6,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, BookOpen, Github } from "lucide-react";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
 import { assetPath, GITHUB_ORG_URL } from "@/lib/constants";
+import { LiveInfoBar } from "@/components/LiveInfoBar";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -16,9 +17,11 @@ export function Hero() {
   };
 
   return (
-    <section aria-labelledby="hero-title" className="relative overflow-hidden border-b border-navy-700/10 dark:border-parchment-100/10">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(110deg,transparent_0%,rgba(245,200,66,0.08)_48%,transparent_76%)] dark:bg-[linear-gradient(110deg,transparent_0%,rgba(245,200,66,0.06)_48%,transparent_76%)]" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16 lg:py-28">
+    <>
+      <LiveInfoBar />
+      <section aria-labelledby="hero-title" className="relative overflow-hidden border-b border-navy-700/10 dark:border-parchment-100/10">
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(110deg,transparent_0%,rgba(245,200,66,0.08)_48%,transparent_76%)] dark:bg-[linear-gradient(110deg,transparent_0%,rgba(245,200,66,0.06)_48%,transparent_76%)]" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16 lg:py-28">
         <div>
           <motion.p
             initial="hidden"
@@ -38,8 +41,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.08 }}
             className="mt-4 max-w-3xl font-display text-5xl font-semibold leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl"
           >
-            Haiti-born. Open-source.
-            <span className="block text-gold-600 dark:text-gold-300">Built for global impact.</span>
+            Building a More Inclusive Digital Economy for Haiti
           </motion.h1>
 
           <motion.p
@@ -61,13 +63,15 @@ export function Hero() {
             className="mt-8 flex flex-wrap gap-3"
           >
             <LaunchDappButton size="lg" />
-            <Link
-              href="/about"
+            <a
+              href={GITHUB_ORG_URL}
+              target="_blank"
+              rel="noreferrer"
               className="group inline-flex items-center gap-2 rounded-full border border-navy-700/20 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-gold-500 hover:bg-gold-500/10 dark:border-parchment-100/20 dark:text-parchment-100"
             >
-              Explore CeloHT
-              <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
-            </Link>
+              Explore GitHub
+              <Github size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+            </a>
           </motion.div>
           <motion.div
             initial="hidden"
@@ -108,7 +112,8 @@ export function Hero() {
             />
           </div>
         </motion.div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

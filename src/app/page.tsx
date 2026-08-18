@@ -36,34 +36,34 @@ const jsonLd = {
 
 const ecosystemPaths = [
   {
-    icon: BookOpen,
-    label: "Education",
-    title: "Start with understanding.",
-    copy: "Financial literacy and Web3 fundamentals in Haitian Creole, before any tool is introduced.",
-    href: "/education",
+    icon: WalletCards,
+    label: "Financial inclusion",
+    title: "Access should feel practical.",
+    copy: "CeloHT focuses on the knowledge, community access, and digital payment pathways that make participation possible.",
+    href: "/mission",
     iconClass: "text-gold-300",
   },
   {
-    icon: WalletCards,
-    label: "Digital payments",
-    title: "Make the technology useful.",
-    copy: "Celo, CELO, USDm, and wallet-compatible tools explained as infrastructure for everyday participation.",
-    href: "/technology",
+    icon: BookOpen,
+    label: "Web3 education",
+    title: "Start with understanding.",
+    copy: "Financial literacy, blockchain fundamentals, and digital security education delivered primarily in Haitian Creole.",
+    href: "/education",
     iconClass: "text-parchment-100",
   },
   {
     icon: UsersRound,
-    label: "Entrepreneurship",
-    title: "Connect people to opportunity.",
-    copy: "A community agent network creates a human bridge between cash, digital payments, and local economic activity.",
+    label: "Agent network",
+    title: "Put people in the loop.",
+    copy: "A trained, community-rooted network helps users interact with digital payment tools and local cash access.",
     href: "/agent-network",
     iconClass: "text-forest-400",
   },
   {
     icon: Leaf,
-    label: "Community development",
+    label: "Reforestation",
     title: "Build for the long term.",
-    copy: "Reforestation and environmental education make community development part of the product story.",
+    copy: "Environmental restoration is designed as a transparent community program, measured over time.",
     href: "/reforestation",
     iconClass: "text-forest-400",
   },
@@ -211,17 +211,21 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:py-20">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800 dark:text-gold-300">Digital payments</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">Clarity before complexity.</h2>
+            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">A clear path from learning to use.</h2>
           </div>
           <div className="max-w-2xl text-base leading-7 text-ink-soft dark:text-parchment-100/70">
             <p>
-              CeloHT teaches the relationship between the Celo network, CELO, USDm, and wallet
-              tools such as Valora without presenting any of them as CeloHT-owned products.
+              CeloHT uses Celo as infrastructure, USDm as a payment medium, CELO for network gas,
+              and wallet-compatible tools such as Valora. CeloHT does not issue or control these assets.
             </p>
-            <p className="mt-5">
-              That distinction matters. People deserve to understand the infrastructure they use,
-              the risks they carry, and the choices available to them.
-            </p>
+            <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 sm:grid-cols-5 dark:border-parchment-100/15 dark:bg-parchment-100/15">
+              {["User", "CeloHT DApp", "Wallet", "USDm", "Payment"].map((step, index) => (
+                <div key={step} className="bg-parchment-50 px-3 py-4 text-center dark:bg-navy-900 sm:px-2">
+                  <span className="font-mono text-[0.62rem] text-gold-800 dark:text-gold-300">0{index + 1}</span>
+                  <strong className="mt-2 block text-xs font-semibold text-ink dark:text-parchment-50">{step}</strong>
+                </div>
+              ))}
+            </div>
             <Link href="/technology" className="mt-7 inline-flex items-center gap-2 font-semibold text-ink underline-offset-4 hover:underline dark:text-parchment-50">
               Explore the technology <ArrowRight size={16} aria-hidden="true" />
             </Link>
