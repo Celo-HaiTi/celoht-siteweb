@@ -1,4 +1,4 @@
-// CeloHT service worker — minimal, safe offline support.
+// CeloHT service worker  -  minimal, safe offline support.
 // Strategy: cache-first for static assets (logo, icons, fonts we ship),
 // network-first (falling back to cache) for HTML pages, so content never
 // goes stale silently. This is intentionally conservative: it does not

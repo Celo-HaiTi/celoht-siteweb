@@ -3,7 +3,7 @@
 ## Overview
 
 A Next.js App Router site, fully static where possible (every page is
-prerendered at build time — no server-side data fetching, no database).
+prerendered at build time  -  no server-side data fetching, no database).
 
 ```text
 src/
@@ -45,7 +45,7 @@ an external network dependency from the build.
 `Hero.tsx` needs `"use client"` because it uses Motion's animation hooks
 and `useReducedMotion`. Every other page is a Server Component by
 default. **Any component that uses a Radix primitive, a React hook, or
-browser APIs must be marked `"use client"` — omitting this causes a hard
+browser APIs must be marked `"use client"`  -  omitting this causes a hard
 build failure** when that component is used from a Server Component,
 because Next's server-side React build doesn't expose `createContext`
 and similar client-only APIs. This was a real bug caught during
@@ -56,7 +56,7 @@ repeated.
 
 `LaunchDappButton.tsx` is the single component used in the header, hero,
 footer, and mobile menu. It reads `NEXT_PUBLIC_DAPP_URL` (defaulting to
-`https://app.celoht.com`) from `src/lib/constants.ts` — changing the
+`https://app.celoht.com`) from `src/lib/constants.ts`  -  changing the
 dApp's domain means changing one constant, not four components.
 
 ## MDX Blog
@@ -69,11 +69,11 @@ without needing a separate route-group layout.
 
 ## PWA Support
 
-- `public/manifest.json` — installability metadata
-- `public/sw.js` — a minimal, hand-written service worker (cache-first
+- `public/manifest.json`  -  installability metadata
+- `public/sw.js`  -  a minimal, hand-written service worker (cache-first
   for a small static-asset allowlist, network-first with cache fallback
   for page navigations)
-- `ServiceWorkerRegistration.tsx` — registers the worker in production
+- `ServiceWorkerRegistration.tsx`  -  registers the worker in production
   builds only, so it never interferes with local development
 
 ## Security

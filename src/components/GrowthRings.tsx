@@ -4,7 +4,7 @@ type Props = { className?: string };
  * The CeloHT "Growth Rings" mark: concentric arcs read as tree rings
  * (Reforestation) and as an expanding network (Agent Network); the outer
  * ring breaks and rises into a line (financial growth, echoing the
- * logo's arrow). Purely decorative — always aria-hidden.
+ * logo's arrow). Purely decorative  -  always aria-hidden.
  */
 export function GrowthRings({ className }: Props) {
   return (

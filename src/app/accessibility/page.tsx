@@ -22,7 +22,7 @@ export default function AccessibilityPage() {
       <Section title="What we've implemented">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>A skip-to-content link for keyboard and screen reader users</li>
-          <li>Semantic HTML — nav, main, section, and headings that increment logically</li>
+          <li>Semantic HTML  -  nav, main, section, and headings that increment logically</li>
           <li>
             A visible focus outline on every interactive element, not just default browser styling
           </li>
@@ -42,7 +42,7 @@ export default function AccessibilityPage() {
       <Section title="Known gaps">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
           Automated accessibility auditing (e.g. axe-core in CI) is not yet wired into our pipeline
-          — see our developer documentation for the current roadmap item.
+           -  see our developer documentation for the current roadmap item.
         </p>
       </Section>
 

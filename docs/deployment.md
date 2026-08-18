@@ -15,7 +15,7 @@ npm run build
 
 ## Environment Variables
 
-Only `NEXT_PUBLIC_DAPP_URL` is relevant, and it has a working default —
+Only `NEXT_PUBLIC_DAPP_URL` is relevant, and it has a working default  - 
 see [`development.md`](development.md).
 
 ## Security Headers & CSP
@@ -28,11 +28,11 @@ it broadly.
 
 Every push and Pull Request to `main` runs:
 
-- **`ci.yml`** — typecheck, lint, format check, build, unit tests
-- **`codeql.yml`** — static security analysis
-- **`secret-scanning.yml`** — Gitleaks scan
-- **`dependency-review.yml`** — blocks high-severity vulnerable dependencies
-- **`e2e.yml`** — Playwright end-to-end tests (requires a runner with
-  internet access to install browser binaries — GitHub-hosted runners
+- **`ci.yml`**  -  typecheck, lint, format check, build, unit tests
+- **`codeql.yml`**  -  static security analysis
+- **`secret-scanning.yml`**  -  Gitleaks scan
+- **`dependency-review.yml`**  -  blocks high-severity vulnerable dependencies
+- **`e2e.yml`**  -  Playwright end-to-end tests (requires a runner with
+  internet access to install browser binaries  -  GitHub-hosted runners
   have this by default)
-- **`lighthouse.yml`** — Lighthouse CI budget check
+- **`lighthouse.yml`**  -  Lighthouse CI budget check

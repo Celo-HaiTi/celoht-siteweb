@@ -1,7 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 
 /**
- * Required by Next.js App Router MDX support — provides the mapping from
+ * Required by Next.js App Router MDX support  -  provides the mapping from
  * Markdown elements to styled React components for every .mdx file
  * (currently: blog posts under src/app/blog/*).
  */

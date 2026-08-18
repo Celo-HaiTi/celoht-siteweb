@@ -8,7 +8,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Impact",
   description:
-    "How CeloHT measures success across education, the agent network, and reforestation — in concrete, verifiable terms.",
+    "How CeloHT measures success across education, the agent network, and reforestation  -  in concrete, verifiable terms.",
   alternates: { canonical: "/impact" },
 };
 
@@ -35,25 +35,25 @@ export default function ImpactPage() {
 
       <Section eyebrow="Education" title="What we measure">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-          <li>Module completion count — people who finish at least one training module</li>
-          <li>Knowledge-check pass rate — whether training is actually landing</li>
-          <li>Post-session feedback — qualitative signal on relevance and clarity</li>
+          <li>Module completion count  -  people who finish at least one training module</li>
+          <li>Knowledge-check pass rate  -  whether training is actually landing</li>
+          <li>Post-session feedback  -  qualitative signal on relevance and clarity</li>
         </ul>
       </Section>
 
       <Section eyebrow="Agent Network" title="What we measure">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-          <li>Active trained agents — network capacity</li>
-          <li>Transaction volume through agents — real usage, not just registrations</li>
-          <li>90-day agent retention — whether the role is sustainable for agents themselves</li>
+          <li>Active trained agents  -  network capacity</li>
+          <li>Transaction volume through agents  -  real usage, not just registrations</li>
+          <li>90-day agent retention  -  whether the role is sustainable for agents themselves</li>
         </ul>
       </Section>
 
       <Section eyebrow="Reforestation" title="What we measure">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-          <li>Trees planted (verified) — direct environmental output</li>
-          <li>Tree survival rate over time — whether planting translates into lasting impact</li>
-          <li>Participants rewarded — reach of the financial-environmental link</li>
+          <li>Trees planted (verified)  -  direct environmental output</li>
+          <li>Tree survival rate over time  -  whether planting translates into lasting impact</li>
+          <li>Participants rewarded  -  reach of the financial-environmental link</li>
         </ul>
       </Section>
 

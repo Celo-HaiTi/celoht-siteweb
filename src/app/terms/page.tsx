@@ -38,7 +38,7 @@ export default function TermsPage() {
       <Section title="No token, no investment">
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
           Nothing on this website offers, sells, or facilitates the purchase of any token, security,
-          or investment product. CELO and cUSD are existing Celo ecosystem assets; CeloHT
+          or investment product. CELO and USDm are existing Celo ecosystem assets; CeloHT
           doesn&rsquo;t issue or control either.
         </p>
       </Section>

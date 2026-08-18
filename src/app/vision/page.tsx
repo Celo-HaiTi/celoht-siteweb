@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Vision",
   description:
-    "A Haiti — and eventually a wider Caribbean — where distance from a bank branch no longer decides financial access, and growth doesn't come at the environment's expense.",
+    "A Haiti  -  and eventually a wider Caribbean  -  where distance from a bank branch no longer decides financial access, and growth doesn't come at the environment's expense.",
   alternates: { canonical: "/vision" },
 };
 
@@ -18,7 +18,7 @@ export default function VisionPage() {
       <PageHero
         eyebrow="Our vision"
         title="Access shouldn't depend on distance from a bank branch"
-        lead="We want to see a Haiti — and eventually a wider Caribbean — where people don't just have a wallet on their phone, but understand how to use it, and where economic progress doesn't cost the land people depend on."
+        lead="We want to see a Haiti  -  and eventually a wider Caribbean  -  where people don't just have a wallet on their phone, but understand how to use it, and where economic progress doesn't cost the land people depend on."
         tone="forest"
       />
 
@@ -47,7 +47,7 @@ export default function VisionPage() {
               03
             </p>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Financial development and environmental health aren&rsquo;t separate tracks —
+              Financial development and environmental health aren&rsquo;t separate tracks  - 
               communities whose security depends on land can&rsquo;t be served by an initiative that
               ignores deforestation.
             </p>

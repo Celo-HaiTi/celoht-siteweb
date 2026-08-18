@@ -7,16 +7,16 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Roadmap",
   description:
-    "CeloHT's four-phase roadmap — Foundation, Validation, Growth, and Maturity — with dated milestones across all three pillars.",
+    "CeloHT's four-phase roadmap  -  Foundation, Validation, Growth, and Maturity  -  with dated milestones across all three pillars.",
   alternates: { canonical: "/roadmap" },
 };
 
 const phases = [
   {
-    name: "Phase 1 — Foundation",
+    name: "Phase 1  -  Foundation",
     window: "2026, Q2–Q3",
     status: "In progress",
-    goal: "Establish a credible, transparent base — documentation, first agents, first partners.",
+    goal: "Establish a credible, transparent base  -  documentation, first agents, first partners.",
     milestones: [
       { text: "Publish the official flagship repository", done: true },
       { text: "Core financial & Web3 training material in Haitian Creole", done: true },
@@ -26,19 +26,19 @@ const phases = [
     ],
   },
   {
-    name: "Phase 2 — Validation",
+    name: "Phase 2  -  Validation",
     window: "2026 Q4 – 2027 Q1",
     status: "Planned",
     goal: "Prove the model works end-to-end in a single pilot area before spending resources on expansion.",
     milestones: [
       { text: "First complete cash-in/cash-out cycle handled entirely by agents", done: false },
-      { text: "First reforestation pilot with cUSD-based rewards", done: false },
+      { text: "First reforestation pilot with USDm-based rewards", done: false },
       { text: "dApp deployed to Celo's Alfajores testnet", done: false },
       { text: "Formal agent code of conduct and verification process live", done: false },
     ],
   },
   {
-    name: "Phase 3 — Growth",
+    name: "Phase 3  -  Growth",
     window: "2027",
     status: "Planned",
     goal: "Expand beyond the pilot once the operational model is proven.",
@@ -50,7 +50,7 @@ const phases = [
     ],
   },
   {
-    name: "Phase 4 — Maturity",
+    name: "Phase 4  -  Maturity",
     window: "2028+",
     status: "Planned",
     goal: "A self-sustaining ecosystem with mature governance, rather than grant-dependent.",
@@ -111,7 +111,7 @@ export default function RoadmapPage() {
                       {milestone.text}
                       <span className="sr-only">
                         {" "}
-                        — {milestone.done ? "done" : "not yet started"}
+                         -  {milestone.done ? "done" : "not yet started"}
                       </span>
                     </span>
                   </li>

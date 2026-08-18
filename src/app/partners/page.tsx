@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Partners",
   description:
-    "Who CeloHT works with — the Celo ecosystem, local Haitian organizations, educational institutions, and environmental partners.",
+    "Who CeloHT works with  -  the Celo ecosystem, local Haitian organizations, educational institutions, and environmental partners.",
   alternates: { canonical: "/partners" },
 };
 
@@ -15,7 +15,7 @@ const categories = [
   {
     title: "The Celo ecosystem",
     detail:
-      "Grants, technical support, and visibility through official Celo channels — the Celo Foundation, Celo Forum, and community grant programs.",
+      "Grants, technical support, and visibility through official Celo channels  -  the Celo Foundation, Celo Forum, and community grant programs.",
   },
   {
     title: "Local Haitian organizations",
@@ -41,7 +41,7 @@ export default function PartnersPage() {
       <PageHero
         eyebrow="Partners"
         title="We complement existing work, not duplicate it"
-        lead="CeloHT looks for partners whose work already overlaps with our mission — and brings a specific, honest offer to that conversation."
+        lead="CeloHT looks for partners whose work already overlaps with our mission  -  and brings a specific, honest offer to that conversation."
       />
 
       <Section>

@@ -19,7 +19,7 @@ const posts = [
   {
     date: "2026-07",
     title: "CeloHT dApp repository published",
-    body: "Five open-source smart contracts — agent registry, certificates, donations, reforestation impact, and governance voting — with a full test suite, are now public.",
+    body: "Five open-source smart contracts  -  agent registry, certificates, donations, reforestation impact, and governance voting  -  with a full test suite, are now public.",
   },
   {
     date: "2026-07",
@@ -40,7 +40,7 @@ export default function NewsPage() {
       <PageHero
         eyebrow="News"
         title="Updates as they actually happen"
-        lead="We post here when something real ships — not on a content calendar. For deeper reading, see our Blog."
+        lead="We post here when something real ships  -  not on a content calendar. For deeper reading, see our Blog."
       />
 
       <Section>

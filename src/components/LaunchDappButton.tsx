@@ -14,7 +14,7 @@ const sizeClasses = {
 };
 
 /**
- * The dApp isn't live yet (see docs/roadmap.md) — this links to
+ * The dApp isn't live yet (see docs/roadmap.md)  -  this links to
  * NEXT_PUBLIC_DAPP_URL (defaulting to app.celoht.com) so the button is
  * wired correctly the moment it ships, without a code change here.
  */

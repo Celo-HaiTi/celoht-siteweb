@@ -8,7 +8,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "CeloHT is a community-driven, open-source initiative built on the Celo ecosystem — here's who we are, and, just as importantly, who we're not.",
+    "CeloHT is a community-driven, open-source initiative built on the Celo ecosystem  -  here's who we are, and, just as importantly, who we're not.",
   alternates: { canonical: "/about" },
 };
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
             , is the public record of how we do that.
           </p>
           <p>
-            We&rsquo;re explicit about what CeloHT is not, because the distinction matters — both
+            We&rsquo;re explicit about what CeloHT is not, because the distinction matters  -  both
             legally and to the communities we serve, many of whom have seen fintech and crypto
             projects overpromise before.
           </p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               className="flex items-start gap-3 rounded-xl border border-navy-700/15 p-4 text-sm dark:border-parchment-100/10"
             >
               <span aria-hidden="true" className="mt-0.5 text-navy-500 dark:text-parchment-100/40">
-                —
+                 - 
               </span>
               <span className="text-ink-soft dark:text-parchment-100/70">{item}</span>
             </div>
@@ -71,13 +71,13 @@ export default function AboutPage() {
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
             The founder, Johnny Dubic, identified Celo as a good technical fit because of its low
-            transaction fees and mobile-first design — its native token, CELO, and its stablecoin,
-            cUSD, are both accessible through the Valora wallet. From there, CeloHT built outward:
+            transaction fees and mobile-first design. Its native token, CELO, and its stablecoin,
+            USDm, are both accessible through the Valora wallet. From there, CeloHT built outward:
             first education material in Haitian Creole, then the framework for a trained agent
             network, then a reforestation program tying environmental action to financial reward.
           </p>
           <p>
-            CeloHT was featured in a Celo Forum &ldquo;Founders&rdquo; post in March 2026 — a small
+            CeloHT was featured in a Celo Forum &ldquo;Founders&rdquo; post in March 2026  -  a small
             but real marker of recognition within the broader Celo ecosystem.
           </p>
         </div>

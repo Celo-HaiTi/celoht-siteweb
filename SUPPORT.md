@@ -8,7 +8,7 @@
 ## Contact
 
 - General questions: hello@celoht.com
-- Security reports (private): security@celoht.com — see [`SECURITY.md`](SECURITY.md)
+- Security reports (private): security@celoht.com  -  see [`SECURITY.md`](SECURITY.md)
 
 ## Response Time
 

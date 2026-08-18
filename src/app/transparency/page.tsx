@@ -17,14 +17,14 @@ export default function TransparencyPage() {
       <Breadcrumbs items={[{ label: "Transparency" }]} />
       <PageHero
         eyebrow="Transparency"
-        title="Radical transparency isn't a slogan here — it's a mechanism"
+        title="Radical transparency isn't a slogan here  -  it's a mechanism"
         lead="An organization asking communities to trust it with financial education should be auditable, not opaque. Here's specifically how we keep it that way."
       />
 
       <Section eyebrow="What's public today" title="Open by default">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
-            Every CeloHT repository — flagship documentation, this website, and the dApp — in full
+            Every CeloHT repository  -  flagship documentation, this website, and the dApp  -  in full
           </li>
           <li>Every GitHub Actions workflow used for repository quality control</li>
           <li>All Pull Request and Issue history</li>
@@ -56,7 +56,7 @@ export default function TransparencyPage() {
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
           CeloHT is a community-driven initiative, not a company issuing equity or promising
           returns, and it has never created a token. Funding comes from ecosystem grants,
-          partnerships, and voluntary community contributions — see our{" "}
+          partnerships, and voluntary community contributions  -  see our{" "}
           <a href="/developers" className="underline underline-offset-2">
             developer documentation
           </a>{" "}
@@ -66,7 +66,7 @@ export default function TransparencyPage() {
 
       <CTASection
         title="See what we've committed to"
-        description="Our roadmap lists dated milestones and honest status markers — done, in progress, or planned."
+        description="Our roadmap lists dated milestones and honest status markers  -  done, in progress, or planned."
         primary={{ label: "View the roadmap", href: "/roadmap" }}
         secondary={{ label: "Read our values", href: "/mission" }}
       />

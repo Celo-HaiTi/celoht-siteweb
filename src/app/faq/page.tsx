@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Is CeloHT a cryptocurrency or a token?",
-    a: "No. CeloHT uses Celo ecosystem infrastructure (CELO, cUSD) but is not itself a token or blockchain, and has never created a token.",
+    a: "No. CeloHT uses Celo ecosystem infrastructure (CELO, USDm) but is not itself a token or blockchain, and has never created a token.",
   },
   { q: "Can I invest in CeloHT?", a: "No. CeloHT offers no investment product of any kind." },
   {
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Why does CeloHT use Celo specifically?",
-    a: "Its mobile-first design and low transaction fees match the realities of the communities we serve — see our Technology page for detail.",
+    a: "Its mobile-first design and low transaction fees match the realities of the communities we serve  -  see our Technology page for detail.",
   },
   {
     q: "How is CeloHT funded?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How can I get involved?",
-    a: "Take a course, become a community agent, or contribute to the repository — see our Community page for each path.",
+    a: "Take a course, become a community agent, or contribute to the repository  -  see our Community page for each path.",
   },
   {
     q: "Where do I launch the dApp?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "How do I report a security issue?",
-    a: "Email security@celoht.com or use GitHub Security Advisories — never a public GitHub Issue.",
+    a: "Email security@celoht.com or use GitHub Security Advisories  -  never a public GitHub Issue.",
   },
 ];
 

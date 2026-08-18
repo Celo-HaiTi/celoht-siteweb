@@ -41,7 +41,7 @@ export default function GovernancePage() {
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
             <h3 className="font-semibold">Community Contributors</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Anyone submitting Issues, Pull Requests, or joining Discussions — the entry point to
+              Anyone submitting Issues, Pull Requests, or joining Discussions  -  the entry point to
               the Maintainer Council.
             </p>
           </div>
@@ -51,18 +51,18 @@ export default function GovernancePage() {
       <Section eyebrow="Decision-making" title="Not every decision needs the same process">
         <div className="max-w-3xl space-y-3 text-ink-soft dark:text-parchment-100/75">
           <p>
-            <strong className="text-ink dark:text-parchment-100">Minor changes</strong> — typo
-            fixes, documentation improvements — are approved by any maintainer after a standard
+            <strong className="text-ink dark:text-parchment-100">Minor changes</strong>  -  typo
+            fixes, documentation improvements  -  are approved by any maintainer after a standard
             review.
           </p>
           <p>
-            <strong className="text-ink dark:text-parchment-100">Major changes</strong> — new
-            structure, policy shifts, brand changes — require Maintainer Council consensus,
+            <strong className="text-ink dark:text-parchment-100">Major changes</strong>  -  new
+            structure, policy shifts, brand changes  -  require Maintainer Council consensus,
             discussed publicly first.
           </p>
           <p>
-            <strong className="text-ink dark:text-parchment-100">Governance changes</strong> — edits
-            to the governance policy itself — require a minimum 14-day public comment period and
+            <strong className="text-ink dark:text-parchment-100">Governance changes</strong>  -  edits
+            to the governance policy itself  -  require a minimum 14-day public comment period and
             majority Council approval.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function GovernancePage() {
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
           CeloHT has no token, so community governance votes (in the dApp&rsquo;s GovernanceVoting
           contract) use one-address-one-vote, restricted to addresses the Maintainer Council has
-          approved — trading permissionless participation for resistance to Sybil and plutocratic
+          approved  -  trading permissionless participation for resistance to Sybil and plutocratic
           attacks. See our{" "}
           <a href="/developers" className="underline underline-offset-2">
             developer documentation

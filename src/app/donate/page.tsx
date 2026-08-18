@@ -8,7 +8,7 @@ import { DAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Donate",
   description:
-    "Support CeloHT's work directly through the dApp's donation flow — no intermediary custody of funds.",
+    "Support CeloHT's work directly through the dApp's donation flow  -  no intermediary custody of funds.",
   alternates: { canonical: "/donate" },
 };
 
@@ -19,7 +19,7 @@ export default function DonatePage() {
       <PageHero
         eyebrow="Donate"
         title="Support goes directly to a registered project"
-        lead="Donations happen inside the CeloHT dApp, where they're routed through our open-source DonationManager contract — earmarked to a specific project, never pooled into a general fund CeloHT controls freely."
+        lead="Donations happen inside the CeloHT dApp, where they're routed through our open-source DonationManager contract  -  earmarked to a specific project, never pooled into a general fund CeloHT controls freely."
       />
 
       <Section eyebrow="How it works" title="Three steps">
@@ -37,7 +37,7 @@ export default function DonatePage() {
             </p>
           </div>
           <div className="rounded-2xl border border-gold-500/30 p-6">
-            <h3 className="font-semibold">3. Donate in cUSD</h3>
+            <h3 className="font-semibold">3. Donate in USDm</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
               Your donation is recorded on-chain and earmarked to that project&rsquo;s available
               balance.
@@ -49,7 +49,7 @@ export default function DonatePage() {
       <Section eyebrow="Fee policy" title="0% by default, capped at 5%">
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
           The platform fee on donations defaults to 0% and is hard-capped at 5% directly in the
-          smart contract&rsquo;s code — no administrator can raise it further without redeploying
+          smart contract&rsquo;s code  -  no administrator can raise it further without redeploying
           the contract entirely, which would be a publicly visible, auditable change.
         </p>
       </Section>

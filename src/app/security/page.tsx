@@ -18,7 +18,7 @@ export default function SecurityPage() {
       <PageHero
         eyebrow="Security"
         title="Report privately, never in a public issue"
-        lead="Each CeloHT repository has its own SECURITY.md — here's the summary and where to send a report."
+        lead="Each CeloHT repository has its own SECURITY.md  -  here's the summary and where to send a report."
       />
 
       <Section eyebrow="Reporting" title="Where to send a vulnerability report">
@@ -39,7 +39,7 @@ export default function SecurityPage() {
       <Section eyebrow="This website" title="Practices">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>Strict Content Security Policy and standard security headers (see next.config.ts)</li>
-          <li>No secrets committed — environment variables only</li>
+          <li>No secrets committed  -  environment variables only</li>
           <li>CodeQL static analysis and Dependabot on every change</li>
         </ul>
       </Section>

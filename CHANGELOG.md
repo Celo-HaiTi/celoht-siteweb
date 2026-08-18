@@ -15,7 +15,7 @@ All notable changes to the CeloHT website are documented here, following
 ### Added
 
 - Complete rebuild from scratch: 33 pages (30 unique routes + 3 MDX blog
-  posts), covering every page in the requested site structure — Home,
+  posts), covering every page in the requested site structure  -  Home,
   About, Mission, Vision, Education, Agent Network, Reforestation,
   Technology, Impact, Community, Partners, Roadmap, Governance,
   Transparency, Developers, Documentation, Media Kit, Blog, News, FAQ,

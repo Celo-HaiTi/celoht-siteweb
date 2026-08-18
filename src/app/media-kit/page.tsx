@@ -68,7 +68,7 @@ export default function MediaKitPage() {
             <p className="font-medium text-ink dark:text-parchment-100">Medium (one paragraph)</p>
             <p className="mt-1">
               CeloHT combines financial education in Haitian Creole, a decentralized network of
-              community agents, and environmental reforestation programs — all built on Celo, cUSD,
+              community agents, and environmental reforestation programs  -  all built on Celo, USDm,
               and Valora-compatible infrastructure. Founded by Johnny Dubic in Léogâne, Haiti,
               CeloHT aims to make modern financial tools accessible to communities with limited
               access to traditional banking.

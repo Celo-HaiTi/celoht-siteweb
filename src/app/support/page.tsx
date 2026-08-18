@@ -6,7 +6,7 @@ import { GITHUB_FLAGSHIP_URL, GITHUB_WEBSITE_URL, GITHUB_DAPP_URL } from "@/lib/
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "How to get help with CeloHT — general questions, bug reports, and security issues.",
+  description: "How to get help with CeloHT  -  general questions, bug reports, and security issues.",
   alternates: { canonical: "/support" },
 };
 
@@ -24,7 +24,7 @@ export default function SupportPage() {
       <PageHero
         eyebrow="Support"
         title="Get help"
-        lead="Where to go depends on what you need — here's the fastest path for each."
+        lead="Where to go depends on what you need  -  here's the fastest path for each."
       />
 
       <Section eyebrow="Bug reports" title="Repository issues">

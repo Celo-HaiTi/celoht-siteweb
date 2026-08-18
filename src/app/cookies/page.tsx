@@ -5,7 +5,7 @@ import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Cookies",
-  description: "CeloHT's cookie policy — we use no tracking cookies.",
+  description: "CeloHT's cookie policy  -  we use no tracking cookies.",
   alternates: { canonical: "/cookies" },
 };
 
@@ -22,12 +22,12 @@ export default function CookiesPage() {
       <Section title="What we store">
         <div className="max-w-2xl space-y-4 text-sm text-ink-soft dark:text-parchment-100/70">
           <p>
-            <strong className="text-ink dark:text-parchment-100">Theme preference</strong> — stored
+            <strong className="text-ink dark:text-parchment-100">Theme preference</strong>  -  stored
             in <code>localStorage</code> (not a cookie) so your light/dark mode choice persists
             between visits. Never transmitted to a server.
           </p>
           <p>
-            <strong className="text-ink dark:text-parchment-100">Service worker cache</strong> — a
+            <strong className="text-ink dark:text-parchment-100">Service worker cache</strong>  -  a
             small set of static assets (logo, icons) cached locally for offline resilience, per our{" "}
             <a href="/accessibility" className="underline underline-offset-2">
               Progressive Web App support

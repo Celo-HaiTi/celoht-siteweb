@@ -10,7 +10,7 @@ export const primaryNav: NavItem[] = [
   {
     label: "Agent Network",
     href: "/agent-network",
-    description: "Community agents who bridge cash and cUSD",
+    description: "Community agents who bridge cash and USDm",
   },
   {
     label: "Reforestation",
@@ -105,11 +105,11 @@ export const searchIndex: NavItem[] = [
     href: "/agent-network",
     description: "Community agents, cash-in/cash-out, Valora support",
   },
-  { label: "Reforestation", href: "/reforestation", description: "Tree planting rewarded in cUSD" },
+  { label: "Reforestation", href: "/reforestation", description: "Tree planting rewarded in USDm" },
   {
     label: "Technology",
     href: "/technology",
-    description: "Celo, CELO, cUSD, and Valora compatibility",
+    description: "Celo, CELO, USDm, and Valora compatibility",
   },
   {
     label: "Impact",

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const steps = [
   "Complete the full education program",
-  "Demonstrate a solid understanding of the basics — Valora, seed-phrase security",
+  "Demonstrate a solid understanding of the basics  -  Valora, seed-phrase security",
   "Commit to the community's operational standards",
   "Get sign-off from a local network coordinator",
 ];
@@ -25,13 +25,13 @@ export default function AgentNetworkPage() {
       <PageHero
         eyebrow="Pillar 02 · Agent Network"
         title="Trust is a human problem, not just a design problem"
-        lead="An app alone doesn't build confidence in a new financial tool. A trained person in the community does — that's what CeloHT's agent network is for."
+        lead="An app alone doesn't build confidence in a new financial tool. A trained person in the community does  -  that's what CeloHT's agent network is for."
       />
 
       <Section eyebrow="What an agent does" title="Four responsibilities">
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-            "Facilitates cash-to-cUSD and cUSD-to-cash exchanges (cash-in/cash-out)",
+            "Facilitates cash-to-USDm and USDm-to-cash exchanges (cash-in/cash-out)",
             "Helps new participants set up and understand Valora",
             "Handles peer-to-peer transfer support",
             "Acts as a local point of contact for ongoing questions",

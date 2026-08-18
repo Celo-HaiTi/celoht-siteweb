@@ -17,7 +17,7 @@ export default function CodeOfConductPage() {
       <PageHero
         eyebrow="Code of Conduct"
         title="A harassment-free experience for everyone"
-        lead="This applies across every CeloHT space — GitHub repositories, community sessions, and social channels."
+        lead="This applies across every CeloHT space  -  GitHub repositories, community sessions, and social channels."
       />
 
       <Section title="The short version">
@@ -39,7 +39,7 @@ export default function CodeOfConductPage() {
           </a>{" "}
           and are reviewed promptly and fairly. The full policy, including our enforcement
           guideline, is maintained as the canonical <code>CODE_OF_CONDUCT.md</code> in each
-          repository — see the{" "}
+          repository  -  see the{" "}
           <a
             href={`${GITHUB_WEBSITE_URL}/blob/main/CODE_OF_CONDUCT.md`}
             className="underline underline-offset-2"

@@ -22,7 +22,7 @@ const STORAGE_KEY = "celoht-theme";
 // A tiny external store backed by the `dark` class on <html>. Using
 // useSyncExternalStore (rather than useState + useEffect) lets React
 // reconcile the server-rendered "light" snapshot with the real client
-// theme — set synchronously by `themeInitScript` before hydration —
+// theme  -  set synchronously by `themeInitScript` before hydration  - 
 // without a hydration-mismatch warning.
 type Listener = () => void;
 let listeners: Listener[] = [];

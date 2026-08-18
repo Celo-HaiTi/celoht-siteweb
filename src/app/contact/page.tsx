@@ -7,7 +7,7 @@ import { GITHUB_ORG_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Official CeloHT contact channels — general questions, partnerships, press, security, and conduct.",
+    "Official CeloHT contact channels  -  general questions, partnerships, press, security, and conduct.",
   alternates: { canonical: "/contact" },
 };
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
           >
             GitHub Discussions
           </a>{" "}
-          instead of private email when possible — it helps other people with the same question.
+          instead of private email when possible  -  it helps other people with the same question.
         </p>
       </Section>
     </>

@@ -15,7 +15,7 @@ import {
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "CeloHT — Financial Inclusion, Education, Agent Network, Reforestation",
+  title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
   description:
     "CeloHT is a community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation, built on the Celo ecosystem.",
   alternates: { canonical: "/" },
@@ -106,7 +106,7 @@ export default function HomePage() {
           <PillarCard
             number="03"
             title="Reforestation"
-            description="Tree planting tied to verified action and rewarded in cUSD — growth you can see."
+            description="Tree planting tied to verified action and rewarded in USDm  -  growth you can see."
             href="/reforestation"
             accent="forest"
             icon="🌱"
@@ -150,7 +150,7 @@ export default function HomePage() {
           </div>
         </div>
         <p className="mt-6 max-w-2xl text-sm text-ink-soft dark:text-parchment-100/60">
-          CeloHT reports numbers as they become real and verifiable — see{" "}
+          CeloHT reports numbers as they become real and verifiable  -  see{" "}
           <Link href="/transparency" className="underline underline-offset-2">
             Transparency
           </Link>{" "}
@@ -183,7 +183,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Not what you might assume" title="What CeloHT is — and isn’t">
+      <Section eyebrow="Not what you might assume" title="What CeloHT is  -  and isn’t">
         <div className="grid gap-8 sm:grid-cols-2">
           <div className="rounded-2xl border border-forest-500/30 p-6">
             <h3 className="font-display text-2xl font-semibold text-forest-600 dark:text-forest-400">
@@ -193,7 +193,7 @@ export default function HomePage() {
               <li>A community-driven, open-source initiative</li>
               <li>Built on the Celo ecosystem</li>
               <li>A user of CELO for network transactions where appropriate</li>
-              <li>A promoter of cUSD for accessible digital payments</li>
+              <li>A promoter of USDm for accessible digital payments</li>
               <li>A developer of tools compatible with the Valora wallet</li>
             </ul>
           </div>
@@ -212,7 +212,7 @@ export default function HomePage() {
 
       <CTASection
         title="Build with us, learn with us"
-        description="Whether you want to complete a course, become a community agent, or contribute to the repository — there is a way in."
+        description="Whether you want to complete a course, become a community agent, or contribute to the repository  -  there is a way in."
         primary={{ label: "Explore the community", href: "/community" }}
         secondary={{ label: "Read the documentation", href: "/documentation" }}
       />

@@ -47,7 +47,7 @@
     "typescript": "^5",
     "vitest": "^2.1.8"
   },
-  "description": "Official website for CeloHT — a community-driven, open-source initiative for financial inclusion, education, agent networks, and reforestation on the Celo ecosystem.",
+  "description": "Official website for CeloHT  -  a community-driven, open-source initiative for financial inclusion, education, agent networks, and reforestation on the Celo ecosystem.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",

@@ -10,8 +10,8 @@ import { SITE_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "CeloHT — Financial Inclusion, Education, Agent Network, Reforestation",
-    template: "%s — CeloHT",
+    default: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
+    template: "%s  -  CeloHT",
   },
   description:
     "CeloHT is a community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation, built on the Celo ecosystem.",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "CeloHT",
     "Celo",
     "financial inclusion",
-    "cUSD",
+    "USDm",
     "Valora",
     "Haiti",
     "reforestation",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "CeloHT",
-    title: "CeloHT — Financial Inclusion, Education, Agent Network, Reforestation",
+    title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
     description:
       "A community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation.",
     images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "CeloHT" }],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@CeloHtOfficial",
-    title: "CeloHT — Financial Inclusion, Education, Agent Network, Reforestation",
+    title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
     description:
       "A community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation.",
     images: ["/og-image.svg"],

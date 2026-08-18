@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Community",
   description:
-    "Ways to get involved with CeloHT — as a learner, a community agent, a contributor, or simply someone following along.",
+    "Ways to get involved with CeloHT  -  as a learner, a community agent, a contributor, or simply someone following along.",
   alternates: { canonical: "/community" },
 };
 
@@ -26,7 +26,7 @@ const paths = [
   },
   {
     title: "Contribute to the repository",
-    detail: "Documentation, examples, and tooling improvements — all welcome.",
+    detail: "Documentation, examples, and tooling improvements  -  all welcome.",
     action: "See contributing guide",
     href: "/contributing",
   },
@@ -83,14 +83,14 @@ export default function CommunityPage() {
           <div className="rounded-xl border border-gold-500/30 p-5">
             <h3 className="font-semibold">Ambassador Program</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              For community members who want to represent CeloHT locally — organizing sessions,
+              For community members who want to represent CeloHT locally  -  organizing sessions,
               translating material, and connecting new agents to the network.
             </p>
           </div>
           <div className="rounded-xl border border-gold-500/30 p-5">
             <h3 className="font-semibold">Partner Program</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              For organizations — see our{" "}
+              For organizations  -  see our{" "}
               <a href="/partners" className="underline underline-offset-2">
                 Partners
               </a>{" "}

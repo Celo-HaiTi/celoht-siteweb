@@ -8,7 +8,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Mission",
   description:
-    "Expand financial inclusion through education, a decentralized network of community agents, and environmental reforestation — built on the Celo ecosystem.",
+    "Expand financial inclusion through education, a decentralized network of community agents, and environmental reforestation  -  built on the Celo ecosystem.",
   alternates: { canonical: "/mission" },
 };
 
@@ -19,7 +19,7 @@ export default function MissionPage() {
       <PageHero
         eyebrow="Our mission"
         title="Expand financial inclusion through education, agents, and reforestation"
-        lead="Built on the Celo ecosystem as our technical foundation — three pillars working together, not three separate projects."
+        lead="Built on the Celo ecosystem as our technical foundation  -  three pillars working together, not three separate projects."
         tone="gold"
       />
 
@@ -27,8 +27,8 @@ export default function MissionPage() {
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
             Education is named first because we treat it as a prerequisite, not a companion feature.
-            Nobody should use a financial tool they don&rsquo;t understand — so every CeloHT program
-            starts with a curriculum, in Haitian Creole, before Valora or cUSD ever enters the
+            Nobody should use a financial tool they don&rsquo;t understand  -  so every CeloHT program
+            starts with a curriculum, in Haitian Creole, before Valora or USDm ever enters the
             conversation.
           </p>
           <p>
@@ -37,7 +37,7 @@ export default function MissionPage() {
             person from the community does.
           </p>
           <p>
-            Reforestation is third — not because it matters less, but because it&rsquo;s the pillar
+            Reforestation is third  -  not because it matters less, but because it&rsquo;s the pillar
             most directly tied to the long-term economic security of the same communities the first
             two pillars serve.
           </p>
@@ -49,7 +49,7 @@ export default function MissionPage() {
           <PillarCard
             number="01"
             title="Education"
-            description="Creole-language curriculum on financial literacy, blockchain and Web3 fundamentals, and hands-on Valora/cUSD use."
+            description="Creole-language curriculum on financial literacy, blockchain and Web3 fundamentals, and hands-on Valora/USDm use."
             href="/education"
             accent="gold"
             icon="📘"
@@ -65,7 +65,7 @@ export default function MissionPage() {
           <PillarCard
             number="03"
             title="Reforestation"
-            description="Coordinated tree-planting tied to verified activity and rewarded through cUSD."
+            description="Coordinated tree-planting tied to verified activity and rewarded through USDm."
             href="/reforestation"
             accent="forest"
             icon="🌱"
@@ -75,7 +75,7 @@ export default function MissionPage() {
 
       <CTASection
         title="See where the mission is headed"
-        description="Our vision describes what success looks like by 2030 — and our roadmap breaks it into phases with real milestones."
+        description="Our vision describes what success looks like by 2030  -  and our roadmap breaks it into phases with real milestones."
         primary={{ label: "Read our vision", href: "/vision" }}
         secondary={{ label: "View the roadmap", href: "/roadmap" }}
       />

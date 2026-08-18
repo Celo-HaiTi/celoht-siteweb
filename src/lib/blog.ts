@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Education Comes First",
     date: "2026-06-02",
     excerpt:
-      "Handing someone a financial tool without the education to go with it isn't opportunity — it's risk. Here's why every CeloHT program starts with a classroom, not an app.",
+      "Handing someone a financial tool without the education to go with it isn't opportunity  -  it's risk. Here's why every CeloHT program starts with a classroom, not an app.",
     author: "CeloHT Team",
   },
   {
@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why We Chose Celo",
     date: "2026-05-14",
     excerpt:
-      "Mobile-first design, low transaction fees, and a stablecoin built for everyday use — the specific, practical reasons behind CeloHT's technical foundation.",
+      "Mobile-first design, low transaction fees, and a stablecoin built for everyday use  -  the specific, practical reasons behind CeloHT's technical foundation.",
     author: "CeloHT Team",
   },
   {

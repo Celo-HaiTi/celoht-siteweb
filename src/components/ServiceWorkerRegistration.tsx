@@ -8,7 +8,7 @@ export function ServiceWorkerRegistration() {
     if (!("serviceWorker" in navigator)) return;
 
     navigator.serviceWorker.register("/sw.js").catch(() => {
-      // Registration failing shouldn't break the app — it's a progressive
+      // Registration failing shouldn't break the app  -  it's a progressive
       // enhancement, not a requirement.
     });
   }, []);

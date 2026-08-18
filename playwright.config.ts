@@ -2,7 +2,7 @@ import { defineConfig, devices } from "@playwright/test";
 
 /**
  * End-to-end tests. Run `npx playwright install` once to fetch browser
- * binaries before `npm run test:e2e` — see docs/TESTING.md. These are
+ * binaries before `npm run test:e2e`  -  see docs/TESTING.md. These are
  * NOT run as part of `npm test` (that's Vitest, for unit tests) since
  * e2e tests need a real browser and a running server.
  */

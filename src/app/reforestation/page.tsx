@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Reforestation",
   description:
-    "Tree planting, ecological restoration, and environmental education — a permanent pillar equal to education and the agent network, rewarded through cUSD.",
+    "Tree planting, ecological restoration, and environmental education  -  a permanent pillar equal to education and the agent network, rewarded through USDm.",
   alternates: { canonical: "/reforestation" },
 };
 
@@ -17,7 +17,7 @@ export default function ReforestationPage() {
       <Breadcrumbs items={[{ label: "Reforestation" }]} />
       <PageHero
         eyebrow="Pillar 03 · Reforestation"
-        title="We treat land the way we treat financial access — as infrastructure"
+        title="We treat land the way we treat financial access  -  as infrastructure"
         lead="Reforestation is a permanent pillar, not a side initiative funded when convenient. The same communities we serve financially are often the ones most exposed to the economic consequences of deforestation."
         tone="forest"
       />
@@ -48,10 +48,10 @@ export default function ReforestationPage() {
             </p>
           </div>
           <div className="rounded-2xl border border-forest-500/30 p-6">
-            <h3 className="font-semibold">cUSD rewards</h3>
+            <h3 className="font-semibold">USDm rewards</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
               Participants who commit to verified planting and tracking can receive symbolic rewards
-              in cUSD.
+              in USDm.
             </p>
           </div>
           <div className="rounded-2xl border border-forest-500/30 p-6">
@@ -66,7 +66,7 @@ export default function ReforestationPage() {
       <Section eyebrow="Core principles" title="Structure, not slogans">
         <ul className="max-w-3xl space-y-3 text-ink-soft dark:text-parchment-100/75">
           <li>
-            Every reward is tied to a verifiable action — we don&rsquo;t distribute cUSD without
+            Every reward is tied to a verifiable action  -  we don&rsquo;t distribute USDm without
             structure.
           </li>
           <li>

@@ -21,12 +21,12 @@ const repos = [
   {
     name: "Website",
     href: GITHUB_WEBSITE_URL,
-    detail: "This site — Next.js, TypeScript, Tailwind CSS.",
+    detail: "This site  -  Next.js, TypeScript, Tailwind CSS.",
   },
   {
     name: "dApp",
     href: GITHUB_DAPP_URL,
-    detail: "The CeloHT dApp — Next.js frontend plus a Hardhat/Solidity contracts package.",
+    detail: "The CeloHT dApp  -  Next.js frontend plus a Hardhat/Solidity contracts package.",
   },
 ];
 

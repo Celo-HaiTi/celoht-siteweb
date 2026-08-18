@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Education",
   description:
-    "Financial literacy, blockchain and Web3 fundamentals, and hands-on Valora/cUSD training — delivered in Haitian Creole, before any tool is introduced.",
+    "Financial literacy, blockchain and Web3 fundamentals, and hands-on Valora/USDm training  -  delivered in Haitian Creole, before any tool is introduced.",
   alternates: { canonical: "/education" },
 };
 
@@ -23,7 +23,7 @@ const modules = [
     before: "Wallet setup",
   },
   {
-    title: "Hands-on Valora/cUSD use",
+    title: "Hands-on Valora/USDm use",
     detail: "Step-by-step guided use, with heavy emphasis on seed-phrase security.",
     before: "First live transaction",
   },
@@ -41,7 +41,7 @@ export default function EducationPage() {
       <PageHero
         eyebrow="Pillar 01 · Education"
         title="Understanding comes before access"
-        lead="Give communities the financial, blockchain, and digital skills they need to use digital financial services with real confidence — before they're ever handed a specific tool like Valora or cUSD."
+        lead="Give communities the financial, blockchain, and digital skills they need to use digital financial services with real confidence  -  before they're ever handed a specific tool like Valora or USDm."
         tone="gold"
       />
 
@@ -66,7 +66,7 @@ export default function EducationPage() {
 
       <Section eyebrow="Delivery" title="Written, visual, and in person">
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
-          Material combines written guides, visual diagrams, and in-person community sessions —
+          Material combines written guides, visual diagrams, and in-person community sessions  - 
           deliberately not confined to a single digital channel, since not every participant has
           reliable connectivity at the point they need the material most.
         </p>

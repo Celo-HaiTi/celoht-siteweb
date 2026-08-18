@@ -18,7 +18,7 @@ npm run dev
 
 | Variable               | Required?                                 | Purpose                             |
 | ---------------------- | ----------------------------------------- | ----------------------------------- |
-| `NEXT_PUBLIC_DAPP_URL` | No — defaults to `https://app.celoht.com` | Where the Launch dApp button points |
+| `NEXT_PUBLIC_DAPP_URL` | No  -  defaults to `https://app.celoht.com` | Where the Launch dApp button points |
 
 No other environment variables are required to build or run this site.
 
@@ -61,5 +61,5 @@ in components; use the generated Tailwind utility classes (`bg-navy-950`,
 
 **Build fails with a Radix/context-related error after adding a
 component.** Check that it has `"use client"` if it uses any Radix
-primitive or React hook — see
+primitive or React hook  -  see
 [`../ARCHITECTURE.md`](../ARCHITECTURE.md#why-the-hero-uses-use-client-and-everything-else-defaults-to-server).
