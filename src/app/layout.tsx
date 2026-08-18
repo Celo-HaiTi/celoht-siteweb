@@ -10,11 +10,11 @@ import { assetPath, SITE_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
+    default: "CeloHT | Open-Source Haitian Web3 Initiative",
     template: "%s  -  CeloHT",
   },
   description:
-    "CeloHT is a community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation, built on the Celo ecosystem.",
+    "CeloHT is an open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
   keywords: [
     "CeloHT",
     "Celo",
@@ -32,17 +32,17 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "CeloHT",
-    title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
+    title: "CeloHT | Open-Source Haitian Web3 Initiative",
     description:
-      "A community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation.",
+      "An open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
     images: [{ url: assetPath("/og-image.svg"), width: 1200, height: 630, alt: "CeloHT" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@CeloHtOfficial",
-    title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
+    title: "CeloHT | Open-Source Haitian Web3 Initiative",
     description:
-      "A community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation.",
+      "An open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
     images: [assetPath("/og-image.svg")],
   },
   icons: { icon: assetPath("/favicon.svg"), apple: assetPath("/celoht-logo.png") },

@@ -145,7 +145,7 @@ export function Footer() {
         </div>
 
         <p className="mt-8 text-xs text-parchment-100/50">
-          © {new Date().getFullYear()} CeloHT Contributors. Code licensed under Apache 2.0.
+          © {new Date().getFullYear()} CeloHT. Open source and community driven. Code licensed under Apache 2.0.
           &ldquo;Celo,&rdquo; &ldquo;USDm,&rdquo; and &ldquo;Valora&rdquo; are marks of their
           respective owners; CeloHT builds compatible tools and content and is not affiliated with
           or endorsed by them unless explicitly documented.
