@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { GITHUB_FLAGSHIP_URL, GITHUB_ORG_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -35,7 +36,7 @@ const paths = [
     title: "Join the discussion",
     detail: "Ask questions, share ideas, and connect with other community members.",
     action: "Open GitHub Discussions",
-    href: "https://github.com/celo-ht/celoht/discussions",
+    href: `${GITHUB_FLAGSHIP_URL}/discussions`,
   },
 ];
 
@@ -44,7 +45,7 @@ const channels = [
   { label: "Telegram", href: "https://t.me/celoht" },
   { label: "X / Twitter", href: "https://twitter.com/CeloHtOfficial" },
   { label: "LinkedIn", href: "https://linkedin.com/company/celoht" },
-  { label: "GitHub", href: "https://github.com/Celo-HT" },
+  { label: "GitHub", href: GITHUB_ORG_URL },
 ];
 
 export default function CommunityPage() {

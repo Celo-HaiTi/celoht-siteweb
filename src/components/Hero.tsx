@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, BookOpen, Github } from "lucide-react";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
 import { assetPath, GITHUB_ORG_URL } from "@/lib/constants";
 
@@ -27,7 +27,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800 dark:text-gold-300"
           >
-            Community-led · Open source · Built on Celo
+            CeloHT
           </motion.p>
 
           <motion.h1
@@ -38,7 +38,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.08 }}
             className="mt-4 max-w-3xl font-display text-5xl font-semibold leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl"
           >
-            Practical pathways to a more open digital economy.
+            Haiti-born. Open-source.
+            <span className="block text-gold-600 dark:text-gold-300">Built for global impact.</span>
           </motion.h1>
 
           <motion.p
@@ -48,8 +49,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.16 }}
             className="mt-6 max-w-2xl text-lg text-ink-soft dark:text-parchment-100/75"
           >
-            CeloHT is a Haitian open-source Web3 initiative building practical pathways through
-            financial inclusion, education, digital payments, entrepreneurship, and community action.
+            An open-source Haitian Web3 initiative building practical pathways through financial
+            inclusion, education, digital payments, entrepreneurship, and community development on Celo.
           </motion.p>
 
           <motion.div
@@ -61,11 +62,11 @@ export function Hero() {
           >
             <LaunchDappButton size="lg" />
             <Link
-              href="/about"
+              href="/open-source"
               className="group inline-flex items-center gap-2 rounded-full border border-navy-700/20 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-gold-500 hover:bg-gold-500/10 dark:border-parchment-100/20 dark:text-parchment-100"
             >
-              Explore CeloHT
-              <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+              Explore Open Source
+              <Github size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
           <motion.div
@@ -77,8 +78,14 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-forest-500" /> Haitian-led</span>
             <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-gold-500" /> Built in public</span>
+            <Link href="/technology" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
+              Explore ecosystem <ArrowRight size={14} aria-hidden="true" />
+            </Link>
+            <Link href="/documentation" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
+              <BookOpen size={14} aria-hidden="true" /> Documentation
+            </Link>
             <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
-              <Github size={14} aria-hidden="true" /> GitHub organization
+              <Github size={14} aria-hidden="true" /> GitHub
             </a>
           </motion.div>
         </div>

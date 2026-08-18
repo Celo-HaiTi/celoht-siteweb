@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { GITHUB_ORG_URL } from "@/lib/constants";
+import { GITHUB_FLAGSHIP_URL, GITHUB_ORG_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -89,7 +89,7 @@ export default function ContactPage() {
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
           For public discussion, use{" "}
           <a
-            href="https://github.com/celo-ht/celoht/discussions"
+            href={`${GITHUB_FLAGSHIP_URL}/discussions`}
             className="underline underline-offset-2"
           >
             GitHub Discussions

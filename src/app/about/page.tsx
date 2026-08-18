@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { GITHUB_FLAGSHIP_URL, GITHUB_ORG_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
@@ -29,7 +30,7 @@ export default function AboutPage() {
             It exists to expand financial inclusion through three permanent pillars: education, a
             decentralized network of community agents, and reforestation. This website, along with
             our{" "}
-            <a href="https://github.com/Celo-HT" className="underline underline-offset-2">
+            <a href={GITHUB_ORG_URL} className="underline underline-offset-2">
               GitHub repositories
             </a>
             , is the public record of how we do that.
@@ -98,7 +99,7 @@ export default function AboutPage() {
           </Link>{" "}
           and our{" "}
           <a
-            href="https://github.com/celo-ht/celoht/blob/main/docs/legal-status.md"
+            href={`${GITHUB_FLAGSHIP_URL}/blob/main/docs/legal-status.md`}
             className="underline underline-offset-2"
           >
             legal status documentation

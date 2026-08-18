@@ -11,7 +11,13 @@ export function assetPath(path: string) {
 	return `${BASE_PATH}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
-export const GITHUB_ORG_URL = "https://github.com/Celo-HT";
-export const GITHUB_FLAGSHIP_URL = "https://github.com/celo-ht/celoht";
-export const GITHUB_WEBSITE_URL = "https://github.com/celo-ht/website";
-export const GITHUB_DAPP_URL = "https://github.com/celo-ht/dapp";
+export const GITHUB_ORG_URL = "https://github.com/Celo-HaiTi";
+export const GITHUB_FLAGSHIP_URL = "https://github.com/Celo-HaiTi/CeloHT";
+export const GITHUB_WEBSITE_URL = "https://github.com/Celo-HaiTi/celoht-siteweb";
+export const GITHUB_DAPP_URL = "https://github.com/Celo-HaiTi/celoht-dapp";
+export const GITHUB_DOCS_URL = "https://github.com/Celo-HaiTi/celoht-docs";
+export const GITHUB_CONTRACTS_URL = "https://github.com/Celo-HaiTi/celoht-smart-contracts";
+export const GITHUB_BRAND_URL = "https://github.com/Celo-HaiTi/celoht-brand";
+export const GITHUB_RESEARCH_URL = "https://github.com/Celo-HaiTi/celoht-research";
+export const GITHUB_DEMO_URL = "https://github.com/Celo-HaiTi/celoht-demo";
+export const GITHUB_BOOK_URL = "https://github.com/Celo-HaiTi/celoht-investor-book";

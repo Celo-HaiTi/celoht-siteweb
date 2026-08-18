@@ -18,6 +18,11 @@ export const primaryNav: NavItem[] = [
     href: "/developers",
     description: "Docs, architecture, and how to contribute",
   },
+  {
+    label: "Open Source",
+    href: "/open-source",
+    description: "Repositories, documentation, and contribution paths",
+  },
   { label: "Community", href: "/community", description: "Ways to participate and stay connected" },
 ];
 
@@ -121,6 +126,11 @@ export const searchIndex: NavItem[] = [
     label: "Developers",
     href: "/developers",
     description: "Contributing, repository structure, dApp plans",
+  },
+  {
+    label: "Open Source",
+    href: "/open-source",
+    description: "The repositories and resources built in public",
   },
   { label: "Documentation", href: "/documentation", description: "Full documentation portal" },
   { label: "Media Kit", href: "/media-kit", description: "Logo, brand assets, press description" },
