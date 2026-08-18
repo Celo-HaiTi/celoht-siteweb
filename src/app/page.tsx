@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { PillarCard } from "@/components/PillarCard";
-import { StatGrid } from "@/components/StatGrid";
 import { CTASection } from "@/components/CTASection";
 import {
   SITE_URL,
@@ -42,6 +41,54 @@ export default function HomePage() {
 
       <Hero />
 
+      <Section
+        eyebrow="The CeloHT ecosystem"
+        title="A practical stack for participation"
+        className="pt-16 sm:pt-20"
+      >
+        <div className="grid gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 dark:border-parchment-100/10 dark:bg-parchment-100/10 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              index: "01",
+              title: "Learn",
+              copy: "Creole-first financial literacy and Web3 education before any tool is introduced.",
+              href: "/education",
+            },
+            {
+              index: "02",
+              title: "Access",
+              copy: "Community agents help bridge everyday users to digital payments and wallet support.",
+              href: "/agent-network",
+            },
+            {
+              index: "03",
+              title: "Build",
+              copy: "Open repositories, documentation, and contribution paths for people who want to make the system better.",
+              href: "/developers",
+            },
+            {
+              index: "04",
+              title: "Regenerate",
+              copy: "Reforestation connects environmental action with transparent, community-led programs.",
+              href: "/reforestation",
+            },
+          ].map((item) => (
+            <Link
+              key={item.index}
+              href={item.href}
+              className="group bg-parchment-50 p-6 transition-colors hover:bg-gold-500/10 dark:bg-navy-900 dark:hover:bg-navy-800"
+            >
+              <span className="font-mono text-xs text-gold-800 dark:text-gold-300">{item.index}</span>
+              <h3 className="mt-10 font-display text-2xl font-semibold">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-ink-soft dark:text-parchment-100/65">{item.copy}</p>
+              <span className="mt-6 inline-flex text-sm font-semibold text-ink underline-offset-4 group-hover:underline dark:text-parchment-100">
+                Explore {item.title.toLowerCase()}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       <Section eyebrow="A global open-source ecosystem" title="Built around people, tools, and shared impact">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-3xl border border-navy-700/10 bg-parchment-50 p-8 shadow-sm dark:border-parchment-100/10 dark:bg-navy-900">
@@ -60,7 +107,7 @@ export default function HomePage() {
                 rel="noreferrer"
                 className="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-600"
               >
-                Launch CeloHT dApp
+                Launch CeloHT DApp
               </Link>
               <Link
                 href="/documentation"
@@ -114,54 +161,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Progress, honestly reported"
-        title="Impact and transparency"
-        className="bg-navy-950/[0.02] dark:bg-parchment-100/[0.03]"
-      >
-        <StatGrid
-          stats={[
-            { value: "3", label: "Permanent pillars" },
-            { value: "2026", label: "Foundation phase" },
-            { value: "Apache 2.0", label: "Open-source license" },
-            { value: "No data currently available", label: "Verified agent transactions" },
-          ]}
-        />
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          <div className="rounded-2xl border border-navy-700/10 bg-parchment-50 p-6 dark:border-parchment-100/10 dark:bg-navy-900">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-soft dark:text-parchment-100/50">
-              What is verified today
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              <li>• The project structure, governance, and roadmap are public.</li>
-              <li>• The mission is organized around education, community access, and reforestation.</li>
-              <li>• The dApp is linked through a verified public launch URL.</li>
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-navy-700/10 bg-parchment-50 p-6 dark:border-parchment-100/10 dark:bg-navy-900">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-soft dark:text-parchment-100/50">
-              Where more data is still needed
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              <li>• People trained: No data currently available</li>
-              <li>• Agent transactions: No data currently available</li>
-              <li>• Trees planted: No data currently available</li>
-            </ul>
-          </div>
-        </div>
-        <p className="mt-6 max-w-2xl text-sm text-ink-soft dark:text-parchment-100/60">
-          CeloHT reports numbers as they become real and verifiable  -  see{" "}
-          <Link href="/transparency" className="underline underline-offset-2">
-            Transparency
-          </Link>{" "}
-          for how, and{" "}
-          <Link href="/roadmap" className="underline underline-offset-2">
-            Roadmap
-          </Link>{" "}
-          for what&rsquo;s next.
-        </p>
-      </Section>
-
       <Section eyebrow="Build with CeloHT" title="Developer resources and contribution paths">
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <a href={GITHUB_FLAGSHIP_URL} target="_blank" rel="noreferrer" className="rounded-2xl border border-navy-700/10 bg-parchment-50 p-5 transition-colors hover:border-gold-500 dark:border-parchment-100/10 dark:bg-navy-900">
@@ -211,10 +210,11 @@ export default function HomePage() {
       </Section>
 
       <CTASection
-        title="Build with us, learn with us"
-        description="Whether you want to complete a course, become a community agent, or contribute to the repository  -  there is a way in."
-        primary={{ label: "Explore the community", href: "/community" }}
-        secondary={{ label: "Read the documentation", href: "/documentation" }}
+        title="Start with the product"
+        description="Explore the CeloHT dApp, then follow the documentation and community pathways that make the ecosystem understandable and useful."
+        primary={{ label: "Launch CeloHT DApp", href: DAPP_URL }}
+        secondary={{ label: "Explore the community", href: "/community" }}
+        external
       />
     </>
   );

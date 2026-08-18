@@ -48,6 +48,7 @@ export function Footer() {
           <div className="flex gap-4 text-sm">
             <a
               href={GITHUB_ORG_URL}
+              target="_blank"
               className="text-parchment-100/70 hover:text-parchment-100"
               rel="noreferrer"
             >

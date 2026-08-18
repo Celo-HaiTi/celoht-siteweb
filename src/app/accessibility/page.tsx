@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -50,9 +51,9 @@ export default function AccessibilityPage() {
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
           Found an accessibility barrier? Open a GitHub issue with the <code>accessibility</code>{" "}
           label, or reach out through our{" "}
-          <a href="/support" className="underline underline-offset-2">
+          <Link href="/support" className="underline underline-offset-2">
             Support
-          </a>{" "}
+          </Link>{" "}
           page.
         </p>
       </Section>

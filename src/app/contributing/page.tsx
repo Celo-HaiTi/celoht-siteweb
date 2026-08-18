@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -60,9 +61,9 @@ export default function ContributingPage() {
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
             Read the{" "}
-            <a href="/code-of-conduct" className="underline underline-offset-2">
+            <Link href="/code-of-conduct" className="underline underline-offset-2">
               Code of Conduct
-            </a>
+            </Link>
           </li>
           <li>Search existing issues before opening a new one</li>
           <li>

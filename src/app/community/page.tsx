@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -91,9 +92,9 @@ export default function CommunityPage() {
             <h3 className="font-semibold">Partner Program</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
               For organizations  -  see our{" "}
-              <a href="/partners" className="underline underline-offset-2">
+              <Link href="/partners" className="underline underline-offset-2">
                 Partners
-              </a>{" "}
+              </Link>{" "}
               page for categories and how to start a conversation.
             </p>
           </div>

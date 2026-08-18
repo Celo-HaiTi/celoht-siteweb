@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -90,9 +91,9 @@ export default function SupportPage() {
       <Section eyebrow="Response time" title="">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
           We aim for 3–5 business days on general questions and 48 hours on security reports. See{" "}
-          <a href="/security" className="underline underline-offset-2">
+            <Link href="/security" className="underline underline-offset-2">
             Security
-          </a>{" "}
+            </Link>{" "}
           for the full vulnerability disclosure policy.
         </p>
       </Section>

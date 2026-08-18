@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -22,9 +23,9 @@ export default function PrivacyPage() {
       <Section title="What this website collects">
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
           This website does not use tracking cookies or third-party analytics  -  see our{" "}
-          <a href="/cookies" className="underline underline-offset-2">
+            <Link href="/cookies" className="underline underline-offset-2">
             Cookie Policy
-          </a>{" "}
+            </Link>{" "}
           for the one exception (a local theme preference). Any information you share in our GitHub
           repositories&rsquo; Issues, Pull Requests, or Discussions is publicly visible and governed
           by GitHub&rsquo;s own privacy policy.

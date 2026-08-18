@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -61,13 +62,13 @@ export default function ImpactPage() {
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
           CeloHT commits to an annual transparency and impact report covering all three pillars, in
           addition to recurring monthly community updates. See{" "}
-          <a href="/transparency" className="underline underline-offset-2">
+            <Link href="/transparency" className="underline underline-offset-2">
             Transparency
-          </a>{" "}
+            </Link>{" "}
           for how we report, and{" "}
-          <a href="/roadmap" className="underline underline-offset-2">
+            <Link href="/roadmap" className="underline underline-offset-2">
             Roadmap
-          </a>{" "}
+            </Link>{" "}
           for the timeline.
         </p>
       </Section>

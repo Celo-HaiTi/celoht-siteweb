@@ -25,7 +25,7 @@ export function Header() {
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {primaryNav.map((item) => {
-              const active = pathname === item.href;
+              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
                 <li key={item.href}>
                   <Link
@@ -73,6 +73,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-current={pathname === item.href || pathname.startsWith(`${item.href}/`) ? "page" : undefined}
                   onClick={() => setMenuOpen(false)}
                   className="block rounded-md px-3 py-2 text-sm text-ink-soft hover:bg-navy-700/5 hover:text-ink dark:text-parchment-100/70 dark:hover:bg-parchment-100/5 dark:hover:text-parchment-100"
                 >

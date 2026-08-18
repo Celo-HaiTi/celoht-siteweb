@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -29,9 +30,9 @@ export default function CookiesPage() {
           <p>
             <strong className="text-ink dark:text-parchment-100">Service worker cache</strong>  -  a
             small set of static assets (logo, icons) cached locally for offline resilience, per our{" "}
-            <a href="/accessibility" className="underline underline-offset-2">
+            <Link href="/accessibility" className="underline underline-offset-2">
               Progressive Web App support
-            </a>
+            </Link>
             .
           </p>
         </div>

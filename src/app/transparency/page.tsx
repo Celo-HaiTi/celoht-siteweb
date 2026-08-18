@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -57,9 +58,9 @@ export default function TransparencyPage() {
           CeloHT is a community-driven initiative, not a company issuing equity or promising
           returns, and it has never created a token. Funding comes from ecosystem grants,
           partnerships, and voluntary community contributions  -  see our{" "}
-          <a href="/developers" className="underline underline-offset-2">
+            <Link href="/developers" className="underline underline-offset-2">
             developer documentation
-          </a>{" "}
+            </Link>{" "}
           for the funding model documented alongside the codebase.
         </p>
       </Section>

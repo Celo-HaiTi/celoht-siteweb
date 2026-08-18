@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -74,9 +75,9 @@ export default function GovernancePage() {
           contract) use one-address-one-vote, restricted to addresses the Maintainer Council has
           approved  -  trading permissionless participation for resistance to Sybil and plutocratic
           attacks. See our{" "}
-          <a href="/developers" className="underline underline-offset-2">
+          <Link href="/developers" className="underline underline-offset-2">
             developer documentation
-          </a>{" "}
+          </Link>{" "}
           for the technical detail.
         </p>
       </Section>

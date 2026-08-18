@@ -3,19 +3,14 @@ export type NavItem = { label: string; href: string; description?: string };
 export const primaryNav: NavItem[] = [
   { label: "About", href: "/about", description: "Vision, mission, and how CeloHT started" },
   {
+    label: "Ecosystem",
+    href: "/technology",
+    description: "The CeloHT stack and the infrastructure it builds on",
+  },
+  {
     label: "Education",
     href: "/education",
     description: "Financial and Web3 literacy in Haitian Creole",
-  },
-  {
-    label: "Agent Network",
-    href: "/agent-network",
-    description: "Community agents who bridge cash and USDm",
-  },
-  {
-    label: "Reforestation",
-    href: "/reforestation",
-    description: "Tree planting tied to verified, rewarded action",
   },
   { label: "Impact", href: "/impact", description: "Metrics across all three pillars" },
   {
@@ -23,6 +18,7 @@ export const primaryNav: NavItem[] = [
     href: "/developers",
     description: "Docs, architecture, and how to contribute",
   },
+  { label: "Community", href: "/community", description: "Ways to participate and stay connected" },
 ];
 
 export const footerNav: { heading: string; items: NavItem[] }[] = [

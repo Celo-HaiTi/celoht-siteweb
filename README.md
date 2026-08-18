@@ -8,10 +8,13 @@ open-source initiative for financial inclusion, education, agent
 networks, and reforestation on the Celo ecosystem.
 
 [![CI](https://github.com/celo-ht/website/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
+[![Deploy to GitHub Pages](https://github.com/celo-ht/website/actions/workflows/deploy-pages.yml/badge.svg)](.github/workflows/deploy-pages.yml)
 [![CodeQL](https://github.com/celo-ht/website/actions/workflows/codeql.yml/badge.svg)](.github/workflows/codeql.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-0B1120.svg)](LICENSE)
 
-[Live site](https://celoht.com) · [Launch dApp](https://app.celoht.com) · [Flagship repository](https://github.com/celo-ht/celoht) · [dApp repository](https://github.com/celo-ht/dapp)
+[![Open in Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/celo-ht/website)
+
+[Live site](https://celoht.com) · [GitHub Pages](https://celo-haiti.github.io/celoht-siteweb/) · [Launch DApp](https://app.celoht.com) · [Flagship repository](https://github.com/celo-ht/celoht) · [DApp repository](https://github.com/celo-ht/dapp)
 
 </div>
 
@@ -19,11 +22,12 @@ networks, and reforestation on the Celo ecosystem.
 
 ## What this is
 
-The public information platform for CeloHT 33 pages covering our
+The public information platform for CeloHT, with all routes statically
+exported for local hosting, GitHub Pages, and Vercel. It covers our
 mission, three pillars (Education, Agent Network, Reforestation),
 governance, transparency, developer docs, a blog, and every standard
 legal/community page a mature open-source project needs, with a
-prominent **Launch dApp** entry point in the header, hero, and footer.
+prominent **Launch DApp** entry point in the header, hero, and footer.
 
 CeloHT is a community-driven, open-source initiative built on the Celo
 ecosystem. It is **not** a blockchain, a cryptocurrency, a token, an ICO,
@@ -54,6 +58,26 @@ Open [http://localhost:3000](http://localhost:3000).
 
 See [`docs/DEVELOPMENT.md`](docs/development.md) for the full local
 development guide.
+
+## Deployment
+
+### GitHub Pages
+
+Every push to `main` runs [Deploy to GitHub Pages](.github/workflows/deploy-pages.yml).
+The workflow builds the static `out/` directory with the repository base path and publishes it
+through GitHub Pages. Enable **Settings > Pages > GitHub Actions** in the repository settings.
+
+### Vercel
+
+Use the **Open in Vercel** button above, or import this repository in Vercel. The default build
+command is `npm run build`; no special environment variable is required. Set
+`NEXT_PUBLIC_DAPP_URL` only when the production DApp URL changes from `https://app.celoht.com`.
+
+### Static hosting
+
+Run `npm run build`, then serve the generated `out/` directory. The static export is also suitable
+for other hosts that support static files. Local development uses `npm run dev`; local production
+preview uses `npx serve out`.
 
 ## Available scripts
 
