@@ -100,15 +100,6 @@ export function Hero() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="absolute bottom-6 left-6 right-6 border-t border-parchment-100/15 pt-4 text-xs uppercase tracking-[0.18em] text-parchment-100/55">
-            <div className="flex items-center justify-between">
-              <span>CeloHT ecosystem</span>
-              <span>01 / 03</span>
-            </div>
-            <p className="mt-3 max-w-xs font-display text-2xl normal-case tracking-normal text-parchment-50">
-              Learn, participate, build.
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>
