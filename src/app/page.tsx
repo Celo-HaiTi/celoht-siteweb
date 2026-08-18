@@ -14,9 +14,9 @@ import {
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
+  title: "CeloHT | Open-source Haitian Web3 infrastructure",
   description:
-    "CeloHT is a community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation, built on the Celo ecosystem.",
+    "CeloHT is an open-source Haitian Web3 initiative building practical pathways through financial inclusion, education, digital payments, and community action on Celo.",
   alternates: { canonical: "/" },
 };
 
@@ -89,16 +89,16 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="A global open-source ecosystem" title="Built around people, tools, and shared impact">
+      <Section eyebrow="A global open-source ecosystem" title="Built in public, ready to be examined">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-3xl border border-navy-700/10 bg-parchment-50 p-8 shadow-sm dark:border-parchment-100/10 dark:bg-navy-900">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800 dark:text-gold-300">
-              Why CeloHT stands out
+              A clear point of view
             </p>
             <p className="mt-4 max-w-2xl text-lg text-ink-soft dark:text-parchment-100/75">
-              CeloHT combines practical financial literacy, community-first access infrastructure,
-              and environmental action in one open-source effort. The work is documented, the
-              governance is public, and the path to contribute is clear.
+              CeloHT connects education, community access, and digital tools around a simple
+              principle: useful infrastructure should be understandable, inspectable, and shaped
+              with the people who rely on it.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -120,13 +120,13 @@ export default function HomePage() {
 
           <div className="rounded-3xl border border-forest-500/20 bg-forest-500/10 p-8 dark:border-forest-400/25">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-600 dark:text-forest-300">
-              Open-source credibility
+              What is open today
             </p>
             <ul className="mt-4 space-y-3 text-sm text-ink-soft dark:text-parchment-100/80">
-              <li>• Public GitHub repositories and contributor paths</li>
-              <li>• Governance, roadmap, and transparency documentation</li>
-              <li>• Security reporting, code of conduct, and open contribution rules</li>
-              <li>• A public product story rooted in community and impact</li>
+              <li>• The flagship repository and product documentation</li>
+              <li>• A public dApp codebase and technical roadmap</li>
+              <li>• Governance, security, and contribution policies</li>
+              <li>• A live website with a direct path to the CeloHT DApp</li>
             </ul>
           </div>
         </div>
@@ -182,30 +182,58 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Not what you might assume" title="What CeloHT is  -  and isn’t">
-        <div className="grid gap-8 sm:grid-cols-2">
-          <div className="rounded-2xl border border-forest-500/30 p-6">
-            <h3 className="font-display text-2xl font-semibold text-forest-600 dark:text-forest-400">
-              CeloHT is
-            </h3>
-            <ul className="mt-4 space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              <li>A community-driven, open-source initiative</li>
-              <li>Built on the Celo ecosystem</li>
-              <li>A user of CELO for network transactions where appropriate</li>
-              <li>A promoter of USDm for accessible digital payments</li>
-              <li>A developer of tools compatible with the Valora wallet</li>
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-navy-700/20 p-6 dark:border-parchment-100/15">
-            <h3 className="font-display text-2xl font-semibold">CeloHT is not</h3>
-            <ul className="mt-4 space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              <li>A blockchain, Layer 1, or cryptocurrency</li>
-              <li>A token, an ICO, or an IDO</li>
-              <li>An NFT project or a staking platform</li>
-              <li>An investment or trading platform</li>
-              <li>The owner or operator of Valora</li>
-            </ul>
-          </div>
+      <Section eyebrow="For partners, builders, and institutions" title="Start with the evidence">
+        <div className="grid gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 dark:border-parchment-100/10 dark:bg-parchment-100/10 md:grid-cols-3">
+          {[
+            {
+              title: "Read the thesis",
+              copy: "Understand the mission, the community context, and the product direction before you engage.",
+              href: "/documentation",
+              label: "Open documentation",
+            },
+            {
+              title: "Inspect the build",
+              copy: "Review the repositories, architecture, roadmap, and contribution standards in the open.",
+              href: GITHUB_FLAGSHIP_URL,
+              label: "View GitHub",
+              external: true,
+            },
+            {
+              title: "Use the product",
+              copy: "Go directly to the CeloHT DApp and experience the product layer for yourself.",
+              href: DAPP_URL,
+              label: "Launch DApp",
+              external: true,
+            },
+          ].map((item) => (
+            item.external ? (
+              <a
+                key={item.title}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group bg-parchment-50 p-6 transition-colors hover:bg-gold-500/10 dark:bg-navy-900 dark:hover:bg-navy-800"
+              >
+                <h3 className="font-display text-2xl font-semibold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-ink-soft dark:text-parchment-100/65">{item.copy}</p>
+                <span className="mt-8 inline-flex text-sm font-semibold underline-offset-4 group-hover:underline dark:text-parchment-100">
+                  {item.label} <span aria-hidden="true" className="ml-2">↗</span>
+                </span>
+              </a>
+            ) : (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group bg-parchment-50 p-6 transition-colors hover:bg-gold-500/10 dark:bg-navy-900 dark:hover:bg-navy-800"
+              >
+                <h3 className="font-display text-2xl font-semibold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-ink-soft dark:text-parchment-100/65">{item.copy}</p>
+                <span className="mt-8 inline-flex text-sm font-semibold underline-offset-4 group-hover:underline dark:text-parchment-100">
+                  {item.label} <span aria-hidden="true" className="ml-2">→</span>
+                </span>
+              </Link>
+            )
+          ))}
         </div>
       </Section>
 

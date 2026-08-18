@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Github } from "lucide-react";
-import { GrowthRings } from "@/components/GrowthRings";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
 import { GITHUB_ORG_URL } from "@/lib/constants";
 
@@ -90,7 +90,16 @@ export function Hero() {
           className="relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[2rem] border border-navy-700/10 bg-navy-950 px-6 py-10 text-parchment-50 shadow-2xl shadow-navy-950/10 dark:border-parchment-100/10 lg:min-h-[30rem]"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(245,200,66,0.24),transparent_36%)]" />
-          <GrowthRings className="relative h-64 w-64 text-gold-500/80 sm:h-80 sm:w-80" />
+          <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-[2.5rem] bg-[#ffff58] shadow-[0_24px_80px_rgba(245,200,66,0.18)] sm:h-80 sm:w-80">
+            <Image
+              src="/celoht-logo.png"
+              alt="CeloHT logo"
+              width={420}
+              height={420}
+              priority
+              className="h-full w-full object-cover"
+            />
+          </div>
           <div className="absolute bottom-6 left-6 right-6 border-t border-parchment-100/15 pt-4 text-xs uppercase tracking-[0.18em] text-parchment-100/55">
             <div className="flex items-center justify-between">
               <span>CeloHT ecosystem</span>

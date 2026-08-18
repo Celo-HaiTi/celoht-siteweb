@@ -18,7 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-navy-700/10 bg-parchment/90 backdrop-blur dark:border-parchment-100/10 dark:bg-navy-950/90">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2 rounded-md">
-          <Image src="/celoht-logo.png" alt="CeloHT" width={32} height={32} priority />
+          <Image src="/celoht-logo.png" alt="CeloHT" width={38} height={38} priority className="rounded-lg" />
           <span className="font-display text-xl font-semibold tracking-tight">CeloHT</span>
         </Link>
 
