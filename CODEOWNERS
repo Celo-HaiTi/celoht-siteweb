@@ -1,0 +1,15 @@
+# CODEOWNERS for the CeloHT website
+*                           @celo-ht/maintainers
+
+/src/app/                   @celo-ht/frontend-maintainers
+/src/components/            @celo-ht/frontend-maintainers
+/src/app/blog/               @celo-ht/docs-team
+
+/SECURITY.md                @celo-ht/security
+/next.config.ts              @celo-ht/security
+/.github/workflows/           @celo-ht/security
+
+/GOVERNANCE.md               @celo-ht/founders
+/LICENSE                      @celo-ht/founders
+
+/docs/                        @celo-ht/docs-team
