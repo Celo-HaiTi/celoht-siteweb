@@ -62,11 +62,11 @@ export function Hero() {
           >
             <LaunchDappButton size="lg" />
             <Link
-              href="/open-source"
+              href="/about"
               className="group inline-flex items-center gap-2 rounded-full border border-navy-700/20 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-gold-500 hover:bg-gold-500/10 dark:border-parchment-100/20 dark:text-parchment-100"
             >
-              Explore Open Source
-              <Github size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+              Explore CeloHT
+              <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
           <motion.div

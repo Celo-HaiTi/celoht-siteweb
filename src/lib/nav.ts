@@ -13,16 +13,6 @@ export const primaryNav: NavItem[] = [
     description: "Financial and Web3 literacy in Haitian Creole",
   },
   { label: "Impact", href: "/impact", description: "Metrics across all three pillars" },
-  {
-    label: "Developers",
-    href: "/developers",
-    description: "Docs, architecture, and how to contribute",
-  },
-  {
-    label: "Open Source",
-    href: "/open-source",
-    description: "Repositories, documentation, and contribution paths",
-  },
   { label: "Community", href: "/community", description: "Ways to participate and stay connected" },
 ];
 
