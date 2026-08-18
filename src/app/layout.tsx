@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
-import { SITE_URL } from "@/lib/constants";
+import { assetPath, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "community governance",
   ],
   authors: [{ name: "CeloHT Contributors" }],
-  manifest: "/manifest.json",
+  manifest: assetPath("/manifest.json"),
   openGraph: {
     type: "website",
     url: SITE_URL,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
     description:
       "A community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation.",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "CeloHT" }],
+    images: [{ url: assetPath("/og-image.svg"), width: 1200, height: 630, alt: "CeloHT" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     title: "CeloHT  -  Financial Inclusion, Education, Agent Network, Reforestation",
     description:
       "A community-driven, open-source initiative expanding financial inclusion through education, a community agent network, and reforestation.",
-    images: ["/og-image.svg"],
+    images: [assetPath("/og-image.svg")],
   },
-  icons: { icon: "/favicon.svg", apple: "/celoht-logo.png" },
+  icons: { icon: assetPath("/favicon.svg"), apple: assetPath("/celoht-logo.png") },
   alternates: { canonical: SITE_URL },
 };
 

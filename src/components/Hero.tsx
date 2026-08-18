@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Github } from "lucide-react";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
-import { GITHUB_ORG_URL } from "@/lib/constants";
+import { assetPath, GITHUB_ORG_URL } from "@/lib/constants";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -92,7 +92,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(245,200,66,0.24),transparent_36%)]" />
           <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-[2.5rem] bg-[#ffff58] shadow-[0_24px_80px_rgba(245,200,66,0.18)] sm:h-80 sm:w-80">
             <Image
-              src="/celoht-logo.png"
+              src={assetPath("/celoht-logo.png")}
               alt="CeloHT logo"
               width={420}
               height={420}

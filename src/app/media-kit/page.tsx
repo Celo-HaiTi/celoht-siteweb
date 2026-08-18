@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { assetPath } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Media Kit",
@@ -23,7 +24,7 @@ export default function MediaKitPage() {
 
       <Section eyebrow="Logo" title="">
         <div className="flex items-center gap-6 rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
-          <Image src="/celoht-logo.png" alt="CeloHT logo" width={96} height={96} />
+          <Image src={assetPath("/celoht-logo.png")} alt="CeloHT logo" width={96} height={96} />
           <p className="max-w-md text-sm text-ink-soft dark:text-parchment-100/70">
             Use the logo unmodified, with adequate clear space. See our full logo usage policy in
             the flagship repository&rsquo;s documentation for what requires written permission.

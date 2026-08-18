@@ -8,6 +8,7 @@ import {
   GITHUB_FLAGSHIP_URL,
   GITHUB_ORG_URL,
   GITHUB_WEBSITE_URL,
+  assetPath,
 } from "@/lib/constants";
 
 const githubLinks = [
@@ -103,7 +104,7 @@ export function Footer() {
         <div className="mt-12 flex flex-col gap-6 border-t border-parchment-100/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start gap-4">
             <Image
-              src="/celoht-logo.png"
+              src={assetPath("/celoht-logo.png")}
               alt="CeloHT logo"
               width={56}
               height={56}
