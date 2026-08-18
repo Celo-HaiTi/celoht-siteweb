@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------
+   CeloHT design tokens — shared across the flagship repository, this
+   website, and the dApp, so all three feel like one product.
+   Palette: navy (authority/trust) + gold (growth, the logo's rising
+   arrow) + forest (Reforestation) on a cool parchment field.
+--------------------------------------------------------------------- */
+@theme {
+  --font-display:
+    Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --font-body:
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, ui-sans-serif, sans-serif;
+  --font-mono:
+    ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", monospace;
+
+  --color-navy-950: #0b1120;
+  --color-navy-900: #101a30;
+  --color-navy-800: #16213a;
+  --color-navy-700: #202f4d;
+  --color-navy-600: #2c3f63;
+
+  --color-gold-300: #f8dc8f;
+  --color-gold-500: #f5c842;
+  --color-gold-600: #d9ac26;
+  --color-gold-700: #ad8213;
+  --color-gold-800: #7a5a0d;
+
+  --color-forest-400: #4c9271;
+  --color-forest-500: #2f6b4f;
+  --color-forest-600: #21543d;
+
+  --color-parchment-50: #fbfcfd;
+  --color-parchment-100: #f2f4f7;
+  --color-parchment: #f7f8fa;
+
+  --color-ink: #101623;
+  --color-ink-soft: #3c465c;
+}
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--color-navy-700);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(circle at top left, rgba(245, 200, 66, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(247, 248, 250, 0.98) 0%, rgba(242, 244, 247, 1) 100%);
+}
+
+.dark body {
+  background-image: radial-gradient(circle at top left, rgba(245, 200, 66, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(11, 17, 32, 1) 0%, rgba(16, 26, 48, 1) 100%);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: var(--color-navy-950);
+}

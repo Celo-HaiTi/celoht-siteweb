@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0B1120"/>
+  <circle cx="620" cy="315" r="90" stroke="#F5C842" stroke-opacity="0.9" stroke-width="2" fill="none"/>
+  <circle cx="620" cy="315" r="150" stroke="#F5C842" stroke-opacity="0.6" stroke-width="2" fill="none"/>
+  <circle cx="620" cy="315" r="210" stroke="#F5C842" stroke-opacity="0.35" stroke-width="2" fill="none"/>
+  <path d="M620 105 A210 210 0 0 1 830 315" stroke="#F5C842" stroke-width="3" fill="none"/>
+  <path d="M830 315 L900 315 L930 240 L960 340 L1010 170" stroke="#F5C842" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="90" y="290" font-family="Georgia, serif" font-size="88" fill="#F7F8FA" font-weight="600">CeloHT</text>
+  <text x="90" y="345" font-family="Arial, sans-serif" font-size="28" fill="#F5C842" letter-spacing="2">EDUCATION · AGENT NETWORK · REFORESTATION</text>
+  <text x="90" y="400" font-family="Arial, sans-serif" font-size="22" fill="#C7CCD8" letter-spacing="1">A community-driven, open-source initiative on Celo</text>
+</svg>
