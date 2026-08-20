@@ -313,14 +313,14 @@ export function LiveInfoBar() {
   }, [state]);
 
   return (
-    <section aria-label="Live CeloHT market data" aria-live="polite" className="border-b border-slate-200 bg-[#f1f5fa]/95 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-950/80">
+    <section aria-label="Live CeloHT market data" aria-live="polite" className="border-b border-parchment-100 bg-parchment/95 backdrop-blur-sm">
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <div className="mb-3 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-            <Activity size={10} aria-hidden="true" className="text-emerald-600" />
+          <div className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-muted">
+            <Activity size={10} aria-hidden="true" className="text-gold-700" />
             Live market & network
           </div>
-          <p className="text-[0.62rem] text-slate-500 dark:text-slate-400">Market data provided by CoinGecko.</p>
+          <p className="text-[0.62rem] text-muted">Market data provided by CoinGecko.</p>
         </div>
 
         {state.loading && !state.celo && !state.usdm && !state.network ? (

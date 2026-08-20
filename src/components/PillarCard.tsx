@@ -20,17 +20,17 @@ export function PillarCard({ number, title, description, href, accent, icon }: P
   return (
     <Link
       href={href}
-      className={`group flex flex-col rounded-2xl border bg-parchment-50 p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:bg-navy-900 ${accentClasses[accent]}`}
+      className={`group flex flex-col rounded-lg border bg-white p-6 shadow-[0_12px_30px_rgba(8,18,37,0.06)] transition-all hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(8,18,37,0.12)] ${accentClasses[accent]}`}
     >
       <div className="flex items-center justify-between">
         <span aria-hidden="true" className="text-2xl">
           {icon}
         </span>
-        <span className="font-mono text-xs text-ink-soft dark:text-parchment-100/40">{number}</span>
+        <span className="font-mono text-xs text-muted">{number}</span>
       </div>
       <h3 className="mt-4 font-display text-2xl font-semibold">{title}</h3>
-      <p className="mt-2 flex-1 text-sm text-ink-soft dark:text-parchment-100/70">{description}</p>
-      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-ink group-hover:gap-2 dark:text-parchment-100">
+      <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">{description}</p>
+      <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-navy-900 group-hover:gap-2">
         Learn more
         <span aria-hidden="true">→</span>
       </span>

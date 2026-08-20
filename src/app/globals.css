@@ -1,40 +1,36 @@
 @import "tailwindcss";
 
-/* ---------------------------------------------------------------------
-   CeloHT design tokens  -  shared across the flagship repository, this
-   website, and the dApp, so all three feel like one product.
-   Palette: navy (authority/trust) + gold (growth, the logo's rising
-   arrow) + forest (Reforestation) on a cool parchment field.
---------------------------------------------------------------------- */
+/* CeloHT permanent visual system: navy infrastructure, yellow signal, and
+   light-gray reading surfaces. */
 @theme {
-  --font-display: "Iowan Old Style", "Baskerville", Georgia, serif;
-  --font-body:
-    "Avenir Next", Avenir, "Trebuchet MS", ui-sans-serif, sans-serif;
+  --font-display: "IBM Plex Sans", "Inter", "Avenir Next", ui-sans-serif, sans-serif;
+  --font-body: "Inter", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
   --font-mono:
     ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", monospace;
 
-  --color-navy-950: #0f172a;
-  --color-navy-900: #13233d;
-  --color-navy-800: #1b2d4d;
-  --color-navy-700: #253d63;
-  --color-navy-600: #30507d;
+  --color-navy-950: #081225;
+  --color-navy-900: #0b1730;
+  --color-navy-800: #142443;
+  --color-navy-700: #24385b;
+  --color-navy-600: #52627a;
 
-  --color-gold-300: #f8df8a;
-  --color-gold-500: #f5c842;
-  --color-gold-600: #dcae23;
-  --color-gold-700: #a97d18;
-  --color-gold-800: #7a5b12;
+  --color-gold-300: #f9df7a;
+  --color-gold-500: #f7d046;
+  --color-gold-600: #d6aa22;
+  --color-gold-700: #9b7614;
+  --color-gold-800: #72560f;
 
   --color-forest-400: #4f9274;
   --color-forest-500: #36725a;
   --color-forest-600: #264e3d;
 
-  --color-parchment-50: #eaf1f8;
-  --color-parchment-100: #e1ebf5;
-  --color-parchment: #edf3fa;
+  --color-parchment-50: #ffffff;
+  --color-parchment-100: #e8edf3;
+  --color-parchment: #f4f6f8;
 
-  --color-ink: #10213d;
-  --color-ink-soft: #42506a;
+  --color-ink: #0b1730;
+  --color-ink-soft: #52627a;
+  --color-muted: #718096;
 }
 
 :root {
@@ -71,6 +67,12 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 :focus-visible {

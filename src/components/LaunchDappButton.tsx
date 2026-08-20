@@ -21,7 +21,7 @@ export function LaunchDappButton({ size = "md", className }: Props) {
       rel="noreferrer"
       aria-label="Launch CeloHT dApp (Launch dApp)"
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full bg-gold-500 font-semibold text-navy-950 transition-colors hover:bg-gold-600",
+        "inline-flex min-h-11 items-center gap-1.5 rounded-md bg-gold-500 font-bold text-navy-950 transition-colors hover:bg-gold-300",
         sizeClasses[size],
         className,
       )}

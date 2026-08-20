@@ -77,11 +77,11 @@ export default function RoadmapPage() {
           {phases.map((phase) => (
             <div
               key={phase.name}
-              className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10 sm:p-8"
+              className="border border-parchment-100 bg-white p-6 shadow-[0_12px_30px_rgba(8,18,37,0.06)] sm:p-8"
             >
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <h2 className="font-display text-2xl font-semibold sm:text-3xl">{phase.name}</h2>
-                <span className="rounded-full bg-gold-500/15 px-3 py-1 font-mono text-xs uppercase tracking-wide text-gold-800 dark:text-gold-300">
+                <span className="rounded-md bg-gold-500/20 px-3 py-2 font-mono text-xs font-semibold uppercase tracking-wide text-gold-800">
                   {phase.window} · {phase.status}
                 </span>
               </div>
@@ -96,7 +96,7 @@ export default function RoadmapPage() {
                       className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold ${
                         milestone.done
                           ? "bg-forest-500 text-white"
-                          : "border border-navy-700/30 text-transparent dark:border-parchment-100/30"
+                          : "border border-navy-700/30 text-transparent"
                       }`}
                     >
                       {milestone.done ? "✓" : "·"}

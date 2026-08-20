@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { PillarCard } from "@/components/PillarCard";
 import { CTASection } from "@/components/CTASection";
+import { BookOpen, Handshake, Leaf } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Mission",
@@ -52,7 +53,7 @@ export default function MissionPage() {
             description="Creole-language curriculum on financial literacy, blockchain and Web3 fundamentals, and hands-on Valora/USDm use."
             href="/education"
             accent="gold"
-            icon="📘"
+            icon={<BookOpen size={22} aria-hidden="true" className="text-gold-700" />}
           />
           <PillarCard
             number="02"
@@ -60,7 +61,7 @@ export default function MissionPage() {
             description="Trained community members who handle cash-in/cash-out, transfers, and local support."
             href="/agent-network"
             accent="navy"
-            icon="🤝"
+            icon={<Handshake size={22} aria-hidden="true" className="text-navy-700" />}
           />
           <PillarCard
             number="03"
@@ -68,7 +69,7 @@ export default function MissionPage() {
             description="Coordinated tree-planting tied to verified activity and rewarded through USDm."
             href="/reforestation"
             accent="forest"
-            icon="🌱"
+            icon={<Leaf size={22} aria-hidden="true" className="text-forest-600" />}
           />
         </div>
       </Section>

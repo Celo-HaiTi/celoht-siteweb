@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F1F5FA",
+  themeColor: "#F4F6F8",
   width: "device-width",
   initialScale: 1,
 };
@@ -57,7 +57,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="bg-parchment font-body text-ink antialiased dark:bg-navy-950 dark:text-parchment-50">
+      <body className="bg-parchment font-body text-ink antialiased">
         <SkipLink />
         <Header />
         <main id="main-content">{children}</main>

@@ -19,16 +19,16 @@ export function Hero() {
   return (
     <>
       <LiveInfoBar />
-      <section aria-labelledby="hero-title" className="relative overflow-hidden border-b border-navy-700/10 dark:border-parchment-100/10">
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(110deg,transparent_0%,rgba(245,200,66,0.08)_48%,transparent_76%)] dark:bg-[linear-gradient(110deg,transparent_0%,rgba(245,200,66,0.06)_48%,transparent_76%)]" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16 lg:py-28">
+      <section aria-labelledby="hero-title" className="relative overflow-hidden border-b border-navy-800 bg-navy-950 text-parchment-50">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_25%,rgba(247,208,70,0.13),transparent_30%)]" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16 lg:py-24">
         <div>
           <motion.p
             initial="hidden"
             animate="show"
             variants={fadeUp}
             transition={{ duration: 0.5 }}
-            className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800 dark:text-gold-300"
+            className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300"
           >
             CeloHT
           </motion.p>
@@ -39,7 +39,7 @@ export function Hero() {
             animate="show"
             variants={fadeUp}
             transition={{ duration: 0.5, delay: 0.08 }}
-            className="mt-4 max-w-3xl font-display text-5xl font-semibold leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl"
+            className="mt-4 max-w-3xl font-display text-5xl font-bold leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl"
           >
             Building a More Inclusive Digital Economy for Haiti
           </motion.h1>
@@ -49,7 +49,7 @@ export function Hero() {
             animate="show"
             variants={fadeUp}
             transition={{ duration: 0.5, delay: 0.16 }}
-            className="mt-6 max-w-2xl text-lg text-ink-soft dark:text-parchment-100/75"
+            className="mt-6 max-w-2xl text-lg leading-8 text-parchment-100/75"
           >
             An open-source Haitian Web3 initiative building practical pathways through financial
             inclusion, education, digital payments, entrepreneurship, and community development on Celo.
@@ -65,7 +65,7 @@ export function Hero() {
             <LaunchDappButton size="lg" />
             <Link
               href="/about"
-              className="group inline-flex items-center gap-2 rounded-full border border-navy-700/20 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-gold-500 hover:bg-gold-500/10"
+              className="group inline-flex min-h-12 items-center gap-2 rounded-md border border-parchment-100/30 px-6 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300"
             >
               Explore CeloHT
               <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
@@ -76,7 +76,7 @@ export function Hero() {
             animate="show"
             variants={fadeUp}
             transition={{ duration: 0.5, delay: 0.32 }}
-            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-ink-soft"
+            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-parchment-100/65"
           >
             <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-forest-500" /> Haitian-led</span>
             <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-gold-500" /> Built in public</span>
@@ -93,10 +93,10 @@ export function Hero() {
           initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[2rem] border border-navy-700/10 bg-navy-950 px-6 py-10 text-parchment-50 shadow-2xl shadow-navy-950/10 dark:border-parchment-100/10 lg:min-h-[30rem]"
+          className="relative flex min-h-[22rem] items-center justify-center overflow-hidden border border-parchment-100/15 bg-navy-900 px-6 py-10 text-parchment-50 shadow-2xl shadow-black/20 lg:min-h-[30rem]"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(245,200,66,0.24),transparent_36%)]" />
-          <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-[2.5rem] bg-[#ffff58] shadow-[0_24px_80px_rgba(245,200,66,0.18)] sm:h-80 sm:w-80">
+          <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-2xl bg-[#ffff58] shadow-[0_24px_80px_rgba(247,208,70,0.2)] sm:h-80 sm:w-80">
             <Image
               src={assetPath("/celoht-logo.png")}
               alt="CeloHT logo"

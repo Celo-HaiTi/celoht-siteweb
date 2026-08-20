@@ -103,6 +103,7 @@ export default function HomePage() {
 
       <Hero />
 
+      <section className="bg-white">
       <Section eyebrow="The CeloHT proposition" title="Technology is only useful when people can enter it">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <p className="font-display text-3xl leading-tight text-ink dark:text-parchment-50 sm:text-4xl">
@@ -128,6 +129,7 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
+      </section>
 
       <section className="border-y border-navy-700/10 bg-navy-950 text-parchment-50 dark:border-parchment-100/10">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
@@ -162,6 +164,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-white">
       <Section eyebrow="The ecosystem" title="A product story with more than one entry point">
         <div className="grid gap-12 lg:grid-cols-[1fr_0.7fr] lg:gap-20">
           <div>
@@ -206,8 +209,9 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
+      </section>
 
-      <section className="border-y border-navy-700/10 bg-gold-500/[0.08] dark:border-parchment-100/10 dark:bg-gold-500/[0.06]">
+      <section className="border-y border-parchment-100 bg-parchment">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:py-20">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800 dark:text-gold-300">Digital payments</p>
@@ -220,7 +224,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 sm:grid-cols-5 dark:border-parchment-100/15 dark:bg-parchment-100/15">
               {["User", "CeloHT DApp", "Wallet", "USDm", "Payment"].map((step, index) => (
-                <div key={step} className="bg-parchment-50 px-3 py-4 text-center dark:bg-navy-900 sm:px-2">
+                <div key={step} className="bg-white px-3 py-4 text-center sm:px-2">
                   <span className="font-mono text-[0.62rem] text-gold-800 dark:text-gold-300">0{index + 1}</span>
                   <strong className="mt-2 block text-xs font-semibold text-ink dark:text-parchment-50">{step}</strong>
                 </div>
@@ -233,6 +237,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="border-y border-parchment-100 bg-white">
       <Section eyebrow="Impact, honestly reported" title="Progress you can inspect">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <p className="max-w-md text-base leading-7 text-ink-soft dark:text-parchment-100/70">
@@ -255,6 +260,7 @@ export default function HomePage() {
           <Link href="/impact" className="font-semibold underline-offset-4 hover:underline">See the impact framework →</Link>
         </div>
       </Section>
+      </section>
 
       <section className="border-y border-navy-700/10 bg-navy-950 text-parchment-50 dark:border-parchment-100/10">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
@@ -305,7 +311,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-navy-700/10 bg-parchment-100/65">
+      <section className="border-y border-parchment-100 bg-parchment-100/70">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:py-16">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Reboisement et impact</p>
