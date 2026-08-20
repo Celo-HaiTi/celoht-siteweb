@@ -26,9 +26,8 @@ export default function PrivacyPage() {
             <Link href="/cookies" className="underline underline-offset-2">
             Cookie Policy
             </Link>{" "}
-          for the one exception (a local theme preference). Any information you share in our GitHub
-          repositories&rsquo; Issues, Pull Requests, or Discussions is publicly visible and governed
-          by GitHub&rsquo;s own privacy policy.
+          pour la seule exception d&apos;une préférence de thème locale. Les informations partagées sur
+          les services externes sont soumises à leurs propres politiques de confidentialité.
         </p>
       </Section>
 

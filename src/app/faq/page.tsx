@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "How do I report a security issue?",
-    a: "Email security@celoht.com or use GitHub Security Advisories  -  never a public GitHub Issue.",
+    a: "Écrivez à security@celoht.com et ne partagez jamais de détails sensibles dans un canal public.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function FAQPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions we hear often"
-        lead="Didn't find your answer? Ask in GitHub Discussions or reach out through our Support page."
+        lead="Vous n'avez pas trouvé votre réponse ? Consultez la page Support ou contactez directement l'équipe CeloHT."
       />
 
       <Section>

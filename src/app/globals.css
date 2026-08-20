@@ -13,28 +13,28 @@
   --font-mono:
     ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", monospace;
 
-  --color-navy-950: #0b1120;
-  --color-navy-900: #101a30;
-  --color-navy-800: #16213a;
-  --color-navy-700: #202f4d;
-  --color-navy-600: #2c3f63;
+  --color-navy-950: #0f172a;
+  --color-navy-900: #13233d;
+  --color-navy-800: #1b2d4d;
+  --color-navy-700: #253d63;
+  --color-navy-600: #30507d;
 
-  --color-gold-300: #f8dc8f;
+  --color-gold-300: #f8df8a;
   --color-gold-500: #f5c842;
-  --color-gold-600: #d9ac26;
-  --color-gold-700: #ad8213;
-  --color-gold-800: #7a5a0d;
+  --color-gold-600: #dcae23;
+  --color-gold-700: #a97d18;
+  --color-gold-800: #7a5b12;
 
-  --color-forest-400: #4c9271;
-  --color-forest-500: #2f6b4f;
-  --color-forest-600: #21543d;
+  --color-forest-400: #4f9274;
+  --color-forest-500: #36725a;
+  --color-forest-600: #264e3d;
 
-  --color-parchment-50: #fbfcfd;
-  --color-parchment-100: #f2f4f7;
-  --color-parchment: #f7f8fa;
+  --color-parchment-50: #f5f8fd;
+  --color-parchment-100: #edf3fb;
+  --color-parchment: #f1f5fa;
 
-  --color-ink: #101623;
-  --color-ink-soft: #3c465c;
+  --color-ink: #10213d;
+  --color-ink-soft: #42506a;
 }
 
 :root {

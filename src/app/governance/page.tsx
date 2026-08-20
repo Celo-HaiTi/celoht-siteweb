@@ -4,7 +4,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
-import { GITHUB_FLAGSHIP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Governance",
@@ -84,13 +83,9 @@ export default function GovernancePage() {
 
       <CTASection
         title="Read the full policy"
-        description="The complete, binding governance document lives in our GitHub repository."
-        primary={{
-          label: "Read GOVERNANCE.md",
-          href: `${GITHUB_FLAGSHIP_URL}/blob/main/GOVERNANCE.md`,
-        }}
+        description="La page Gouvernance présente le cadre public actuel, ses responsabilités et la manière dont il peut évoluer."
+        primary={{ label: "Voir la transparence", href: "/transparency" }}
         secondary={{ label: "See the roadmap", href: "/roadmap" }}
-        external
       />
     </>
   );

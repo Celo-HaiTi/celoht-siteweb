@@ -4,7 +4,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
-import { GITHUB_FLAGSHIP_URL, GITHUB_ORG_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
@@ -28,12 +27,8 @@ export default function AboutPage() {
           <p>
             CeloHT is a community-driven, open-source initiative built on top of the Celo ecosystem.
             It exists to expand financial inclusion through three permanent pillars: education, a
-            decentralized network of community agents, and reforestation. This website, along with
-            our{" "}
-            <a href={GITHUB_ORG_URL} className="underline underline-offset-2">
-              GitHub repositories
-            </a>
-            , is the public record of how we do that.
+            decentralized network of community agents, and reforestation. This website is the
+            public place to understand the mission, programs, safeguards, and progress.
           </p>
           <p>
             We&rsquo;re explicit about what CeloHT is not, because the distinction matters  -  both
@@ -96,15 +91,7 @@ export default function AboutPage() {
           For the legal detail behind these claims, see{" "}
           <Link href="/governance" className="underline underline-offset-2">
             Governance
-          </Link>{" "}
-          and our{" "}
-          <a
-            href={`${GITHUB_FLAGSHIP_URL}/blob/main/docs/legal-status.md`}
-            className="underline underline-offset-2"
-          >
-            legal status documentation
-          </a>
-          .
+          </Link>{" "}and our <Link href="/transparency" className="underline underline-offset-2">transparency pages</Link>.
         </p>
       </Section>
     </>

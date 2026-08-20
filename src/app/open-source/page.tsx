@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, BookOpen, Code2, GitBranch, Search } from "lucide-react";
+import { BookOpen, Code2, GitBranch, Search } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import {
-  GITHUB_BRAND_URL,
-  GITHUB_CONTRACTS_URL,
-  GITHUB_DAPP_URL,
-  GITHUB_DEMO_URL,
-  GITHUB_DOCS_URL,
-  GITHUB_FLAGSHIP_URL,
-  GITHUB_RESEARCH_URL,
-  GITHUB_WEBSITE_URL,
-} from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Open Source",
@@ -23,14 +13,14 @@ export const metadata: Metadata = {
 };
 
 const repositories = [
-  { name: "CeloHT", detail: "Core mission, governance, and public project record.", category: "Foundation", href: GITHUB_FLAGSHIP_URL },
-  { name: "CeloHT Docs", detail: "Architecture, APIs, roadmap, standards, and contributor guidance.", category: "Documentation", href: GITHUB_DOCS_URL },
-  { name: "CeloHT DApp", detail: "Smart contracts powering education, agents, and impact tracking.", category: "Product", href: GITHUB_DAPP_URL },
-  { name: "Smart Contracts", detail: "Solidity infrastructure for the CeloHT ecosystem.", category: "Infrastructure", href: GITHUB_CONTRACTS_URL },
-  { name: "Research", detail: "Research papers, RFCs, specifications, and security studies.", category: "Research", href: GITHUB_RESEARCH_URL },
-  { name: "Brand", detail: "Official identity, visual assets, messaging, and usage standards.", category: "Brand", href: GITHUB_BRAND_URL },
-  { name: "Demo", detail: "Interactive investor and grant-reviewer product demonstration.", category: "Experience", href: GITHUB_DEMO_URL },
-  { name: "Website", detail: "The public interface and content system you are reading now.", category: "Interface", href: GITHUB_WEBSITE_URL },
+  { name: "Mission et vision", detail: "Comprendre pourquoi CeloHT existe et où il veut aller.", category: "Fondation", href: "/mission" },
+  { name: "Documentation publique", detail: "Lire les explications destinées aux utilisateurs et à la communauté.", category: "Documentation", href: "/documentation" },
+  { name: "CeloHT DApp", detail: "Comprendre les services Web3 et les parcours proposés aux utilisateurs.", category: "Produit", href: "/dapp" },
+  { name: "Architecture", detail: "Voir comment les différentes briques techniques s'articulent.", category: "Infrastructure", href: "/technology/architecture" },
+  { name: "Recherche et impact", detail: "Explorer les principes de mesure, de transparence et d'apprentissage.", category: "Recherche", href: "/research" },
+  { name: "Identité CeloHT", detail: "Consulter les ressources de marque et les informations média.", category: "Identité", href: "/media-kit" },
+  { name: "Feuille de route", detail: "Suivre les priorités publiques et les étapes annoncées.", category: "Direction", href: "/roadmap" },
+  { name: "Transparence", detail: "Lire les pages qui expliquent les décisions et les limites du projet.", category: "Confiance", href: "/transparency" },
 ];
 
 const actions = [
@@ -65,28 +55,27 @@ export default function OpenSourcePage() {
         </div>
       </Section>
 
-      <Section eyebrow="CeloHT Open Source Universe" title="The repositories behind the work">
+      <Section eyebrow="CeloHT en pratique" title="Les ressources publiques pour comprendre le travail">
         <div className="grid gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 dark:border-parchment-100/10 dark:bg-parchment-100/10 sm:grid-cols-2 lg:grid-cols-4">
           {repositories.map((repo) => (
-            <a key={repo.href} href={repo.href} target="_blank" rel="noreferrer" className="group flex min-h-56 flex-col bg-parchment-50 p-6 transition-colors hover:bg-gold-500/10 dark:bg-navy-900 dark:hover:bg-navy-800">
+            <a key={repo.href} href={repo.href} className="group flex min-h-56 flex-col bg-parchment-50 p-6 transition-colors hover:bg-gold-500/10 dark:bg-navy-900 dark:hover:bg-navy-800">
               <span className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-gold-800 dark:text-gold-300">{repo.category}</span>
               <h2 className="mt-8 flex items-center justify-between font-display text-xl font-semibold">
                 {repo.name}
-                <ArrowUpRight size={16} aria-hidden="true" className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                <span aria-hidden="true">→</span>
               </h2>
               <p className="mt-3 flex-1 text-sm leading-6 text-ink-soft dark:text-parchment-100/65">{repo.detail}</p>
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink dark:text-parchment-50">View source <ArrowUpRight size={14} aria-hidden="true" /></span>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink dark:text-parchment-50">Lire la page <span aria-hidden="true">→</span></span>
             </a>
           ))}
         </div>
       </Section>
 
       <CTASection
-        title="Make the next contribution count."
-        description="Read the context, run the code, and help CeloHT keep building a clearer path into the Celo ecosystem."
-        primary={{ label: "Read the documentation", href: GITHUB_DOCS_URL }}
-        secondary={{ label: "Contributing guide", href: "/contributing" }}
-        external
+        title="Comprendre avant de contribuer"
+        description="Lisez le contexte public, explorez les programmes et choisissez une manière utile de participer à CeloHT."
+        primary={{ label: "Lire la documentation", href: "/documentation" }}
+        secondary={{ label: "Rejoindre CeloHT", href: "/community" }}
       />
     </>
   );

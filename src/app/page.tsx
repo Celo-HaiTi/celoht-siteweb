@@ -14,7 +14,7 @@ import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { StatGrid } from "@/components/StatGrid";
-import { GITHUB_DAPP_URL, GITHUB_FLAGSHIP_URL, GITHUB_ORG_URL, SITE_URL, DAPP_URL } from "@/lib/constants";
+import { SITE_URL, DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "CeloHT | Open-source Haitian Web3 infrastructure",
@@ -31,7 +31,7 @@ const jsonLd = {
   logo: `${SITE_URL}/celoht-logo.png`,
   description:
     "An open-source Haitian Web3 initiative building practical pathways through financial inclusion, education, digital payments, and community action on Celo.",
-  sameAs: ["https://twitter.com/CeloHtOfficial", GITHUB_ORG_URL, "https://medium.com/@celoht3"],
+  sameAs: ["https://twitter.com/CeloHtOfficial", "https://medium.com/@celoht3"],
 };
 
 const ecosystemPaths = [
@@ -257,27 +257,43 @@ export default function HomePage() {
       </Section>
 
       <section className="border-y border-navy-700/10 bg-navy-950 text-parchment-50 dark:border-parchment-100/10">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:py-20">
-          <div>
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+          <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
-              <Code2 size={15} aria-hidden="true" /> Built in public
+              <Globe2 size={15} aria-hidden="true" /> L&apos;écosystème CeloHT
             </p>
-            <h2 className="mt-4 max-w-xl font-display text-3xl font-semibold sm:text-5xl">The work is the proof.</h2>
+            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-5xl">Explorez l&apos;écosystème CeloHT</h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-parchment-100/70">
+              CeloHT est une initiative haïtienne Web3 open source qui relie outils numériques,
+              apprentissage, participation communautaire et impact local.
+            </p>
           </div>
-          <div>
-            <p className="max-w-xl text-base leading-7 text-parchment-100/70">
-              Read the canonical documentation, inspect the flagship repository, or open the DApp
-              code. CeloHT is designed to be evaluated by the people who use it and the people who
-              want to build alongside it.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={GITHUB_FLAGSHIP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
-                View the flagship repository <ArrowUpRight size={16} aria-hidden="true" />
-              </a>
-              <a href={GITHUB_DAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-parchment-100/25 px-5 py-3 text-sm font-semibold transition-colors hover:bg-parchment-100/10">
-                Inspect the DApp code <ArrowUpRight size={16} aria-hidden="true" />
-              </a>
-            </div>
+          <div className="mt-10 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              { icon: WalletCards, title: "CeloHT DApp", copy: "Paiements, connexions aux wallets et services Web3.", href: "/dapp" },
+              { icon: BookOpen, title: "Éducation Web3", copy: "Ressources pour apprendre la blockchain, les actifs numériques, les paiements numériques et l'écosystème Celo.", href: "/education" },
+              { icon: UsersRound, title: "Réseau d'agents", copy: "Une infrastructure communautaire pour rapprocher les services numériques et financiers des utilisateurs.", href: "/agent-network" },
+              { icon: Leaf, title: "Reboisement et impact", copy: "Des initiatives communautaires liées à la plantation d'arbres, à leur suivi et à l'impact environnemental.", href: "/reforestation" },
+              { icon: Code2, title: "Transparence et impact", copy: "Les décisions, les priorités et les progrès de CeloHT sont expliqués sur le site.", href: "/transparency" },
+            ].map((item) => {
+              const Icon = item.icon;
+              const content = (
+                <>
+                  <Icon size={24} strokeWidth={1.5} className="text-gold-300" aria-hidden="true" />
+                  <h3 className="mt-8 font-display text-xl font-semibold">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-parchment-100/65">{item.copy}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-300">
+                    Explorer <ArrowRight size={15} aria-hidden="true" />
+                  </span>
+                </>
+              );
+              return <Link key={item.title} href={item.href} className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800">{content}</Link>;
+            })}
+          </div>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link href="/about" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
+              Explorer CeloHT <ArrowRight size={16} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

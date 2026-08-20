@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { GITHUB_FLAGSHIP_URL, GITHUB_WEBSITE_URL, GITHUB_DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Security",
@@ -18,7 +17,7 @@ export default function SecurityPage() {
       <PageHero
         eyebrow="Security"
         title="Report privately, never in a public issue"
-        lead="Each CeloHT repository has its own SECURITY.md  -  here's the summary and where to send a report."
+        lead="Voici les protections principales du site et la manière confidentielle de signaler un problème."
       />
 
       <Section eyebrow="Reporting" title="Where to send a vulnerability report">
@@ -30,8 +29,8 @@ export default function SecurityPage() {
             </a>
           </li>
           <li>
-            Or use GitHub Security Advisories on the relevant repository&rsquo;s &ldquo;Report a
-            vulnerability&rdquo; page
+            Pour un problème sensible, utilisez l&apos;adresse privée ci-dessus et ne partagez jamais
+            de données personnelles, de clé privée ou de phrase de récupération.
           </li>
         </ul>
       </Section>
@@ -57,33 +56,13 @@ export default function SecurityPage() {
         </ul>
       </Section>
 
-      <Section eyebrow="Full policies" title="Per repository">
-        <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-          <li>
-            <a
-              href={`${GITHUB_FLAGSHIP_URL}/blob/main/SECURITY.md`}
-              className="underline underline-offset-2"
-            >
-              Flagship repository SECURITY.md
-            </a>
-          </li>
-          <li>
-            <a
-              href={`${GITHUB_WEBSITE_URL}/blob/main/SECURITY.md`}
-              className="underline underline-offset-2"
-            >
-              Website repository SECURITY.md
-            </a>
-          </li>
-          <li>
-            <a
-              href={`${GITHUB_DAPP_URL}/blob/main/SECURITY.md`}
-              className="underline underline-offset-2"
-            >
-              dApp repository SECURITY.md
-            </a>
-          </li>
-        </ul>
+      <Section eyebrow="Protection des utilisateurs" title="Des règles simples et vérifiables">
+        <p className="max-w-2xl text-sm leading-6 text-ink-soft dark:text-parchment-100/70">
+          CeloHT ne demande jamais une phrase de récupération, une clé privée ou un mot de passe.
+          Les pages <a href="/support" className="underline underline-offset-2">Support</a> et
+          <a href="/contact" className="underline underline-offset-2"> Contact</a> indiquent les
+          bons canaux pour chaque demande.
+        </p>
       </Section>
     </>
   );

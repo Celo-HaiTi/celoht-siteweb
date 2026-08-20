@@ -91,6 +91,11 @@ export const searchIndex: NavItem[] = [
   },
   { label: "Reforestation", href: "/reforestation", description: "Tree planting rewarded in USDm" },
   {
+    label: "Planter un arbre",
+    href: "/reforestation/planter-un-arbre",
+    description: "Guide pratique pour planter, protéger et suivre un jeune arbre",
+  },
+  {
     label: "Technology",
     href: "/technology",
     description: "Celo, CELO, USDm, and Valora compatibility",

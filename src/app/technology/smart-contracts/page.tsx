@@ -3,7 +3,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { GITHUB_DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Smart Contracts",
@@ -102,18 +101,15 @@ export default function SmartContractsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Source access" title="Developers can inspect the source directly">
+      <Section eyebrow="Comprendre le produit" title="Les contrats dans le parcours utilisateur">
         <div className="rounded-2xl border border-navy-700/15 p-6">
           <p className="text-sm text-ink-soft">
-            The CeloHT dApp and its source repositories are the authoritative technical references for contract implementation, verification, and deployment status.
+            Cette page décrit les fonctions prévues et distingue clairement les éléments en
+            développement des éléments confirmés. La page DApp présente le parcours utilisateur,
+            tandis que la page Technologie explique l&apos;architecture générale.
           </p>
-          <a
-            href={GITHUB_DAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex items-center text-sm font-semibold underline-offset-4 hover:underline"
-          >
-            View source on GitHub
+          <a href="/dapp" className="mt-4 inline-flex items-center text-sm font-semibold underline-offset-4 hover:underline">
+            Voir la DApp <span aria-hidden="true">→</span>
           </a>
         </div>
       </Section>

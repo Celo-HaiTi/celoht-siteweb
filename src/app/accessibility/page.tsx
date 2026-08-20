@@ -42,15 +42,14 @@ export default function AccessibilityPage() {
 
       <Section title="Known gaps">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          Automated accessibility auditing (e.g. axe-core in CI) is not yet wired into our pipeline
-           -  see our developer documentation for the current roadmap item.
+          Automated accessibility auditing (e.g. axe-core in CI) is not yet wired into our pipeline.
+          Nous suivons ce point dans la feuille de route technique du site.
         </p>
       </Section>
 
       <Section title="Reporting an issue">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          Found an accessibility barrier? Open a GitHub issue with the <code>accessibility</code>{" "}
-          label, or reach out through our{" "}
+          Vous avez rencontré une barrière d&apos;accessibilité ? Écrivez-nous via la page{" "}
           <Link href="/support" className="underline underline-offset-2">
             Support
           </Link>{" "}

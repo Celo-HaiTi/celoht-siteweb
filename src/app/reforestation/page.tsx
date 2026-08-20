@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -82,6 +83,21 @@ export default function ReforestationPage() {
           As of this writing, the reforestation program is in its design and pilot phase, with a
           full pilot targeted for Phase 2 of our roadmap.
         </p>
+      </Section>
+
+      <Section eyebrow="Passer à l&apos;action" title="Plantez un arbre">
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+          <p className="max-w-2xl text-lg leading-8 text-ink-soft dark:text-parchment-100/75">
+            Apprenez comment choisir un jeune arbre, préparer le terrain, le planter correctement,
+            l&apos;arroser, le protéger et assurer son suivi jusqu&apos;à sa croissance.
+          </p>
+          <Link
+            href="/reforestation/planter-un-arbre"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-600"
+          >
+            Apprendre à planter un arbre <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </Section>
 
       <CTASection

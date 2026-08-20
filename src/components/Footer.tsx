@@ -1,33 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { footerNav } from "@/lib/nav";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
 import {
-  GITHUB_DAPP_URL,
-  GITHUB_FLAGSHIP_URL,
   GITHUB_ORG_URL,
-  GITHUB_WEBSITE_URL,
   assetPath,
 } from "@/lib/constants";
-
-const githubLinks = [
-  {
-    label: "CeloHT core",
-    detail: "Mission, governance, roadmap",
-    href: GITHUB_FLAGSHIP_URL,
-  },
-  {
-    label: "CeloHT DApp",
-    detail: "Product code and contracts",
-    href: GITHUB_DAPP_URL,
-  },
-  {
-    label: "This website",
-    detail: "Public interface and content",
-    href: GITHUB_WEBSITE_URL,
-  },
-];
 
 export function Footer() {
   return (
@@ -46,11 +25,9 @@ export function Footer() {
         <section aria-labelledby="footer-github-title" className="mt-12 border-y border-parchment-100/10 py-10">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
-                <Github size={14} aria-hidden="true" /> Open source
-              </p>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Source technique</p>
               <h2 id="footer-github-title" className="mt-2 font-display text-3xl font-semibold">
-                See how CeloHT is built.
+                Le code reste ouvert aux personnes qui souhaitent l&apos;étudier.
               </h2>
             </div>
             <a
@@ -59,25 +36,8 @@ export function Footer() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold text-parchment-100/75 underline-offset-4 transition-colors hover:text-gold-300 hover:underline"
             >
-              Visit the GitHub organization <ArrowUpRight size={16} aria-hidden="true" />
+              Voir sur GitHub <ArrowUpRight size={16} aria-hidden="true" />
             </a>
-          </div>
-          <div className="mt-7 grid gap-px overflow-hidden border border-parchment-100/10 bg-parchment-100/10 sm:grid-cols-3">
-            {githubLinks.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800"
-              >
-                <span className="flex items-center justify-between font-display text-lg font-semibold text-parchment-50">
-                  {item.label}
-                  <ArrowUpRight size={16} aria-hidden="true" className="text-gold-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </span>
-                <span className="mt-2 block text-sm text-parchment-100/55">{item.detail}</span>
-              </a>
-            ))}
           </div>
         </section>
 
@@ -119,14 +79,6 @@ export function Footer() {
             </div>
           </div>
           <div className="flex gap-4 text-sm">
-            <a
-              href={GITHUB_ORG_URL}
-              target="_blank"
-              className="text-parchment-100/70 hover:text-parchment-100"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
             <a
               href="https://twitter.com/CeloHtOfficial"
               className="text-parchment-100/70 hover:text-parchment-100"

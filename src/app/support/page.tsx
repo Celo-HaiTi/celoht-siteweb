@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { GITHUB_FLAGSHIP_URL, GITHUB_WEBSITE_URL, GITHUB_DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Support",
@@ -28,28 +27,16 @@ export default function SupportPage() {
         lead="Where to go depends on what you need  -  here's the fastest path for each."
       />
 
-      <Section eyebrow="Bug reports" title="Repository issues">
+      <Section eyebrow="Demandes et incidents" title="Un parcours clair pour chaque besoin">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
-            Website bug:{" "}
-            <a href={`${GITHUB_WEBSITE_URL}/issues`} className="underline underline-offset-2">
-              open an issue
-            </a>{" "}
-            on the website repository
+            Problème sur le site : décrivez-le à <a href="mailto:hello@celoht.com" className="underline underline-offset-2">hello@celoht.com</a>.
           </li>
           <li>
-            dApp or contract bug:{" "}
-            <a href={`${GITHUB_DAPP_URL}/issues`} className="underline underline-offset-2">
-              open an issue
-            </a>{" "}
-            on the dApp repository
+            Problème lié à la DApp : indiquez l&apos;écran concerné, le navigateur et les étapes suivies à la même adresse.
           </li>
           <li>
-            Documentation or governance question:{" "}
-            <a href={`${GITHUB_FLAGSHIP_URL}/discussions`} className="underline underline-offset-2">
-              start a discussion
-            </a>{" "}
-            on the flagship repository
+            Question sur la documentation ou la gouvernance : consultez la <a href="/faq" className="underline underline-offset-2">FAQ</a> ou écrivez à hello@celoht.com.
           </li>
         </ul>
       </Section>

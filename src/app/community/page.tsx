@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
-import { GITHUB_FLAGSHIP_URL, GITHUB_ORG_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -15,37 +13,34 @@ export const metadata: Metadata = {
 
 const paths = [
   {
-    title: "Take a course",
-    detail: "Join a community education session covering financial literacy and Web3 fundamentals.",
-    action: "Find a session",
+    title: "Apprendre",
+    detail: "Découvrez le Web3, les paiements numériques, la blockchain et l'écosystème CeloHT.",
+    action: "Découvrir l'éducation",
     href: "/education",
   },
   {
-    title: "Become an agent",
-    detail: "Complete education, demonstrate competency, and get coordinator sign-off.",
-    action: "Learn the path",
+    title: "Participer",
+    detail: "Participez aux initiatives communautaires, éducatives, environnementales et entrepreneuriales.",
+    action: "Voir les initiatives",
+    href: "/impact",
+  },
+  {
+    title: "Devenir agent",
+    detail: "Découvrez comment contribuer à rapprocher les services numériques et financiers des communautés locales.",
+    action: "Découvrir le réseau",
     href: "/agent-network",
   },
   {
-    title: "Contribute to the repository",
-    detail: "Documentation, examples, and tooling improvements  -  all welcome.",
-    action: "See contributing guide",
-    href: "/contributing",
-  },
-  {
-    title: "Join the discussion",
-    detail: "Ask questions, share ideas, and connect with other community members.",
-    action: "Open GitHub Discussions",
-    href: `${GITHUB_FLAGSHIP_URL}/discussions`,
+    title: "Partager une initiative",
+    detail: "Proposez une idée, une initiative ou une collaboration pouvant contribuer à la mission de CeloHT.",
+    action: "Nous contacter",
+    href: "/contact",
   },
 ];
 
 const channels = [
-  { label: "Discord", href: "https://discord.gg/celoht" },
-  { label: "Telegram", href: "https://t.me/celoht" },
   { label: "X / Twitter", href: "https://twitter.com/CeloHtOfficial" },
   { label: "LinkedIn", href: "https://linkedin.com/company/celoht" },
-  { label: "GitHub", href: GITHUB_ORG_URL },
 ];
 
 export default function CommunityPage() {
@@ -53,9 +48,9 @@ export default function CommunityPage() {
     <>
       <Breadcrumbs items={[{ label: "Community" }]} />
       <PageHero
-        eyebrow="Community"
-        title="There's a way in, whoever you are"
-        lead="CeloHT's growth strategy treats community participation as infrastructure, not marketing. Here are the paths people actually take."
+        eyebrow="Communauté CeloHT"
+        title="Construisez avec nous"
+        lead="CeloHT évolue avec les personnes qui apprennent, utilisent, développent et contribuent à l'écosystème."
       />
 
       <Section>
@@ -80,27 +75,11 @@ export default function CommunityPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Ambassador & partner programs" title="Deeper ways to participate">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="rounded-xl border border-gold-500/30 p-5">
-            <h3 className="font-semibold">Ambassador Program</h3>
-            <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              For community members who want to represent CeloHT locally  -  organizing sessions,
-              translating material, and connecting new agents to the network.
-            </p>
-          </div>
-          <div className="rounded-xl border border-gold-500/30 p-5">
-            <h3 className="font-semibold">Partner Program</h3>
-            <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              For organizations  -  see our{" "}
-              <Link href="/partners" className="underline underline-offset-2">
-                Partners
-              </Link>{" "}
-              page for categories and how to start a conversation.
-            </p>
-          </div>
-        </div>
-      </Section>
+      <CTASection
+        title="Rejoindre CeloHT"
+        description="Parlez-nous de votre intérêt, de votre initiative ou de la manière dont vous souhaitez prendre part à l'écosystème."
+        primary={{ label: "Rejoindre CeloHT →", href: "/contact" }}
+      />
 
       <Section eyebrow="Stay connected" title="Channels">
         <ul className="flex flex-wrap gap-3">
@@ -117,12 +96,6 @@ export default function CommunityPage() {
         </ul>
       </Section>
 
-      <CTASection
-        title="Have a specific question first?"
-        description="Check our FAQ, or reach out through one of our official contact channels."
-        primary={{ label: "Read the FAQ", href: "/faq" }}
-        secondary={{ label: "Contact us", href: "/contact" }}
-      />
     </>
   );
 }

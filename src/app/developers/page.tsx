@@ -3,7 +3,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
-import { GITHUB_FLAGSHIP_URL, GITHUB_WEBSITE_URL, GITHUB_DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Developers",
@@ -13,21 +12,9 @@ export const metadata: Metadata = {
 };
 
 const repos = [
-  {
-    name: "Flagship (governance & docs)",
-    href: GITHUB_FLAGSHIP_URL,
-    detail: "The canonical source of truth: vision, governance, roadmap, and full documentation.",
-  },
-  {
-    name: "Website",
-    href: GITHUB_WEBSITE_URL,
-    detail: "This site  -  Next.js, TypeScript, Tailwind CSS.",
-  },
-  {
-    name: "dApp",
-    href: GITHUB_DAPP_URL,
-    detail: "The CeloHT dApp  -  Next.js frontend plus a Hardhat/Solidity contracts package.",
-  },
+  { name: "Architecture", href: "/technology/architecture", detail: "La structure technique expliquée en langage clair." },
+  { name: "DApp", href: "/dapp", detail: "Les services Web3 et le parcours d'utilisation." },
+  { name: "Sécurité", href: "/security", detail: "Les règles et protections à connaître avant toute utilisation." },
 ];
 
 export default function DevelopersPage() {
@@ -46,8 +33,6 @@ export default function DevelopersPage() {
             <a
               key={repo.href}
               href={repo.href}
-              target="_blank"
-              rel="noreferrer"
               className="rounded-2xl border border-navy-700/15 p-6 transition-colors hover:border-gold-500/50 dark:border-parchment-100/10"
             >
               <h3 className="font-display text-lg font-semibold">{repo.name}</h3>
@@ -57,23 +42,20 @@ export default function DevelopersPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Quick start" title="This website">
+      <Section eyebrow="Parcours de compréhension" title="Commencer par le site">
         <pre className="overflow-x-auto rounded-xl bg-navy-950 p-4 text-sm text-parchment-100">
-          <code>{`git clone ${GITHUB_WEBSITE_URL}.git
-cd website
-npm install
-npm run dev`}</code>
+          <code>{`1. Lire la mission et la vision
+2. Comprendre la technologie et la DApp
+3. Explorer la gouvernance et la transparence
+4. Rejoindre la communauté`}</code>
         </pre>
       </Section>
 
-      <Section eyebrow="Quick start" title="The dApp and its contracts">
+      <Section eyebrow="Parcours technique" title="Comprendre la DApp et ses contrats">
         <pre className="overflow-x-auto rounded-xl bg-navy-950 p-4 text-sm text-parchment-100">
-          <code>{`git clone ${GITHUB_DAPP_URL}.git
-cd dapp
-npm install
-npm run dev                        # frontend
-npm run contracts:compile           # contracts
-npm run contracts:test`}</code>
+          <code>{`DApp → Technology → Architecture → Smart contracts
+
+Les pages indiquent ce qui est confirmé, en développement ou encore planifié.`}</code>
         </pre>
       </Section>
 

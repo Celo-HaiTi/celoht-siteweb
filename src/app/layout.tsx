@@ -57,7 +57,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="bg-parchment font-body text-ink antialiased">
+      <body className="bg-[#f1f5fa] font-body text-ink antialiased">
         <SkipLink />
         <Header />
         <main id="main-content">{children}</main>

@@ -24,7 +24,7 @@ const posts = [
   {
     date: "2026-07",
     title: "Flagship repository published",
-    body: "Our governance and documentation hub is now public on GitHub, with a full roadmap, security policy, and contribution guidelines.",
+    body: "Notre espace public de gouvernance et de documentation rassemble désormais la feuille de route, la sécurité et les parcours de participation.",
   },
   {
     date: "2026-03",
@@ -63,7 +63,7 @@ export default function NewsPage() {
 
       <CTASection
         title="Don't want to miss an update?"
-        description="Follow CeloHT on X or Medium, or watch our GitHub repositories for release notes."
+        description="Suivez CeloHT sur X ou Medium, et consultez régulièrement les pages News et Blog pour les évolutions publiques."
         primary={{ label: "Follow on X", href: "https://twitter.com/CeloHtOfficial" }}
         secondary={{ label: "Read the blog", href: "/blog" }}
         external

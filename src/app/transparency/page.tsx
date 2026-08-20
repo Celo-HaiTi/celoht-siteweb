@@ -27,7 +27,7 @@ export default function TransparencyPage() {
           <li>
             Every CeloHT repository  -  flagship documentation, this website, and the dApp  -  in full
           </li>
-          <li>Every GitHub Actions workflow used for repository quality control</li>
+          <li>Les contrôles automatisés utilisés pour la qualité et la sécurité des livraisons</li>
           <li>All Pull Request and Issue history</li>
           <li>Governance decisions, discussed publicly before being applied</li>
           <li>Every smart contract&rsquo;s source code and test suite</li>

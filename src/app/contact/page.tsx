@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { GITHUB_FLAGSHIP_URL, GITHUB_ORG_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -23,7 +22,6 @@ const social = [
   { label: "Website", href: "https://celoht.com" },
   { label: "Medium", href: "https://medium.com/@celoht3" },
   { label: "X / Twitter", href: "https://twitter.com/CeloHtOfficial" },
-  { label: "GitHub", href: GITHUB_ORG_URL },
 ];
 
 export default function ContactPage() {
@@ -85,16 +83,11 @@ export default function ContactPage() {
         </ul>
       </Section>
 
-      <Section eyebrow="Prefer public discussion?" title="">
+      <Section eyebrow="Need more information?" title="">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          For public discussion, use{" "}
-          <a
-            href={`${GITHUB_FLAGSHIP_URL}/discussions`}
-            className="underline underline-offset-2"
-          >
-            GitHub Discussions
-          </a>{" "}
-          instead of private email when possible  -  it helps other people with the same question.
+          Consultez la <a href="/faq" className="underline underline-offset-2">FAQ</a> ou la
+          page <a href="/support" className="underline underline-offset-2">Support</a> avant
+          de nous écrire. Ces pages regroupent les réponses et les parcours disponibles.
         </p>
       </Section>
     </>

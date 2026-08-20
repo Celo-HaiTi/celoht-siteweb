@@ -4,7 +4,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
-import { GITHUB_FLAGSHIP_URL, GITHUB_WEBSITE_URL, GITHUB_DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contributing",
@@ -15,17 +14,17 @@ export const metadata: Metadata = {
 const repos = [
   {
     name: "Flagship (governance & docs)",
-    href: `${GITHUB_FLAGSHIP_URL}/blob/main/CONTRIBUTING.md`,
+    href: "/documentation",
     detail: "Documentation, translations, governance proposals.",
   },
   {
     name: "Website",
-    href: `${GITHUB_WEBSITE_URL}/blob/main/CONTRIBUTING.md`,
+    href: "/developers",
     detail: "Next.js, TypeScript, Tailwind CSS.",
   },
   {
     name: "dApp",
-    href: `${GITHUB_DAPP_URL}/blob/main/CONTRIBUTING.md`,
+    href: "/dapp",
     detail: "Frontend and Solidity contract contributions.",
   },
 ];
@@ -46,8 +45,6 @@ export default function ContributingPage() {
             <a
               key={repo.href}
               href={repo.href}
-              target="_blank"
-              rel="noreferrer"
               className="rounded-2xl border border-navy-700/15 p-6 transition-colors hover:border-gold-500/50 dark:border-parchment-100/10"
             >
               <h3 className="font-display text-lg font-semibold">{repo.name}</h3>

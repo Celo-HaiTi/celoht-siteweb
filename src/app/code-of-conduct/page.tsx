@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { GITHUB_WEBSITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Code of Conduct",
@@ -17,7 +16,7 @@ export default function CodeOfConductPage() {
       <PageHero
         eyebrow="Code of Conduct"
         title="A harassment-free experience for everyone"
-        lead="This applies across every CeloHT space  -  GitHub repositories, community sessions, and social channels."
+        lead="Ces règles s'appliquent à tous les espaces CeloHT, aux sessions communautaires et aux échanges publics."
       />
 
       <Section title="The short version">
@@ -38,15 +37,8 @@ export default function CodeOfConductPage() {
             conduct@celoht.com
           </a>{" "}
           and are reviewed promptly and fairly. The full policy, including our enforcement
-          guideline, is maintained as the canonical <code>CODE_OF_CONDUCT.md</code> in each
-          repository  -  see the{" "}
-          <a
-            href={`${GITHUB_WEBSITE_URL}/blob/main/CODE_OF_CONDUCT.md`}
-            className="underline underline-offset-2"
-          >
-            website repository&rsquo;s copy
-          </a>{" "}
-          for the complete text.
+          guideline, est résumé sur cette page afin que chaque personne puisse le consulter avant
+          de participer.
         </p>
       </Section>
     </>

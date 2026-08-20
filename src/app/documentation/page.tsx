@@ -3,11 +3,10 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
-import { GITHUB_FLAGSHIP_URL, GITHUB_DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Documentation",
-  description: "The full CeloHT documentation portal, mirrored from our GitHub repositories.",
+  description: "Le portail de documentation public de CeloHT, conçu pour comprendre le projet directement sur le site.",
   alternates: { canonical: "/documentation" },
 };
 
@@ -15,43 +14,37 @@ const groups = [
   {
     heading: "Identity & vision",
     links: [
-      { label: "Vision", href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/vision.md` },
-      { label: "Mission", href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/mission.md` },
-      { label: "Values", href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/values.md` },
-      { label: "History", href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/history.md` },
+      { label: "Vision", href: "/vision" },
+      { label: "Mission", href: "/mission" },
+      { label: "Valeurs", href: "/mission" },
+      { label: "Histoire", href: "/about" },
     ],
   },
   {
     heading: "Governance & legal",
     links: [
-      { label: "Governance", href: `${GITHUB_FLAGSHIP_URL}/blob/main/GOVERNANCE.md` },
-      {
-        label: "Legal status / No token policy",
-        href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/legal-status.md`,
-      },
-      { label: "Trademark", href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/trademark.md` },
-      { label: "Whitepaper", href: `${GITHUB_FLAGSHIP_URL}/blob/main/WHITEPAPER.md` },
+      { label: "Gouvernance", href: "/governance" },
+      { label: "Statut et politique sans token", href: "/about" },
+      { label: "Identité de marque", href: "/media-kit" },
+      { label: "Vision du projet", href: "/vision" },
     ],
   },
   {
     heading: "dApp technical docs",
     links: [
-      { label: "Architecture", href: `${GITHUB_DAPP_URL}/blob/main/ARCHITECTURE.md` },
-      { label: "API", href: `${GITHUB_DAPP_URL}/blob/main/docs/api.md` },
-      { label: "Deployment", href: `${GITHUB_DAPP_URL}/blob/main/docs/deployment.md` },
-      { label: "Development guide", href: `${GITHUB_DAPP_URL}/blob/main/docs/development.md` },
+      { label: "Architecture", href: "/technology/architecture" },
+      { label: "Services DApp", href: "/dapp" },
+      { label: "Déploiement et disponibilité", href: "/technology" },
+      { label: "Guide développeur", href: "/developers" },
     ],
   },
   {
     heading: "Security & funding",
     links: [
-      { label: "Security policy", href: `${GITHUB_FLAGSHIP_URL}/blob/main/SECURITY.md` },
-      { label: "Threat model", href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/threat-model.md` },
-      {
-        label: "Business model / funding policy",
-        href: `${GITHUB_FLAGSHIP_URL}/blob/main/docs/business-model.md`,
-      },
-      { label: "Roadmap", href: `${GITHUB_FLAGSHIP_URL}/blob/main/ROADMAP.md` },
+      { label: "Politique de sécurité", href: "/security" },
+      { label: "Risques et protections", href: "/security" },
+      { label: "Modèle de financement", href: "/transparency/financial" },
+      { label: "Feuille de route", href: "/roadmap" },
     ],
   },
 ];
@@ -62,8 +55,8 @@ export default function DocumentationPage() {
       <Breadcrumbs items={[{ label: "Documentation" }]} />
       <PageHero
         eyebrow="Documentation"
-        title="One source of truth, mirrored here for convenience"
-        lead="This website's copy is written for a general audience. Our GitHub repositories are the canonical, continuously maintained source for governance, policy, and technical detail."
+        title="Une explication publique, directement sur CeloHT"
+        lead="Ce portail rassemble le contexte, les décisions, les programmes et les informations techniques nécessaires pour comprendre CeloHT sans quitter le site."
       />
 
       <Section>
@@ -93,8 +86,8 @@ export default function DocumentationPage() {
       <CTASection
         title="Looking to build something?"
         description="Our developer portal covers the local environment, repository structure, and how to run validation checks."
-        primary={{ label: "Visit the developer portal", href: "/developers" }}
-        secondary={{ label: "View the flagship repository", href: GITHUB_FLAGSHIP_URL }}
+        primary={{ label: "Visiter le portail développeur", href: "/developers" }}
+        secondary={{ label: "Lire la FAQ", href: "/faq" }}
       />
     </>
   );

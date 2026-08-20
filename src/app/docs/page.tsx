@@ -95,18 +95,18 @@ export default function DocumentationHubPage() {
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6">
-            <h3 className="font-display text-xl font-semibold">Open source last</h3>
+            <h3 className="font-display text-xl font-semibold">Agir avec contexte</h3>
             <p className="mt-3 text-sm text-ink-soft">
-              GitHub remains the technical layer for code, research, and development activity.
+              Les pages du site présentent le contexte utile avant toute action ou prise de contact.
             </p>
           </div>
         </div>
       </Section>
 
       <CTASection
-        title="Need the source layer?"
-        description="Technical repositories remain available for developers and contributors, but the public-facing explanation is here first."
-        primary={{ label: "Explore open source", href: "/open-source" }}
+        title="Besoin d'aller plus loin ?"
+        description="Explorez la technologie, la gouvernance et les pages de transparence pour comprendre les choix de CeloHT."
+        primary={{ label: "Explorer la technologie", href: "/technology" }}
         secondary={{ label: "Read the FAQ", href: "/faq" }}
       />
     </>
