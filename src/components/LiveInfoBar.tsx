@@ -1,12 +1,14 @@
 "use client";
 
-import { Activity, AlertTriangle, ArrowUpRight, Wifi, WifiOff } from "lucide-react";
+import { Activity, AlertTriangle, ArrowUpRight, CircleDollarSign, Coins, Wifi, WifiOff } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 const MARKET_ENDPOINT =
   "https://api.coingecko.com/api/v3/simple/price?ids=celo,celo-dollar&vs_currencies=usd&include_24hr_change=true&include_last_updated_at=true";
 const CELO_RPC_URL = process.env.NEXT_PUBLIC_CELO_RPC_URL ?? "https://forno.celo.org";
 const CELO_CHAIN_ID = 42220;
+const REFRESH_INTERVAL = 120000;
+const REQUEST_TIMEOUT = 10000;
 
 type PriceEntry = {
   usd: number | null;
@@ -23,11 +25,23 @@ type NetworkEntry = {
 
 type LiveState = {
   loading: boolean;
-  error: boolean;
+  marketError: boolean;
+  networkError: boolean;
   celo: PriceEntry | null;
   usdm: PriceEntry | null;
   network: NetworkEntry | null;
 };
+
+async function fetchWithTimeout(input: RequestInfo | URL, init?: RequestInit) {
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
+
+  try {
+    return await fetch(input, { ...init, signal: controller.signal });
+  } finally {
+    window.clearTimeout(timeout);
+  }
+}
 
 function formatPrice(value: number | null) {
   if (value === null || Number.isNaN(value)) return "—";
@@ -57,7 +71,7 @@ function formatRelativeTime(timestamp: number | null) {
 }
 
 async function fetchMarketData(): Promise<{ celo: PriceEntry; usdm: PriceEntry }> {
-  const response = await fetch(MARKET_ENDPOINT, {
+  const response = await fetchWithTimeout(MARKET_ENDPOINT, {
     cache: "no-store",
     headers: { accept: "application/json" },
   });
@@ -93,7 +107,7 @@ async function fetchNetworkData(): Promise<NetworkEntry> {
     id: 1,
   };
 
-  const chainResponse = await fetch(CELO_RPC_URL, {
+  const chainResponse = await fetchWithTimeout(CELO_RPC_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -105,6 +119,7 @@ async function fetchNetworkData(): Promise<NetworkEntry> {
   }
 
   const chainJson = await chainResponse.json();
+  if (chainJson?.error) throw new Error("Celo RPC returned a chain ID error");
   const chainId = Number.parseInt(chainJson?.result ?? "0x0", 16);
 
   const blockPayload = {
@@ -114,7 +129,7 @@ async function fetchNetworkData(): Promise<NetworkEntry> {
     id: 2,
   };
 
-  const blockResponse = await fetch(CELO_RPC_URL, {
+  const blockResponse = await fetchWithTimeout(CELO_RPC_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(blockPayload),
@@ -126,10 +141,11 @@ async function fetchNetworkData(): Promise<NetworkEntry> {
   }
 
   const blockJson = await blockResponse.json();
+  if (blockJson?.error) throw new Error("Celo RPC returned a block error");
   const latestBlock = blockJson?.result ? Number.parseInt(blockJson.result, 16) : null;
 
   return {
-    ok: chainId === CELO_CHAIN_ID,
+    ok: chainId === CELO_CHAIN_ID && latestBlock !== null,
     chainId: Number.isFinite(chainId) ? chainId : null,
     latestBlock: Number.isFinite(latestBlock) ? latestBlock : null,
     updatedAt: Date.now() / 1000,
@@ -144,6 +160,7 @@ function AssetTile({
   updatedAt,
   state,
   kind,
+  icon,
 }: {
   label: string;
   symbol: string;
@@ -152,6 +169,7 @@ function AssetTile({
   updatedAt: string;
   state: "up" | "down" | "neutral" | "error";
   kind: "price" | "network";
+  icon: "celo" | "usdm" | "network";
 }) {
   const accentClass =
     state === "up"
@@ -163,13 +181,16 @@ function AssetTile({
           : "bg-slate-100 text-slate-700 ring-slate-200";
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white/85 p-4 shadow-[0_10px_30px_rgba(15,23,42,0.04)] backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5 dark:border-slate-800 dark:bg-slate-900/70">
+    <div className="rounded-2xl border border-navy-700/15 bg-white/80 p-4 shadow-[0_10px_30px_rgba(15,23,42,0.04)] backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5 dark:border-slate-800 dark:bg-slate-900/70">
       <div className="flex items-start justify-between gap-2">
         <div>
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
             {label}
           </p>
           <div className="mt-2 flex items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-navy-950 text-gold-500" aria-hidden="true">
+              {icon === "celo" ? <Coins size={16} /> : icon === "usdm" ? <CircleDollarSign size={16} /> : <Activity size={16} />}
+            </span>
             <span className="font-display text-xl font-semibold text-slate-900 dark:text-slate-50">{symbol}</span>
             <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[0.62rem] font-semibold ring-1 ${accentClass}`}>
               {kind === "network" ? (
@@ -210,12 +231,14 @@ type MarketTile = {
   updatedAt: string;
   state: AssetTileState;
   kind: "price" | "network";
+  icon: "celo" | "usdm" | "network";
 };
 
 export function LiveInfoBar() {
   const [state, setState] = useState<LiveState>({
     loading: true,
-    error: false,
+    marketError: false,
+    networkError: false,
     celo: null,
     usdm: null,
     network: null,
@@ -225,33 +248,21 @@ export function LiveInfoBar() {
     let isMounted = true;
 
     const load = async () => {
-      try {
-        const [market, network] = await Promise.all([fetchMarketData(), fetchNetworkData()]);
+      const [marketResult, networkResult] = await Promise.allSettled([fetchMarketData(), fetchNetworkData()]);
+      if (!isMounted) return;
 
-        if (!isMounted) return;
-
-        setState({
-          loading: false,
-          error: false,
-          celo: market.celo,
-          usdm: market.usdm,
-          network,
-        });
-      } catch {
-        if (!isMounted) return;
-
-        setState({
-          loading: false,
-          error: true,
-          celo: null,
-          usdm: null,
-          network: null,
-        });
-      }
+      setState((current) => ({
+        loading: false,
+        marketError: marketResult.status === "rejected",
+        networkError: networkResult.status === "rejected",
+        celo: marketResult.status === "fulfilled" ? marketResult.value.celo : current.celo,
+        usdm: marketResult.status === "fulfilled" ? marketResult.value.usdm : current.usdm,
+        network: networkResult.status === "fulfilled" ? networkResult.value : current.network,
+      }));
     };
 
     load();
-    const timer = window.setInterval(load, 120000);
+    const timer = window.setInterval(load, REFRESH_INTERVAL);
 
     return () => {
       isMounted = false;
@@ -265,38 +276,6 @@ export function LiveInfoBar() {
       return value >= 0 ? "up" : "down";
     };
 
-    if (state.error) {
-      return [
-        {
-          label: "CELO",
-          symbol: "CELO",
-          value: "Unavailable",
-          change: "Market offline",
-          updatedAt: "CoinGecko unreachable",
-          state: "error" as const,
-          kind: "price" as const,
-        },
-        {
-          label: "USDm",
-          symbol: "USDm",
-          value: "Unavailable",
-          change: "Market offline",
-          updatedAt: "CoinGecko unreachable",
-          state: "error" as const,
-          kind: "price" as const,
-        },
-        {
-          label: "Celo Network",
-          symbol: "Unable to verify",
-          value: "Unable to verify",
-          change: "Check provider",
-          updatedAt: "Provider error",
-          state: "error" as const,
-          kind: "network" as const,
-        },
-      ];
-    }
-
     return [
       {
         label: "CELO",
@@ -306,6 +285,7 @@ export function LiveInfoBar() {
         updatedAt: formatRelativeTime(state.celo?.updatedAt ?? null),
         state: tileState(state.celo?.change ?? null),
         kind: "price" as const,
+        icon: "celo" as const,
       },
       {
         label: "USDm",
@@ -315,17 +295,19 @@ export function LiveInfoBar() {
         updatedAt: formatRelativeTime(state.usdm?.updatedAt ?? null),
         state: tileState(state.usdm?.change ?? null),
         kind: "price" as const,
+        icon: "usdm" as const,
       },
       {
         label: "Celo Network",
         symbol: state.network?.ok ? "Operational" : "Unable to verify",
-        value: state.network?.ok ? `Chain ${state.network.chainId ?? "42220"}` : "Check provider",
+        value: state.network?.ok ? `Chain ${state.network.chainId}` : "RPC unavailable",
         change: state.network?.ok ? "Live" : "Not verified",
         updatedAt: state.network?.latestBlock
           ? `Latest block #${state.network.latestBlock.toLocaleString()}`
-          : "RPC unavailable",
+          : "Unable to verify",
         state: state.network?.ok ? "up" : "error",
         kind: "network" as const,
+        icon: "network" as const,
       },
     ];
   }, [state]);
@@ -364,15 +346,20 @@ export function LiveInfoBar() {
                 updatedAt={tile.updatedAt}
                 state={tile.state}
                 kind={tile.kind}
+                icon={tile.icon}
               />
             ))}
           </div>
         )}
 
-        {state.error ? (
+        {state.marketError || state.networkError ? (
           <div className="mt-3 flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800 dark:border-amber-900/60 dark:bg-amber-500/10 dark:text-amber-200">
             <AlertTriangle size={14} aria-hidden="true" />
-            Live market data is temporarily unavailable. Please try again in a few minutes.
+            {state.marketError && state.networkError
+              ? "Market and network data are temporarily unavailable."
+              : state.marketError
+                ? "Market data is temporarily unavailable."
+                : "Celo network status could not be verified."}
           </div>
         ) : null}
       </div>

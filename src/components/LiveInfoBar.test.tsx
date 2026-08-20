@@ -27,7 +27,7 @@ describe("LiveInfoBar", () => {
         if (body.includes("eth_chainId")) {
           return {
             ok: true,
-            json: async () => ({ result: "0xa4c" }),
+            json: async () => ({ result: "0xa4ec" }),
           } as unknown as Response;
         }
 
@@ -49,6 +49,35 @@ describe("LiveInfoBar", () => {
     await waitFor(() => expect(screen.getAllByText("CELO").length).toBeGreaterThan(0));
     expect(screen.getByText("$0.065")).toBeInTheDocument();
     expect(screen.getAllByText("USDm").length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Celo Network/i).length).toBeGreaterThan(0);
+  });
+
+  it("keeps network status visible when CoinGecko is unavailable", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+        const url = String(input);
+        const body = typeof init?.body === "string" ? init.body : "";
+
+        if (url.includes("api.coingecko.com")) {
+          throw new Error("CoinGecko unavailable");
+        }
+
+        if (body.includes("eth_chainId")) {
+          return { ok: true, json: async () => ({ result: "0xa4ec" }) } as unknown as Response;
+        }
+
+        if (body.includes("eth_blockNumber")) {
+          return { ok: true, json: async () => ({ result: "0x12345" }) } as unknown as Response;
+        }
+
+        return Promise.reject(new Error("Unexpected fetch target"));
+      }),
+    );
+
+    render(<LiveInfoBar />);
+
+    await waitFor(() => expect(screen.getByText(/Market data is temporarily unavailable/i)).toBeInTheDocument());
     expect(screen.getAllByText(/Celo Network/i).length).toBeGreaterThan(0);
   });
 });

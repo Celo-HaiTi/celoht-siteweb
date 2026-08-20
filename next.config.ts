@@ -11,7 +11,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self' data:",
-  "connect-src 'self'" + (isDev ? " ws:" : ""),
+  "connect-src 'self' https://api.coingecko.com https://forno.celo.org" + (isDev ? " ws:" : ""),
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",

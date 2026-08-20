@@ -2,10 +2,12 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Search, X } from "lucide-react";
 import { searchIndex } from "@/lib/nav";
 
 export function SearchDialog() {
+  const router = useRouter();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
@@ -19,6 +21,11 @@ export function SearchDialog() {
           item.label.toLowerCase().includes(q) ||
           (item.description ?? "").toLowerCase().includes(q),
       )
+      .sort((left, right) => {
+        const leftMatchesLabel = left.label.toLowerCase().includes(q);
+        const rightMatchesLabel = right.label.toLowerCase().includes(q);
+        return Number(rightMatchesLabel) - Number(leftMatchesLabel);
+      })
       .slice(0, 8);
   }, [query]);
 
@@ -77,6 +84,7 @@ export function SearchDialog() {
           <input
             ref={inputRef}
             type="text"
+            aria-label="Search pages"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search pages…"
@@ -101,7 +109,11 @@ export function SearchDialog() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                onClick={close}
+                onClick={(event) => {
+                  event.preventDefault();
+                  close();
+                  router.push(item.href);
+                }}
                 className="block rounded-lg px-3 py-2 hover:bg-gold-500/10 focus:bg-gold-500/10"
               >
                 <span className="block text-sm font-medium">{item.label}</span>

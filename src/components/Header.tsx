@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { primaryNav } from "@/lib/nav";
 import { SearchDialog } from "@/components/SearchDialog";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { assetPath } from "@/lib/constants";
 
 export function Header() {
@@ -47,6 +48,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <SearchDialog />
+          <ThemeToggle />
           <LaunchDappButton size="sm" className="hidden md:inline-flex" />
           <button
             type="button"

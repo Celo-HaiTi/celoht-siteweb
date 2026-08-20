@@ -70,9 +70,7 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background:
-    radial-gradient(circle at top, rgba(245, 200, 66, 0.12), transparent 32%),
-    linear-gradient(180deg, rgba(247, 248, 250, 0.98) 0%, rgba(242, 244, 247, 1) 100%);
+  background: var(--color-parchment);
 }
 
 :focus-visible {

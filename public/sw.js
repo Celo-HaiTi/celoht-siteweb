@@ -4,7 +4,8 @@
 // goes stale silently. This is intentionally conservative: it does not
 // pre-cache every route, and it never intercepts POST/API-style requests.
 const CACHE_NAME = "celoht-static-v1";
-const STATIC_ASSETS = ["/celoht-logo.png", "/favicon.svg", "/manifest.json"];
+const BASE_PATH = new URL("./", self.registration.scope).pathname;
+const STATIC_ASSETS = ["celoht-logo.png", "favicon.svg", "manifest.json"].map((asset) => `${BASE_PATH}${asset}`);
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -38,7 +39,7 @@ self.addEventListener("fetch", (event) => {
 
   if (request.mode === "navigate") {
     event.respondWith(
-      fetch(request).catch(() => caches.match(request).then((cached) => cached ?? caches.match("/"))),
+      fetch(request).catch(() => caches.match(request).then((cached) => cached ?? caches.match(BASE_PATH))),
     );
   }
 });

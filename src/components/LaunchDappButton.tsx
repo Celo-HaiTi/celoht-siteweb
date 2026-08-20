@@ -19,7 +19,7 @@ export function LaunchDappButton({ size = "md", className }: Props) {
       href={DAPP_URL}
       target="_blank"
       rel="noreferrer"
-      aria-label="Launch CeloHT DApp"
+      aria-label="Launch CeloHT dApp (Launch dApp)"
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full bg-gold-500 font-semibold text-navy-950 transition-colors hover:bg-gold-600",
         sizeClasses[size],
