@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowRight, BookOpen, Github } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
-import { assetPath, GITHUB_ORG_URL } from "@/lib/constants";
+import { assetPath } from "@/lib/constants";
 import { LiveInfoBar } from "@/components/LiveInfoBar";
 
 export function Hero() {
@@ -63,22 +63,20 @@ export function Hero() {
             className="mt-8 flex flex-wrap gap-3"
           >
             <LaunchDappButton size="lg" />
-            <a
-              href={GITHUB_ORG_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-navy-700/20 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-gold-500 hover:bg-gold-500/10 dark:border-parchment-100/20 dark:text-parchment-100"
+            <Link
+              href="/about"
+              className="group inline-flex items-center gap-2 rounded-full border border-navy-700/20 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-gold-500 hover:bg-gold-500/10"
             >
-              Explore GitHub
-              <Github size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
-            </a>
+              Explore CeloHT
+              <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </motion.div>
           <motion.div
             initial="hidden"
             animate="show"
             variants={fadeUp}
             transition={{ duration: 0.5, delay: 0.32 }}
-            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-ink-soft dark:text-parchment-100/55"
+            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-ink-soft"
           >
             <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-forest-500" /> Haitian-led</span>
             <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-gold-500" /> Built in public</span>
@@ -88,9 +86,6 @@ export function Hero() {
             <Link href="/documentation" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
               <BookOpen size={14} aria-hidden="true" /> Documentation
             </Link>
-            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
-              <Github size={14} aria-hidden="true" /> GitHub
-            </a>
           </motion.div>
         </div>
 

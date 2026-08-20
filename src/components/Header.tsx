@@ -4,12 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Github, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { primaryNav } from "@/lib/nav";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { SearchDialog } from "@/components/SearchDialog";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
-import { assetPath, GITHUB_ORG_URL } from "@/lib/constants";
+import { assetPath } from "@/lib/constants";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,17 +47,6 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <SearchDialog />
-          <ThemeToggle />
-          <a
-            href={GITHUB_ORG_URL}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="CeloHT on GitHub"
-            className="hidden h-10 items-center gap-1.5 rounded-full px-3 text-sm text-ink-soft transition-colors hover:bg-navy-700/5 hover:text-ink md:inline-flex dark:text-parchment-100/70 dark:hover:bg-parchment-100/5 dark:hover:text-parchment-100"
-          >
-            <Github size={16} aria-hidden="true" />
-            <span>GitHub</span>
-          </a>
           <LaunchDappButton size="sm" className="hidden md:inline-flex" />
           <button
             type="button"
@@ -92,17 +80,6 @@ export function Header() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href={GITHUB_ORG_URL}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-ink-soft hover:bg-navy-700/5 hover:text-ink dark:text-parchment-100/70 dark:hover:bg-parchment-100/5 dark:hover:text-parchment-100"
-              >
-                <Github size={16} aria-hidden="true" /> GitHub
-              </a>
-            </li>
             <li className="pt-2">
               <LaunchDappButton size="md" className="w-full justify-center" />
             </li>

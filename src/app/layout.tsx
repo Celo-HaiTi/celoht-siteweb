@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { ThemeProvider, themeInitScript } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
@@ -50,28 +49,20 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F7F8FA" },
-    { media: "(prefers-color-scheme: dark)", color: "#0B1120" },
-  ],
+  themeColor: "#F7F8FA",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
-      <body className="bg-parchment font-body text-ink antialiased dark:bg-navy-950 dark:text-parchment-100">
-        <ThemeProvider>
-          <SkipLink />
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
-          <ServiceWorkerRegistration />
-        </ThemeProvider>
+    <html lang="en">
+      <body className="bg-parchment font-body text-ink antialiased">
+        <SkipLink />
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );

@@ -1,20 +1,12 @@
 export type NavItem = { label: string; href: string; description?: string };
 
 export const primaryNav: NavItem[] = [
-  { label: "About", href: "/about", description: "Vision, mission, and how CeloHT started" },
-  {
-    label: "Ecosystem",
-    href: "/technology",
-    description: "The CeloHT stack and the infrastructure it builds on",
-  },
-  {
-    label: "Education",
-    href: "/education",
-    description: "Financial and Web3 literacy in Haitian Creole",
-  },
-  { label: "Impact", href: "/impact", description: "Metrics across all three pillars" },
-  { label: "Resources", href: "/documentation", description: "Documentation, research, and learning resources" },
-  { label: "Community", href: "/community", description: "Ways to participate and stay connected" },
+  { label: "About", href: "/about", description: "Who CeloHT is and why it exists" },
+  { label: "Technology", href: "/technology", description: "How the ecosystem works on Celo" },
+  { label: "Impact", href: "/impact", description: "Public evidence of the programs in motion" },
+  { label: "Transparency", href: "/transparency", description: "Governance, financial reporting, and public accountability" },
+  { label: "Resources", href: "/docs", description: "Documentation, research, and learning materials" },
+  { label: "Community", href: "/community", description: "Ways to participate and support the mission" },
 ];
 
 export const footerNav: { heading: string; items: NavItem[] }[] = [
@@ -104,15 +96,37 @@ export const searchIndex: NavItem[] = [
     description: "Celo, CELO, USDm, and Valora compatibility",
   },
   {
+    label: "Technology Architecture",
+    href: "/technology/architecture",
+    description: "A plain-language architecture overview for everyone",
+  },
+  {
+    label: "Smart Contracts",
+    href: "/technology/smart-contracts",
+    description: "Human-readable overview of CeloHT contract components",
+  },
+  {
+    label: "DApp",
+    href: "/dapp",
+    description: "The product layer used for education, payments, and community tools",
+  },
+  {
+    label: "Agents",
+    href: "/agents",
+    description: "The community agent model and responsibilities",
+  },
+  {
     label: "Impact",
     href: "/impact",
     description: "Metrics: agents trained, people educated, trees planted",
   },
   { label: "Community", href: "/community", description: "How to get involved" },
-  { label: "Partners", href: "/partners", description: "Who we work with, and how" },
+  { label: "Partners", href: "/partners", description: "Verified partnerships and ecosystem relationships" },
   { label: "Roadmap", href: "/roadmap", description: "Phased plan through 2028" },
   { label: "Governance", href: "/governance", description: "How decisions get made" },
   { label: "Transparency", href: "/transparency", description: "Public reporting and open data" },
+  { label: "On-chain Transparency", href: "/transparency/on-chain", description: "What can be independently audited on-chain" },
+  { label: "Financial Transparency", href: "/transparency/financial", description: "Funding, allocation, and reporting overview" },
   {
     label: "Developers",
     href: "/developers",
@@ -123,7 +137,9 @@ export const searchIndex: NavItem[] = [
     href: "/open-source",
     description: "The repositories and resources built in public",
   },
-  { label: "Documentation", href: "/documentation", description: "Full documentation portal" },
+  { label: "Documents", href: "/docs", description: "Documentation portal for all audiences" },
+  { label: "Documentation", href: "/documentation", description: "Legacy documentation landing page and canonical references" },
+  { label: "Research", href: "/research", description: "Research, RFCs, and technical studies" },
   { label: "Media Kit", href: "/media-kit", description: "Logo, brand assets, press description" },
   { label: "Blog", href: "/blog", description: "Longer-form posts from the CeloHT team" },
   { label: "News", href: "/news", description: "Updates and announcements" },
