@@ -117,7 +117,7 @@ export default function TreePlantingPage() {
             return (
               <article
                 key={step.number}
-                className="relative rounded-2xl border border-forest-500/25 bg-white/70 p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] dark:bg-navy-900/60"
+                className="relative rounded-2xl border border-forest-500/25 bg-parchment-50/80 p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] dark:bg-navy-900/60"
               >
                 <div className="flex items-start gap-4">
                   <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-forest-700 text-parchment-50">

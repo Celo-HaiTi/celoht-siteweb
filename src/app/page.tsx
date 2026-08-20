@@ -14,7 +14,7 @@ import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { StatGrid } from "@/components/StatGrid";
-import { SITE_URL, DAPP_URL } from "@/lib/constants";
+import { GITHUB_ORG_URL, SITE_URL, DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "CeloHT | Open-source Haitian Web3 infrastructure",
@@ -274,7 +274,7 @@ export default function HomePage() {
               { icon: BookOpen, title: "Éducation Web3", copy: "Ressources pour apprendre la blockchain, les actifs numériques, les paiements numériques et l'écosystème Celo.", href: "/education" },
               { icon: UsersRound, title: "Réseau d'agents", copy: "Une infrastructure communautaire pour rapprocher les services numériques et financiers des utilisateurs.", href: "/agent-network" },
               { icon: Leaf, title: "Reboisement et impact", copy: "Des initiatives communautaires liées à la plantation d'arbres, à leur suivi et à l'impact environnemental.", href: "/reforestation" },
-              { icon: Code2, title: "Transparence et impact", copy: "Les décisions, les priorités et les progrès de CeloHT sont expliqués sur le site.", href: "/transparency" },
+              { icon: Code2, title: "GitHub CeloHT", copy: "Code source, documentation, dépôts et ressources pour comprendre et contribuer au projet.", href: GITHUB_ORG_URL, external: true },
             ].map((item) => {
               const Icon = item.icon;
               const content = (
@@ -287,14 +287,36 @@ export default function HomePage() {
                   </span>
                 </>
               );
-              return <Link key={item.title} href={item.href} className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800">{content}</Link>;
+              return item.external ? (
+                <a key={item.title} href={item.href} target="_blank" rel="noreferrer" className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800">{content}</a>
+              ) : (
+                <Link key={item.title} href={item.href} className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800">{content}</Link>
+              );
             })}
           </div>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link href="/about" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
               Explorer CeloHT <ArrowRight size={16} aria-hidden="true" />
             </Link>
+            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-parchment-100/25 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300">
+              Voir sur GitHub <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
           </div>
+        </div>
+      </section>
+
+      <section className="border-y border-navy-700/10 bg-parchment-100/65">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:py-16">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Reboisement et impact</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">Plantez un arbre</h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft dark:text-parchment-100/75">
+              Apprenez comment choisir un jeune arbre, préparer le terrain, le planter correctement, l&apos;arroser, le protéger et assurer son suivi jusqu&apos;à sa croissance.
+            </p>
+          </div>
+          <Link href="/reforestation/planter-un-arbre" className="inline-flex w-fit items-center gap-2 rounded-full bg-navy-950 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:bg-navy-800">
+            Apprendre à planter un arbre <ArrowRight size={16} aria-hidden="true" />
+          </Link>
         </div>
       </section>
 

@@ -54,6 +54,7 @@ export function SearchDialog() {
       <button
         type="button"
         onClick={open}
+        aria-label="Search the site"
         className="hidden items-center gap-2 rounded-full border border-navy-700/20 px-4 py-2 text-sm text-ink-soft transition-colors hover:bg-navy-700/10 sm:inline-flex dark:border-parchment-100/20 dark:text-parchment-100/80 dark:hover:bg-parchment-100/10"
       >
         <Search size={16} aria-hidden="true" />

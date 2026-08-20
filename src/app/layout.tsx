@@ -4,7 +4,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
-import { ThemeProvider, themeInitScript } from "@/components/ThemeProvider";
 import { assetPath, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -58,17 +57,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
       <body className="bg-parchment font-body text-ink antialiased dark:bg-navy-950 dark:text-parchment-50">
-        <ThemeProvider>
-          <SkipLink />
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
-          <ServiceWorkerRegistration />
-        </ThemeProvider>
+        <SkipLink />
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );

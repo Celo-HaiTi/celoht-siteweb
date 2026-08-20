@@ -181,7 +181,7 @@ function AssetTile({
           : "bg-slate-100 text-slate-700 ring-slate-200";
 
   return (
-    <div className="rounded-2xl border border-navy-700/15 bg-white/80 p-4 shadow-[0_10px_30px_rgba(15,23,42,0.04)] backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5 dark:border-slate-800 dark:bg-slate-900/70">
+    <div className="rounded-2xl border border-navy-700/15 bg-parchment-50/85 p-4 shadow-[0_10px_30px_rgba(15,23,42,0.04)] backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5 dark:border-slate-800 dark:bg-slate-900/70">
       <div className="flex items-start justify-between gap-2">
         <div>
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
@@ -327,7 +327,7 @@ export function LiveInfoBar() {
           <div role="status" aria-live="polite" aria-label="Loading live market data" className="grid gap-3 md:grid-cols-3">
             <span className="sr-only">Loading live market data</span>
             {Array.from({ length: 3 }).map((_, index) => (
-              <div key={index} className="animate-pulse rounded-2xl border border-slate-200 bg-white/80 p-4 dark:border-slate-800 dark:bg-slate-900/80">
+              <div key={index} className="animate-pulse rounded-2xl border border-slate-200 bg-parchment-50/80 p-4 dark:border-slate-800 dark:bg-slate-900/80">
                 <div className="h-3 w-20 rounded bg-slate-200 dark:bg-slate-700" />
                 <div className="mt-4 h-6 w-24 rounded bg-slate-200 dark:bg-slate-700" />
                 <div className="mt-4 h-4 w-28 rounded bg-slate-200 dark:bg-slate-700" />

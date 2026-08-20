@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpen, Code2, Leaf, UsersRound, WalletCards } from "lucide-react";
 import { footerNav } from "@/lib/nav";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
 import {
+  DAPP_URL,
   GITHUB_ORG_URL,
   assetPath,
 } from "@/lib/constants";
@@ -22,20 +23,42 @@ export function Footer() {
           <LaunchDappButton size="lg" />
         </div>
 
-        <section aria-labelledby="footer-github-title" className="mt-12 border-y border-parchment-100/10 py-10">
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Source technique</p>
-              <h2 id="footer-github-title" className="mt-2 font-display text-3xl font-semibold">
-                Le code reste ouvert aux personnes qui souhaitent l&apos;étudier.
-              </h2>
-            </div>
-            <a
-              href={GITHUB_ORG_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-parchment-100/75 underline-offset-4 transition-colors hover:text-gold-300 hover:underline"
-            >
+        <section aria-labelledby="footer-ecosystem-title" className="mt-12 border-y border-parchment-100/10 py-10">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Écosystème ouvert</p>
+          <h2 id="footer-ecosystem-title" className="mt-2 max-w-3xl font-display text-3xl font-semibold">
+            Explorez l&apos;écosystème CeloHT
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-parchment-100/70">
+            CeloHT est une initiative haïtienne Web3 open source qui relie outils numériques, apprentissage, participation communautaire et impact local.
+          </p>
+          <div className="mt-7 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              { icon: WalletCards, title: "CeloHT DApp", copy: "Paiements, connexions aux wallets et services Web3.", href: DAPP_URL, external: true },
+              { icon: BookOpen, title: "Éducation Web3", copy: "Ressources pour apprendre la blockchain, les actifs numériques et les paiements numériques.", href: "/education" },
+              { icon: UsersRound, title: "Réseau d'agents", copy: "Une infrastructure communautaire pour rapprocher les services numériques et financiers.", href: "/agent-network" },
+              { icon: Leaf, title: "Reboisement et impact", copy: "Plantation d'arbres, suivi de leur croissance et impact environnemental.", href: "/reforestation" },
+              { icon: Code2, title: "GitHub CeloHT", copy: "Code source, documentation, dépôts et ressources pour contribuer.", href: GITHUB_ORG_URL, external: true },
+            ].map((item) => {
+              const Icon = item.icon;
+              const content = (
+                <>
+                  <Icon size={20} className="text-gold-300" aria-hidden="true" />
+                  <h3 className="mt-5 font-display text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-xs leading-5 text-parchment-100/65">{item.copy}</p>
+                </>
+              );
+              return item.external ? (
+                <a key={item.title} href={item.href} target="_blank" rel="noreferrer" className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800">{content}<ArrowUpRight size={15} className="mt-5 text-gold-300" aria-hidden="true" /></a>
+              ) : (
+                <Link key={item.title} href={item.href} className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800">{content}<ArrowRight size={15} className="mt-5 text-gold-300" aria-hidden="true" /></Link>
+              );
+            })}
+          </div>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link href="/about" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
+              Explorer CeloHT <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-parchment-100/25 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300">
               Voir sur GitHub <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           </div>

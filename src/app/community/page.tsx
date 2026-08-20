@@ -15,26 +15,18 @@ const paths = [
   {
     title: "Apprendre",
     detail: "Découvrez le Web3, les paiements numériques, la blockchain et l'écosystème CeloHT.",
-    action: "Découvrir l'éducation",
-    href: "/education",
   },
   {
     title: "Participer",
     detail: "Participez aux initiatives communautaires, éducatives, environnementales et entrepreneuriales.",
-    action: "Voir les initiatives",
-    href: "/impact",
   },
   {
     title: "Devenir agent",
     detail: "Découvrez comment contribuer à rapprocher les services numériques et financiers des communautés locales.",
-    action: "Découvrir le réseau",
-    href: "/agent-network",
   },
   {
     title: "Partager une initiative",
     detail: "Proposez une idée, une initiative ou une collaboration pouvant contribuer à la mission de CeloHT.",
-    action: "Nous contacter",
-    href: "/contact",
   },
 ];
 
@@ -64,12 +56,6 @@ export default function CommunityPage() {
               <p className="mt-2 flex-1 text-sm text-ink-soft dark:text-parchment-100/70">
                 {path.detail}
               </p>
-              <a
-                href={path.href}
-                className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-gold-800 dark:text-gold-300"
-              >
-                {path.action} <span aria-hidden="true">→</span>
-              </a>
             </div>
           ))}
         </div>

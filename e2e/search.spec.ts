@@ -10,7 +10,7 @@ test.describe("Site search", () => {
     // Fall back to clicking the visible search button if the shortcut
     // didn't register (varies by OS/browser in headless mode).
     if (!(await dialog.isVisible().catch(() => false))) {
-      await page.getByRole("button", { name: "Search" }).first().click();
+      await page.locator('button[aria-label="Search the site"]:visible').click();
     }
 
     await page.getByPlaceholder("Search pages…").fill("reforestation");
