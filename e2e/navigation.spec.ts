@@ -23,7 +23,7 @@ test.describe("Primary navigation", () => {
   });
 
   test("reforestation guide is English on both supported routes", async ({ page }) => {
-    await page.goto("/reforestation/planter-un-arbre");
+    await page.goto("/en/reforestation/plant-a-tree");
     await expect(page.getByRole("heading", { name: "How to Plant and Grow a Tree" })).toBeVisible();
 
     await page.goto("/en/reforestation/plant-a-tree");

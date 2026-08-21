@@ -144,7 +144,7 @@ export const searchIndex: NavItem[] = [
   },
   {
     label: "Plant a Tree",
-    href: "/reforestation/planter-un-arbre",
+    href: "/en/reforestation/plant-a-tree",
     description:
       "A practical guide to planting, protecting, and monitoring a young tree",
   },

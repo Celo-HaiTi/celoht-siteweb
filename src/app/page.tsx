@@ -308,12 +308,12 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:py-16">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Reforestation and impact</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">Plantez un arbre</h2>
+            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">Plant a Tree</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft dark:text-parchment-100/75">
               Learn how to choose a young tree, prepare the ground, plant it correctly, water it, protect it, and monitor it through establishment.
             </p>
           </div>
-          <Link href="/reforestation/planter-un-arbre" className="inline-flex w-fit items-center gap-2 rounded-full bg-navy-950 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:bg-navy-800">
+          <Link href="/en/reforestation/plant-a-tree" className="inline-flex w-fit items-center gap-2 rounded-full bg-navy-950 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:bg-navy-800">
             Learn how to plant a tree <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>

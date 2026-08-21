@@ -39,7 +39,6 @@ const publicRoutes = [
   "/privacy",
   "/project-vision",
   "/reforestation",
-  "/reforestation/planter-un-arbre",
   "/en/reforestation/plant-a-tree",
   "/research",
   "/roadmap",

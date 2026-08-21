@@ -92,7 +92,7 @@ export default function ReforestationPage() {
             protect it, and monitor it through establishment.
           </p>
           <Link
-            href="/reforestation/planter-un-arbre"
+            href="/en/reforestation/plant-a-tree"
             className="inline-flex w-fit items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-600"
           >
             Learn how to plant a tree <span aria-hidden="true">→</span>
