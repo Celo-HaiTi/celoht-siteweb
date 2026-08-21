@@ -6,7 +6,8 @@ import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "How to get help with CeloHT  -  general questions, bug reports, and security issues.",
+  description:
+    "How to get help with CeloHT  -  general questions, bug reports, and security issues.",
   alternates: { canonical: "/support" },
 };
 
@@ -27,16 +28,31 @@ export default function SupportPage() {
         lead="Where to go depends on what you need  -  here's the fastest path for each."
       />
 
-      <Section eyebrow="Demandes et incidents" title="Un parcours clair pour chaque besoin">
+      <Section
+        eyebrow="Demandes et incidents"
+        title="Un parcours clair pour chaque besoin"
+      >
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
-            Problème sur le site : décrivez-le à <a href="mailto:hello@celoht.com" className="underline underline-offset-2">hello@celoht.com</a>.
+            Problème sur le site : décrivez-le à{" "}
+            <a
+              href="mailto:hello@celoht.com"
+              className="underline underline-offset-2"
+            >
+              hello@celoht.com
+            </a>
+            .
           </li>
           <li>
-            Problème lié à la DApp : indiquez l&apos;écran concerné, le navigateur et les étapes suivies à la même adresse.
+            Problème lié à la DApp : indiquez l&apos;écran concerné, le
+            navigateur et les étapes suivies à la même adresse.
           </li>
           <li>
-            Question sur la documentation ou la gouvernance : consultez la <a href="/faq" className="underline underline-offset-2">FAQ</a> ou écrivez à hello@celoht.com.
+            Question sur la documentation ou la gouvernance : consultez la{" "}
+            <Link href="/faq" className="underline underline-offset-2">
+              FAQ
+            </Link>{" "}
+            ou écrivez à hello@celoht.com.
           </li>
         </ul>
       </Section>
@@ -64,7 +80,10 @@ export default function SupportPage() {
                     {channel.purpose}
                   </td>
                   <td className="px-5 py-3">
-                    <a href={`mailto:${channel.contact}`} className="underline underline-offset-2">
+                    <a
+                      href={`mailto:${channel.contact}`}
+                      className="underline underline-offset-2"
+                    >
                       {channel.contact}
                     </a>
                   </td>
@@ -77,10 +96,11 @@ export default function SupportPage() {
 
       <Section eyebrow="Response time" title="">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          We aim for 3–5 business days on general questions and 48 hours on security reports. See{" "}
-            <Link href="/security" className="underline underline-offset-2">
+          We aim for 3–5 business days on general questions and 48 hours on
+          security reports. See{" "}
+          <Link href="/security" className="underline underline-offset-2">
             Security
-            </Link>{" "}
+          </Link>{" "}
           for the full vulnerability disclosure policy.
         </p>
       </Section>

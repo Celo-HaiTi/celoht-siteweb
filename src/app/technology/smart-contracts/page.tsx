@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
@@ -14,42 +15,52 @@ export const metadata: Metadata = {
 const contracts = [
   {
     name: "Agent Registry",
-    purpose: "Stores the identity and status of community agents in a verifiable structure when the program is in operation.",
+    purpose:
+      "Stores the identity and status of community agents in a verifiable structure when the program is in operation.",
     network: "Celo ecosystem",
     status: "In development / published as source when available",
-    verification: "Verification status varies by deployment; contract address pending publication where not confirmed.",
+    verification:
+      "Verification status varies by deployment; contract address pending publication where not confirmed.",
     address: "Contract address pending publication",
   },
   {
     name: "Certificate Registry",
-    purpose: "Tracks learning and credential information associated with education or recognition programs.",
+    purpose:
+      "Tracks learning and credential information associated with education or recognition programs.",
     network: "Celo ecosystem",
     status: "In development / published as source when available",
-    verification: "Verification status varies by deployment; contract address pending publication where not confirmed.",
+    verification:
+      "Verification status varies by deployment; contract address pending publication where not confirmed.",
     address: "Contract address pending publication",
   },
   {
     name: "Donation Manager",
-    purpose: "Supports donation flows and tracking in a way that is transparent and tied to project or initiative goals.",
+    purpose:
+      "Supports donation flows and tracking in a way that is transparent and tied to project or initiative goals.",
     network: "Celo ecosystem",
     status: "In development / published as source when available",
-    verification: "Verification status varies by deployment; contract address pending publication where not confirmed.",
+    verification:
+      "Verification status varies by deployment; contract address pending publication where not confirmed.",
     address: "Contract address pending publication",
   },
   {
     name: "Impact Registry",
-    purpose: "Captures environmental and social impact data in a public, auditable structure where the project is operational.",
+    purpose:
+      "Captures environmental and social impact data in a public, auditable structure where the project is operational.",
     network: "Celo ecosystem",
     status: "In development / published as source when available",
-    verification: "Verification status varies by deployment; contract address pending publication where not confirmed.",
+    verification:
+      "Verification status varies by deployment; contract address pending publication where not confirmed.",
     address: "Contract address pending publication",
   },
   {
     name: "Governance Voting",
-    purpose: "Supports governance and community decision-making in the way the project’s public governance model is designed.",
+    purpose:
+      "Supports governance and community decision-making in the way the project’s public governance model is designed.",
     network: "Celo ecosystem",
     status: "Planned / in governance design",
-    verification: "Verification status varies by deployment; not all governance flow elements are published yet.",
+    verification:
+      "Verification status varies by deployment; not all governance flow elements are published yet.",
     address: "Contract address pending publication",
   },
 ];
@@ -57,7 +68,12 @@ const contracts = [
 export default function SmartContractsPage() {
   return (
     <>
-      <Breadcrumbs items={[{ label: "Technology", href: "/technology" }, { label: "Smart Contracts" }]} />
+      <Breadcrumbs
+        items={[
+          { label: "Technology", href: "/technology" },
+          { label: "Smart Contracts" },
+        ]}
+      />
       <PageHero
         eyebrow="Smart contracts"
         title="Human-readable contract overview"
@@ -67,11 +83,18 @@ export default function SmartContractsPage() {
       <Section>
         <div className="space-y-6">
           {contracts.map((contract) => (
-            <article key={contract.name} className="rounded-2xl border border-navy-700/15 p-6">
+            <article
+              key={contract.name}
+              className="rounded-2xl border border-navy-700/15 p-6"
+            >
               <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
-                  <h2 className="font-display text-2xl font-semibold">{contract.name}</h2>
-                  <p className="mt-2 text-sm text-ink-soft">{contract.purpose}</p>
+                  <h2 className="font-display text-2xl font-semibold">
+                    {contract.name}
+                  </h2>
+                  <p className="mt-2 text-sm text-ink-soft">
+                    {contract.purpose}
+                  </p>
                 </div>
                 <span className="rounded-full bg-gold-500/15 px-3 py-1 text-xs font-medium uppercase tracking-wide text-gold-800">
                   {contract.status}
@@ -81,19 +104,27 @@ export default function SmartContractsPage() {
               <dl className="mt-5 grid gap-4 md:grid-cols-2">
                 <div>
                   <dt className="font-medium text-ink">Function</dt>
-                  <dd className="mt-1 text-sm text-ink-soft">{contract.purpose}</dd>
+                  <dd className="mt-1 text-sm text-ink-soft">
+                    {contract.purpose}
+                  </dd>
                 </div>
                 <div>
                   <dt className="font-medium text-ink">Network</dt>
-                  <dd className="mt-1 text-sm text-ink-soft">{contract.network}</dd>
+                  <dd className="mt-1 text-sm text-ink-soft">
+                    {contract.network}
+                  </dd>
                 </div>
                 <div>
                   <dt className="font-medium text-ink">Verification status</dt>
-                  <dd className="mt-1 text-sm text-ink-soft">{contract.verification}</dd>
+                  <dd className="mt-1 text-sm text-ink-soft">
+                    {contract.verification}
+                  </dd>
                 </div>
                 <div>
                   <dt className="font-medium text-ink">Contract address</dt>
-                  <dd className="mt-1 text-sm text-ink-soft">{contract.address}</dd>
+                  <dd className="mt-1 text-sm text-ink-soft">
+                    {contract.address}
+                  </dd>
                 </div>
               </dl>
             </article>
@@ -101,16 +132,23 @@ export default function SmartContractsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Comprendre le produit" title="Les contrats dans le parcours utilisateur">
+      <Section
+        eyebrow="Comprendre le produit"
+        title="Les contrats dans le parcours utilisateur"
+      >
         <div className="rounded-2xl border border-navy-700/15 p-6">
           <p className="text-sm text-ink-soft">
-            Cette page décrit les fonctions prévues et distingue clairement les éléments en
-            développement des éléments confirmés. La page DApp présente le parcours utilisateur,
-            tandis que la page Technologie explique l&apos;architecture générale.
+            Cette page décrit les fonctions prévues et distingue clairement les
+            éléments en développement des éléments confirmés. La page DApp
+            présente le parcours utilisateur, tandis que la page Technologie
+            explique l&apos;architecture générale.
           </p>
-          <a href="/dapp" className="mt-4 inline-flex items-center text-sm font-semibold underline-offset-4 hover:underline">
+          <Link
+            href="/dapp"
+            className="mt-4 inline-flex items-center text-sm font-semibold underline-offset-4 hover:underline"
+          >
             Voir la DApp <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </Section>
 

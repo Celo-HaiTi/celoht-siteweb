@@ -34,7 +34,14 @@ export const metadata: Metadata = {
     title: "CeloHT | Open-Source Haitian Web3 Initiative",
     description:
       "An open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
-    images: [{ url: assetPath("/og-image.svg"), width: 1200, height: 630, alt: "CeloHT" }],
+    images: [
+      {
+        url: assetPath("/og-image.svg"),
+        width: 1200,
+        height: 630,
+        alt: "CeloHT",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -44,7 +51,10 @@ export const metadata: Metadata = {
       "An open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
     images: [assetPath("/og-image.svg")],
   },
-  icons: { icon: assetPath("/favicon.svg"), apple: assetPath("/celoht-logo.png") },
+  icons: {
+    icon: assetPath("/favicon.svg"),
+    apple: assetPath("/celoht-logo.png"),
+  },
   alternates: { canonical: SITE_URL },
 };
 
@@ -54,9 +64,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="bg-navy-950 font-body text-parchment-100 antialiased">
         <SkipLink />
         <Header />

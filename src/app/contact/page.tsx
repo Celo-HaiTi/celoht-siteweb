@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -57,7 +58,10 @@ export default function ContactPage() {
                     {channel.purpose}
                   </td>
                   <td className="px-5 py-3">
-                    <a href={`mailto:${channel.contact}`} className="underline underline-offset-2">
+                    <a
+                      href={`mailto:${channel.contact}`}
+                      className="underline underline-offset-2"
+                    >
                       {channel.contact}
                     </a>
                   </td>
@@ -85,9 +89,16 @@ export default function ContactPage() {
 
       <Section eyebrow="Need more information?" title="">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          Consultez la <a href="/faq" className="underline underline-offset-2">FAQ</a> ou la
-          page <a href="/support" className="underline underline-offset-2">Support</a> avant
-          de nous écrire. Ces pages regroupent les réponses et les parcours disponibles.
+          Consultez la{" "}
+          <Link href="/faq" className="underline underline-offset-2">
+            FAQ
+          </Link>{" "}
+          ou la page{" "}
+          <Link href="/support" className="underline underline-offset-2">
+            Support
+          </Link>{" "}
+          avant de nous écrire. Ces pages regroupent les réponses et les
+          parcours disponibles.
         </p>
       </Section>
     </>
