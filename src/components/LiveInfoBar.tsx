@@ -44,7 +44,7 @@ async function fetchWithTimeout(input: RequestInfo | URL, init?: RequestInit) {
 }
 
 function formatPrice(value: number | null) {
-  if (value === null || Number.isNaN(value)) return "—";
+  if (value === null || Number.isNaN(value)) return "Data temporarily unavailable";
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -54,7 +54,7 @@ function formatPrice(value: number | null) {
 }
 
 function formatChange(value: number | null) {
-  if (value === null || Number.isNaN(value)) return "—";
+  if (value === null || Number.isNaN(value)) return "Data temporarily unavailable";
   const sign = value >= 0 ? "+" : "";
   return `${sign}${value.toFixed(2)}%`;
 }
@@ -173,25 +173,25 @@ function AssetTile({
 }) {
   const accentClass =
     state === "up"
-      ? "bg-emerald-50 text-emerald-700 ring-emerald-200"
+      ? "bg-forest-500/20 text-gold-300 ring-forest-400/40"
       : state === "down"
-        ? "bg-rose-50 text-rose-700 ring-rose-200"
+        ? "bg-gold-500/15 text-gold-300 ring-gold-500/40"
         : state === "error"
-          ? "bg-amber-50 text-amber-700 ring-amber-200"
-          : "bg-slate-100 text-slate-700 ring-slate-200";
+          ? "bg-gold-500/15 text-gold-300 ring-gold-500/40"
+          : "bg-parchment-100/10 text-parchment-100/70 ring-parchment-100/20";
 
   return (
-    <div className="rounded-2xl border border-navy-700/15 bg-parchment-50/85 p-4 shadow-[0_10px_30px_rgba(15,23,42,0.04)] backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5 dark:border-slate-800 dark:bg-slate-900/70">
+    <div className="rounded-xl border border-parchment-100/15 bg-navy-900/80 p-4 shadow-[0_12px_35px_rgba(0,0,0,0.16)] backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5">
       <div className="flex items-start justify-between gap-2">
         <div>
-          <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+          <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-parchment-100/55">
             {label}
           </p>
           <div className="mt-2 flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-navy-950 text-gold-500" aria-hidden="true">
               {icon === "celo" ? <Coins size={16} /> : icon === "usdm" ? <CircleDollarSign size={16} /> : <Activity size={16} />}
             </span>
-            <span className="font-display text-xl font-semibold text-slate-900 dark:text-slate-50">{symbol}</span>
+            <span className="font-display text-xl font-semibold text-parchment-50">{symbol}</span>
             <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[0.62rem] font-semibold ring-1 ${accentClass}`}>
               {kind === "network" ? (
                 <Activity size={10} aria-hidden="true" />
@@ -214,8 +214,8 @@ function AssetTile({
       </div>
 
       <div className="mt-4">
-        <p className="text-lg font-semibold text-slate-900 dark:text-slate-50">{value}</p>
-        <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{updatedAt}</p>
+        <p className="text-lg font-semibold text-parchment-50">{value}</p>
+        <p className="mt-1 text-xs text-parchment-100/55">{updatedAt}</p>
       </div>
     </div>
   );
@@ -313,7 +313,7 @@ export function LiveInfoBar() {
   }, [state]);
 
   return (
-    <section aria-label="Live CeloHT market data" aria-live="polite" className="border-b border-parchment-100 bg-parchment/95 backdrop-blur-sm">
+    <section aria-label="Live CeloHT market data" aria-live="polite" className="border-b border-parchment-100/10 bg-navy-950 text-parchment-50">
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <div className="mb-3 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-muted">
@@ -327,10 +327,10 @@ export function LiveInfoBar() {
           <div role="status" aria-live="polite" aria-label="Loading live market data" className="grid gap-3 md:grid-cols-3">
             <span className="sr-only">Loading live market data</span>
             {Array.from({ length: 3 }).map((_, index) => (
-              <div key={index} className="animate-pulse rounded-2xl border border-slate-200 bg-parchment-50/80 p-4 dark:border-slate-800 dark:bg-slate-900/80">
-                <div className="h-3 w-20 rounded bg-slate-200 dark:bg-slate-700" />
-                <div className="mt-4 h-6 w-24 rounded bg-slate-200 dark:bg-slate-700" />
-                <div className="mt-4 h-4 w-28 rounded bg-slate-200 dark:bg-slate-700" />
+              <div key={index} className="animate-pulse rounded-xl border border-parchment-100/15 bg-navy-900/80 p-4">
+                <div className="h-3 w-20 rounded bg-parchment-100/15" />
+                <div className="mt-4 h-6 w-24 rounded bg-parchment-100/15" />
+                <div className="mt-4 h-4 w-28 rounded bg-parchment-100/15" />
               </div>
             ))}
           </div>
@@ -353,7 +353,7 @@ export function LiveInfoBar() {
         )}
 
         {state.marketError || state.networkError ? (
-          <div className="mt-3 flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800 dark:border-amber-900/60 dark:bg-amber-500/10 dark:text-amber-200">
+          <div className="mt-3 flex items-center gap-2 rounded-xl border border-gold-500/30 bg-gold-500/10 px-3 py-2 text-xs text-gold-300">
             <AlertTriangle size={14} aria-hidden="true" />
             {state.marketError && state.networkError
               ? "Market and network data are temporarily unavailable."

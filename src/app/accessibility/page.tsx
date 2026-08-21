@@ -36,7 +36,7 @@ export default function AccessibilityPage() {
             <code>prefers-reduced-motion</code> respected globally, including in the animated hero
             section
           </li>
-          <li>ARIA labels on icon-only buttons (theme toggle, search, mobile menu)</li>
+          <li>ARIA labels on icon-only buttons, including the mobile menu</li>
         </ul>
       </Section>
 

@@ -23,8 +23,8 @@ export default function CookiesPage() {
       <Section title="What we store">
         <div className="max-w-2xl space-y-4 text-sm text-ink-soft dark:text-parchment-100/70">
           <p>
-            <strong className="text-ink dark:text-parchment-100">Theme preference</strong>  -  stored
-            in <code>localStorage</code> (not a cookie) so your light/dark mode choice persists
+            <strong className="text-ink dark:text-parchment-100">Visual identity</strong>  -  CeloHT
+            uses one permanent navy and gold visual system; no theme preference is stored
             between visits. Never transmitted to a server.
           </p>
           <p>

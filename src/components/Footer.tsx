@@ -37,7 +37,7 @@ export function Footer() {
               { icon: BookOpen, title: "Éducation Web3", copy: "Ressources pour apprendre la blockchain, les actifs numériques et les paiements numériques.", href: "/education" },
               { icon: UsersRound, title: "Réseau d'agents", copy: "Une infrastructure communautaire pour rapprocher les services numériques et financiers.", href: "/agent-network" },
               { icon: Leaf, title: "Reboisement et impact", copy: "Plantation d'arbres, suivi de leur croissance et impact environnemental.", href: "/reforestation" },
-              { icon: Code2, title: "GitHub CeloHT", copy: "Code source, documentation, dépôts et ressources pour contribuer.", href: GITHUB_ORG_URL, external: true },
+              { icon: Code2, title: "Open Source", copy: "Comprendre le code, la documentation et les méthodes publiques de CeloHT.", href: "/open-source" },
             ].map((item) => {
               const Icon = item.icon;
               const content = (
@@ -58,9 +58,6 @@ export function Footer() {
             <Link href="/about" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
               Explorer CeloHT <ArrowRight size={16} aria-hidden="true" />
             </Link>
-            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-parchment-100/25 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300">
-              Voir sur GitHub <ArrowUpRight size={16} aria-hidden="true" />
-            </a>
           </div>
         </section>
 
@@ -102,6 +99,9 @@ export function Footer() {
             </div>
           </div>
           <div className="flex gap-4 text-sm">
+            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="text-gold-300 hover:text-gold-500">
+              GitHub →
+            </a>
             <a
               href="https://twitter.com/CeloHtOfficial"
               className="text-parchment-100/70 hover:text-parchment-100"

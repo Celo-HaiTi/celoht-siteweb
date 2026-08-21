@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-/* CeloHT permanent visual system: navy infrastructure, yellow signal, and
-   light-gray reading surfaces. */
+/* CeloHT permanent visual system: deep navy infrastructure and yellow signal. */
 @theme {
   --font-display: "IBM Plex Sans", "Inter", "Avenir Next", ui-sans-serif, sans-serif;
   --font-body: "Inter", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
@@ -34,9 +33,6 @@
 }
 
 :root {
-  color-scheme: light;
-}
-.dark {
   color-scheme: dark;
 }
 
@@ -66,8 +62,27 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background: var(--color-parchment);
-  color: var(--color-ink);
+  background: var(--color-navy-950);
+  color: var(--color-parchment-100);
+}
+
+/* Legacy page utilities resolve to the permanent CeloHT surface system. */
+.bg-white,
+.bg-parchment,
+.bg-parchment-50,
+.bg-parchment-50\/80,
+.bg-parchment-50\/85 {
+  background-color: var(--color-navy-950) !important;
+}
+
+.text-ink {
+  color: var(--color-parchment-50) !important;
+}
+
+.text-ink-soft,
+.text-muted {
+  color: var(--color-parchment-100) !important;
+  opacity: 0.72;
 }
 
 button,

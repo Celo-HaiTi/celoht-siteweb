@@ -14,7 +14,7 @@ import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { StatGrid } from "@/components/StatGrid";
-import { GITHUB_ORG_URL, SITE_URL, DAPP_URL } from "@/lib/constants";
+import { SITE_URL, DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "CeloHT | Open-source Haitian Web3 infrastructure",
@@ -280,7 +280,7 @@ export default function HomePage() {
               { icon: BookOpen, title: "Éducation Web3", copy: "Ressources pour apprendre la blockchain, les actifs numériques, les paiements numériques et l'écosystème Celo.", href: "/education" },
               { icon: UsersRound, title: "Réseau d'agents", copy: "Une infrastructure communautaire pour rapprocher les services numériques et financiers des utilisateurs.", href: "/agent-network" },
               { icon: Leaf, title: "Reboisement et impact", copy: "Des initiatives communautaires liées à la plantation d'arbres, à leur suivi et à l'impact environnemental.", href: "/reforestation" },
-              { icon: Code2, title: "GitHub CeloHT", copy: "Code source, documentation, dépôts et ressources pour comprendre et contribuer au projet.", href: GITHUB_ORG_URL, external: true },
+              { icon: Code2, title: "Open Source", copy: "CeloHT publie sa documentation, sa recherche et ses méthodes pour être compris et amélioré directement depuis le site.", href: "/open-source" },
             ].map((item) => {
               const Icon = item.icon;
               const content = (
@@ -293,20 +293,13 @@ export default function HomePage() {
                   </span>
                 </>
               );
-              return item.external ? (
-                <a key={item.title} href={item.href} target="_blank" rel="noreferrer" className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800">{content}</a>
-              ) : (
-                <Link key={item.title} href={item.href} className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800">{content}</Link>
-              );
+              return <Link key={item.title} href={item.href} className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800">{content}</Link>;
             })}
           </div>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link href="/about" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
               Explorer CeloHT <ArrowRight size={16} aria-hidden="true" />
             </Link>
-            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-parchment-100/25 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300">
-              Voir sur GitHub <ArrowUpRight size={16} aria-hidden="true" />
-            </a>
           </div>
         </div>
       </section>
