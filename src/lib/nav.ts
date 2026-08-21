@@ -149,11 +149,6 @@ export const searchIndex: NavItem[] = [
       "A practical guide to planting, protecting, and monitoring a young tree",
   },
   {
-    label: "Plant a Tree",
-    href: "/en/reforestation/plant-a-tree",
-    description: "A practical guide to planting, protecting, and monitoring a young tree",
-  },
-  {
     label: "Technology",
     href: "/technology",
     description: "Celo, CELO, USDm, and Valora compatibility",

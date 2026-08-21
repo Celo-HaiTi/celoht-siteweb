@@ -104,9 +104,9 @@ export default function DocumentationHubPage() {
       </Section>
 
       <CTASection
-        title="Besoin d'aller plus loin ?"
+        title="Want to go further?"
         description="Explore the technology, governance, and transparency pages to understand CeloHT's choices."
-        primary={{ label: "Explorer la technologie", href: "/technology" }}
+        primary={{ label: "Explore the technology", href: "/technology" }}
         secondary={{ label: "Read the FAQ", href: "/faq" }}
       />
     </>

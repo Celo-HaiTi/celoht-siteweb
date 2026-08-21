@@ -77,7 +77,7 @@ export default function SecurityPage() {
           <Link href="/support" className="underline underline-offset-2">
             Support
           </Link>{" "}
-          et
+          and
           <Link href="/contact" className="underline underline-offset-2">
             {" "}
             Contact

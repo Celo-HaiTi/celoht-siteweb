@@ -33,7 +33,7 @@ export function Footer() {
           </p>
           <div className="mt-7 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              { icon: WalletCards, title: "CeloHT DApp", copy: "Paiements, connexions aux wallets et services Web3.", href: DAPP_URL, external: true },
+              { icon: WalletCards, title: "CeloHT DApp", copy: "Payments, wallet connections, and Web3 services.", href: DAPP_URL, external: true },
               { icon: BookOpen, title: "Web3 Education", copy: "Resources for learning about blockchain, digital assets, and digital payments.", href: "/education" },
               { icon: UsersRound, title: "Agent Network", copy: "Community infrastructure that brings digital and financial services closer to people.", href: "/agent-network" },
               { icon: Leaf, title: "Reforestation and Impact", copy: "Tree planting, growth monitoring, and environmental impact.", href: "/reforestation" },
@@ -56,7 +56,7 @@ export function Footer() {
           </div>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/about" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
-              Explorer CeloHT <ArrowRight size={16} aria-hidden="true" />
+              Explore CeloHT <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
         </section>

@@ -22,6 +22,15 @@ test.describe("Primary navigation", () => {
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   });
 
+  test("Open Source page exposes its public ecosystem and contribution path", async ({ page }) => {
+    await page.goto("/open-source");
+    await expect(page).toHaveTitle(/CeloHT Open Source/);
+    await expect(page.getByRole("heading", { name: "Trust should be verifiable" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "The public development ecosystem" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "How to contribute" })).toHaveAttribute("href", "/contributing");
+    await expect(page.getByRole("link", { name: /Explore GitHub/ }).first()).toHaveAttribute("href", "https://github.com/Celo-HaiTi");
+  });
+
   test("reforestation guide is English on both supported routes", async ({ page }) => {
     await page.goto("/en/reforestation/plant-a-tree");
     await expect(page.getByRole("heading", { name: "How to Plant and Grow a Tree" })).toBeVisible();

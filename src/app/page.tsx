@@ -276,7 +276,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              { icon: WalletCards, title: "CeloHT DApp", copy: "Paiements, connexions aux wallets et services Web3.", href: "/dapp" },
+              { icon: WalletCards, title: "CeloHT DApp", copy: "Payments, wallet connections, and Web3 services.", href: "/dapp" },
               { icon: BookOpen, title: "Web3 Education", copy: "Resources for learning blockchain, digital assets, digital payments, and the Celo ecosystem.", href: "/education" },
               { icon: UsersRound, title: "Agent Network", copy: "Community infrastructure that brings digital and financial services closer to users.", href: "/agent-network" },
               { icon: Leaf, title: "Reforestation and Impact", copy: "Community initiatives for tree planting, growth monitoring, and environmental impact.", href: "/reforestation" },
