@@ -95,9 +95,9 @@ export default function DocumentationHubPage() {
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6">
-            <h3 className="font-display text-xl font-semibold">Agir avec contexte</h3>
+            <h3 className="font-display text-xl font-semibold">Act with context</h3>
             <p className="mt-3 text-sm text-ink-soft">
-              Les pages du site présentent le contexte utile avant toute action ou prise de contact.
+              The site pages provide useful context before any action or contact.
             </p>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function DocumentationHubPage() {
 
       <CTASection
         title="Besoin d'aller plus loin ?"
-        description="Explorez la technologie, la gouvernance et les pages de transparence pour comprendre les choix de CeloHT."
+        description="Explore the technology, governance, and transparency pages to understand CeloHT's choices."
         primary={{ label: "Explorer la technologie", href: "/technology" }}
         secondary={{ label: "Read the FAQ", href: "/faq" }}
       />

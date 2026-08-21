@@ -3,25 +3,24 @@ import { TreePlantingGuide } from "@/components/TreePlantingGuide";
 import { SITE_URL, assetPath } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Comment planter et faire grandir un arbre",
+  title: "How to Plant and Grow a Tree",
   description:
-    "Un guide pratique pour choisir, planter, protéger et suivre un jeune arbre jusqu'à son établissement.",
+    "A practical guide to choosing, planting, protecting, and monitoring a young tree through establishment.",
   alternates: {
-    canonical: "/reforestation/planter-un-arbre",
+    canonical: "/en/reforestation/plant-a-tree",
     languages: {
-      fr: `${SITE_URL}/reforestation/planter-un-arbre/`,
       en: `${SITE_URL}/en/reforestation/plant-a-tree/`,
-      "x-default": `${SITE_URL}/reforestation/planter-un-arbre/`,
+      "x-default": `${SITE_URL}/en/reforestation/plant-a-tree/`,
     },
   },
   openGraph: {
-    title: "Comment planter et faire grandir un arbre",
-    description: "Un guide pratique pour planter, protéger et suivre un jeune arbre.",
-    url: `${SITE_URL}/reforestation/planter-un-arbre/`,
-    images: [{ url: assetPath("/og-image.svg"), alt: "Guide de reboisement CeloHT" }],
+    title: "How to Plant and Grow a Tree",
+    description: "A practical guide to planting, protecting, and monitoring a young tree.",
+    url: `${SITE_URL}/en/reforestation/plant-a-tree/`,
+    images: [{ url: assetPath("/og-image.svg"), alt: "CeloHT reforestation guide" }],
   },
 };
 
 export default function TreePlantingPage() {
-  return <TreePlantingGuide language="fr" />;
+  return <TreePlantingGuide />;
 }

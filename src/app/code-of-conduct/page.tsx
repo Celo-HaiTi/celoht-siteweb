@@ -16,7 +16,7 @@ export default function CodeOfConductPage() {
       <PageHero
         eyebrow="Code of Conduct"
         title="A harassment-free experience for everyone"
-        lead="Ces règles s'appliquent à tous les espaces CeloHT, aux sessions communautaires et aux échanges publics."
+        lead="These rules apply to all CeloHT spaces, community sessions, and public discussions."
       />
 
       <Section title="The short version">
@@ -37,7 +37,7 @@ export default function CodeOfConductPage() {
             conduct@celoht.com
           </a>{" "}
           and are reviewed promptly and fairly. The full policy, including our enforcement
-          guideline, est résumé sur cette page afin que chaque personne puisse le consulter avant
+          guideline, is summarized on this page so everyone can review it before
           de participer.
         </p>
       </Section>

@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "How do I report a security issue?",
-    a: "Écrivez à security@celoht.com et ne partagez jamais de détails sensibles dans un canal public.",
+    a: "Write to security@celoht.com and never share sensitive details in a public channel.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function FAQPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions we hear often"
-        lead="Vous n'avez pas trouvé votre réponse ? Consultez la page Support ou contactez directement l'équipe CeloHT."
+        lead="Did not find your answer? Visit the Support page or contact the CeloHT team directly."
       />
 
       <Section>

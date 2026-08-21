@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const repos = [
-  { name: "Architecture", href: "/technology/architecture", detail: "La structure technique expliquée en langage clair." },
-  { name: "DApp", href: "/dapp", detail: "Les services Web3 et le parcours d'utilisation." },
-  { name: "Sécurité", href: "/security", detail: "Les règles et protections à connaître avant toute utilisation." },
+  { name: "Architecture", href: "/technology/architecture", detail: "The technical structure explained in plain language." },
+  { name: "DApp", href: "/dapp", detail: "The Web3 services and user journey." },
+  { name: "Security", href: "/security", detail: "The rules and protections to know before using the system." },
 ];
 
 export default function DevelopersPage() {
@@ -42,20 +42,20 @@ export default function DevelopersPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Parcours de compréhension" title="Commencer par le site">
+      <Section eyebrow="Understanding path" title="Start with the site">
         <pre className="overflow-x-auto rounded-xl bg-navy-950 p-4 text-sm text-parchment-100">
-          <code>{`1. Lire la mission et la vision
-2. Comprendre la technologie et la DApp
-3. Explorer la gouvernance et la transparence
-4. Rejoindre la communauté`}</code>
+          <code>{`1. Read the mission and vision
+2. Understand the technology and DApp
+3. Explore governance and transparency
+4. Join the community`}</code>
         </pre>
       </Section>
 
-      <Section eyebrow="Parcours technique" title="Comprendre la DApp et ses contrats">
+      <Section eyebrow="Technical path" title="Understand the DApp and its contracts">
         <pre className="overflow-x-auto rounded-xl bg-navy-950 p-4 text-sm text-parchment-100">
           <code>{`DApp → Technology → Architecture → Smart contracts
 
-Les pages indiquent ce qui est confirmé, en développement ou encore planifié.`}</code>
+The pages identify what is confirmed, in development, or still planned.`}</code>
         </pre>
       </Section>
 

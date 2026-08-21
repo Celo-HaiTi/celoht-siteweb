@@ -266,21 +266,21 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
-              <Globe2 size={15} aria-hidden="true" /> L&apos;écosystème CeloHT
+              <Globe2 size={15} aria-hidden="true" /> The CeloHT ecosystem
             </p>
-            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-5xl">Explorez l&apos;écosystème CeloHT</h2>
+            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-5xl">Explore the CeloHT ecosystem</h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-parchment-100/70">
-              CeloHT est une initiative haïtienne Web3 open source qui relie outils numériques,
-              apprentissage, participation communautaire et impact local.
+              CeloHT is an open-source Haitian Web3 initiative connecting digital tools, learning,
+              community participation, and local impact.
             </p>
           </div>
           <div className="mt-10 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
             {[
               { icon: WalletCards, title: "CeloHT DApp", copy: "Paiements, connexions aux wallets et services Web3.", href: "/dapp" },
-              { icon: BookOpen, title: "Éducation Web3", copy: "Ressources pour apprendre la blockchain, les actifs numériques, les paiements numériques et l'écosystème Celo.", href: "/education" },
-              { icon: UsersRound, title: "Réseau d'agents", copy: "Une infrastructure communautaire pour rapprocher les services numériques et financiers des utilisateurs.", href: "/agent-network" },
-              { icon: Leaf, title: "Reboisement et impact", copy: "Des initiatives communautaires liées à la plantation d'arbres, à leur suivi et à l'impact environnemental.", href: "/reforestation" },
-              { icon: Code2, title: "Open Source", copy: "CeloHT publie sa documentation, sa recherche et ses méthodes pour être compris et amélioré directement depuis le site.", href: "/open-source" },
+              { icon: BookOpen, title: "Web3 Education", copy: "Resources for learning blockchain, digital assets, digital payments, and the Celo ecosystem.", href: "/education" },
+              { icon: UsersRound, title: "Agent Network", copy: "Community infrastructure that brings digital and financial services closer to users.", href: "/agent-network" },
+              { icon: Leaf, title: "Reforestation and Impact", copy: "Community initiatives for tree planting, growth monitoring, and environmental impact.", href: "/reforestation" },
+              { icon: Code2, title: "Open Source", copy: "CeloHT publishes its documentation, research, and methods so they can be understood and improved on the site.", href: "/open-source" },
             ].map((item) => {
               const Icon = item.icon;
               const content = (
@@ -307,14 +307,14 @@ export default function HomePage() {
       <section className="border-y border-parchment-100 bg-parchment-100/70">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:py-16">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Reboisement et impact</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Reforestation and impact</p>
             <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">Plantez un arbre</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft dark:text-parchment-100/75">
-              Apprenez comment choisir un jeune arbre, préparer le terrain, le planter correctement, l&apos;arroser, le protéger et assurer son suivi jusqu&apos;à sa croissance.
+              Learn how to choose a young tree, prepare the ground, plant it correctly, water it, protect it, and monitor it through establishment.
             </p>
           </div>
           <Link href="/reforestation/planter-un-arbre" className="inline-flex w-fit items-center gap-2 rounded-full bg-navy-950 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:bg-navy-800">
-            Apprendre à planter un arbre <ArrowRight size={16} aria-hidden="true" />
+            Learn how to plant a tree <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </section>

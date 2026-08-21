@@ -13,20 +13,20 @@ export const metadata: Metadata = {
 
 const paths = [
   {
-    title: "Apprendre",
-    detail: "Découvrez le Web3, les paiements numériques, la blockchain et l'écosystème CeloHT.",
+    title: "Learn",
+    detail: "Discover Web3, digital payments, blockchain, and the CeloHT ecosystem.",
   },
   {
-    title: "Participer",
-    detail: "Participez aux initiatives communautaires, éducatives, environnementales et entrepreneuriales.",
+    title: "Participate",
+    detail: "Take part in community, education, environmental, and entrepreneurship initiatives.",
   },
   {
-    title: "Devenir agent",
-    detail: "Découvrez comment contribuer à rapprocher les services numériques et financiers des communautés locales.",
+    title: "Become an agent",
+    detail: "Discover how to bring digital and financial services closer to local communities.",
   },
   {
-    title: "Partager une initiative",
-    detail: "Proposez une idée, une initiative ou une collaboration pouvant contribuer à la mission de CeloHT.",
+    title: "Share an initiative",
+    detail: "Propose an idea, initiative, or collaboration that could contribute to CeloHT's mission.",
   },
 ];
 
@@ -40,9 +40,9 @@ export default function CommunityPage() {
     <>
       <Breadcrumbs items={[{ label: "Community" }]} />
       <PageHero
-        eyebrow="Communauté CeloHT"
-        title="Construisez avec nous"
-        lead="CeloHT évolue avec les personnes qui apprennent, utilisent, développent et contribuent à l'écosystème."
+        eyebrow="CeloHT community"
+        title="Build with us"
+        lead="CeloHT evolves with the people who learn, use, develop, and contribute to the ecosystem."
       />
 
       <Section>
@@ -62,9 +62,9 @@ export default function CommunityPage() {
       </Section>
 
       <CTASection
-        title="Rejoindre CeloHT"
-        description="Parlez-nous de votre intérêt, de votre initiative ou de la manière dont vous souhaitez prendre part à l'écosystème."
-        primary={{ label: "Rejoindre CeloHT →", href: "/contact" }}
+        title="Join CeloHT"
+        description="Tell us about your interest, initiative, or how you would like to take part in the ecosystem."
+        primary={{ label: "Join CeloHT →", href: "/contact" }}
       />
 
       <Section eyebrow="Stay connected" title="Channels">

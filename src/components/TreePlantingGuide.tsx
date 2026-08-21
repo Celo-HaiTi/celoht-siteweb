@@ -24,14 +24,10 @@ type GuideStep = {
 };
 
 type TreePlantingContent = {
-  language: "fr" | "en";
   breadcrumbHome: string;
   breadcrumbPillar: string;
   breadcrumbPage: string;
   pillarHref: string;
-  switchLabel: string;
-  switchHref: string;
-  switchLanguage: string;
   eyebrow: string;
   title: string;
   lead: string;
@@ -57,19 +53,6 @@ const icons = [
   ClipboardCheck,
 ] as const;
 
-const frenchSteps = [
-  ["Choisir le bon arbre", "Choisissez un jeune arbre sain, avec des racines bien formées, qui convient au climat, au sol et aux usages de l'environnement local."],
-  ["Choisir le bon emplacement", "Vérifiez l'ensoleillement, l'espace disponible à maturité, le drainage et la possibilité de protéger l'arbre des passages et des activités voisines."],
-  ["Préparer le terrain", "Dégagez la zone, ameublissez le sol et préparez un trou assez large pour les racines. Gardez la terre fertile à proximité pour reboucher."],
-  ["Planter correctement", "Placez l'arbre à la même profondeur que dans son contenant ou sa motte. Étalez les racines sans les forcer, rebouchez doucement et tassez légèrement la terre."],
-  ["Arroser", "Arrosez après la plantation, puis adaptez la fréquence aux pluies, au sol et aux conditions locales. L'objectif est de maintenir une humidité régulière sans détremper le terrain."],
-  ["Protéger le jeune arbre", "Utilisez une protection adaptée contre les animaux, les dommages accidentels, les mauvaises herbes et les conditions qui pourraient fragiliser le jeune plant."],
-  ["Entretenir", "Observez l'état du sol, retirez la végétation concurrente autour du tronc et maintenez une humidité appropriée pendant la période d'établissement."],
-  ["Suivre la croissance", "Revenez régulièrement vérifier la santé de l'arbre, sa croissance, les signes de stress et l'état de sa protection. Des notes et des photos peuvent aider à comparer son évolution."],
-  ["Laisser l'arbre devenir autonome", "À mesure que l'arbre s'établit, adaptez progressivement l'arrosage et l'entretien aux conditions du site plutôt que d'appliquer un calendrier identique partout."],
-  ["Documenter l'impact", "Lorsque cela est utile et possible, partagez la date, le lieu général, l'espèce et les observations de croissance. CeloHT ne présente pas ce guide comme un système de certification."],
-] as const;
-
 const englishSteps = [
   ["Choose the right tree", "Choose a healthy young tree with well-formed roots that suits the local climate, soil, and surrounding land use."],
   ["Choose the right location", "Check sunlight, the space available at maturity, drainage, and whether the tree can be protected from traffic and nearby activity."],
@@ -92,36 +75,11 @@ function makeSteps(values: readonly (readonly [string, string])[]): GuideStep[] 
   }));
 }
 
-const frenchContent: TreePlantingContent = {
-  language: "fr",
-  breadcrumbHome: "Accueil",
-  breadcrumbPillar: "Reboisement",
-  breadcrumbPage: "Planter un arbre",
-  pillarHref: "/reforestation",
-  switchLabel: "English",
-  switchHref: "/en/reforestation/plant-a-tree",
-  switchLanguage: "Changer de langue",
-  eyebrow: "Guide de reboisement",
-  title: "Comment planter et faire grandir un arbre",
-  lead: "Un parcours simple pour passer de la préparation du terrain aux premiers signes d'établissement, en tenant compte des conditions propres à chaque site.",
-  sectionEyebrow: "Le parcours en dix étapes",
-  sectionTitle: "De la plantation à l'établissement",
-  steps: makeSteps(frenchSteps),
-  calloutEyebrow: "Observer avant d'agir",
-  calloutTitle: "Chaque site demande une attention différente.",
-  calloutBody: "Les conditions du sol, les pluies, l'espace, les animaux et les usages du terrain doivent guider les décisions d'entretien. En cas de doute, demandez conseil à une personne qui connaît l'environnement local.",
-  backLink: "Retour au reboisement",
-};
-
 const englishContent: TreePlantingContent = {
-  language: "en",
   breadcrumbHome: "Home",
   breadcrumbPillar: "Reforestation",
   breadcrumbPage: "Plant a Tree",
   pillarHref: "/reforestation",
-  switchLabel: "Français",
-  switchHref: "/reforestation/planter-un-arbre",
-  switchLanguage: "Change language",
   eyebrow: "Reforestation guide",
   title: "How to Plant and Grow a Tree",
   lead: "A practical path from preparing the ground to the first signs of establishment, shaped by the conditions of each site.",
@@ -134,20 +92,11 @@ const englishContent: TreePlantingContent = {
   backLink: "Back to reforestation",
 };
 
-export function TreePlantingGuide({ language }: { language: "fr" | "en" }) {
-  const content = language === "en" ? englishContent : frenchContent;
+export function TreePlantingGuide() {
+  const content = englishContent;
 
   return (
     <>
-      <div className="mx-auto flex max-w-6xl justify-end px-4 pt-5 sm:px-6">
-        <nav aria-label={content.switchLanguage} className="flex items-center gap-2 text-sm">
-          <span className="text-muted">{content.language === "en" ? "English" : "Français"}</span>
-          <span aria-hidden="true" className="text-muted">|</span>
-          <a href={content.switchHref} className="font-semibold text-gold-300 underline-offset-4 hover:underline">
-            {content.switchLabel}
-          </a>
-        </nav>
-      </div>
       <Breadcrumbs
         homeLabel={content.breadcrumbHome}
         items={[{ label: content.breadcrumbPillar, href: content.pillarHref }, { label: content.breadcrumbPage }]}

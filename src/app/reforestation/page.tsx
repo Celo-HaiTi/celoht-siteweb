@@ -85,17 +85,17 @@ export default function ReforestationPage() {
         </p>
       </Section>
 
-      <Section eyebrow="Passer à l&apos;action" title="Plantez un arbre">
+      <Section eyebrow="Take action" title="Plant a tree">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <p className="max-w-2xl text-lg leading-8 text-ink-soft dark:text-parchment-100/75">
-            Apprenez comment choisir un jeune arbre, préparer le terrain, le planter correctement,
-            l&apos;arroser, le protéger et assurer son suivi jusqu&apos;à sa croissance.
+            Learn how to choose a young tree, prepare the ground, plant it correctly, water it,
+            protect it, and monitor it through establishment.
           </p>
           <Link
             href="/reforestation/planter-un-arbre"
             className="inline-flex w-fit items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-600"
           >
-            Apprendre à planter un arbre <span aria-hidden="true">→</span>
+            Learn how to plant a tree <span aria-hidden="true">→</span>
           </Link>
         </div>
       </Section>

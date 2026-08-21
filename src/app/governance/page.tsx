@@ -83,7 +83,7 @@ export default function GovernancePage() {
 
       <CTASection
         title="Read the full policy"
-        description="La page Gouvernance présente le cadre public actuel, ses responsabilités et la manière dont il peut évoluer."
+        description="The Governance page presents the current public framework, its responsibilities, and how it can evolve."
         primary={{ label: "Voir la transparence", href: "/transparency" }}
         secondary={{ label: "See the roadmap", href: "/roadmap" }}
       />

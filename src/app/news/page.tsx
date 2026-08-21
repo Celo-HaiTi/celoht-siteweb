@@ -24,7 +24,7 @@ const posts = [
   {
     date: "2026-07",
     title: "Flagship repository published",
-    body: "Notre espace public de gouvernance et de documentation rassemble désormais la feuille de route, la sécurité et les parcours de participation.",
+    body: "Our public governance and documentation space now brings together the roadmap, security, and participation paths.",
   },
   {
     date: "2026-03",
@@ -63,7 +63,7 @@ export default function NewsPage() {
 
       <CTASection
         title="Don't want to miss an update?"
-        description="Suivez CeloHT sur X ou Medium, et consultez régulièrement les pages News et Blog pour les évolutions publiques."
+        description="Follow CeloHT on X or Medium, and check the News and Blog pages regularly for public updates."
         primary={{ label: "Follow on X", href: "https://twitter.com/CeloHtOfficial" }}
         secondary={{ label: "Read the blog", href: "/blog" }}
         external

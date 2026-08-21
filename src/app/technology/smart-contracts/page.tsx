@@ -133,15 +133,14 @@ export default function SmartContractsPage() {
       </Section>
 
       <Section
-        eyebrow="Comprendre le produit"
-        title="Les contrats dans le parcours utilisateur"
+        eyebrow="Understand the product"
+        title="Contracts in the user journey"
       >
         <div className="rounded-2xl border border-navy-700/15 p-6">
           <p className="text-sm text-ink-soft">
-            Cette page décrit les fonctions prévues et distingue clairement les
-            éléments en développement des éléments confirmés. La page DApp
-            présente le parcours utilisateur, tandis que la page Technologie
-            explique l&apos;architecture générale.
+            This page describes planned functions and clearly distinguishes work in development
+            from confirmed components. The DApp page presents the user journey, while the
+            Technology page explains the overall architecture.
           </p>
           <Link
             href="/dapp"

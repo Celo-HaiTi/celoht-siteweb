@@ -48,8 +48,8 @@ export default function CookiesPage() {
 
       <Section title="Third parties">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          Les liens vers X, Medium et la DApp CeloHT mènent vers des sites qui ont leurs propres
-          pratiques de cookies, en dehors de notre contrôle.
+          Links to X, Medium, and the CeloHT DApp lead to sites with their own cookie practices,
+          outside our control.
         </p>
       </Section>
     </>

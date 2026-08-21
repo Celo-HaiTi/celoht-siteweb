@@ -18,7 +18,7 @@ export default function SecurityPage() {
       <PageHero
         eyebrow="Security"
         title="Report privately, never in a public issue"
-        lead="Voici les protections principales du site et la manière confidentielle de signaler un problème."
+        lead="These are the website's main protections and the confidential way to report a problem."
       />
 
       <Section eyebrow="Reporting" title="Where to send a vulnerability report">
@@ -33,9 +33,8 @@ export default function SecurityPage() {
             </a>
           </li>
           <li>
-            Pour un problème sensible, utilisez l&apos;adresse privée ci-dessus
-            et ne partagez jamais de données personnelles, de clé privée ou de
-            phrase de récupération.
+            For a sensitive issue, use the private address above and never share personal data, a
+            private key, or a recovery phrase.
           </li>
         </ul>
       </Section>
@@ -70,12 +69,11 @@ export default function SecurityPage() {
       </Section>
 
       <Section
-        eyebrow="Protection des utilisateurs"
-        title="Des règles simples et vérifiables"
+        eyebrow="User protection"
+        title="Simple, verifiable rules"
       >
         <p className="max-w-2xl text-sm leading-6 text-ink-soft dark:text-parchment-100/70">
-          CeloHT ne demande jamais une phrase de récupération, une clé privée ou
-          un mot de passe. Les pages{" "}
+          CeloHT never asks for a recovery phrase, private key, or password. The{" "}
           <Link href="/support" className="underline underline-offset-2">
             Support
           </Link>{" "}
@@ -84,7 +82,7 @@ export default function SecurityPage() {
             {" "}
             Contact
           </Link>{" "}
-          indiquent les bons canaux pour chaque demande.
+          show the right channels for each request.
         </p>
       </Section>
     </>

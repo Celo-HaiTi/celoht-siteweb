@@ -24,20 +24,20 @@ export function Footer() {
         </div>
 
         <section aria-labelledby="footer-ecosystem-title" className="mt-12 border-y border-parchment-100/10 py-10">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Écosystème ouvert</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Open ecosystem</p>
           <h2 id="footer-ecosystem-title" className="mt-2 max-w-3xl font-display text-3xl font-semibold">
-            Explorez l&apos;écosystème CeloHT
+            Explore the CeloHT ecosystem
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-parchment-100/70">
-            CeloHT est une initiative haïtienne Web3 open source qui relie outils numériques, apprentissage, participation communautaire et impact local.
+            CeloHT is an open-source Haitian Web3 initiative connecting digital tools, learning, community participation, and local impact.
           </p>
           <div className="mt-7 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
             {[
               { icon: WalletCards, title: "CeloHT DApp", copy: "Paiements, connexions aux wallets et services Web3.", href: DAPP_URL, external: true },
-              { icon: BookOpen, title: "Éducation Web3", copy: "Ressources pour apprendre la blockchain, les actifs numériques et les paiements numériques.", href: "/education" },
-              { icon: UsersRound, title: "Réseau d'agents", copy: "Une infrastructure communautaire pour rapprocher les services numériques et financiers.", href: "/agent-network" },
-              { icon: Leaf, title: "Reboisement et impact", copy: "Plantation d'arbres, suivi de leur croissance et impact environnemental.", href: "/reforestation" },
-              { icon: Code2, title: "Open Source", copy: "Comprendre le code, la documentation et les méthodes publiques de CeloHT.", href: "/open-source" },
+              { icon: BookOpen, title: "Web3 Education", copy: "Resources for learning about blockchain, digital assets, and digital payments.", href: "/education" },
+              { icon: UsersRound, title: "Agent Network", copy: "Community infrastructure that brings digital and financial services closer to people.", href: "/agent-network" },
+              { icon: Leaf, title: "Reforestation and Impact", copy: "Tree planting, growth monitoring, and environmental impact.", href: "/reforestation" },
+              { icon: Code2, title: "Open Source", copy: "Understand CeloHT's code, documentation, and public methods.", href: "/open-source" },
             ].map((item) => {
               const Icon = item.icon;
               const content = (

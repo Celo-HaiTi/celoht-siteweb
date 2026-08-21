@@ -26,8 +26,8 @@ export default function PrivacyPage() {
             <Link href="/cookies" className="underline underline-offset-2">
             Cookie Policy
             </Link>{" "}
-          pour la seule exception d&apos;une préférence de thème locale. Les informations partagées sur
-          les services externes sont soumises à leurs propres politiques de confidentialité.
+          except for a local theme preference. Information shared with external services is subject
+          to their own privacy policies.
         </p>
       </Section>
 

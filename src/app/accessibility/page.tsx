@@ -43,13 +43,13 @@ export default function AccessibilityPage() {
       <Section title="Known gaps">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
           Automated accessibility auditing (e.g. axe-core in CI) is not yet wired into our pipeline.
-          Nous suivons ce point dans la feuille de route technique du site.
+          We track this point in the site&apos;s technical roadmap.
         </p>
       </Section>
 
       <Section title="Reporting an issue">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          Vous avez rencontré une barrière d&apos;accessibilité ? Écrivez-nous via la page{" "}
+          Have you encountered an accessibility barrier? Contact us through the{" "}
           <Link href="/support" className="underline underline-offset-2">
             Support
           </Link>{" "}

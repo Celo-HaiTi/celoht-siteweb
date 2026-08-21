@@ -8,9 +8,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/en/reforestation/plant-a-tree",
     languages: {
-      fr: `${SITE_URL}/reforestation/planter-un-arbre/`,
       en: `${SITE_URL}/en/reforestation/plant-a-tree/`,
-      "x-default": `${SITE_URL}/reforestation/planter-un-arbre/`,
+      "x-default": `${SITE_URL}/en/reforestation/plant-a-tree/`,
     },
   },
   openGraph: {
@@ -22,5 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function PlantATreePage() {
-  return <TreePlantingGuide language="en" />;
+  return <TreePlantingGuide />;
 }

@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 };
 
 const repositories = [
-  { name: "Mission et vision", detail: "Comprendre pourquoi CeloHT existe et où il veut aller.", category: "Fondation", href: "/mission" },
-  { name: "Documentation publique", detail: "Lire les explications destinées aux utilisateurs et à la communauté.", category: "Documentation", href: "/documentation" },
-  { name: "CeloHT DApp", detail: "Comprendre les services Web3 et les parcours proposés aux utilisateurs.", category: "Produit", href: "/dapp" },
-  { name: "Architecture", detail: "Voir comment les différentes briques techniques s'articulent.", category: "Infrastructure", href: "/technology/architecture" },
-  { name: "Recherche et impact", detail: "Explorer les principes de mesure, de transparence et d'apprentissage.", category: "Recherche", href: "/research" },
-  { name: "Identité CeloHT", detail: "Consulter les ressources de marque et les informations média.", category: "Identité", href: "/media-kit" },
-  { name: "Feuille de route", detail: "Suivre les priorités publiques et les étapes annoncées.", category: "Direction", href: "/roadmap" },
-  { name: "Transparence", detail: "Lire les pages qui expliquent les décisions et les limites du projet.", category: "Confiance", href: "/transparency" },
+  { name: "Mission and vision", detail: "Understand why CeloHT exists and where it is going.", category: "Foundation", href: "/mission" },
+  { name: "Public documentation", detail: "Read explanations prepared for users and the community.", category: "Documentation", href: "/documentation" },
+  { name: "CeloHT DApp", detail: "Understand the Web3 services and user journeys.", category: "Product", href: "/dapp" },
+  { name: "Architecture", detail: "See how the technical building blocks fit together.", category: "Infrastructure", href: "/technology/architecture" },
+  { name: "Research and impact", detail: "Explore measurement, transparency, and learning principles.", category: "Research", href: "/research" },
+  { name: "CeloHT identity", detail: "Review brand resources and media information.", category: "Identity", href: "/media-kit" },
+  { name: "Roadmap", detail: "Follow public priorities and announced milestones.", category: "Direction", href: "/roadmap" },
+  { name: "Transparency", detail: "Read the pages explaining project decisions and limits.", category: "Trust", href: "/transparency" },
 ];
 
 const actions = [
@@ -55,7 +55,7 @@ export default function OpenSourcePage() {
         </div>
       </Section>
 
-      <Section eyebrow="CeloHT en pratique" title="Les ressources publiques pour comprendre le travail">
+      <Section eyebrow="CeloHT in practice" title="Public resources for understanding the work">
         <div className="grid gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 dark:border-parchment-100/10 dark:bg-parchment-100/10 sm:grid-cols-2 lg:grid-cols-4">
           {repositories.map((repo) => (
             <a key={repo.href} href={repo.href} className="group flex min-h-56 flex-col bg-parchment-50 p-6 transition-colors hover:bg-gold-500/10 dark:bg-navy-900 dark:hover:bg-navy-800">
@@ -65,17 +65,17 @@ export default function OpenSourcePage() {
                 <span aria-hidden="true">→</span>
               </h2>
               <p className="mt-3 flex-1 text-sm leading-6 text-ink-soft dark:text-parchment-100/65">{repo.detail}</p>
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink dark:text-parchment-50">Lire la page <span aria-hidden="true">→</span></span>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink dark:text-parchment-50">Read page <span aria-hidden="true">→</span></span>
             </a>
           ))}
         </div>
       </Section>
 
       <CTASection
-        title="Comprendre avant de contribuer"
-        description="Lisez le contexte public, explorez les programmes et choisissez une manière utile de participer à CeloHT."
-        primary={{ label: "Lire la documentation", href: "/documentation" }}
-        secondary={{ label: "Rejoindre CeloHT", href: "/community" }}
+        title="Understand before you contribute"
+        description="Read the public context, explore the programs, and choose a useful way to participate in CeloHT."
+        primary={{ label: "Read the documentation", href: "/documentation" }}
+        secondary={{ label: "Join CeloHT", href: "/community" }}
       />
     </>
   );

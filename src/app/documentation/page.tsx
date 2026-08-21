@@ -8,7 +8,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Documentation",
   description:
-    "Le portail de documentation public de CeloHT, conçu pour comprendre le projet directement sur le site.",
+    "CeloHT's public documentation portal, designed to explain the project directly on the site.",
   alternates: { canonical: "/documentation" },
 };
 
@@ -18,17 +18,17 @@ const groups = [
     links: [
       { label: "Vision", href: "/vision" },
       { label: "Mission", href: "/mission" },
-      { label: "Valeurs", href: "/values" },
-      { label: "Histoire", href: "/history" },
+      { label: "Values", href: "/values" },
+      { label: "History", href: "/history" },
     ],
   },
   {
     heading: "Governance & legal",
     links: [
-      { label: "Gouvernance", href: "/governance" },
-      { label: "Statut et politique sans token", href: "/no-token-policy" },
-      { label: "Identité de marque", href: "/brand-identity" },
-      { label: "Vision du projet", href: "/project-vision" },
+      { label: "Governance", href: "/governance" },
+      { label: "Status and no-token policy", href: "/no-token-policy" },
+      { label: "Brand identity", href: "/brand-identity" },
+      { label: "Project vision", href: "/project-vision" },
     ],
   },
   {
@@ -36,17 +36,17 @@ const groups = [
     links: [
       { label: "Architecture", href: "/technology/architecture" },
       { label: "Services DApp", href: "/dapp/services" },
-      { label: "Déploiement et disponibilité", href: "/dapp/deployment" },
-      { label: "Guide développeur", href: "/developers/guide" },
+      { label: "Deployment and availability", href: "/dapp/deployment" },
+      { label: "Developer guide", href: "/developers/guide" },
     ],
   },
   {
     heading: "Security & funding",
     links: [
-      { label: "Politique de sécurité", href: "/security" },
-      { label: "Risques et protections", href: "/security/risks" },
-      { label: "Modèle de financement", href: "/funding" },
-      { label: "Feuille de route", href: "/roadmap" },
+      { label: "Security policy", href: "/security" },
+      { label: "Risks and protections", href: "/security/risks" },
+      { label: "Funding model", href: "/funding" },
+      { label: "Roadmap", href: "/roadmap" },
     ],
   },
 ];
@@ -57,8 +57,8 @@ export default function DocumentationPage() {
       <Breadcrumbs items={[{ label: "Documentation" }]} />
       <PageHero
         eyebrow="Documentation"
-        title="Une explication publique, directement sur CeloHT"
-        lead="Ce portail rassemble le contexte, les décisions, les programmes et les informations techniques nécessaires pour comprendre CeloHT sans quitter le site."
+        title="A public explanation, directly on CeloHT"
+        lead="This portal brings together the context, decisions, programs, and technical information needed to understand CeloHT without leaving the site."
       />
 
       <Section>
@@ -89,10 +89,10 @@ export default function DocumentationPage() {
         title="Looking to build something?"
         description="Our developer portal covers the local environment, repository structure, and how to run validation checks."
         primary={{
-          label: "Visiter le portail développeur",
+          label: "Visit the developer portal",
           href: "/developers",
         }}
-        secondary={{ label: "Lire la FAQ", href: "/faq" }}
+        secondary={{ label: "Read the FAQ", href: "/faq" }}
       />
     </>
   );

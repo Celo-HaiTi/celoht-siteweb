@@ -143,10 +143,10 @@ export const searchIndex: NavItem[] = [
     description: "Tree planting rewarded in USDm",
   },
   {
-    label: "Planter un arbre",
+    label: "Plant a Tree",
     href: "/reforestation/planter-un-arbre",
     description:
-      "Guide pratique pour planter, protéger et suivre un jeune arbre",
+      "A practical guide to planting, protecting, and monitoring a young tree",
   },
   {
     label: "Plant a Tree",

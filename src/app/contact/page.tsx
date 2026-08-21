@@ -89,16 +89,15 @@ export default function ContactPage() {
 
       <Section eyebrow="Need more information?" title="">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          Consultez la{" "}
+          Check the{" "}
           <Link href="/faq" className="underline underline-offset-2">
             FAQ
           </Link>{" "}
-          ou la page{" "}
+          or{" "}
           <Link href="/support" className="underline underline-offset-2">
             Support
           </Link>{" "}
-          avant de nous écrire. Ces pages regroupent les réponses et les
-          parcours disponibles.
+          before writing to us. These pages collect the available answers and paths.
         </p>
       </Section>
     </>

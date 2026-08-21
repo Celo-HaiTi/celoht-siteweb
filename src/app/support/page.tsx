@@ -29,12 +29,12 @@ export default function SupportPage() {
       />
 
       <Section
-        eyebrow="Demandes et incidents"
-        title="Un parcours clair pour chaque besoin"
+        eyebrow="Requests and incidents"
+        title="A clear path for every need"
       >
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
-            Problème sur le site : décrivez-le à{" "}
+            Website problem: describe it to{" "}
             <a
               href="mailto:hello@celoht.com"
               className="underline underline-offset-2"
@@ -44,15 +44,13 @@ export default function SupportPage() {
             .
           </li>
           <li>
-            Problème lié à la DApp : indiquez l&apos;écran concerné, le
-            navigateur et les étapes suivies à la même adresse.
+            DApp problem: include the relevant screen, browser, and steps you followed at the same address.
           </li>
           <li>
-            Question sur la documentation ou la gouvernance : consultez la{" "}
+            Documentation or governance question: consult the{" "}
             <Link href="/faq" className="underline underline-offset-2">
               FAQ
-            </Link>{" "}
-            ou écrivez à hello@celoht.com.
+              </Link>{" "}or email hello@celoht.com.
           </li>
         </ul>
       </Section>
