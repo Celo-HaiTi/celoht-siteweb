@@ -16,7 +16,7 @@ export function Section({ title, eyebrow, children, className = "", id }: Props)
           {eyebrow}
         </p>
       )}
-      {title && <h2 className="mt-3 max-w-4xl font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl lg:text-5xl">{title}</h2>}
+      {title && <h2 className="mt-3 max-w-4xl font-display text-3xl font-bold tracking-tight text-parchment-50 sm:text-4xl lg:text-5xl">{title}</h2>}
       <div className={title || eyebrow ? "mt-8" : ""}>{children}</div>
     </section>
   );

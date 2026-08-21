@@ -1,43 +1,62 @@
 @import "tailwindcss";
 
-/* CeloHT permanent visual system: deep navy infrastructure and yellow signal. */
+/* CeloHT permanent visual system: one deep navy canvas and one yellow signal. */
 @theme {
   --font-display: "IBM Plex Sans", "Inter", "Avenir Next", ui-sans-serif, sans-serif;
   --font-body: "Inter", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
   --font-mono:
     ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", monospace;
 
-  --color-navy-950: #081225;
-  --color-navy-900: #0b1730;
-  --color-navy-800: #142443;
-  --color-navy-700: #24385b;
-  --color-navy-600: #52627a;
+  --color-bg: #061426;
+  --color-surface: #0a1b30;
+  --color-surface-soft: rgba(255, 255, 255, 0.025);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-text: #f5f7fa;
+  --color-text-muted: #94a3b8;
+  --color-primary: #ffd43b;
+  --color-primary-hover: #ffe066;
 
-  --color-gold-300: #f9df7a;
-  --color-gold-500: #f7d046;
-  --color-gold-600: #d6aa22;
-  --color-gold-700: #9b7614;
-  --color-gold-800: #72560f;
+  --color-navy-950: #061426;
+  --color-navy-900: #0a1b30;
+  --color-navy-800: #102640;
+  --color-navy-700: #213a58;
+  --color-navy-600: #4f6680;
+
+  --color-gold-300: #ffe066;
+  --color-gold-500: #ffd43b;
+  --color-gold-600: #e0b72f;
+  --color-gold-700: #c39b20;
+  --color-gold-800: #a9851d;
 
   --color-forest-400: #4f9274;
   --color-forest-500: #36725a;
   --color-forest-600: #264e3d;
 
-  --color-parchment-50: #ffffff;
-  --color-parchment-100: #e8edf3;
-  --color-parchment: #f4f6f8;
+  --color-parchment-50: #f5f7fa;
+  --color-parchment-100: #dce5ef;
+  --color-parchment: #94a3b8;
 
-  --color-ink: #0b1730;
-  --color-ink-soft: #52627a;
-  --color-muted: #718096;
+  --color-ink: #f5f7fa;
+  --color-ink-soft: #94a3b8;
+  --color-muted: #94a3b8;
 }
 
 :root {
   color-scheme: dark;
+  --color-bg: #061426;
+  --color-surface: #0a1b30;
+  --color-surface-soft: rgba(255, 255, 255, 0.025);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-text: #f5f7fa;
+  --color-text-muted: #94a3b8;
+  --color-primary: #ffd43b;
+  --color-primary-hover: #ffe066;
 }
 
 * {
-  border-color: var(--color-navy-700);
+  border-color: var(--color-border);
 }
 
 html {
@@ -62,27 +81,92 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background: var(--color-navy-950);
-  color: var(--color-parchment-100);
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 /* Legacy page utilities resolve to the permanent CeloHT surface system. */
+main,
+section,
+article,
+header,
+footer {
+  background-color: var(--color-bg);
+}
+
 .bg-white,
 .bg-parchment,
 .bg-parchment-50,
 .bg-parchment-50\/80,
-.bg-parchment-50\/85 {
-  background-color: var(--color-navy-950) !important;
+.bg-parchment-50\/85,
+.bg-navy-950 {
+  background-color: var(--color-bg) !important;
+}
+
+.bg-navy-900 {
+  background-color: var(--color-surface) !important;
+}
+
+.bg-navy-900\/60,
+.bg-navy-900\/80,
+.bg-parchment-100\/70 {
+  background-color: var(--color-surface) !important;
+}
+
+.bg-navy-800 {
+  background-color: color-mix(in srgb, var(--color-surface) 86%, white 14%) !important;
+}
+
+.bg-navy-700\/5,
+.bg-parchment-100\/5,
+.bg-parchment-100\/10,
+.bg-parchment-100\/15,
+.bg-navy-700\/10 {
+  background-color: var(--color-surface-soft) !important;
+}
+
+.border-navy-700\/10,
+.border-navy-700\/15,
+.border-parchment-100\/10,
+.border-parchment-100\/15,
+.border-parchment-100\/20,
+.border-parchment-100\/25 {
+  border-color: var(--color-border) !important;
+}
+
+.border-navy-800,
+.border-parchment-100 {
+  border-color: var(--color-border-strong) !important;
 }
 
 .text-ink {
-  color: var(--color-parchment-50) !important;
+  color: var(--color-text) !important;
 }
 
 .text-ink-soft,
-.text-muted {
-  color: var(--color-parchment-100) !important;
-  opacity: 0.72;
+.text-muted,
+.text-navy-900 {
+  color: var(--color-text-muted) !important;
+}
+
+.text-slate-900,
+.text-slate-700,
+.text-slate-500,
+.text-slate-400 {
+  color: var(--color-text-muted) !important;
+}
+
+.text-gold-800,
+.text-gold-700 {
+  color: var(--color-primary) !important;
+}
+
+.rounded-lg.border,
+.rounded-xl.border,
+.rounded-2xl.border,
+.rounded-3xl.border {
+  background-color: var(--color-surface-soft);
+  border-color: var(--color-border);
 }
 
 button,
