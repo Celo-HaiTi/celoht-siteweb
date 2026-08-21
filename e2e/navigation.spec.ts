@@ -22,6 +22,17 @@ test.describe("Primary navigation", () => {
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   });
 
+  test("reforestation guide switches languages in both directions", async ({ page }) => {
+    await page.goto("/reforestation/planter-un-arbre");
+    await page.getByRole("link", { name: "English", exact: true }).click();
+    await expect(page).toHaveURL(/\/en\/reforestation\/plant-a-tree\/?$/);
+    await expect(page.getByRole("heading", { name: "How to Plant and Grow a Tree" })).toBeVisible();
+
+    await page.getByRole("link", { name: "Français", exact: true }).click();
+    await expect(page).toHaveURL(/\/reforestation\/planter-un-arbre\/?$/);
+    await expect(page.getByRole("heading", { name: "Comment planter et faire grandir un arbre" })).toBeVisible();
+  });
+
   test("404 page renders for an unknown route", async ({ page }) => {
     const response = await page.goto("/this-page-does-not-exist");
     expect(response?.status()).toBe(404);
