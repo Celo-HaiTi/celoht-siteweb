@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { DISCORD_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -31,7 +32,7 @@ const paths = [
 ];
 
 const channels = [
-  { label: "X / Twitter", href: "https://twitter.com/CeloHtOfficial" },
+  { label: "Discord", href: DISCORD_URL },
   { label: "LinkedIn", href: "https://linkedin.com/company/celoht" },
 ];
 
@@ -73,6 +74,9 @@ export default function CommunityPage() {
             <li key={channel.href}>
               <a
                 href={channel.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={channel.label === "Discord" ? "Join CeloHT on Discord" : channel.label}
                 className="inline-flex items-center rounded-full border border-navy-700/20 px-4 py-2 text-sm hover:bg-navy-700/10 dark:border-parchment-100/20 dark:hover:bg-parchment-100/10"
               >
                 {channel.label}

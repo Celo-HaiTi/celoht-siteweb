@@ -5,6 +5,7 @@ import { footerNav } from "@/lib/nav";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
 import {
   DAPP_URL,
+  DISCORD_URL,
   GITHUB_ORG_URL,
   assetPath,
 } from "@/lib/constants";
@@ -103,11 +104,13 @@ export function Footer() {
               GitHub →
             </a>
             <a
-              href="https://twitter.com/CeloHtOfficial"
+              href={DISCORD_URL}
+              target="_blank"
+              aria-label="Join CeloHT on Discord"
               className="text-parchment-100/70 hover:text-parchment-100"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              X / Twitter
+              Discord
             </a>
             <a
               href="https://medium.com/@celoht3"

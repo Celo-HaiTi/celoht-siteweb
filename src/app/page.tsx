@@ -14,7 +14,7 @@ import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { StatGrid } from "@/components/StatGrid";
-import { SITE_URL, DAPP_URL } from "@/lib/constants";
+import { DISCORD_URL, SITE_URL, DAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "CeloHT | Open-source Haitian Web3 infrastructure",
@@ -31,7 +31,7 @@ const jsonLd = {
   logo: `${SITE_URL}/celoht-logo.png`,
   description:
     "An open-source Haitian Web3 initiative building practical pathways through financial inclusion, education, digital payments, and community action on Celo.",
-  sameAs: ["https://twitter.com/CeloHtOfficial", "https://medium.com/@celoht3"],
+  sameAs: [DISCORD_URL, "https://medium.com/@celoht3"],
 };
 
 const ecosystemPaths = [

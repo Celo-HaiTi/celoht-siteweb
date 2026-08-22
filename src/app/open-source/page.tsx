@@ -42,11 +42,6 @@ export const metadata: Metadata = {
     url: "https://celoht.com/open-source/",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "CeloHT Open Source",
-    description: "Explore CeloHT's public code, governance, and transparent development infrastructure.",
-  },
 };
 
 const jsonLd = {

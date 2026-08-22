@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { DISCORD_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "News",
@@ -63,8 +64,8 @@ export default function NewsPage() {
 
       <CTASection
         title="Don't want to miss an update?"
-        description="Follow CeloHT on X or Medium, and check the News and Blog pages regularly for public updates."
-        primary={{ label: "Follow on X", href: "https://twitter.com/CeloHtOfficial" }}
+        description="Join the CeloHT Discord community or follow Medium, and check the News and Blog pages regularly for public updates."
+        primary={{ label: "Join Discord", href: DISCORD_URL }}
         secondary={{ label: "Read the blog", href: "/blog" }}
         external
       />

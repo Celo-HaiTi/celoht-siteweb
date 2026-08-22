@@ -43,14 +43,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@CeloHtOfficial",
-    title: "CeloHT | Open-Source Haitian Web3 Initiative",
-    description:
-      "An open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
-    images: [assetPath("/og-image.svg")],
-  },
   icons: {
     icon: assetPath("/favicon.svg"),
     apple: assetPath("/celoht-logo.png"),

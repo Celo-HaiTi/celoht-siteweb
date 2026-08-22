@@ -1,6 +1,7 @@
 /** Central place for cross-cutting constants, especially the dApp URL,
  * so it's never hardcoded in more than one place. */
 export const DAPP_URL = process.env.NEXT_PUBLIC_DAPP_URL ?? "https://app.celoht.com";
+export const DISCORD_URL = "https://discord.gg/BZk3nS4KM6";
 export const SITE_URL = "https://celoht.com";
 export const BASE_PATH =
 	process.env.GITHUB_ACTIONS && process.env.GITHUB_REPOSITORY
