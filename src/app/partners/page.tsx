@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -58,6 +60,47 @@ export default function PartnersPage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      <Section eyebrow="Strategic Ecosystem Partner" title="FreClean">
+        <article className="grid gap-8 rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10 sm:grid-cols-[minmax(0,220px)_1fr] sm:items-center sm:p-8">
+          <div className="flex aspect-square items-center justify-center rounded-xl bg-white p-5">
+            <Image
+              src="/freclean-logo.jpg"
+              alt="FreClean logo"
+              width={1536}
+              height={1536}
+              className="h-full w-full object-contain"
+            />
+          </div>
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-gold-800 dark:text-gold-300">
+              Strategic Ecosystem Partner
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-semibold">FreClean</h2>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-ink-soft dark:text-parchment-100/70">
+              FreClean is a Haitian cleaning services and cleaning products company building reliable, professional, and accessible cleaning solutions for homes, businesses, and organizations.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2" aria-label="Partnership focus">
+              {['Cleaning Services', 'Consumer Products', 'Entrepreneurship', 'Digital Payments'].map((focus) => (
+                <span
+                  key={focus}
+                  className="rounded-full border border-navy-700/15 px-3 py-1.5 text-xs text-ink-soft dark:border-parchment-100/15 dark:text-parchment-100/70"
+                >
+                  {focus}
+                </span>
+              ))}
+            </div>
+            <Link
+              href="https://freclean.github.io/freclean-website/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex min-h-12 items-center rounded-md bg-gold-500 px-5 py-3 text-sm font-bold text-navy-950 transition-colors hover:bg-gold-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+            >
+              Visit FreClean
+            </Link>
+          </div>
+        </article>
       </Section>
 
       <Section eyebrow="What we bring" title="A specific, honest offer">
