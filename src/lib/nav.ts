@@ -59,7 +59,6 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
     items: [
       { label: "Community", href: "/community" },
       { label: "Partners", href: "/partners" },
-      { label: "Developers", href: "/developers" },
       { label: "Documentation", href: "/documentation" },
       { label: "Blog", href: "/blog" },
       { label: "News", href: "/news" },
@@ -222,16 +221,6 @@ export const searchIndex: NavItem[] = [
     label: "Financial Transparency",
     href: "/transparency/financial",
     description: "Funding, allocation, and reporting overview",
-  },
-  {
-    label: "Developers",
-    href: "/developers",
-    description: "Repository structure, technical documentation, and dApp plans",
-  },
-  {
-    label: "Developer Guide",
-    href: "/developers/guide",
-    description: "Validation, architecture, and security guidance",
   },
   {
     label: "DApp Services",

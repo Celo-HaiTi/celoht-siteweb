@@ -58,8 +58,8 @@ export default function TransparencyPage() {
           CeloHT is a community-driven initiative, not a company issuing equity or promising
           returns, and it has never created a token. Funding comes from ecosystem grants,
           partnerships, and voluntary community contributions  -  see our{" "}
-            <Link href="/developers" className="underline underline-offset-2">
-            developer documentation
+            <Link href="/documentation" className="underline underline-offset-2">
+            public documentation
             </Link>{" "}
           for the funding model documented alongside the codebase.
         </p>

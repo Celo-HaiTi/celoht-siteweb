@@ -74,8 +74,8 @@ export default function GovernancePage() {
           contract) use one-address-one-vote, restricted to addresses the Maintainer Council has
           approved  -  trading permissionless participation for resistance to Sybil and plutocratic
           attacks. See our{" "}
-          <Link href="/developers" className="underline underline-offset-2">
-            developer documentation
+          <Link href="/documentation" className="underline underline-offset-2">
+            public documentation
           </Link>{" "}
           for the technical detail.
         </p>

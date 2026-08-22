@@ -62,7 +62,7 @@ export default function ArchitecturePage() {
         </div>
       </Section>
 
-      <Section eyebrow="For developers" title="Technical description">
+      <Section eyebrow="Technical description" title="How the system is organized">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl border border-navy-700/15 p-6">
             <h2 className="font-display text-2xl font-semibold">

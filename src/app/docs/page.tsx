@@ -8,7 +8,7 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "Documentation",
   description:
-    "Official CeloHT documentation for everyone, community members, and developers, written for comprehension before source-code exploration.",
+    "Official CeloHT documentation for everyone and community members, written for comprehension before technical exploration.",
   alternates: { canonical: "/docs" },
 };
 
@@ -38,13 +38,12 @@ const audiences = [
     ],
   },
   {
-    heading: "For developers",
+    heading: "For technical readers",
     items: [
       { title: "Architecture", href: "/technology/architecture" },
       { title: "DApp", href: "/dapp" },
       { title: "Smart contracts", href: "/technology/smart-contracts" },
       { title: "Open source", href: "/open-source" },
-      { title: "Developers", href: "/developers" },
       { title: "Research", href: "/research" },
     ],
   },

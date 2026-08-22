@@ -86,7 +86,7 @@ export default function RisksAndProtectionsPage() {
           ),
         },
       ]}
-      previous={{ label: "Developer guide", href: "/developers/guide" }}
+      previous={{ label: "Documentation", href: "/documentation" }}
       next={{ label: "Funding model", href: "/funding" }}
     />
   );

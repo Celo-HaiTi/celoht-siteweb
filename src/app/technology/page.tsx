@@ -68,8 +68,8 @@ export default function TechnologyPage() {
 
       <CTASection
         title="See the architecture behind it"
-        description="Our developer documentation covers the technical layers of the CeloHT ecosystem in full detail."
-        primary={{ label: "Read developer docs", href: "/developers" }}
+        description="Our public documentation covers the technical layers of the CeloHT ecosystem in full detail."
+        primary={{ label: "Read technical documentation", href: "/documentation" }}
         secondary={{ label: "View governance", href: "/governance" }}
       />
     </>

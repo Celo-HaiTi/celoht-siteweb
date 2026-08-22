@@ -37,7 +37,7 @@ const groups = [
       { label: "Architecture", href: "/technology/architecture" },
       { label: "Services DApp", href: "/dapp/services" },
       { label: "Deployment and availability", href: "/dapp/deployment" },
-      { label: "Developer guide", href: "/developers/guide" },
+      { label: "Technical architecture", href: "/technology/architecture" },
     ],
   },
   {
@@ -86,11 +86,11 @@ export default function DocumentationPage() {
       </Section>
 
       <CTASection
-        title="Looking to build something?"
-        description="Our developer portal covers the local environment, repository structure, and how to run validation checks."
+        title="Explore the public technical record"
+        description="Architecture, security, governance, and project direction are available through CeloHT's public documentation."
         primary={{
-          label: "Visit the developer portal",
-          href: "/developers",
+          label: "Read the Open Source center",
+          href: "/open-source",
         }}
         secondary={{ label: "Read the FAQ", href: "/faq" }}
       />

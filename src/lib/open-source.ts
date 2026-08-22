@@ -21,7 +21,7 @@ export type OpenSourceRepository = {
 export const openSourceRepositories: OpenSourceRepository[] = [
   { name: "CeloHT", description: "Flagship project repository for CeloHT's public direction, governance, and ecosystem context.", category: "Flagship", href: GITHUB_FLAGSHIP_URL },
   { name: "celoht-siteweb", description: "The official static-first website and public information layer for CeloHT.", category: "Website", language: "TypeScript", href: GITHUB_WEBSITE_URL },
-  { name: "celoht-docs", description: "Architecture, governance, APIs, education, developer guides, RFCs, and community resources.", category: "Documentation", href: GITHUB_DOCS_URL },
+  { name: "celoht-docs", description: "Architecture, governance, APIs, education, technical guides, RFCs, and community resources.", category: "Documentation", href: GITHUB_DOCS_URL },
   { name: "celoht-dapp", description: "The public DApp and smart-contract ecosystem for CeloHT services and participation.", category: "Product", language: "TypeScript", href: GITHUB_DAPP_URL },
   { name: "celoht-smart-contracts", description: "Solidity contracts for education, community agents, impact tracking, and future Web3 infrastructure.", category: "Smart contracts", language: "Solidity", href: GITHUB_CONTRACTS_URL },
   { name: "celoht-research", description: "Research papers, RFCs, technical specifications, security studies, and evidence-based analyses.", category: "Research", href: GITHUB_RESEARCH_URL },
@@ -74,7 +74,7 @@ export const publicEcosystemProjects: PublicEcosystemProject[] = [
   {
     name: "CeloHT Documentation",
     role: "Technical Resources",
-    description: "Architecture guides, APIs, education materials, developer resources, and RFCs for technical understanding.",
+    description: "Architecture guides, APIs, education materials, technical resources, and RFCs for technical understanding.",
     icon: "BookOpen",
   },
   {

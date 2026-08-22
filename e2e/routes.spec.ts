@@ -18,8 +18,6 @@ const publicRoutes = [
   "/dapp",
   "/dapp/deployment",
   "/dapp/services",
-  "/developers",
-  "/developers/guide",
   "/docs",
   "/documentation",
   "/donate",

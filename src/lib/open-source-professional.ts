@@ -209,7 +209,7 @@ export const documentationCategories: DocumentationCategory[] = [
     title: "Technical Documentation",
     description: "Technical concepts and implementation documentation.",
     items: [
-      { label: "Developer Documentation", href: "/docs" },
+      { label: "Technical Documentation", href: "/docs" },
       { label: "API Reference", href: "/docs" },
     ],
   },
@@ -496,7 +496,7 @@ export const publicResourceDirectory: ResourceCategory[] = [
     title: "Documentation",
     icon: "BookOpen",
     items: [
-      { label: "Developer Docs", href: "/docs" },
+      { label: "Technical Documentation", href: "/docs" },
       { label: "Architecture", href: "/technology" },
       { label: "Education Resources", href: "/education" },
     ],
