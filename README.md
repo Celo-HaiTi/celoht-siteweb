@@ -109,10 +109,6 @@ to run but that can't be executed in every environment.
 
 See [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
-## Contributing
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
 ## Security
 
 Found a vulnerability? Don't open a public issue  see

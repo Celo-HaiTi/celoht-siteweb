@@ -22,7 +22,7 @@ export default function TermsPage() {
       <Section title="Acceptable use">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>Read, share, and cite our documentation</li>
-          <li>Contribute changes following our contributing guide</li>
+          <li>Use and share our public documentation responsibly</li>
           <li>Adapt code and documents under the Apache 2.0 License</li>
         </ul>
       </Section>

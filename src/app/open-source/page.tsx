@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
+import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import {
-  Accessibility,
   BookOpen,
   Check,
   Code2,
   FileText,
   GitBranch,
   Lightbulb,
-  LockKeyhole,
   Search,
   ShieldCheck,
   Users,
-  Shield,
-  Map,
-  Eye,
-  BeakerIcon,
-  Lock,
-  Heart,
 } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
@@ -27,7 +20,6 @@ import {
   openSourcePrinciples,
   whatWePublic,
   publicProjects,
-  documentationCategories,
   governanceInfo,
   transparencyAreas,
   securityItems,
@@ -105,7 +97,7 @@ export default function OpenSourcePage() {
         <Section eyebrow="What We Make Public" title="Nine areas of public transparency">
           <div className="grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-3">
             {whatWePublic.map((resource) => {
-              const icons: Record<string, any> = {
+              const icons: Record<string, LucideIcon> = {
                 Code2,
                 BookOpen,
                 Users,
@@ -166,7 +158,7 @@ export default function OpenSourcePage() {
       <Section eyebrow="Governance" title="Public accountability and decision-making">
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
           <p className="text-base leading-7 text-ink-soft dark:text-parchment-100/70">
-            CeloHT's governance is public and documented. Organizational structure, decision-making principles, and governance frameworks are maintained in public repositories and accessible through CeloHT's official documentation.
+            CeloHT&apos;s governance is public and documented. Organizational structure, decision-making principles, and governance frameworks are maintained in public repositories and accessible through CeloHT&apos;s official documentation.
           </p>
           <div className="space-y-3">
             {governanceInfo.map((item) => (
@@ -252,7 +244,7 @@ export default function OpenSourcePage() {
       <section className="border-y border-navy-700/10 bg-parchment text-ink dark:border-parchment-100/10">
         <Section id="policies" eyebrow="Policies" title="Public rules and frameworks">
           <p className="mb-8 text-base leading-7 text-ink-soft">
-            CeloHT maintains public policies governing governance, security, privacy, accessibility, community standards, and other relevant areas. These policies are regularly reviewed and updated to reflect the project's evolution.
+            CeloHT maintains public policies governing governance, security, privacy, accessibility, community standards, and other relevant areas. These policies are regularly reviewed and updated to reflect the project&apos;s evolution.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             {policies.map((policy) => (
@@ -315,7 +307,7 @@ export default function OpenSourcePage() {
       {/* BRAND RESOURCES */}
       <Section eyebrow="Brand Resources" title="Official visual identity and media">
         <p className="mb-8 text-base leading-7 text-ink-soft dark:text-parchment-100/70">
-          CeloHT's brand resources, including logos, visual identity, typography, and brand story, are publicly available for reference and approved uses.
+          CeloHT&apos;s brand resources, including logos, visual identity, typography, and brand story, are publicly available for reference and approved uses.
         </p>
         <div className="grid gap-4 sm:grid-cols-2">
           {brandResources.map((resource) => (
@@ -339,7 +331,7 @@ export default function OpenSourcePage() {
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {publicResourceDirectory.map((category) => {
-              const icons: Record<string, any> = {
+              const icons: Record<string, LucideIcon> = {
                 BookOpen,
                 Users,
                 ShieldCheck,
@@ -370,8 +362,8 @@ export default function OpenSourcePage() {
 
       {/* FINAL CTA */}
       <CTASection
-        title="Ready to explore CeloHT's public infrastructure?"
-        description="Everything you need to understand CeloHT's open development, transparency, and public resources is available here. No GitHub account required."
+        title="Ready to explore CeloHT&apos;s public infrastructure?"
+        description="Everything you need to understand CeloHT&apos;s open development, transparency, and public resources is available here. No GitHub account required."
         primary={{ label: "Explore Public Resources", href: "#public-resources" }}
         secondary={{ label: "Read Full Documentation", href: "/docs" }}
       />

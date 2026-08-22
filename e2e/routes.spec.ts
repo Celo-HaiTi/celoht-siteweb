@@ -14,7 +14,6 @@ const publicRoutes = [
   "/code-of-conduct",
   "/community",
   "/contact",
-  "/contributing",
   "/cookies",
   "/dapp",
   "/dapp/deployment",

@@ -19,4 +19,4 @@ security reports.
 
 The in-site [`/support`](https://celoht.com/support) and
 [`/faq`](https://celoht.com/faq) pages cover the same information for
-end users, not just contributors.
+end users and community participants.

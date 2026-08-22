@@ -39,7 +39,7 @@ export default function GovernancePage() {
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
-            <h3 className="font-semibold">Community Contributors</h3>
+            <h3 className="font-semibold">Community Participants</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
               Anyone submitting Issues, Pull Requests, or joining Discussions  -  the entry point to
               the Maintainer Council.

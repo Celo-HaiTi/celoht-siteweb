@@ -5,7 +5,7 @@ import { DocumentationArticle } from "@/components/DocumentationArticle";
 export const metadata: Metadata = {
   title: "Developer Guide",
   description:
-    "A practical CeloHT developer guide covering architecture, validation, security, and contribution paths.",
+    "A practical CeloHT developer guide covering architecture, validation, and security.",
   alternates: { canonical: "/developers/guide" },
 };
 
@@ -14,7 +14,7 @@ export default function DeveloperGuidePage() {
     <DocumentationArticle
       eyebrow="DApp technical documentation"
       title="Developer Guide"
-      lead="Start with the public explanation, then move through architecture, code quality, security, and contribution standards."
+      lead="Start with the public explanation, then move through architecture, code quality, and security standards."
       sections={[
         {
           title: "Understand the layers",
@@ -57,23 +57,6 @@ npm test
 npm run build
 npm run test:e2e`}</code>
             </pre>
-          ),
-        },
-        {
-          title: "Contribute with context",
-          children: (
-            <p className="max-w-3xl text-ink-soft">
-              Changes should preserve the project&apos;s no-token policy,
-              security guidance, accessibility standards, and distinction
-              between confirmed work and future plans. Read the{" "}
-              <Link
-                href="/contributing"
-                className="font-semibold text-gold-300 hover:text-gold-500"
-              >
-                contribution guide
-              </Link>{" "}
-              before opening a change.
-            </p>
           ),
         },
       ]}

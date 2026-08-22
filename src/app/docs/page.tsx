@@ -45,7 +45,6 @@ const audiences = [
       { title: "Smart contracts", href: "/technology/smart-contracts" },
       { title: "Open source", href: "/open-source" },
       { title: "Developers", href: "/developers" },
-      { title: "Contributing", href: "/contributing" },
       { title: "Research", href: "/research" },
     ],
   },

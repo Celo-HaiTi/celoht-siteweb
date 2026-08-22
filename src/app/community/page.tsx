@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Community",
   description:
-    "Ways to get involved with CeloHT  -  as a learner, a community agent, a contributor, or simply someone following along.",
+    "Ways to get involved with CeloHT  -  as a learner, a community agent, or simply someone following along.",
   alternates: { canonical: "/community" },
 };
 
@@ -26,7 +26,7 @@ const paths = [
   },
   {
     title: "Share an initiative",
-    detail: "Propose an idea, initiative, or collaboration that could contribute to CeloHT's mission.",
+    detail: "Propose an idea, initiative, or collaboration that could advance CeloHT's mission.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function CommunityPage() {
       <PageHero
         eyebrow="CeloHT community"
         title="Build with us"
-        lead="CeloHT evolves with the people who learn, use, develop, and contribute to the ecosystem."
+        lead="CeloHT evolves with the people who learn, use, and participate in the ecosystem."
       />
 
       <Section>

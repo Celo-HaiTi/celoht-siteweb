@@ -27,7 +27,7 @@ roadmap, see the flagship repository's
 
 - [ ] Real map integration on any location-based content (coordinating
       with the dApp's agent map)
-- [ ] Expanded blog cadence with contributor posts
+- [ ] Expanded blog cadence with community posts
 - [ ] Newsletter signup wired to a real provider
 
 See [`docs/testing.md`](docs/testing.md) for exactly what's verified

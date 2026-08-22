@@ -91,7 +91,7 @@ export default function ArchitecturePage() {
               Community layer
             </h2>
             <p className="mt-3 text-sm text-ink-soft">
-              Agents, contributors, and local participants turn technical access
+              Agents and local participants turn technical access
               into practical literacy and local trust. This is where the system
               becomes useful in real communities.
             </p>

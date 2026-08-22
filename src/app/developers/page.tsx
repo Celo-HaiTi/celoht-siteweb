@@ -69,9 +69,9 @@ The pages identify what is confirmed, in development, or still planned.`}</code>
       </Section>
 
       <CTASection
-        title="Ready to open your first PR?"
-        description="Every repository has its own contributing guide with specific setup steps."
-        primary={{ label: "Contributing guide", href: "/contributing" }}
+        title="Explore the public technical record"
+        description="Architecture, security, documentation, and project direction are available through the public CeloHT information center."
+        primary={{ label: "Open Source center", href: "/open-source" }}
         secondary={{ label: "Full documentation", href: "/documentation" }}
       />
     </>

@@ -84,7 +84,6 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Security", href: "/security" },
       { label: "Accessibility", href: "/accessibility" },
       { label: "Code of Conduct", href: "/code-of-conduct" },
-      { label: "Contributing", href: "/contributing" },
     ],
   },
 ];
@@ -227,13 +226,12 @@ export const searchIndex: NavItem[] = [
   {
     label: "Developers",
     href: "/developers",
-    description: "Contributing, repository structure, dApp plans",
+    description: "Repository structure, technical documentation, and dApp plans",
   },
   {
     label: "Developer Guide",
     href: "/developers/guide",
-    description:
-      "Validation, architecture, security, and contribution workflow",
+    description: "Validation, architecture, and security guidance",
   },
   {
     label: "DApp Services",
@@ -319,10 +317,5 @@ export const searchIndex: NavItem[] = [
     label: "Code of Conduct",
     href: "/code-of-conduct",
     description: "Community standards",
-  },
-  {
-    label: "Contributing",
-    href: "/contributing",
-    description: "How to contribute",
   },
 ];

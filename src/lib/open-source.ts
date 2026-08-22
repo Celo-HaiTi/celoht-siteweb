@@ -36,7 +36,6 @@ export const publicDocumentationLinks = [
   { label: "Roadmap", href: "/roadmap", icon: "Map" },
   { label: "Privacy", href: "/privacy", icon: "Lock" },
   { label: "Accessibility", href: "/accessibility", icon: "Eye" },
-  { label: "Contribution Policy", href: "/contributing", icon: "Code" },
   { label: "Code of Conduct", href: "/code-of-conduct", icon: "Heart" },
   { label: "Research", href: "/research", icon: "Beaker" },
   { label: "Transparency", href: "/transparency", icon: "Eye" },
@@ -45,7 +44,6 @@ export const publicDocumentationLinks = [
 export const openSourceDocuments = [
   { label: "Governance policy", href: "/governance", external: false },
   { label: "Security policy", href: "/security", external: false },
-  { label: "Contribution guide", href: "/contributing", external: false },
   { label: "Roadmap", href: "/roadmap", external: false },
   { label: "Website architecture", href: "/technology", external: false },
   { label: "Documentation portal", href: "/docs", external: false },

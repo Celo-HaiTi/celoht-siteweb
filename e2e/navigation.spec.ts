@@ -22,13 +22,17 @@ test.describe("Primary navigation", () => {
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   });
 
-  test("Open Source page exposes its public ecosystem and contribution path", async ({ page }) => {
+  test("Open Source page exposes its public ecosystem", async ({ page }) => {
     await page.goto("/open-source");
     await expect(page).toHaveTitle(/CeloHT Open Source/);
-    await expect(page.getByRole("heading", { name: "Trust should be verifiable" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "The public development ecosystem" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "How to contribute" })).toHaveAttribute("href", "/contributing");
-    await expect(page.getByRole("link", { name: /Explore GitHub/ }).first()).toHaveAttribute("href", "https://github.com/Celo-HaiTi");
+    await expect(page.getByRole("heading", { name: /Open by design/ })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "The CeloHT ecosystem" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Explore Public Resources" })).toHaveAttribute("href", "#public-resources");
+  });
+
+  test("Contributing route no longer exists", async ({ page }) => {
+    const response = await page.goto("/contributing");
+    expect(response?.status()).toBe(404);
   });
 
   test("reforestation guide is English on both supported routes", async ({ page }) => {

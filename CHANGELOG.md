@@ -20,7 +20,7 @@ All notable changes to the CeloHT website are documented here, following
   Technology, Impact, Community, Partners, Roadmap, Governance,
   Transparency, Developers, Documentation, Media Kit, Blog, News, FAQ,
   Support, Donate, Contact, Privacy, Terms, Cookies, Security,
-  Accessibility, Code of Conduct, Contributing, and a custom 404.
+  Accessibility, Code of Conduct, and a custom 404.
 - A prominent **Launch dApp** button in the header, hero, footer, and
   mobile menu, linking to `NEXT_PUBLIC_DAPP_URL`.
 - Animated hero section using Motion (Framer Motion), respecting

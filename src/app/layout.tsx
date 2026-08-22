@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "open source",
     "community governance",
   ],
-  authors: [{ name: "CeloHT Contributors" }],
+  authors: [{ name: "CeloHT" }],
   manifest: assetPath("/manifest.json"),
   openGraph: {
     type: "website",

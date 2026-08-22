@@ -7,7 +7,6 @@ import {
   GITHUB_DEMO_URL,
   GITHUB_DOCS_URL,
   GITHUB_FLAGSHIP_URL,
-  GITHUB_ORG_URL,
   GITHUB_RESEARCH_URL,
   GITHUB_WEBSITE_URL,
 } from "@/lib/constants";
@@ -389,11 +388,6 @@ export const policies: PolicyItem[] = [
     title: "Code of Conduct",
     description: "Community standards and expected behavior.",
     link: "/code-of-conduct",
-  },
-  {
-    title: "Contribution Policy",
-    description: "Framework for community contributions.",
-    link: "/contributing",
   },
   {
     title: "No-Token Policy",
