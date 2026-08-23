@@ -121,16 +121,13 @@ type MarketTile = {
 };
 
 export function LiveInfoBar() {
-  const [state, setState] = useState<LiveState>(() => {
-    const initialData = getCachedLiveData();
-    return {
-      loading: !initialData,
-      marketError: false,
-      networkError: false,
-      celo: initialData?.celo ?? null,
-      usdm: initialData?.usdm ?? null,
-      network: initialData?.network ?? null,
-    };
+  const [state, setState] = useState<LiveState>({
+    loading: true,
+    marketError: false,
+    networkError: false,
+    celo: null,
+    usdm: null,
+    network: null,
   });
 
   useEffect(() => {
@@ -165,7 +162,12 @@ export function LiveInfoBar() {
     };
 
     const start = window.setTimeout(() => {
-      if (isLiveDataStale(getCachedLiveData())) {
+      const initialData = getCachedLiveData();
+      if (initialData) {
+        setState((current) => ({ ...current, loading: false, ...initialData }));
+      }
+
+      if (isLiveDataStale(initialData)) {
         void load().finally(scheduleRefresh);
       } else {
         scheduleRefresh();

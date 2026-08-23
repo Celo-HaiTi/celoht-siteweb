@@ -63,6 +63,36 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes celoht-hero-reveal {
+  from {
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.celoht-hero-reveal {
+  animation: celoht-hero-reveal 500ms ease-out both;
+  opacity: 1;
+}
+
+.celoht-hero-reveal-2 {
+  animation-delay: 80ms;
+}
+
+.celoht-hero-reveal-3 {
+  animation-delay: 160ms;
+}
+
+.celoht-hero-reveal-4 {
+  animation-delay: 240ms;
+}
+
+.celoht-hero-reveal-5 {
+  animation-delay: 320ms;
+}
+
 @keyframes celoht-logo-float {
   0%,
   100% {
@@ -145,6 +175,12 @@ html {
   .celoht-logo-ambient,
   .celoht-logo-sweep {
     animation: none;
+  }
+
+  .celoht-hero-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
 
