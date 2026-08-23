@@ -29,6 +29,21 @@ used to set the repository `basePath`, so internal links and assets work at
 
 Enable **Settings > Pages > GitHub Actions** once in the repository settings.
 
+### Custom domain
+
+Before connecting `celoht.com`, update the `Build site` environment values in
+`.github/workflows/deploy-pages.yml`:
+
+```yaml
+NEXT_PUBLIC_SITE_URL: https://celoht.com
+NEXT_PUBLIC_USE_PROJECT_BASE_PATH: false
+```
+
+Then configure `celoht.com` as the custom domain in **Settings > Pages** and
+add the DNS records GitHub provides. Keep the project-path values enabled until
+the custom domain is ready, because project URLs need the `/celoht-siteweb/`
+asset prefix while custom domains need root paths.
+
 ## Vercel
 
 Import the repository into Vercel and keep the default build command:

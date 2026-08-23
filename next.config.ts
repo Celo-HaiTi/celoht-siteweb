@@ -3,7 +3,8 @@ import createMDX from "@next/mdx";
 
 const isDev = process.env.NODE_ENV !== "production";
 const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
-const basePath = process.env.GITHUB_ACTIONS && repoName ? `/${repoName}` : "";
+const useProjectBasePath = process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH !== "false";
+const basePath = process.env.GITHUB_ACTIONS && repoName && useProjectBasePath ? `/${repoName}` : "";
 
 const csp = [
   "default-src 'self'",
