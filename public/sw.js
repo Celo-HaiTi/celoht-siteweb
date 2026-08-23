@@ -3,14 +3,16 @@
 // network-first (falling back to cache) for HTML pages, so content never
 // goes stale silently. This is intentionally conservative: it does not
 // pre-cache every route, and it never intercepts POST/API-style requests.
-const CACHE_NAME = "celoht-static-v2";
+const CACHE_NAME = "celoht-static-v3";
 const BASE_PATH = new URL("./", self.registration.scope).pathname;
 const BRAND_ASSETS = ["celoht-logo.png", "freclean-logo.jpg"].map((asset) => `${BASE_PATH}${asset}`);
 const STATIC_ASSETS = [...BRAND_ASSETS, `${BASE_PATH}favicon.svg`, `${BASE_PATH}manifest.json`];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS)).catch(() => {}),
+    caches.open(CACHE_NAME).then((cache) =>
+      Promise.allSettled(STATIC_ASSETS.map((asset) => cache.add(asset))),
+    ),
   );
   self.skipWaiting();
 });
@@ -33,16 +35,19 @@ self.addEventListener("fetch", (event) => {
 
   if (BRAND_ASSETS.includes(url.pathname)) {
     event.respondWith(
-      fetch(request)
-        .then((response) => {
+      caches.match(request).then((cached) => {
+        const cachedType = cached?.headers.get("content-type") ?? "";
+        if (cached?.ok && cachedType.startsWith("image/")) return cached;
+
+        return fetch(request).then((response) => {
           const contentType = response.headers.get("content-type") ?? "";
           if (response.ok && contentType.startsWith("image/")) {
             const copy = response.clone();
             void caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
           }
           return response;
-        })
-        .catch(() => caches.match(request)),
+        });
+      }),
     );
     return;
   }
