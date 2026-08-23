@@ -63,6 +63,31 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes celoht-logo-sweep {
+  from {
+    opacity: 0;
+    transform: translate3d(-220%, 0, 0) rotate(18deg);
+  }
+  35% {
+    opacity: 0.42;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(520%, 0, 0) rotate(18deg);
+  }
+}
+
+.celoht-logo-mark::after {
+  position: absolute;
+  inset: -25% auto -25% -12%;
+  width: 14%;
+  background: rgba(255, 255, 255, 0.72);
+  content: "";
+  pointer-events: none;
+  transform: translate3d(-220%, 0, 0) rotate(18deg);
+  animation: celoht-logo-sweep 800ms cubic-bezier(0.22, 1, 0.36, 1) 350ms 1 both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -74,6 +99,10 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .celoht-logo-mark::after {
+    display: none;
   }
 }
 

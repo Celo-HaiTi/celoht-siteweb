@@ -90,19 +90,20 @@ export function Hero() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.9 }}
+          initial={{ opacity: 1, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
           className="relative flex min-h-[22rem] items-center justify-center overflow-hidden border border-parchment-100/15 bg-navy-900 px-6 py-10 text-parchment-50 shadow-2xl shadow-black/20 lg:min-h-[30rem]"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(245,200,66,0.24),transparent_36%)]" />
-          <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-2xl bg-[#ffff58] shadow-[0_24px_80px_rgba(247,208,70,0.2)] sm:h-80 sm:w-80">
+          <div className="celoht-logo-mark relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-2xl bg-[#ffff58] shadow-[0_24px_80px_rgba(247,208,70,0.2)] sm:h-80 sm:w-80">
             <Image
               src={assetPath("/celoht-logo.png")}
               alt="CeloHT logo"
               width={420}
               height={420}
               priority
+              fetchPriority="high"
+              sizes="(min-width: 640px) 20rem, 16rem"
               className="h-full w-full object-cover"
             />
           </div>
