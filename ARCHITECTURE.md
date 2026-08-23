@@ -20,7 +20,7 @@ src/
 ├── components/
 │   ├── Header.tsx             # Nav, search, theme toggle, Launch dApp button
 │   ├── Footer.tsx               # Full nav + Launch dApp CTA
-│   ├── Hero.tsx                   # Animated (Motion/Framer Motion) homepage hero
+│   ├── Hero.tsx                   # CSS-animated homepage hero
 │   ├── LaunchDappButton.tsx         # Single source of truth for the dApp link
 │   ├── ThemeProvider.tsx              # Light/dark state (useSyncExternalStore)
 │   ├── SearchDialog.tsx                # <dialog>-based site search
@@ -40,17 +40,11 @@ the dApp): navy/gold/forest/parchment palette, defined once in
 instead of a remote webfont service, keeping the CSP simple and removing
 an external network dependency from the build.
 
-## Why the Hero Uses "use client" and Everything Else Defaults to Server
+## Client and Server Components
 
-`Hero.tsx` needs `"use client"` because it uses Motion's animation hooks
-and `useReducedMotion`. Every other page is a Server Component by
-default. **Any component that uses a Radix primitive, a React hook, or
-browser APIs must be marked `"use client"`  -  omitting this causes a hard
-build failure** when that component is used from a Server Component,
-because Next's server-side React build doesn't expose `createContext`
-and similar client-only APIs. This was a real bug caught during
-development of the CeloHT dApp and is called out here so it isn't
-repeated.
+The Hero uses CSS animations and remains a Server Component, keeping its
+static content out of the client hydration path. Components that use React
+hooks or browser APIs remain explicitly marked `"use client"`.
 
 ## The Launch dApp Button
 

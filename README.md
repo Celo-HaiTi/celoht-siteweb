@@ -39,7 +39,7 @@ or an investment platform see [`/about`](https://celoht.com/about) and
 - [Next.js](https://nextjs.org) (App Router, Turbopack build)
 - [TypeScript](https://www.typescriptlang.org) (strict mode)
 - [Tailwind CSS v4](https://tailwindcss.com)
-- [Motion](https://motion.dev) (Framer Motion) for the animated hero
+- CSS animations for the lightweight animated hero
 - [MDX](https://mdxjs.com) for the blog
 - [Vitest](https://vitest.dev) + Testing Library for unit tests
 - [Playwright](https://playwright.dev) for end-to-end tests

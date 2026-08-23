@@ -10,7 +10,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format:check": "prettier --check . --ignore-path .prettierignore",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
@@ -23,7 +23,6 @@
     "@types/mdx": "^2.0.14",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
-    "motion": "^11.15.0",
     "next": "16.2.11",
     "react": "19.2.4",
     "react-dom": "19.2.4"

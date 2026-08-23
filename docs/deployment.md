@@ -65,8 +65,9 @@ npm run build
 
 ## Environment Variables
 
-Only `NEXT_PUBLIC_DAPP_URL` is relevant, and it has a working default  - 
-see [`development.md`](development.md).
+`NEXT_PUBLIC_DAPP_URL` has a working default. `NEXT_PUBLIC_SITE_URL` and
+`NEXT_PUBLIC_USE_PROJECT_BASE_PATH` control custom-domain versus project-path
+builds as described above.
 
 ## Security Headers & CSP
 
