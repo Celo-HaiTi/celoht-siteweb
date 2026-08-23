@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { assetPath } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Partners",
@@ -66,7 +67,7 @@ export default function PartnersPage() {
         <article className="grid gap-8 rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10 sm:grid-cols-[minmax(0,220px)_1fr] sm:items-center sm:p-8">
           <div className="flex aspect-square items-center justify-center rounded-xl bg-white p-5">
             <Image
-              src="/freclean-logo.jpg"
+              src={assetPath("/freclean-logo.jpg")}
               alt="FreClean logo"
               width={1536}
               height={1536}
