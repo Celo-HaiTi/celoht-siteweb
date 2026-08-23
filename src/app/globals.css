@@ -63,6 +63,28 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes celoht-logo-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@keyframes celoht-logo-breathe {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.62;
+    transform: scale(1.04);
+  }
+}
+
 @keyframes celoht-logo-sweep {
   from {
     opacity: 0;
@@ -77,15 +99,33 @@ html {
   }
 }
 
-.celoht-logo-mark::after {
+.celoht-logo-mark {
+  animation: celoht-logo-float 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.celoht-logo-ambient,
+.celoht-logo-sweep {
   position: absolute;
+  pointer-events: none;
+}
+
+.celoht-logo-ambient {
+  inset: 12%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+  filter: blur(22px);
+  animation: celoht-logo-breathe 5s ease-in-out infinite;
+}
+
+.celoht-logo-sweep {
   inset: -25% auto -25% -12%;
   width: 14%;
   background: rgba(255, 255, 255, 0.72);
   content: "";
   pointer-events: none;
   transform: translate3d(-220%, 0, 0) rotate(18deg);
-  animation: celoht-logo-sweep 800ms cubic-bezier(0.22, 1, 0.36, 1) 350ms 1 both;
+  animation: celoht-logo-sweep 8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -101,8 +141,10 @@ html {
     scroll-behavior: auto !important;
   }
 
-  .celoht-logo-mark::after {
-    display: none;
+  .celoht-logo-mark,
+  .celoht-logo-ambient,
+  .celoht-logo-sweep {
+    animation: none;
   }
 }
 
