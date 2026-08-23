@@ -22,8 +22,7 @@ export function Header() {
             alt="CeloHT"
             width={38}
             height={38}
-            priority
-            fetchPriority="high"
+            loading="eager"
             sizes="38px"
             className="rounded-lg"
           />

@@ -101,8 +101,7 @@ export function Hero() {
               alt="CeloHT logo"
               width={420}
               height={420}
-              priority
-              fetchPriority="high"
+              loading="eager"
               sizes="(min-width: 640px) 20rem, 16rem"
               className="h-full w-full object-cover"
             />
