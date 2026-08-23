@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, resolve } from "node:path";
 
 const root = process.cwd();
-const basePath = process.env.GITHUB_ACTIONS && process.env.GITHUB_REPOSITORY
+const basePath = process.env.GITHUB_ACTIONS && process.env.GITHUB_REPOSITORY && process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH !== "false"
   ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
   : "";
 const assets = ["celoht-logo.png", "freclean-logo.jpg"];
