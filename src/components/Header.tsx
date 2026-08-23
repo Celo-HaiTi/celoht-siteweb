@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -16,15 +17,11 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-parchment-100/15 bg-navy-950 text-parchment-50 shadow-[0_8px_30px_rgba(8,18,37,0.12)]">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="group flex items-center gap-2 rounded-md">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={assetPath("/celoht-logo.png")}
             alt="CeloHT"
             width={38}
             height={38}
-            loading="eager"
-            decoding="async"
-            sizes="38px"
             className="rounded-lg"
           />
           <span className="font-display text-xl font-semibold tracking-tight text-parchment-50 transition-colors group-hover:text-gold-300">CeloHT</span>

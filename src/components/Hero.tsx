@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
@@ -97,15 +98,11 @@ export function Hero() {
           <div className="celoht-logo-mark relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-2xl bg-[#ffff58] shadow-[0_24px_80px_rgba(247,208,70,0.2)] sm:h-80 sm:w-80">
             <span className="celoht-logo-ambient" aria-hidden="true" />
             <span className="celoht-logo-sweep" aria-hidden="true" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={assetPath("/celoht-logo.png")}
               alt="CeloHT logo"
               width={420}
               height={420}
-              loading="eager"
-              decoding="async"
-              sizes="(min-width: 640px) 20rem, 16rem"
               className="relative z-10 h-full w-full object-cover"
             />
           </div>
