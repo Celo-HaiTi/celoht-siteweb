@@ -2,46 +2,13 @@
 
 import { Activity, AlertTriangle, ArrowUpRight, CircleDollarSign, Coins, Wifi, WifiOff } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { getCachedLiveData, isLiveDataStale, refreshLiveData, type LiveData } from "@/lib/live-data";
 
-const MARKET_ENDPOINT =
-  "https://api.coingecko.com/api/v3/simple/price?ids=celo,celo-dollar&vs_currencies=usd&include_24hr_change=true&include_last_updated_at=true";
-const CELO_RPC_URL = process.env.NEXT_PUBLIC_CELO_RPC_URL ?? "https://forno.celo.org";
-const CELO_CHAIN_ID = 42220;
-const REFRESH_INTERVAL = 120000;
-const REQUEST_TIMEOUT = 10000;
-
-type PriceEntry = {
-  usd: number | null;
-  change: number | null;
-  updatedAt: number | null;
-};
-
-type NetworkEntry = {
-  ok: boolean;
-  chainId: number | null;
-  latestBlock: number | null;
-  updatedAt: number | null;
-};
-
-type LiveState = {
+type LiveState = LiveData & {
   loading: boolean;
   marketError: boolean;
   networkError: boolean;
-  celo: PriceEntry | null;
-  usdm: PriceEntry | null;
-  network: NetworkEntry | null;
 };
-
-async function fetchWithTimeout(input: RequestInfo | URL, init?: RequestInit) {
-  const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
-
-  try {
-    return await fetch(input, { ...init, signal: controller.signal });
-  } finally {
-    window.clearTimeout(timeout);
-  }
-}
 
 function formatPrice(value: number | null) {
   if (value === null || Number.isNaN(value)) return "Data temporarily unavailable";
@@ -70,87 +37,6 @@ function formatRelativeTime(timestamp: number | null) {
   return `Updated ${Math.round(diff / 86400)} day(s) ago`;
 }
 
-async function fetchMarketData(): Promise<{ celo: PriceEntry; usdm: PriceEntry }> {
-  const response = await fetchWithTimeout(MARKET_ENDPOINT, {
-    cache: "no-store",
-    headers: { accept: "application/json" },
-  });
-
-  if (!response.ok) {
-    throw new Error("CoinGecko market data request failed");
-  }
-
-  const data = await response.json();
-
-  const celo = data?.celo ?? {};
-  const usdm = data?.["celo-dollar"] ?? {};
-
-  return {
-    celo: {
-      usd: typeof celo.usd === "number" ? celo.usd : null,
-      change: typeof celo.usd_24h_change === "number" ? celo.usd_24h_change : null,
-      updatedAt: typeof celo.last_updated_at === "number" ? celo.last_updated_at : null,
-    },
-    usdm: {
-      usd: typeof usdm.usd === "number" ? usdm.usd : null,
-      change: typeof usdm.usd_24h_change === "number" ? usdm.usd_24h_change : null,
-      updatedAt: typeof usdm.last_updated_at === "number" ? usdm.last_updated_at : null,
-    },
-  };
-}
-
-async function fetchNetworkData(): Promise<NetworkEntry> {
-  const payload = {
-    jsonrpc: "2.0",
-    method: "eth_chainId",
-    params: [],
-    id: 1,
-  };
-
-  const chainResponse = await fetchWithTimeout(CELO_RPC_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-    cache: "no-store",
-  });
-
-  if (!chainResponse.ok) {
-    throw new Error("Celo RPC request failed");
-  }
-
-  const chainJson = await chainResponse.json();
-  if (chainJson?.error) throw new Error("Celo RPC returned a chain ID error");
-  const chainId = Number.parseInt(chainJson?.result ?? "0x0", 16);
-
-  const blockPayload = {
-    jsonrpc: "2.0",
-    method: "eth_blockNumber",
-    params: [],
-    id: 2,
-  };
-
-  const blockResponse = await fetchWithTimeout(CELO_RPC_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(blockPayload),
-    cache: "no-store",
-  });
-
-  if (!blockResponse.ok) {
-    throw new Error("Celo RPC block request failed");
-  }
-
-  const blockJson = await blockResponse.json();
-  if (blockJson?.error) throw new Error("Celo RPC returned a block error");
-  const latestBlock = blockJson?.result ? Number.parseInt(blockJson.result, 16) : null;
-
-  return {
-    ok: chainId === CELO_CHAIN_ID && latestBlock !== null,
-    chainId: Number.isFinite(chainId) ? chainId : null,
-    latestBlock: Number.isFinite(latestBlock) ? latestBlock : null,
-    updatedAt: Date.now() / 1000,
-  };
-}
 
 function AssetTile({
   label,
@@ -235,38 +121,63 @@ type MarketTile = {
 };
 
 export function LiveInfoBar() {
-  const [state, setState] = useState<LiveState>({
-    loading: true,
-    marketError: false,
-    networkError: false,
-    celo: null,
-    usdm: null,
-    network: null,
+  const [state, setState] = useState<LiveState>(() => {
+    const initialData = getCachedLiveData();
+    return {
+      loading: !initialData,
+      marketError: false,
+      networkError: false,
+      celo: initialData?.celo ?? null,
+      usdm: initialData?.usdm ?? null,
+      network: initialData?.network ?? null,
+    };
   });
 
   useEffect(() => {
     let isMounted = true;
+    let refreshTimer: number | undefined;
 
     const load = async () => {
-      const [marketResult, networkResult] = await Promise.allSettled([fetchMarketData(), fetchNetworkData()]);
+      const result = await refreshLiveData();
       if (!isMounted) return;
 
-      setState((current) => ({
+      setState({
         loading: false,
-        marketError: marketResult.status === "rejected",
-        networkError: networkResult.status === "rejected",
-        celo: marketResult.status === "fulfilled" ? marketResult.value.celo : current.celo,
-        usdm: marketResult.status === "fulfilled" ? marketResult.value.usdm : current.usdm,
-        network: networkResult.status === "fulfilled" ? networkResult.value : current.network,
-      }));
+        marketError: result.marketError,
+        networkError: result.networkError,
+        ...result.data,
+      });
     };
 
-    load();
-    const timer = window.setInterval(load, REFRESH_INTERVAL);
+    const scheduleRefresh = () => {
+      window.clearTimeout(refreshTimer);
+      if (document.visibilityState === "hidden") return;
+      refreshTimer = window.setTimeout(() => {
+        void load().finally(scheduleRefresh);
+      }, 60000);
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible" && isLiveDataStale(getCachedLiveData())) {
+        void load();
+      }
+      scheduleRefresh();
+    };
+
+    const start = window.setTimeout(() => {
+      if (isLiveDataStale(getCachedLiveData())) {
+        void load().finally(scheduleRefresh);
+      } else {
+        scheduleRefresh();
+      }
+    }, 0);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       isMounted = false;
-      window.clearInterval(timer);
+      window.clearTimeout(start);
+      window.clearTimeout(refreshTimer);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 

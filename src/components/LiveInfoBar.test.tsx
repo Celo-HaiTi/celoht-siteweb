@@ -1,10 +1,12 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, it, vi, afterEach } from "vitest";
 import { LiveInfoBar } from "@/components/LiveInfoBar";
+import { resetLiveDataCache } from "@/lib/live-data";
 
 describe("LiveInfoBar", () => {
   afterEach(() => {
     vi.restoreAllMocks();
+    resetLiveDataCache();
   });
 
   it("renders live CELO, USDm and network status after fetching market data", async () => {
