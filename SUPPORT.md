@@ -2,8 +2,8 @@
 
 ## General Questions
 
-- **GitHub Discussions** (flagship repository): [github.com/celo-ht/celoht/discussions](https://github.com/celo-ht/celoht/discussions)
-- **Website bugs**: open an [Issue](https://github.com/celo-ht/website/issues) in this repository
+- **GitHub Discussions** (flagship repository): [github.com/Celo-HaiTi/CeloHT/discussions](https://github.com/Celo-HaiTi/CeloHT/discussions)
+- **Website bugs**: open an [Issue](https://github.com/Celo-HaiTi/celoht-siteweb/issues) in this repository
 
 ## Contact
 

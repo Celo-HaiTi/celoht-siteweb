@@ -7,7 +7,7 @@ about-page copy, so it can be linked to directly.
 
 ## What this means concretely
 
-- No smart contract in the [CeloHT dApp repository](https://github.com/celo-ht/dapp)
+- No smart contract in the [CeloHT dApp repository](https://github.com/Celo-HaiTi/celoht-dapp)
   inherits from `ERC20` or represents a fungible, transferable balance of
   anything CeloHT controls (the one exception, `MockERC20.sol`, is
   explicitly test-only and never deployed).

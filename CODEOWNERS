@@ -1,15 +1,15 @@
 # CODEOWNERS for the CeloHT website
-*                           @celo-ht/maintainers
+*                           @Celo-HaiTi/maintainers
 
-/src/app/                   @celo-ht/frontend-maintainers
-/src/components/            @celo-ht/frontend-maintainers
-/src/app/blog/               @celo-ht/docs-team
+/src/app/                   @Celo-HaiTi/frontend-maintainers
+/src/components/            @Celo-HaiTi/frontend-maintainers
+/src/app/blog/               @Celo-HaiTi/docs-team
 
-/SECURITY.md                @celo-ht/security
-/next.config.ts              @celo-ht/security
-/.github/workflows/           @celo-ht/security
+/SECURITY.md                @Celo-HaiTi/security
+/next.config.ts              @Celo-HaiTi/security
+/.github/workflows/           @Celo-HaiTi/security
 
-/GOVERNANCE.md               @celo-ht/founders
-/LICENSE                      @celo-ht/founders
+/GOVERNANCE.md               @Celo-HaiTi/founders
+/LICENSE                      @Celo-HaiTi/founders
 
-/docs/                        @celo-ht/docs-team
+/docs/                        @Celo-HaiTi/docs-team

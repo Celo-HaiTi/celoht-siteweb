@@ -7,14 +7,14 @@
 open-source initiative for financial inclusion, education, agent
 networks, and reforestation on the Celo ecosystem.
 
-[![CI](https://github.com/celo-ht/website/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
-[![Deploy to GitHub Pages](https://github.com/celo-ht/website/actions/workflows/deploy-pages.yml/badge.svg)](.github/workflows/deploy-pages.yml)
-[![CodeQL](https://github.com/celo-ht/website/actions/workflows/codeql.yml/badge.svg)](.github/workflows/codeql.yml)
+[![CI](https://github.com/Celo-HaiTi/celoht-siteweb/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
+[![Deploy to GitHub Pages](https://github.com/Celo-HaiTi/celoht-siteweb/actions/workflows/deploy-pages.yml/badge.svg)](.github/workflows/deploy-pages.yml)
+[![CodeQL](https://github.com/Celo-HaiTi/celoht-siteweb/actions/workflows/codeql.yml/badge.svg)](.github/workflows/codeql.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-0B1120.svg)](LICENSE)
 
-[![Open in Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/celo-ht/website)
+[![Open in Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Celo-HaiTi/celoht-siteweb)
 
-[Live site](https://celoht.com) · [GitHub Pages](https://celo-haiti.github.io/celoht-siteweb/) · [Launch DApp](https://app.celoht.com) · [Flagship repository](https://github.com/celo-ht/celoht) · [DApp repository](https://github.com/celo-ht/dapp)
+[Live site](https://celoht.com) · [GitHub Pages](https://celo-haiti.github.io/celoht-siteweb/) · [Launch DApp](https://app.celoht.com) · [Flagship repository](https://github.com/Celo-HaiTi/CeloHT) · [DApp repository](https://github.com/Celo-HaiTi/celoht-dapp)
 
 </div>
 
@@ -48,8 +48,8 @@ or an investment platform see [`/about`](https://celoht.com/about) and
 ## Getting started
 
 ```bash
-git clone https://github.com/celo-ht/website.git
-cd website
+git clone https://github.com/Celo-HaiTi/celoht-siteweb.git
+cd celoht-siteweb
 npm install
 npm run dev
 ```

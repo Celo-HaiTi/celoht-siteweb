@@ -2,7 +2,7 @@
 
 This roadmap covers the website specifically. For the ecosystem-wide
 roadmap, see the flagship repository's
-[`ROADMAP.md`](https://github.com/celo-ht/celoht/blob/main/ROADMAP.md).
+[`ROADMAP.md`](https://github.com/Celo-HaiTi/CeloHT/blob/main/ROADMAP.md).
 
 ## Phase 1  -  Foundation (current)
 

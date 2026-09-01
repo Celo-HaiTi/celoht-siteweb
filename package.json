@@ -23,7 +23,7 @@
     "@types/mdx": "^2.0.14",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
-    "next": "16.2.11",
+    "next": "^16.3.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -45,13 +45,13 @@
     "prettier": "^3.9.6",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^2.1.8"
+    "vitest": "^4.1.11"
   },
   "description": "Official website for CeloHT  -  a community-driven, open-source initiative for financial inclusion, education, agent networks, and reforestation on the Celo ecosystem.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/celo-ht/website.git"
+    "url": "https://github.com/Celo-HaiTi/celoht-siteweb.git"
   },
   "engines": {
     "node": ">=20"

@@ -2,7 +2,7 @@
 
 This repository follows the CeloHT ecosystem's shared governance model  - 
 see the flagship repository's
-[`GOVERNANCE.md`](https://github.com/celo-ht/celoht/blob/main/GOVERNANCE.md)
+[`GOVERNANCE.md`](https://github.com/Celo-HaiTi/CeloHT/blob/main/GOVERNANCE.md)
 for the full, binding policy.
 
 ## Specific to This Repository

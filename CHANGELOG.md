@@ -33,5 +33,5 @@ All notable changes to the CeloHT website are documented here, following
 
   zero at the maintainers' request, after the prior build was found not
   to meet quality expectations.
-[Unreleased]: https://github.com/celo-ht/website/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/celo-ht/website/releases/tag/v2.0.0
+[Unreleased]: https://github.com/Celo-HaiTi/celoht-siteweb/compare/main...HEAD
+[2.0.0]: https://github.com/Celo-HaiTi/celoht-siteweb/releases/tag/v2.0.0

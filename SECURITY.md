@@ -5,7 +5,7 @@
 Please **don't** open a public GitHub issue for a security vulnerability.
 
 - **Email**: security@celoht.com
-- **GitHub Security Advisories**: use ["Report a vulnerability"](https://github.com/celo-ht/website/security/advisories/new)
+- **GitHub Security Advisories**: use ["Report a vulnerability"](https://github.com/Celo-HaiTi/celoht-siteweb/security/advisories/new)
 
 ## Response Timeline
 

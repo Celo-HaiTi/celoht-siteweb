@@ -8,8 +8,8 @@
 ## Setup
 
 ```bash
-git clone https://github.com/celo-ht/website.git
-cd website
+git clone https://github.com/Celo-HaiTi/celoht-siteweb.git
+cd celoht-siteweb
 npm install
 npm run dev
 ```

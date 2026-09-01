@@ -30,5 +30,5 @@ offering any investment product  -  see
 The goal is to reduce dependence on grants over time through reasonable,
 transparent service fees within the agent network  -  see the flagship
 repository's
-[`docs/business-model.md`](https://github.com/celo-ht/celoht/blob/main/docs/business-model.md)
+[`docs/business-model.md`](https://github.com/Celo-HaiTi/CeloHT/blob/main/docs/business-model.md)
 for the full model.

@@ -33,7 +33,7 @@ const phases = [
     milestones: [
       { text: "First complete cash-in/cash-out cycle handled entirely by agents", done: false },
       { text: "First reforestation pilot with USDm-based rewards", done: false },
-      { text: "dApp deployed to Celo's Alfajores testnet", done: false },
+      { text: "dApp deployed to Celo Sepolia testnet (planned)", done: false },
       { text: "Formal agent code of conduct and verification process live", done: false },
     ],
   },
