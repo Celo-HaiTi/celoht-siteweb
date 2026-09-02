@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { Section } from "@/components/Section";
+import { assetPath } from "@/lib/constants";
 
 const walletCards = [
   {
@@ -24,7 +25,7 @@ const walletCards = [
     ],
     href: "https://docs.minipay.xyz/",
     icon: Smartphone,
-    logo: "https://docs.minipay.xyz/minipay-logo.svg",
+    logo: "/minipay-logo.svg",
     logoAlt: "MiniPay",
   },
   {
@@ -41,7 +42,7 @@ const walletCards = [
     ],
     href: "https://walletconnect.network/",
     icon: Network,
-    logo: "https://cdn.sanity.io/files/1t8iva7t/production/9c557fdfabdc747eda382bbe4c372579916567b7.svg",
+    logo: "/walletconnect-logo.svg",
     logoAlt: "WalletConnect",
   },
 ] as const;
@@ -101,7 +102,7 @@ export function WalletConnectivitySection() {
                 <div className="flex min-w-0 items-center gap-3">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gold-500/25 bg-gold-500/10 p-2.5">
                     <Image
-                      src={card.logo}
+                      src={assetPath(card.logo)}
                       alt={card.logoAlt}
                       width={120}
                       height={40}
