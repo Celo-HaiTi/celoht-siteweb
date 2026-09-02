@@ -55,14 +55,17 @@ export function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="Open CeloHT dApp"
-            className="group inline-flex items-center gap-1.5 rounded-full border border-parchment-100/25 bg-white/4 px-2.5 py-1.5 font-mono text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_10px_24px_rgba(8,18,37,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-300 hover:text-gold-300 hover:shadow-[0_0_0_1px_rgba(247,208,70,0.25),0_14px_30px_rgba(247,208,70,0.2)] sm:px-3 sm:py-2 sm:text-[0.65rem]"
+            className="celoht-header-cta group relative inline-flex items-center gap-1.5 overflow-hidden rounded-full border border-parchment-100/25 bg-white/4 px-2.5 py-1.5 font-mono text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_10px_24px_rgba(8,18,37,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-300 hover:text-gold-300 hover:shadow-[0_0_0_1px_rgba(247,208,70,0.25),0_18px_36px_rgba(247,208,70,0.22)] sm:px-3 sm:py-2 sm:text-[0.65rem]"
           >
-            Open CeloHT dApp
-            <ArrowUpRight
-              size={14}
-              aria-hidden="true"
-              className="shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
+            <span className="celoht-header-cta-shine" aria-hidden="true" />
+            <span className="relative z-10 inline-flex items-center gap-1.5">
+              Open CeloHT dApp
+              <ArrowUpRight
+                size={14}
+                aria-hidden="true"
+                className="shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </span>
           </a>
           <button
             type="button"

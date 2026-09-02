@@ -145,6 +145,35 @@ html {
   }
 }
 
+@keyframes celoht-header-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 24px rgba(8, 18, 37, 0.18), 0 0 0 rgba(255, 255, 255, 0);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 18px 36px rgba(8, 18, 37, 0.25), 0 0 24px rgba(255, 255, 255, 0.12);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes celoht-header-shine {
+  0% {
+    transform: translate3d(-130%, 0, 0) rotate(14deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  48% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(140%, 0, 0) rotate(14deg);
+    opacity: 0;
+  }
+}
+
 @keyframes celoht-wallet-orbit {
   0% {
     transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem) rotate(0deg);
@@ -235,6 +264,25 @@ html {
 
 .celoht-badge-drift-2 {
   animation-delay: 0.8s;
+}
+
+.celoht-header-cta {
+  animation: celoht-header-glow 2.8s ease-in-out infinite;
+  isolation: isolate;
+}
+
+.celoht-header-cta-shine {
+  position: absolute;
+  inset: -35% -15%;
+  z-index: 0;
+  display: block;
+  background: linear-gradient(110deg, transparent 32%, rgba(255, 255, 255, 0.7) 46%, rgba(255, 255, 255, 0.2) 52%, transparent 60%);
+  transform: translate3d(-130%, 0, 0) rotate(14deg);
+  animation: celoht-header-shine 3s ease-in-out infinite;
+}
+
+.celoht-header-cta:hover {
+  animation-play-state: paused;
 }
 
 .celoht-wallet-orbit {
