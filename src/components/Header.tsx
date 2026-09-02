@@ -55,10 +55,14 @@ export function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="Open CeloHT dApp"
-            className="hidden items-center gap-1.5 rounded-full border border-gold-500/60 bg-gold-500/10 px-3 py-2 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-200 transition-all hover:border-gold-300 hover:bg-gold-500/15 hover:text-gold-100 md:inline-flex"
+            className="group hidden items-center gap-1.5 rounded-full border border-gold-500/60 bg-gold-500/10 px-3 py-2 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-300 hover:bg-gold-500/15 hover:text-gold-100 hover:shadow-[0_12px_24px_rgba(247,208,70,0.18)] motion-safe:animate-pulse md:inline-flex"
           >
             Open CeloHT dApp
-            <ArrowUpRight size={14} aria-hidden="true" className="shrink-0" />
+            <ArrowUpRight
+              size={14}
+              aria-hidden="true"
+              className="shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
           </a>
           <button
             type="button"
