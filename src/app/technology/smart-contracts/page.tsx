@@ -278,7 +278,7 @@ export default function SmartContractsPage() {
 
       <Section
         eyebrow="Interaction model"
-        title="How the Smart Contract Layer Works"
+        title="How CeloHT Smart Contracts Connect the Ecosystem"
       >
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="rounded-2xl border border-gold-500/20 bg-gold-500/5 p-6 sm:p-8">
@@ -355,7 +355,7 @@ export default function SmartContractsPage() {
 
       <Section
         eyebrow="Celo-native payment layer"
-        title="Celo Ecosystem Integration"
+        title="Built on the Celo Ecosystem"
       >
         <div className="grid gap-6 lg:grid-cols-3">
           {[
@@ -391,7 +391,7 @@ export default function SmartContractsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Protection by design" title="Security & Access Control">
+      <Section eyebrow="Protection by design" title="Security by Architecture">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="grid gap-3 sm:grid-cols-2">
             {[
@@ -419,9 +419,38 @@ export default function SmartContractsPage() {
             Security is treated as a core architectural concern. The contract
             layer uses explicit roles and bounded responsibilities, with
             test-driven contract development supporting review of behavior and
-            invariants. No independent audit or security certification is
-            implied by this architecture overview.
+            invariants. Critical production contracts should be designed for
+            independent security review and audit; this architecture overview
+            does not claim that such a review has occurred.
           </p>
+        </div>
+      </Section>
+
+      <Section eyebrow="Technical foundation" title="Technology Stack">
+        <div className="rounded-2xl border border-gold-500/20 bg-gold-500/5 p-5 sm:p-8">
+          <div className="grid gap-3 sm:grid-cols-6 sm:items-center">
+            {[
+              "Solidity",
+              "EVM-compatible",
+              "Celo",
+              "USDm",
+              "Wallets",
+              "CeloHT Applications",
+            ].map((item, index, stack) => (
+              <div key={item} className="contents">
+                <div className="flex min-h-14 items-center justify-center rounded-xl border border-parchment-100/12 bg-navy-900/70 px-3 py-3 text-center text-sm font-semibold text-parchment-50">
+                  {item}
+                </div>
+                {index < stack.length - 1 && (
+                  <ArrowDown
+                    className="mx-auto text-gold-300/70 sm:hidden"
+                    size={18}
+                    aria-hidden="true"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -461,10 +490,7 @@ export default function SmartContractsPage() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Composable foundation"
-        title="Built as a Modular Protocol Layer"
-      >
+      <Section eyebrow="Composable foundation" title="Modular by Design">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div className="rounded-2xl border border-gold-500/20 bg-gold-500/5 p-6 sm:p-8">
             <div className="flex items-center gap-3 font-display text-lg font-semibold text-parchment-50">
@@ -547,11 +573,11 @@ export default function SmartContractsPage() {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
         <div className="border border-navy-800 bg-navy-950 px-6 py-12 text-center text-parchment-50 shadow-[0_20px_50px_rgba(8,18,37,0.14)] sm:px-16 sm:py-14">
           <h2 className="font-display text-3xl font-semibold sm:text-4xl">
-            Explore the CeloHT Technology
+            Explore the CeloHT Smart Contract Code
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-parchment-100/75">
-            See how the DApp and the public smart-contract repository fit into CeloHT&apos;s broader
-            technical ecosystem.
+            Explore the open-source smart-contract architecture and
+            implementation.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
