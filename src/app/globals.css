@@ -145,6 +145,24 @@ html {
   }
 }
 
+@keyframes celoht-wallet-orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) translateX(8.2rem) rotate(-90deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(8.2rem) rotate(-180deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) translateX(8.2rem) rotate(-270deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(8.2rem) rotate(-360deg);
+  }
+}
+
 @keyframes celoht-logo-breathe {
   0%,
   100% {
@@ -219,6 +237,11 @@ html {
   animation-delay: 0.8s;
 }
 
+.celoht-wallet-orbit {
+  animation: celoht-wallet-orbit 8s linear infinite;
+  transform-origin: center;
+}
+
 .celoht-logo-mark {
   animation: celoht-logo-float 7s ease-in-out infinite;
   will-change: transform;
@@ -268,8 +291,13 @@ html {
   .celoht-halo-ring,
   .celoht-core-glow,
   .celoht-orbit-chip,
-  .celoht-badge-drift {
+  .celoht-badge-drift,
+  .celoht-wallet-orbit {
     animation: none;
+  }
+
+  .celoht-wallet-orbit {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem) rotate(0deg);
   }
 
   .celoht-hero-reveal {

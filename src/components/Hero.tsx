@@ -104,10 +104,16 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="celoht-badge-drift celoht-badge-drift-2 absolute left-8 top-8 inline-flex items-center gap-2 rounded-full border border-forest-500/30 bg-forest-500/10 px-3 py-1.5 text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-forest-300 shadow-[0_12px_24px_rgba(24,119,86,0.22)]">
+              <Link
+                href={DAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open CeloHT wallet access"
+                className="celoht-wallet-orbit group absolute left-1/2 top-1/2 inline-flex items-center gap-2 rounded-full border border-forest-500/30 bg-forest-500/10 px-3 py-1.5 text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-forest-300 shadow-[0_12px_24px_rgba(24,119,86,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-300 hover:text-gold-300"
+              >
                 <WalletCards size={12} aria-hidden="true" />
                 Wallet access
-              </div>
+              </Link>
             </div>
           </div>
         </div>
