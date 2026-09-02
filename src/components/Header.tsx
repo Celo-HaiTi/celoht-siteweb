@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { primaryNav } from "@/lib/nav";
-import { LaunchDappButton } from "@/components/LaunchDappButton";
 import { assetPath } from "@/lib/constants";
 
 export function Header() {
@@ -51,7 +50,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <LaunchDappButton size="sm" className="hidden md:inline-flex" />
           <button
             type="button"
             aria-expanded={menuOpen}
@@ -84,9 +82,6 @@ export function Header() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2">
-              <LaunchDappButton size="md" className="w-full justify-center" />
-            </li>
           </ul>
         </nav>
       )}
