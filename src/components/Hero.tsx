@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { LaunchDappButton } from "@/components/LaunchDappButton";
 import { assetPath } from "@/lib/constants";
 import { LiveInfoBar } from "@/components/LiveInfoBar";
 
@@ -30,7 +29,6 @@ export function Hero() {
           </p>
 
           <div className="celoht-hero-reveal celoht-hero-reveal-4 mt-8 flex flex-wrap gap-3">
-            <LaunchDappButton size="lg" />
             <Link
               href="/about"
               className="group inline-flex min-h-12 items-center gap-2 rounded-md border border-parchment-100/30 px-6 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300"
