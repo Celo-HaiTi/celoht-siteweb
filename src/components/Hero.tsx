@@ -21,12 +21,12 @@ export function Hero() {
             id="hero-title"
             className="celoht-hero-reveal celoht-hero-reveal-2 mt-4 max-w-3xl font-display text-5xl font-bold leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl"
           >
-            Building a More Inclusive Digital Economy for Haiti
+            A Haitian Web3 ecosystem for learning, access, and community impact.
           </h1>
 
           <p className="celoht-hero-reveal celoht-hero-reveal-3 mt-6 max-w-2xl text-lg leading-8 text-parchment-100/75">
-            An open-source Haitian Web3 initiative building practical pathways through financial
-            inclusion, education, digital payments, entrepreneurship, and community development on Celo.
+            CeloHT connects education, local support, digital payments, and reforestation so people
+            can learn, participate, and build practical digital access in Haiti.
           </p>
 
           <div className="celoht-hero-reveal celoht-hero-reveal-4 mt-8 flex flex-wrap gap-3">
@@ -35,7 +35,7 @@ export function Hero() {
               href="/about"
               className="group inline-flex min-h-12 items-center gap-2 rounded-md border border-parchment-100/30 px-6 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300"
             >
-              Explore CeloHT
+              Understand CeloHT
               <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>

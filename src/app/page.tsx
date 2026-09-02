@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  ArrowUpRight,
   BookOpen,
   Code2,
   Globe2,
@@ -61,30 +60,6 @@ const ecosystemPaths = [
   },
 ];
 
-const projectLinks = [
-  {
-    label: "CeloHT DApp",
-    description: "The product layer for wallets, payments, education, and community participation.",
-    href: DAPP_URL,
-    external: true,
-  },
-  {
-    label: "Education",
-    description: "Learning resources for financial literacy and the Celo ecosystem.",
-    href: "/education",
-  },
-  {
-    label: "Agent Network",
-    description: "How local people help others access digital tools and support.",
-    href: "/agent-network",
-  },
-  {
-    label: "Reforestation",
-    description: "A long-term community and environmental resilience program.",
-    href: "/reforestation",
-  },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -96,21 +71,22 @@ export default function HomePage() {
       <Hero />
 
       <section className="bg-white">
-        <Section eyebrow="Why CeloHT" title="Technology is only useful when people can enter it">
+        <Section eyebrow="Why CeloHT" title="Digital tools only work when people can actually enter them.">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <p className="font-display text-3xl leading-tight text-ink dark:text-parchment-50 sm:text-4xl">
-              A Haitian point of view on practical digital infrastructure.
+              A Haitian approach to practical digital infrastructure.
             </p>
             <div className="max-w-2xl space-y-5 text-base leading-7 text-ink-soft dark:text-parchment-100/70">
               <p>
-                CeloHT exists because a community should not need a technical background to benefit
-                from digital tools. We combine open-source infrastructure with education, local
-                guidance, and clear pathways for participation.
+                CeloHT exists because access is not only about software. It is about literacy,
+                trust, local support, and a path that makes sense in everyday life. We build the
+                conditions for people to understand, use, and benefit from digital tools with more
+                confidence.
               </p>
               <p>
-                That means starting with understanding, then building toward access, community trust,
-                and long-term local value. The goal is not just a wallet or a protocol. It is a
-                functioning ecosystem people can actually use.
+                That is why our work starts with education, grows through community agents, and
+                connects to reforestation and measurable impact. The goal is not a single feature.
+                It is a working ecosystem people can participate in with clarity.
               </p>
               <Link
                 href="/about"
@@ -157,79 +133,102 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white">
-        <Section eyebrow="From learning to participation" title="A human path into the ecosystem">
-          <div className="grid gap-12 lg:grid-cols-[1fr_0.7fr] lg:gap-20">
-            <div>
-              <p className="max-w-2xl text-lg leading-8 text-ink-soft dark:text-parchment-100/70">
-                CeloHT is designed as a progression: learn, access, participate, and build value over
-                time. The process is deliberate because trust and comprehension matter as much as the
-                tools themselves.
-              </p>
-              <div className="mt-10 divide-y divide-navy-700/15 border-y border-navy-700/15 dark:divide-parchment-100/10 dark:border-parchment-100/10">
-                {projectLinks.map((item, index) => {
-                  const content = (
-                    <>
-                      <span className="font-mono text-xs text-gold-800 dark:text-gold-300">0{index + 1}</span>
-                      <span className="ml-6 flex-1">
-                        <strong className="block font-display text-xl font-semibold">{item.label}</strong>
-                        <span className="mt-1 block text-sm text-ink-soft dark:text-parchment-100/60">{item.description}</span>
-                      </span>
-                      {item.external ? <ArrowUpRight size={18} aria-hidden="true" /> : <ArrowRight size={18} aria-hidden="true" />}
-                    </>
-                  );
-                  return item.external ? (
-                    <a key={item.label} href={item.href} target="_blank" rel="noreferrer" className="group flex items-center py-5 transition-colors hover:text-gold-700 dark:hover:text-gold-300">
-                      {content}
-                    </a>
-                  ) : (
-                    <Link key={item.label} href={item.href} className="group flex items-center py-5 transition-colors hover:text-gold-700 dark:hover:text-gold-300">
-                      {content}
-                    </Link>
-                  );
-                })}
+      <section className="border-y border-parchment-100 bg-parchment-100/60">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
+          <div className="mb-8 max-w-3xl">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">The product layer</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">
+              A real ecosystem, presented in a real product experience.
+            </h2>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-[2rem] border border-navy-700/15 bg-navy-950 p-4 shadow-[0_24px_80px_rgba(2,12,24,0.18)] sm:p-6">
+              <div className="mb-5 flex items-center justify-between">
+                <div>
+                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-300">CeloHT dApp</p>
+                  <p className="mt-2 text-lg font-semibold text-parchment-50">Today&apos;s experience</p>
+                </div>
+                <span className="rounded-full border border-gold-500/40 bg-gold-500/10 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-300">
+                  Live
+                </span>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+                <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
+                  <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Wallet</p>
+                  <div className="mt-4 rounded-xl bg-navy-800 p-3">
+                    <p className="text-xs text-parchment-100/60">Balance</p>
+                    <p className="mt-2 text-2xl font-semibold text-parchment-50">$1,240.80</p>
+                  </div>
+                  <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-parchment-100/75">
+                    <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
+                      <p>USDm</p>
+                      <p className="mt-2 font-bold text-parchment-50">$860</p>
+                    </div>
+                    <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
+                      <p>CELO</p>
+                      <p className="mt-2 font-bold text-parchment-50">42.4</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Learn</p>
+                    <p className="mt-3 text-base font-semibold text-parchment-50">Web3 basics</p>
+                    <p className="mt-1 text-xs text-parchment-100/65">Creole-first onboarding</p>
+                  </div>
+                  <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Impact</p>
+                    <p className="mt-3 text-base font-semibold text-parchment-50">Trees tracked</p>
+                    <p className="mt-1 text-xs text-parchment-100/65">Transparent community progress</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="border-l-2 border-gold-500 pl-6 lg:mt-8">
-              <Globe2 size={28} strokeWidth={1.5} className="text-gold-700 dark:text-gold-300" aria-hidden="true" />
-              <h3 className="mt-6 font-display text-3xl font-semibold">Local roots. Global standards.</h3>
-              <p className="mt-4 text-sm leading-6 text-ink-soft dark:text-parchment-100/65">
-                CeloHT is rooted in Haiti, but its public standards are shaped for clarity,
-                accountability, and long-term open-source credibility.
-              </p>
-              <Link href="/community" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold underline-offset-4 hover:underline">
-                Meet the community <ArrowRight size={15} aria-hidden="true" />
+
+            <div className="rounded-[2rem] border border-navy-700/15 bg-white p-6 shadow-[0_24px_80px_rgba(2,12,24,0.08)]">
+              <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-800">Product foundations</p>
+              <ul className="mt-6 space-y-4">
+                {[
+                  "Connect a wallet in a familiar mobile flow.",
+                  "Learn through practical education and onboarding.",
+                  "Use digital payments and trusted local support.",
+                  "Participate in community impact and reforestation programs.",
+                ].map((point) => (
+                  <li key={point} className="flex gap-3 text-sm leading-6 text-ink-soft">
+                    <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-gold-500" aria-hidden="true" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/dapp" className="mt-8 inline-flex items-center gap-2 font-semibold text-ink underline-offset-4 hover:underline">
+                Learn more about the dApp <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
           </div>
-        </Section>
+        </div>
       </section>
 
-      <section className="border-y border-parchment-100 bg-parchment">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:py-20">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800 dark:text-gold-300">Digital payments</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">A clear path from learning to use.</h2>
+      <section className="bg-white">
+        <Section eyebrow="How it works" title="Learn, access, participate, create impact.">
+          <div className="grid gap-4 md:grid-cols-5">
+            {[
+              { number: "01", label: "Learn", text: "Build basic understanding in Haitian Creole." },
+              { number: "02", label: "Access", text: "Use wallet-compatible tools in a trusted setup." },
+              { number: "03", label: "Use", text: "Send, receive, and participate in local flows." },
+              { number: "04", label: "Build", text: "Support community action and local entrepreneurship." },
+              { number: "05", label: "Impact", text: "Contribute to measurable environmental and social progress." },
+            ].map((step) => (
+              <div key={step.number} className="rounded-2xl border border-navy-700/15 bg-parchment-100/30 p-5">
+                <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-gold-800">{step.number}</p>
+                <h3 className="mt-4 font-display text-2xl font-semibold text-ink">{step.label}</h3>
+                <p className="mt-2 text-sm leading-6 text-ink-soft">{step.text}</p>
+              </div>
+            ))}
           </div>
-          <div className="max-w-2xl text-base leading-7 text-ink-soft dark:text-parchment-100/70">
-            <p>
-              CeloHT uses Celo as infrastructure, USDm as a payment medium, and CELO as the network
-              asset used for transaction fees. Wallet-compatible tools like Valora help make access
-              easier, but CeloHT does not control or issue these external assets.
-            </p>
-            <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 sm:grid-cols-5 dark:border-parchment-100/15 dark:bg-parchment-100/15">
-              {["Learn", "DApp", "Wallet", "USDm", "Participate"].map((step, index) => (
-                <div key={step} className="bg-white px-3 py-4 text-center sm:px-2">
-                  <span className="font-mono text-[0.62rem] text-gold-800 dark:text-gold-300">0{index + 1}</span>
-                  <strong className="mt-2 block text-xs font-semibold text-ink dark:text-parchment-50">{step}</strong>
-                </div>
-              ))}
-            </div>
-            <Link href="/technology" className="mt-7 inline-flex items-center gap-2 font-semibold text-ink underline-offset-4 hover:underline dark:text-parchment-50">
-              Explore the technology <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
+        </Section>
       </section>
 
       <section className="border-y border-parchment-100 bg-white">
@@ -261,12 +260,12 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
-              <Globe2 size={15} aria-hidden="true" /> Product layer
+              <Globe2 size={15} aria-hidden="true" /> Open and transparent
             </p>
-            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-5xl">Website, DApp, documentation, and open source</h2>
+            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-5xl">Public work, clear standards, accountable growth.</h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-parchment-100/70">
-              The site explains the mission, the DApp offers the product entry point, and the project
-              documentation helps people understand the system without conflating all three.
+              The project makes its mission, governance, security expectations, and open-source work
+              visible so people can evaluate the ecosystem with context rather than hype.
             </p>
           </div>
           <div className="mt-10 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
@@ -302,22 +301,6 @@ export default function HomePage() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      <section className="border-y border-parchment-100 bg-parchment-100/70">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:py-16">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Trust and transparency</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">Open by default, accountable by design.</h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft dark:text-parchment-100/75">
-              CeloHT publishes its mission, governance, security expectations, and open-source work so
-              people can assess the project with clarity.
-            </p>
-          </div>
-          <Link href="/transparency" className="inline-flex w-fit items-center gap-2 rounded-full bg-navy-950 px-5 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:bg-navy-800">
-            Read the transparency framework <ArrowRight size={16} aria-hidden="true" />
-          </Link>
         </div>
       </section>
 
