@@ -9,7 +9,7 @@ describe("LiveInfoBar", () => {
     resetLiveDataCache();
   });
 
-  it("renders live CELO, USDm and network status after fetching market data", async () => {
+  it("renders live CELO and USDm market cards without the technical network status", async () => {
     vi.stubGlobal(
       "fetch",
       vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
@@ -26,17 +26,10 @@ describe("LiveInfoBar", () => {
           } as unknown as Response;
         }
 
-        if (body.includes("eth_chainId")) {
+        if (body.includes("eth_chainId") || body.includes("eth_blockNumber")) {
           return {
             ok: true,
             json: async () => ({ result: "0xa4ec" }),
-          } as unknown as Response;
-        }
-
-        if (body.includes("eth_blockNumber")) {
-          return {
-            ok: true,
-            json: async () => ({ result: "0x12345" }),
           } as unknown as Response;
         }
 
@@ -51,26 +44,18 @@ describe("LiveInfoBar", () => {
     await waitFor(() => expect(screen.getAllByText("CELO").length).toBeGreaterThan(0));
     expect(screen.getByText("$0.065")).toBeInTheDocument();
     expect(screen.getAllByText("USDm").length).toBeGreaterThan(0);
-    expect(screen.getAllByText(/Celo Network/i).length).toBeGreaterThan(0);
+    expect(screen.getByText(/live market/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Celo Network/i)).not.toBeInTheDocument();
   });
 
-  it("keeps network status visible when CoinGecko is unavailable", async () => {
+  it("surfaces a concise market error state without exposing technical network details", async () => {
     vi.stubGlobal(
       "fetch",
-      vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+      vi.fn(async (input: RequestInfo | URL) => {
         const url = String(input);
-        const body = typeof init?.body === "string" ? init.body : "";
 
         if (url.includes("api.coingecko.com")) {
           throw new Error("CoinGecko unavailable");
-        }
-
-        if (body.includes("eth_chainId")) {
-          return { ok: true, json: async () => ({ result: "0xa4ec" }) } as unknown as Response;
-        }
-
-        if (body.includes("eth_blockNumber")) {
-          return { ok: true, json: async () => ({ result: "0x12345" }) } as unknown as Response;
         }
 
         return Promise.reject(new Error("Unexpected fetch target"));
@@ -80,6 +65,7 @@ describe("LiveInfoBar", () => {
     render(<LiveInfoBar />);
 
     await waitFor(() => expect(screen.getByText(/Market data is temporarily unavailable/i)).toBeInTheDocument());
-    expect(screen.getAllByText(/Celo Network/i).length).toBeGreaterThan(0);
+    expect(screen.queryByText(/Celo Network/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Latest block/i)).not.toBeInTheDocument();
   });
 });

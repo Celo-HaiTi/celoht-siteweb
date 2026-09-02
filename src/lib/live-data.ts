@@ -2,11 +2,9 @@
 
 const MARKET_ENDPOINT =
   "https://api.coingecko.com/api/v3/simple/price?ids=celo,celo-dollar&vs_currencies=usd&include_24hr_change=true&include_last_updated_at=true";
-const CELO_RPC_URL = process.env.NEXT_PUBLIC_CELO_RPC_URL ?? "https://forno.celo.org";
-const CELO_CHAIN_ID = 42220;
 const REQUEST_TIMEOUT = 4000;
 const CACHE_KEY = "celoht-live-data-v1";
-const CACHE_MAX_AGE = 60 * 1000;
+const CACHE_MAX_AGE = 10 * 60 * 1000;
 
 export type PriceEntry = {
   usd: number | null;
@@ -14,24 +12,15 @@ export type PriceEntry = {
   updatedAt: number | null;
 };
 
-export type NetworkEntry = {
-  ok: boolean;
-  chainId: number | null;
-  latestBlock: number | null;
-  updatedAt: number | null;
-};
-
 export type LiveData = {
   celo: PriceEntry | null;
   usdm: PriceEntry | null;
-  network: NetworkEntry | null;
 };
 
 let cachedData: LiveData | null = null;
 type RefreshResult = {
   data: LiveData;
   marketError: boolean;
-  networkError: boolean;
 };
 
 let request: Promise<RefreshResult> | null = null;
@@ -87,56 +76,33 @@ async function fetchMarketData(): Promise<Pick<LiveData, "celo" | "usdm">> {
   return { celo: toPriceEntry(celo), usdm: toPriceEntry(usdm) };
 }
 
-async function fetchNetworkData(): Promise<NetworkEntry> {
-  const requestRpc = async (method: "eth_chainId" | "eth_blockNumber", id: number) => {
-    const response = await fetchWithTimeout(CELO_RPC_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ jsonrpc: "2.0", method, params: [], id }),
-    });
-    if (!response.ok) throw new Error("Celo RPC request failed");
-    const json = await response.json();
-    if (json?.error || typeof json?.result !== "string") throw new Error("Celo RPC response was invalid");
-    return Number.parseInt(json.result, 16);
-  };
-
-  const chainId = await requestRpc("eth_chainId", 1);
-  const latestBlock = await requestRpc("eth_blockNumber", 2);
-  return {
-    ok: chainId === CELO_CHAIN_ID && Number.isFinite(latestBlock),
-    chainId: Number.isFinite(chainId) ? chainId : null,
-    latestBlock: Number.isFinite(latestBlock) ? latestBlock : null,
-    updatedAt: Date.now() / 1000,
-  };
-}
-
 export function getCachedLiveData() {
   return readCache();
 }
 
 export function isLiveDataStale(data: LiveData | null) {
-  const timestamps = [data?.celo?.updatedAt, data?.usdm?.updatedAt, data?.network?.updatedAt]
+  const timestamps = [data?.celo?.updatedAt, data?.usdm?.updatedAt]
     .filter((timestamp): timestamp is number => typeof timestamp === "number")
     .map((timestamp) => timestamp * 1000);
-  return timestamps.length === 0 || Date.now() - Math.max(...timestamps) > CACHE_MAX_AGE;
+
+  if (timestamps.length === 0) return true;
+  return Date.now() - Math.max(...timestamps) > CACHE_MAX_AGE;
 }
 
 export function refreshLiveData() {
   if (request) return request;
 
-  request = Promise.allSettled([fetchMarketData(), fetchNetworkData()])
-    .then(([marketResult, networkResult]) => {
+  request = Promise.allSettled([fetchMarketData()])
+    .then(([marketResult]) => {
       const current = readCache();
       const data: LiveData = {
         celo: marketResult.status === "fulfilled" ? marketResult.value.celo : current?.celo ?? null,
         usdm: marketResult.status === "fulfilled" ? marketResult.value.usdm : current?.usdm ?? null,
-        network: networkResult.status === "fulfilled" ? networkResult.value : current?.network ?? null,
       };
       writeCache(data);
       return {
         data,
         marketError: marketResult.status === "rejected",
-        networkError: networkResult.status === "rejected",
       };
     })
     .finally(() => {
