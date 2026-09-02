@@ -40,9 +40,9 @@ export function Hero() {
                 href={DAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex min-h-12 items-center gap-2 rounded-full bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600 px-6 py-3 text-sm font-semibold text-navy-950 shadow-[0_12px_30px_rgba(255,212,59,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(255,212,59,0.42)]"
+                className="group inline-flex min-h-12 items-center gap-2 rounded-full border border-parchment-100/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(255,212,59,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-300 hover:text-gold-300"
               >
-                Open CeloHT
+                Open CeloHT dApp
                 <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
