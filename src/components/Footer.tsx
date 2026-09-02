@@ -14,15 +14,12 @@ export function Footer() {
   return (
     <footer className="mt-24 border-t border-navy-700/10 bg-navy-950 text-parchment-100 dark:border-parchment-100/10">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-gold-500/20 bg-gold-500/5 p-6 sm:flex-row sm:items-center">
-          <div>
-            <p className="font-display text-xl font-semibold">Start with the ecosystem.</p>
-            <p className="mt-1 text-sm text-parchment-100/70">
-              Learn the fundamentals, explore the dApp, and see how CeloHT connects education,
-              community access, and reforestation.
-            </p>
-          </div>
-          <LaunchDappButton size="lg" />
+        <div className="rounded-2xl border border-gold-500/20 bg-gold-500/5 p-6">
+          <p className="font-display text-xl font-semibold">Start with the ecosystem.</p>
+          <p className="mt-1 max-w-2xl text-sm text-parchment-100/70">
+            Learn the fundamentals, explore the dApp, and see how CeloHT connects education,
+            community access, and reforestation.
+          </p>
         </div>
 
         <section aria-labelledby="footer-ecosystem-title" className="mt-12 border-y border-parchment-100/10 py-10">
@@ -57,9 +54,7 @@ export function Footer() {
             })}
           </div>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/about" className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300">
-              Explore CeloHT <ArrowRight size={16} aria-hidden="true" />
-            </Link>
+            <LaunchDappButton size="lg" />
           </div>
         </section>
 
