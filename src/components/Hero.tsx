@@ -55,9 +55,6 @@ export function Hero() {
             <div className="celoht-hero-reveal celoht-hero-reveal-5 mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-parchment-100/65">
               <span className="inline-flex items-center gap-2 rounded-full border border-forest-500/25 bg-forest-500/8 px-2.5 py-1"><span className="h-1.5 w-1.5 rounded-full bg-forest-400" /> Haitian-led</span>
               <span className="inline-flex items-center gap-2 rounded-full border border-gold-500/25 bg-gold-500/8 px-2.5 py-1"><span className="h-1.5 w-1.5 rounded-full bg-gold-400" /> Built in public</span>
-              <Link href="/technology" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
-                Explore ecosystem <ArrowRight size={14} aria-hidden="true" />
-              </Link>
               <Link href="/documentation" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
                 <BookOpen size={14} aria-hidden="true" /> Documentation
               </Link>
