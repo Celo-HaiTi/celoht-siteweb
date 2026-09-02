@@ -58,7 +58,7 @@ export default function TechnologyPage() {
         lead="Celo, CELO, USDm, and Valora are our technical foundation. CeloHT doesn't operate any of them  -  we build the education and community process that makes them accessible."
       />
 
-      <Section eyebrow="The CeloHT foundation" title="The infrastructure layer">
+      <Section eyebrow="Core infrastructure" title="The infrastructure layer">
         <div className="grid gap-5 sm:grid-cols-2">
           {technologyCards.map((card) => {
             const Icon = card.icon;
@@ -90,13 +90,6 @@ export default function TechnologyPage() {
                 <p className="relative mt-4 text-sm leading-7 text-parchment-100/70">
                   {card.description}
                 </p>
-                <div className="relative mt-auto flex items-center gap-2 pt-6 text-xs font-semibold uppercase tracking-[0.14em] text-parchment-100/45">
-                  <span
-                    className="h-px w-8 bg-gold-500/45"
-                    aria-hidden="true"
-                  />
-                  CeloHT foundation
-                </div>
               </article>
             );
           })}
