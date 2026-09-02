@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Where do I launch the dApp?",
-    a: "Use the \u201cLaunch dApp\u201d button in the header, hero, or footer of any page on this site.",
+    a: "Use the \u201cOpen CeloHT dApp\u201d button in the site header.",
   },
   {
     q: "How do I report a security issue?",
