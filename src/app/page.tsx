@@ -308,7 +308,6 @@ export default function HomePage() {
         title="There is a place to begin."
         description="Learn the context, explore the product, and join the work as CeloHT builds in public from Haiti toward a wider digital economy."
         primary={{ label: "Launch CeloHT DApp", href: DAPP_URL }}
-        secondary={{ label: "Explore CeloHT", href: "/about" }}
         external
       />
     </>
