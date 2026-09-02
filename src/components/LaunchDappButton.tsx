@@ -19,14 +19,14 @@ export function LaunchDappButton({ size = "md", className }: Props) {
       href={DAPP_URL}
       target="_blank"
       rel="noreferrer"
-      aria-label="Launch CeloHT dApp (Launch dApp)"
+      aria-label="Open CeloHT dApp"
       className={cn(
         "inline-flex min-h-11 items-center gap-1.5 rounded-md bg-gold-500 font-bold text-navy-950 transition-colors hover:bg-gold-300",
         sizeClasses[size],
         className,
       )}
     >
-      Launch CeloHT DApp
+      Open CeloHT dApp
       <ArrowUpRight size={size === "lg" ? 18 : 14} aria-hidden="true" />
     </a>
   );

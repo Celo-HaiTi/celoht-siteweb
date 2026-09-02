@@ -138,37 +138,37 @@ export default function HomePage() {
           <div className="mb-8 max-w-3xl">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">The product layer</p>
             <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">
-              A real ecosystem, presented in a real product experience.
+              A clear product experience for education, payments, and community participation.
             </h2>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-[2rem] border border-navy-700/15 bg-navy-950 p-4 shadow-[0_24px_80px_rgba(2,12,24,0.18)] sm:p-6">
-              <div className="mb-5 flex items-center justify-between">
+              <div className="mb-5 flex items-center justify-between gap-4">
                 <div>
                   <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-300">CeloHT dApp</p>
-                  <p className="mt-2 text-lg font-semibold text-parchment-50">Today&apos;s experience</p>
+                  <p className="mt-2 text-lg font-semibold text-parchment-50">Product preview</p>
                 </div>
                 <span className="rounded-full border border-gold-500/40 bg-gold-500/10 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-300">
-                  Live
+                  Demo data
                 </span>
               </div>
 
               <div className="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
                 <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
-                  <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Wallet</p>
-                  <div className="mt-4 rounded-xl bg-navy-800 p-3">
-                    <p className="text-xs text-parchment-100/60">Balance</p>
-                    <p className="mt-2 text-2xl font-semibold text-parchment-50">$1,240.80</p>
+                  <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Wallet access</p>
+                  <div className="mt-4 rounded-xl border border-dashed border-parchment-100/20 bg-navy-800 p-3">
+                    <p className="text-xs text-parchment-100/60">Illustrative interface</p>
+                    <p className="mt-2 text-xl font-semibold text-parchment-50">Connect wallet</p>
                   </div>
                   <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-parchment-100/75">
                     <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
                       <p>USDm</p>
-                      <p className="mt-2 font-bold text-parchment-50">$860</p>
+                      <p className="mt-2 font-bold text-parchment-50">Stable asset</p>
                     </div>
                     <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
                       <p>CELO</p>
-                      <p className="mt-2 font-bold text-parchment-50">42.4</p>
+                      <p className="mt-2 font-bold text-parchment-50">Market data</p>
                     </div>
                   </div>
                 </div>
@@ -176,13 +176,13 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
                     <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Learn</p>
-                    <p className="mt-3 text-base font-semibold text-parchment-50">Web3 basics</p>
-                    <p className="mt-1 text-xs text-parchment-100/65">Creole-first onboarding</p>
+                    <p className="mt-3 text-base font-semibold text-parchment-50">Practical education</p>
+                    <p className="mt-1 text-xs text-parchment-100/65">Guided onboarding for real users</p>
                   </div>
                   <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
                     <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Impact</p>
-                    <p className="mt-3 text-base font-semibold text-parchment-50">Trees tracked</p>
-                    <p className="mt-1 text-xs text-parchment-100/65">Transparent community progress</p>
+                    <p className="mt-3 text-base font-semibold text-parchment-50">Transparent progress</p>
+                    <p className="mt-1 text-xs text-parchment-100/65">Verified milestones and reporting</p>
                   </div>
                 </div>
               </div>
