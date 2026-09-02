@@ -9,7 +9,6 @@ import {
   UsersRound,
   WalletCards,
 } from "lucide-react";
-import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { StatGrid } from "@/components/StatGrid";
@@ -304,12 +303,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CTASection
-        title="There is a place to begin."
-        description="Learn the context, explore the product, and join the work as CeloHT builds in public from Haiti toward a wider digital economy."
-        primary={{ label: "Launch CeloHT DApp", href: DAPP_URL }}
-        external
-      />
     </>
   );
 }

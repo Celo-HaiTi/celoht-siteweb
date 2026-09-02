@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, BookOpen, Code2, Leaf, UsersRound, WalletCards } from "lucide-react";
 import { footerNav } from "@/lib/nav";
-import { LaunchDappButton } from "@/components/LaunchDappButton";
 import {
   DAPP_URL,
   DISCORD_URL,
