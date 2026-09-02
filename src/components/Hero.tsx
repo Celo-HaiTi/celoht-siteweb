@@ -19,13 +19,14 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_25%,rgba(247,208,70,0.17),transparent_30%)]" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16 lg:py-24">
           <div className="relative z-10">
-            <p className="celoht-hero-reveal font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
+            <div className="celoht-hero-reveal inline-flex items-center gap-2 rounded-full border border-gold-300/25 bg-gold-500/8 px-3 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-gold-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold-300" aria-hidden="true" />
               CeloHT
-            </p>
+            </div>
 
             <h1
               id="hero-title"
-              className="celoht-hero-reveal celoht-hero-reveal-2 mt-4 max-w-3xl font-display text-5xl font-bold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-7xl"
+              className="celoht-hero-reveal celoht-hero-reveal-2 mt-5 max-w-3xl font-display text-5xl font-bold leading-[0.96] tracking-[-0.05em] text-parchment-50 sm:text-6xl lg:text-7xl"
             >
               Web3 infrastructure built for real access in Haiti.
             </h1>
@@ -52,8 +53,8 @@ export function Hero() {
               </Link>
             </div>
             <div className="celoht-hero-reveal celoht-hero-reveal-5 mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-parchment-100/65">
-              <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-forest-500" /> Haitian-led</span>
-              <span className="inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-gold-500" /> Built in public</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-forest-500/25 bg-forest-500/8 px-2.5 py-1"><span className="h-1.5 w-1.5 rounded-full bg-forest-400" /> Haitian-led</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-gold-500/25 bg-gold-500/8 px-2.5 py-1"><span className="h-1.5 w-1.5 rounded-full bg-gold-400" /> Built in public</span>
               <Link href="/technology" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
                 Explore ecosystem <ArrowRight size={14} aria-hidden="true" />
               </Link>
@@ -98,7 +99,7 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="celoht-badge-drift absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border border-parchment-100/15 bg-navy-950/80 px-4 py-2 text-center backdrop-blur-sm">
+              <div className="celoht-badge-drift absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border border-parchment-100/15 bg-navy-950/80 px-4 py-2 text-center shadow-[0_10px_28px_rgba(2,8,20,0.35)] backdrop-blur-sm">
                 <p className="font-mono text-[0.58rem] uppercase tracking-[0.22em] text-gold-300">CeloHT</p>
                 <div className="mt-2 flex items-center justify-center gap-2 text-[0.56rem] uppercase tracking-[0.18em] text-parchment-100/70">
                   <Globe2 size={12} aria-hidden="true" className="text-forest-400" />
@@ -106,7 +107,7 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="celoht-badge-drift celoht-badge-drift-2 absolute left-8 top-8 inline-flex items-center gap-2 rounded-full border border-forest-500/30 bg-forest-500/10 px-3 py-1.5 text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-forest-300">
+              <div className="celoht-badge-drift celoht-badge-drift-2 absolute left-8 top-8 inline-flex items-center gap-2 rounded-full border border-forest-500/30 bg-forest-500/10 px-3 py-1.5 text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-forest-300 shadow-[0_12px_24px_rgba(24,119,86,0.22)]">
                 <WalletCards size={12} aria-hidden="true" />
                 Wallet access
               </div>
