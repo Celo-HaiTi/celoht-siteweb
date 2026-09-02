@@ -55,7 +55,7 @@ export function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="Open CeloHT dApp"
-            className="group inline-flex items-center gap-1.5 rounded-full border border-gold-500/60 bg-gold-500/10 px-2.5 py-1.5 font-mono text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-gold-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-300 hover:bg-gold-500/15 hover:text-gold-100 hover:shadow-[0_12px_24px_rgba(247,208,70,0.18)] motion-safe:animate-pulse sm:px-3 sm:py-2 sm:text-[0.65rem]"
+            className="group inline-flex items-center gap-1.5 rounded-full border border-gold-400 bg-gold-500 px-2.5 py-1.5 font-mono text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-navy-950 shadow-[0_0_0_1px_rgba(247,208,70,0.25),0_10px_24px_rgba(247,208,70,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-[0_0_0_1px_rgba(247,208,70,0.32),0_14px_30px_rgba(247,208,70,0.35)] motion-safe:animate-pulse sm:px-3 sm:py-2 sm:text-[0.65rem]"
           >
             Open CeloHT dApp
             <ArrowUpRight
