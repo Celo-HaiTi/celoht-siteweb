@@ -13,21 +13,21 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-parchment-100/15 bg-navy-950 text-parchment-50 shadow-[0_8px_30px_rgba(8,18,37,0.12)]">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="group flex items-center gap-2 rounded-md">
+    <header className="sticky top-0 z-40 border-b border-parchment-100/15 bg-navy-950/90 text-parchment-50 shadow-[0_8px_30px_rgba(1,8,18,0.18)] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:py-4">
+        <Link href="/" className="group flex items-center gap-3 rounded-md">
           <Image
             src={assetPath("/celoht-logo.png")}
             alt="CeloHT"
             width={38}
             height={38}
-            className="rounded-lg"
+            className="rounded-xl ring-1 ring-gold-300/20 transition-transform duration-300 group-hover:scale-105"
           />
           <span className="font-display text-xl font-semibold tracking-tight text-parchment-50 transition-colors group-hover:text-gold-300">CeloHT</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-1 rounded-full border border-parchment-100/10 bg-white/[0.03] p-1">
             {primaryNav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
@@ -35,9 +35,9 @@ export function Header() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`rounded-full px-3 py-2 text-sm transition-colors ${
+                    className={`relative rounded-full px-3.5 py-2 text-sm transition-colors ${
                       active
-                        ? "bg-gold-500 text-navy-950"
+                        ? "bg-gold-500 font-semibold text-navy-950 shadow-[0_5px_18px_rgba(248,211,79,0.18)]"
                         : "text-parchment-100/75 hover:bg-navy-800 hover:text-parchment-50"
                     }`}
                   >
@@ -72,7 +72,7 @@ export function Header() {
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             onClick={() => setMenuOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-parchment-100/25 text-parchment-50 transition-colors hover:border-gold-500 hover:text-gold-300 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-parchment-100/25 text-parchment-50 transition-colors hover:border-gold-500 hover:text-gold-300 lg:hidden"
           >
             <span className="sr-only">{menuOpen ? "Close menu" : "Open menu"}</span>
             {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
@@ -84,7 +84,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-parchment-100/15 bg-navy-950 px-4 pb-4 lg:hidden"
+          className="border-t border-parchment-100/15 bg-navy-950/95 px-4 pb-4 backdrop-blur-xl lg:hidden"
         >
           <ul className="flex flex-col gap-1 pt-2">
             {primaryNav.map((item) => (

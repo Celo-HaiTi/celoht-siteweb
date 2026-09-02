@@ -1,37 +1,37 @@
 @import "tailwindcss";
 
-/* CeloHT permanent visual system: one deep navy canvas and one yellow signal. */
+/* CeloHT visual system: deep blue foundation, warm signal, and living green. */
 @theme {
-  --font-display: "IBM Plex Sans", "Inter", "Avenir Next", ui-sans-serif, sans-serif;
-  --font-body: "Inter", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
+  --font-display: "Space Grotesk", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
+  --font-body: "DM Sans", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
   --font-mono:
     ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", monospace;
 
-  --color-bg: #061426;
-  --color-surface: #0a1b30;
-  --color-surface-soft: rgba(255, 255, 255, 0.025);
-  --color-border: rgba(255, 255, 255, 0.1);
-  --color-border-strong: rgba(255, 255, 255, 0.16);
-  --color-text: #f5f7fa;
-  --color-text-muted: #94a3b8;
-  --color-primary: #ffd43b;
-  --color-primary-hover: #ffe066;
+  --color-bg: #071525;
+  --color-surface: #0d2137;
+  --color-surface-soft: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(199, 218, 232, 0.13);
+  --color-border-strong: rgba(199, 218, 232, 0.22);
+  --color-text: #f8fafb;
+  --color-text-muted: #a5b5c2;
+  --color-primary: #f8d34f;
+  --color-primary-hover: #ffe47b;
 
-  --color-navy-950: #061426;
-  --color-navy-900: #0a1b30;
-  --color-navy-800: #102640;
-  --color-navy-700: #213a58;
-  --color-navy-600: #4f6680;
+  --color-navy-950: #071525;
+  --color-navy-900: #0d2137;
+  --color-navy-800: #15304b;
+  --color-navy-700: #294761;
+  --color-navy-600: #61788d;
 
   --color-gold-300: #ffe066;
-  --color-gold-500: #ffd43b;
-  --color-gold-600: #e0b72f;
+  --color-gold-500: #f8d34f;
+  --color-gold-600: #d9b63b;
   --color-gold-700: #c39b20;
   --color-gold-800: #a9851d;
 
-  --color-forest-400: #4f9274;
-  --color-forest-500: #36725a;
-  --color-forest-600: #264e3d;
+  --color-forest-400: #6fc49b;
+  --color-forest-500: #398568;
+  --color-forest-600: #285b4b;
 
   --color-parchment-50: #f5f7fa;
   --color-parchment-100: #dce5ef;
@@ -44,15 +44,15 @@
 
 :root {
   color-scheme: dark;
-  --color-bg: #061426;
-  --color-surface: #0a1b30;
-  --color-surface-soft: rgba(255, 255, 255, 0.025);
-  --color-border: rgba(255, 255, 255, 0.1);
-  --color-border-strong: rgba(255, 255, 255, 0.16);
-  --color-text: #f5f7fa;
-  --color-text-muted: #94a3b8;
-  --color-primary: #ffd43b;
-  --color-primary-hover: #ffe066;
+  --color-bg: #071525;
+  --color-surface: #0d2137;
+  --color-surface-soft: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(199, 218, 232, 0.13);
+  --color-border-strong: rgba(199, 218, 232, 0.22);
+  --color-text: #f8fafb;
+  --color-text-muted: #a5b5c2;
+  --color-primary: #f8d34f;
+  --color-primary-hover: #ffe47b;
 }
 
 * {
@@ -61,6 +61,47 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--color-bg);
+}
+
+body {
+  background:
+    radial-gradient(circle at 88% 0%, rgba(111, 196, 155, 0.08), transparent 24rem),
+    radial-gradient(circle at 8% 16%, rgba(248, 211, 79, 0.05), transparent 28rem),
+    var(--color-bg);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a,
+button {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease, transform 180ms ease;
+}
+
+.celoht-surface {
+  background: linear-gradient(145deg, rgba(21, 48, 75, 0.72), rgba(7, 21, 37, 0.9));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 22px 70px rgba(1, 8, 18, 0.2);
+}
+
+.celoht-grid {
+  background-image: linear-gradient(rgba(199, 218, 232, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(199, 218, 232, 0.045) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
 }
 
 @keyframes celoht-hero-reveal {
@@ -359,8 +400,6 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background: var(--color-bg);
-  color: var(--color-text);
 }
 
 /* Legacy page utilities resolve to the permanent CeloHT surface system. */
