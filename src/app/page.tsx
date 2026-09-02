@@ -135,9 +135,9 @@ export default function HomePage() {
       <section className="border-y border-parchment-100 bg-parchment-100/60">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mb-8 max-w-3xl">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">The product layer</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">The CeloHT product layer</p>
             <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">
-              A clear product experience for education, payments, and community participation.
+              A usable platform for learning, wallets, payments, and community participation.
             </h2>
           </div>
 
@@ -145,43 +145,51 @@ export default function HomePage() {
             <div className="rounded-[2rem] border border-navy-700/15 bg-navy-950 p-4 shadow-[0_24px_80px_rgba(2,12,24,0.18)] sm:p-6">
               <div className="mb-5 flex items-center justify-between gap-4">
                 <div>
-                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-300">CeloHT dApp</p>
-                  <p className="mt-2 text-lg font-semibold text-parchment-50">Product preview</p>
+                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-300">CeloHT Platform</p>
+                  <p className="mt-2 text-lg font-semibold text-parchment-50">Wallet access and community tools</p>
                 </div>
-                <span className="rounded-full border border-gold-500/40 bg-gold-500/10 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-300">
-                  Demo data
+                <span className="inline-flex items-center gap-2 rounded-full border border-forest-500/35 bg-forest-500/10 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-forest-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-forest-400" aria-hidden="true" />
+                  Celo Mainnet
                 </span>
               </div>
 
               <div className="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
                 <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
-                  <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Wallet access</p>
-                  <div className="mt-4 rounded-xl border border-dashed border-parchment-100/20 bg-navy-800 p-3">
-                    <p className="text-xs text-parchment-100/60">Illustrative interface</p>
-                    <p className="mt-2 text-xl font-semibold text-parchment-50">Connect wallet</p>
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Wallet</p>
+                    <button type="button" className="rounded-full bg-gold-500 px-3 py-1.5 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-navy-950">
+                      Connect Wallet
+                    </button>
+                  </div>
+                  <div className="mt-4 rounded-xl border border-dashed border-parchment-100/15 bg-navy-800/80 p-3 text-sm text-parchment-100/70">
+                    No wallet connected yet.
                   </div>
                   <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-parchment-100/75">
                     <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
-                      <p>USDm</p>
-                      <p className="mt-2 font-bold text-parchment-50">Stable asset</p>
+                      <p>CELO</p>
+                      <p className="mt-2 font-bold text-parchment-50">—</p>
                     </div>
                     <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
-                      <p>CELO</p>
-                      <p className="mt-2 font-bold text-parchment-50">Market data</p>
+                      <p>USDm</p>
+                      <p className="mt-2 font-bold text-parchment-50">—</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
-                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Learn</p>
-                    <p className="mt-3 text-base font-semibold text-parchment-50">Practical education</p>
-                    <p className="mt-1 text-xs text-parchment-100/65">Guided onboarding for real users</p>
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Quick actions</p>
+                    <div className="mt-3 space-y-2 text-sm text-parchment-50">
+                      <Link href="/education" className="block rounded-lg border border-parchment-100/10 bg-navy-800/75 px-3 py-2 hover:border-gold-500/40">Learn</Link>
+                      <Link href="/agent-network" className="block rounded-lg border border-parchment-100/10 bg-navy-800/75 px-3 py-2 hover:border-gold-500/40">Agents</Link>
+                      <Link href="/reforestation" className="block rounded-lg border border-parchment-100/10 bg-navy-800/75 px-3 py-2 hover:border-gold-500/40">Reforest</Link>
+                    </div>
                   </div>
                   <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
-                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Impact</p>
-                    <p className="mt-3 text-base font-semibold text-parchment-50">Transparent progress</p>
-                    <p className="mt-1 text-xs text-parchment-100/65">Verified milestones and reporting</p>
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">Education</p>
+                    <p className="mt-3 text-base font-semibold text-parchment-50">Continue learning</p>
+                    <p className="mt-1 text-xs text-parchment-100/65">Course modules and wallet foundations.</p>
                   </div>
                 </div>
               </div>
@@ -191,10 +199,10 @@ export default function HomePage() {
               <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-800">Product foundations</p>
               <ul className="mt-6 space-y-4">
                 {[
-                  "Connect a wallet in a familiar mobile flow.",
-                  "Learn through practical education and onboarding.",
-                  "Use digital payments and trusted local support.",
-                  "Participate in community impact and reforestation programs.",
+                  "Connect a wallet in a familiar mobile-first flow.",
+                  "Learn through practical education and wallet onboarding.",
+                  "Use trusted local support through the agent network.",
+                  "Participate in reforestation and community impact programs.",
                 ].map((point) => (
                   <li key={point} className="flex gap-3 text-sm leading-6 text-ink-soft">
                     <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-gold-500" aria-hidden="true" />
@@ -203,7 +211,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <Link href="/dapp" className="mt-8 inline-flex items-center gap-2 font-semibold text-ink underline-offset-4 hover:underline">
-                Learn more about the dApp <ArrowRight size={16} aria-hidden="true" />
+                Learn more about the platform <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
           </div>

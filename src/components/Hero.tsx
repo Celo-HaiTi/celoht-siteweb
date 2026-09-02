@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { assetPath } from "@/lib/constants";
+import { DAPP_URL, assetPath } from "@/lib/constants";
 import { LiveInfoBar } from "@/components/LiveInfoBar";
 
 export function Hero() {
@@ -20,21 +20,28 @@ export function Hero() {
             id="hero-title"
             className="celoht-hero-reveal celoht-hero-reveal-2 mt-4 max-w-3xl font-display text-5xl font-bold leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl"
           >
-            A Haitian Web3 ecosystem for learning, access, and community impact.
+            Web3 infrastructure built for real access in Haiti.
           </h1>
 
           <p className="celoht-hero-reveal celoht-hero-reveal-3 mt-6 max-w-2xl text-lg leading-8 text-parchment-100/75">
-            CeloHT connects education, local support, digital payments, and reforestation so people
-            can learn, participate, and build practical digital access in Haiti.
+            CeloHT connects education, wallet access, community agents, digital payments, and reforestation through an open-source ecosystem built on Celo.
           </p>
 
           <div className="celoht-hero-reveal celoht-hero-reveal-4 mt-8 flex flex-wrap gap-3">
             <Link
-              href="/about"
+              href={DAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex min-h-12 items-center gap-2 rounded-md bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+            >
+              Open CeloHT
+              <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+            </Link>
+            <Link
+              href="/technology"
               className="group inline-flex min-h-12 items-center gap-2 rounded-md border border-parchment-100/30 px-6 py-3 text-sm font-semibold text-parchment-50 transition-colors hover:border-gold-300 hover:text-gold-300"
             >
-              Understand CeloHT
-              <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+              Explore the infrastructure
             </Link>
           </div>
           <div className="celoht-hero-reveal celoht-hero-reveal-5 mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-parchment-100/65">
@@ -50,19 +57,68 @@ export function Hero() {
         </div>
 
         <div
-          className="relative flex min-h-[22rem] items-center justify-center overflow-hidden border border-parchment-100/15 bg-navy-900 px-6 py-10 text-parchment-50 shadow-2xl shadow-black/20 lg:min-h-[30rem]"
+          className="relative flex min-h-[22rem] items-center justify-center overflow-hidden border border-parchment-100/15 bg-navy-900 px-4 py-6 text-parchment-50 shadow-2xl shadow-black/20 lg:min-h-[30rem]"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(245,200,66,0.24),transparent_36%)]" />
-          <div className="celoht-logo-mark relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-2xl bg-[#ffff58] shadow-[0_24px_80px_rgba(247,208,70,0.2)] sm:h-80 sm:w-80">
-            <span className="celoht-logo-ambient" aria-hidden="true" />
-            <span className="celoht-logo-sweep" aria-hidden="true" />
-            <Image
-              src={assetPath("/celoht-logo.png")}
-              alt="CeloHT logo"
-              width={420}
-              height={420}
-              className="relative z-10 h-full w-full object-cover"
-            />
+          <div className="relative w-full max-w-md rounded-[1.75rem] border border-parchment-100/10 bg-navy-950/80 p-4 shadow-[0_24px_80px_rgba(2,8,20,0.25)] backdrop-blur-sm">
+            <div className="flex items-center justify-between border-b border-parchment-100/10 pb-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-[#ffff58]">
+                  <Image
+                    src={assetPath("/celoht-logo.png")}
+                    alt="CeloHT logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-mono text-[0.58rem] uppercase tracking-[0.2em] text-gold-300">CeloHT</p>
+                  <p className="mt-1 text-xs text-parchment-100/60">Platform</p>
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-forest-500/40 bg-forest-500/10 px-2 py-1 text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-forest-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-forest-400" aria-hidden="true" />
+                Operational
+              </span>
+            </div>
+
+            <div className="mt-4 rounded-2xl border border-parchment-100/10 bg-navy-900 p-4">
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-[0.62rem] uppercase tracking-[0.18em] text-parchment-100/55">Wallet</p>
+                <button type="button" className="rounded-full bg-gold-500 px-3 py-1.5 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-navy-950">
+                  Connect Wallet
+                </button>
+              </div>
+              <div className="mt-4 rounded-xl border border-dashed border-parchment-100/15 bg-navy-800/80 p-3 text-sm text-parchment-100/70">
+                No wallet connected yet.
+              </div>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <div className="rounded-xl border border-parchment-100/10 bg-navy-800/80 p-3">
+                  <p className="text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">CELO</p>
+                  <p className="mt-2 text-lg font-semibold text-parchment-50">—</p>
+                </div>
+                <div className="rounded-xl border border-parchment-100/10 bg-navy-800/80 p-3">
+                  <p className="text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">USDm</p>
+                  <p className="mt-2 text-lg font-semibold text-parchment-50">—</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-xl border border-parchment-100/10 bg-navy-900/80 p-3">
+                <p className="text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">Learn</p>
+                <p className="mt-2 text-sm font-semibold text-parchment-50">Courses</p>
+              </div>
+              <div className="rounded-xl border border-parchment-100/10 bg-navy-900/80 p-3">
+                <p className="text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">Agents</p>
+                <p className="mt-2 text-sm font-semibold text-parchment-50">Support</p>
+              </div>
+              <div className="rounded-xl border border-parchment-100/10 bg-navy-900/80 p-3">
+                <p className="text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">Reforest</p>
+                <p className="mt-2 text-sm font-semibold text-parchment-50">Impact</p>
+              </div>
+            </div>
           </div>
         </div>
         </div>
