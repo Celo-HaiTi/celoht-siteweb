@@ -35,7 +35,7 @@ jobs:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_PUBLIC_SITE_URL: https://celoht.com
-          NEXT_PUBLIC_USE_PROJECT_BASE_PATH: false
+          NEXT_PUBLIC_USE_PROJECT_BASE_PATH: true
         run: npm run build
 
       - name: Configure Pages
