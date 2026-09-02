@@ -16,9 +16,10 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-gold-500/20 bg-gold-500/5 p-6 sm:flex-row sm:items-center">
           <div>
-            <p className="font-display text-xl font-semibold">Ready to try it yourself?</p>
+            <p className="font-display text-xl font-semibold">Start with the ecosystem.</p>
             <p className="mt-1 text-sm text-parchment-100/70">
-              Connect a Valora-compatible wallet and explore the CeloHT dApp.
+              Learn the fundamentals, explore the dApp, and see how CeloHT connects education,
+              community access, and reforestation.
             </p>
           </div>
           <LaunchDappButton size="lg" />
