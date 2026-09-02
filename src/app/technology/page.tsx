@@ -8,7 +8,7 @@ import { WalletConnectivitySection } from "@/components/WalletConnectivitySectio
 export const metadata: Metadata = {
   title: "Technology",
   description:
-    "How CeloHT uses Celo, CELO, USDm, and Valora  -  as infrastructure we build on, not products we own.",
+    "How CeloHT uses Celo, CELO, USDm, Valora, MiniPay, and WalletConnect as wallet and payment infrastructure we build on, not products we own.",
   alternates: { canonical: "/technology" },
 };
 

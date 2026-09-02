@@ -56,6 +56,27 @@ export function WalletConnectivitySection() {
         applications, and modern Web3 wallets.
       </p>
 
+      <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-gold-500/20 bg-gold-500/5 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+        <div>
+          <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-gold-300">
+            Current wallet reference
+          </p>
+          <p className="mt-2 text-sm leading-6 text-parchment-100/75">
+            Valora remains the wallet we use across our training material, while this broader
+            connectivity strategy keeps the ecosystem open to additional wallet experiences.
+          </p>
+        </div>
+        <a
+          href="https://valoraapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-md border border-gold-300/40 px-4 py-2.5 text-sm font-semibold text-gold-300 transition-colors hover:border-gold-300 hover:bg-gold-500/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-300"
+        >
+          Valora wallet
+          <ArrowUpRight size={16} aria-hidden="true" />
+        </a>
+      </div>
+
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
         {walletCards.map((card) => {
           const Icon = card.icon;
@@ -117,6 +138,7 @@ export function WalletConnectivitySection() {
           <div className="font-display text-lg font-semibold text-parchment-50">CeloHT</div>
           <span className="hidden text-gold-300/70 sm:block" aria-hidden="true">-&gt;</span>
           <div className="flex flex-wrap justify-center gap-2 text-sm text-parchment-100/75">
+            <span className="rounded-full border border-gold-500/25 bg-gold-500/5 px-3 py-1.5">Valora</span>
             <span className="rounded-full border border-parchment-100/15 px-3 py-1.5">MiniPay</span>
             <span className="rounded-full border border-parchment-100/15 px-3 py-1.5">WalletConnect</span>
           </div>
