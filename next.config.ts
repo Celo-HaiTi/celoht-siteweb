@@ -10,7 +10,7 @@ const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data:",
+  "img-src 'self' data: https://docs.minipay.xyz https://cdn.sanity.io",
   "font-src 'self' data:",
   "connect-src 'self' https://api.coingecko.com https://forno.celo.org" + (isDev ? " ws:" : ""),
   "frame-ancestors 'none'",
@@ -38,7 +38,13 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
   basePath,
   assetPrefix: basePath || undefined,
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "docs.minipay.xyz" },
+      { protocol: "https", hostname: "cdn.sanity.io" },
+    ],
+  },
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },

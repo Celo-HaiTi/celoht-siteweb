@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { WalletConnectivitySection } from "@/components/WalletConnectivitySection";
 
 export const metadata: Metadata = {
   title: "Technology",
@@ -65,6 +66,8 @@ export default function TechnologyPage() {
           process and be documented publicly.
         </p>
       </Section>
+
+      <WalletConnectivitySection />
 
       <CTASection
         title="See the architecture behind it"
