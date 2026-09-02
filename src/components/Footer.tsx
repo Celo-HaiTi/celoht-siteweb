@@ -53,9 +53,6 @@ export function Footer() {
               );
             })}
           </div>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <LaunchDappButton size="lg" />
-          </div>
         </section>
 
         <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-5">
