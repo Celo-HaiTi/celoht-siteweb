@@ -2,8 +2,11 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, resolve } from "node:path";
 
 const root = process.cwd();
-const basePath = process.env.GITHUB_ACTIONS && process.env.GITHUB_REPOSITORY && process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true"
-  ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
+const isGitHubPages =
+  process.env.GITHUB_PAGES === "true" ||
+  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true";
+const basePath = isGitHubPages
+  ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb"}`
   : "";
 const assets = ["celoht-logo.png", "freclean-logo.jpg"];
 const outputRoot = resolve(root, "out");
@@ -23,14 +26,28 @@ for (const asset of assets) {
 function htmlFiles(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
     const path = join(directory, entry.name);
-    return entry.isDirectory() ? htmlFiles(path) : entry.name.endsWith(".html") ? [path] : [];
+    return entry.isDirectory()
+      ? htmlFiles(path)
+      : entry.name.endsWith(".html")
+        ? [path]
+        : [];
   });
 }
 
-const partnerPages = htmlFiles(outputRoot).filter((path) => path.endsWith("/partners/index.html"));
+const partnerPages = htmlFiles(outputRoot).filter((path) =>
+  path.endsWith("/partners/index.html"),
+);
 assert(partnerPages.length === 1, "partners page was not generated");
 const partnerHtml = readFileSync(partnerPages[0], "utf8");
-assert(partnerHtml.includes(`${basePath}/freclean-logo.jpg`), "FreClean URL is missing the expected production path");
-assert(partnerHtml.includes(`${basePath}/celoht-logo.png`), "CeloHT URL is missing the expected production path");
+assert(
+  partnerHtml.includes(`${basePath}/freclean-logo.jpg`),
+  "FreClean URL is missing the expected production path",
+);
+assert(
+  partnerHtml.includes(`${basePath}/celoht-logo.png`),
+  "CeloHT URL is missing the expected production path",
+);
 
-console.log(`[brand-assets] validated ${assets.length} official logos for ${basePath || "root"} deployment`);
+console.log(
+  `[brand-assets] validated ${assets.length} official logos for ${basePath || "root"} deployment`,
+);

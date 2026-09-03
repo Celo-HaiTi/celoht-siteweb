@@ -3,8 +3,10 @@ import createMDX from "@next/mdx";
 
 const isDev = process.env.NODE_ENV !== "production";
 const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
-const useProjectBasePath = process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true";
-const basePath = process.env.GITHUB_ACTIONS && repoName && useProjectBasePath ? `/${repoName}` : "";
+const isGitHubPages =
+  process.env.GITHUB_PAGES === "true" ||
+  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true";
+const basePath = isGitHubPages ? `/${repoName || "celoht-siteweb"}` : "";
 
 const csp = [
   "default-src 'self'",
@@ -12,7 +14,8 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https://docs.minipay.xyz https://cdn.sanity.io",
   "font-src 'self' data:",
-  "connect-src 'self' https://api.coingecko.com https://forno.celo.org" + (isDev ? " ws:" : ""),
+  "connect-src 'self' https://api.coingecko.com https://forno.celo.org" +
+    (isDev ? " ws:" : ""),
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
@@ -27,7 +30,10 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
   },
-  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains; preload",
+  },
 ];
 
 const nextConfig: NextConfig = {
@@ -51,7 +57,10 @@ const nextConfig: NextConfig = {
       {
         source: "/sw.js",
         headers: [
-          { key: "Content-Type", value: "application/javascript; charset=utf-8" },
+          {
+            key: "Content-Type",
+            value: "application/javascript; charset=utf-8",
+          },
           { key: "Cache-Control", value: "no-cache" },
           { key: "Service-Worker-Allowed", value: "/" },
         ],

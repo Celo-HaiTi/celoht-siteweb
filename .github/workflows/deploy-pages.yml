@@ -30,10 +30,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit tests
+        run: npm run test
+
       - name: Build custom-domain site
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_PAGES: false
           NEXT_PUBLIC_SITE_URL: https://celoht.com
           NEXT_PUBLIC_USE_PROJECT_BASE_PATH: false
         run: npm run build
@@ -45,6 +55,7 @@ jobs:
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_PAGES: true
           NEXT_PUBLIC_SITE_URL: https://celoht.com
           NEXT_PUBLIC_USE_PROJECT_BASE_PATH: true
         run: npm run build

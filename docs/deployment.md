@@ -36,12 +36,13 @@ the `public/CNAME` file in the repository. The deployment workflow already
 builds the root and project-path variants:
 
 ```yaml
+GITHUB_PAGES: false
 NEXT_PUBLIC_SITE_URL: https://celoht.com
-NEXT_PUBLIC_USE_PROJECT_BASE_PATH: false # custom-domain build
 ```
 
-The second build uses `NEXT_PUBLIC_USE_PROJECT_BASE_PATH: true` and is copied
-under `/celoht-siteweb/`. Add the DNS records GitHub provides for `celoht.com`.
+The second build uses `GITHUB_PAGES: true` and is copied under
+`/celoht-siteweb/`. `NEXT_PUBLIC_USE_PROJECT_BASE_PATH` remains supported for
+backwards compatibility. Add the DNS records GitHub provides for `celoht.com`.
 
 ## Vercel
 
@@ -65,8 +66,9 @@ npm run build
 ## Environment Variables
 
 `NEXT_PUBLIC_DAPP_URL` has a working default. `NEXT_PUBLIC_SITE_URL` and
-`NEXT_PUBLIC_USE_PROJECT_BASE_PATH` control custom-domain versus project-path
-builds as described above.
+`GITHUB_PAGES` control custom-domain versus project-path builds as described
+above. `NEXT_PUBLIC_USE_PROJECT_BASE_PATH` remains a backwards-compatible
+alias for `GITHUB_PAGES`.
 
 ## Security Headers & CSP
 
