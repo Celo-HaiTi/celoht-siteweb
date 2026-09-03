@@ -9,6 +9,7 @@ import {
   Globe2,
   Leaf,
   LockKeyhole,
+  Sprout,
   UsersRound,
   WalletCards,
 } from "lucide-react";
@@ -333,6 +334,26 @@ export default function HomePage() {
                         </button>
                       </div>
                     </div>
+                    <div
+                      aria-label="03 active preview sessions"
+                      className="mt-3 flex items-center justify-between rounded-xl border border-parchment-100/10 bg-navy-900/45 px-3 py-2.5"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span
+                          className="h-1.5 w-1.5 rounded-full bg-forest-400"
+                          aria-hidden="true"
+                        />
+                        <span className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                          Sessions
+                        </span>
+                      </div>
+                      <span className="font-display text-sm font-semibold text-parchment-50">
+                        03{" "}
+                        <span className="text-[0.62rem] font-normal text-parchment-100/55">
+                          Active
+                        </span>
+                      </span>
+                    </div>
 
                     <p className="mt-5 font-mono text-[0.55rem] uppercase tracking-[0.16em] text-parchment-100/45">
                       Quick actions
@@ -363,6 +384,41 @@ export default function HomePage() {
                         Course modules and wallet foundations.
                       </p>
                     </div>
+                    <nav
+                      aria-label="CeloHT preview navigation"
+                      className="mt-5 grid grid-cols-4 gap-1 border-t border-parchment-100/10 pt-4"
+                    >
+                      {[
+                        { icon: WalletCards, label: "Wallet", href: "/dapp" },
+                        { icon: BookOpen, label: "Learn", href: "/education" },
+                        {
+                          icon: UsersRound,
+                          label: "Agents",
+                          href: "/agent-network",
+                        },
+                        {
+                          icon: Sprout,
+                          label: "Reforest",
+                          href: "/reforestation",
+                        },
+                      ].map(({ icon: NavIcon, label, href }, index) => {
+                        return (
+                          <Link
+                            key={label}
+                            href={href}
+                            aria-current={index === 0 ? "page" : undefined}
+                            className={`flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl text-[0.52rem] font-semibold transition-colors ${
+                              index === 0
+                                ? "bg-gold-500/12 text-gold-300"
+                                : "text-parchment-100/45 hover:bg-parchment-100/5 hover:text-parchment-50"
+                            }`}
+                          >
+                            <NavIcon size={14} aria-hidden="true" />
+                            {label}
+                          </Link>
+                        );
+                      })}
+                    </nav>
                   </div>
                 </div>
               </div>
