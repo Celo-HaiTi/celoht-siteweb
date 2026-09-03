@@ -243,23 +243,23 @@ button {
 
 @keyframes celoht-wallet-orbit {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem)
+    transform: translate(-50%, -50%) rotate(0deg) translateX(var(--celoht-wallet-radius))
       rotate(0deg);
   }
   25% {
-    transform: translate(-50%, -50%) rotate(90deg) translateX(8.2rem)
+    transform: translate(-50%, -50%) rotate(90deg) translateX(var(--celoht-wallet-radius))
       rotate(-90deg);
   }
   50% {
-    transform: translate(-50%, -50%) rotate(180deg) translateX(8.2rem)
+    transform: translate(-50%, -50%) rotate(180deg) translateX(var(--celoht-wallet-radius))
       rotate(-180deg);
   }
   75% {
-    transform: translate(-50%, -50%) rotate(270deg) translateX(8.2rem)
+    transform: translate(-50%, -50%) rotate(270deg) translateX(var(--celoht-wallet-radius))
       rotate(-270deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(8.2rem)
+    transform: translate(-50%, -50%) rotate(360deg) translateX(var(--celoht-wallet-radius))
       rotate(-360deg);
   }
 }
@@ -364,8 +364,15 @@ button {
 }
 
 .celoht-wallet-orbit {
+  --celoht-wallet-radius: 8.2rem;
   animation: celoht-wallet-orbit 8s linear infinite;
   transform-origin: center;
+}
+
+@media (max-width: 639px) {
+  .celoht-wallet-orbit {
+    --celoht-wallet-radius: clamp(4.5rem, 20vw, 6rem);
+  }
 }
 
 .celoht-logo-mark {
@@ -423,7 +430,7 @@ button {
   }
 
   .celoht-wallet-orbit {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem)
+    transform: translate(-50%, -50%) rotate(0deg) translateX(var(--celoht-wallet-radius))
       rotate(0deg);
   }
 
