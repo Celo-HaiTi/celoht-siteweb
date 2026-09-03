@@ -24,7 +24,9 @@ export function Header() {
             alt="CeloHT"
             width={38}
             height={38}
-            className="h-auto w-[clamp(2rem,8vw,2.375rem)] max-w-full shrink-0 rounded-xl ring-1 ring-gold-300/20 transition-transform duration-300 group-hover:scale-105"
+            priority
+            sizes="38px"
+            className="h-auto w-[clamp(2rem,8vw,2.375rem)] max-w-full shrink-0 rounded-xl object-contain ring-1 ring-gold-300/20 transition-transform duration-300 group-hover:scale-105"
           />
           <span className="min-w-0 truncate font-display text-xl font-semibold tracking-tight text-parchment-50 transition-colors group-hover:text-gold-300">
             CeloHT

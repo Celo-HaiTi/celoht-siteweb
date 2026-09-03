@@ -146,6 +146,8 @@ export function Hero() {
                     alt="CeloHT logo"
                     width={128}
                     height={128}
+                    priority
+                    sizes="(max-width: 639px) 9rem, 12rem"
                     className="relative z-10 h-full w-full object-cover"
                   />
                 </div>
