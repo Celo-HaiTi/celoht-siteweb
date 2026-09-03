@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { primaryNav } from "@/lib/nav";
 import { DAPP_URL, assetPath } from "@/lib/constants";
+import { SearchDialog } from "@/components/SearchDialog";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -58,6 +59,7 @@ export function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          <SearchDialog />
           <a
             href={DAPP_URL}
             target="_blank"

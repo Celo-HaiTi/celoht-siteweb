@@ -195,12 +195,14 @@ export default function HomePage() {
                     <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">
                       Wallet
                     </p>
-                    <button
-                      type="button"
+                    <Link
+                      href={DAPP_URL}
+                      target="_blank"
+                      rel="noreferrer"
                       className="rounded-full bg-gold-500 px-3 py-1.5 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-navy-950"
                     >
-                      Connect Wallet
-                    </button>
+                      Open Wallet
+                    </Link>
                   </div>
                   <div className="mt-4 rounded-xl border border-dashed border-parchment-100/15 bg-navy-800/80 p-3 text-sm text-parchment-100/70">
                     No wallet connected yet.

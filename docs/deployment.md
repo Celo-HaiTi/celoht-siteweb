@@ -22,6 +22,12 @@ npx serve out
 
 ## GitHub Pages
 
+Because this site uses Next.js static export, `headers()` in `next.config.ts`
+is not applied by GitHub Pages. Production security headers such as CSP,
+`X-Frame-Options`, and HSTS must therefore be configured at the custom domain
+CDN or reverse proxy. Do not treat the headers declared in `next.config.ts` as
+active protection for the static GitHub Pages deployment.
+
 The workflow in `.github/workflows/deploy-pages.yml` builds and publishes
 `out/` on every push to `main` with the `/celoht-siteweb` project base path.
 GitHub Pages mounts this artifact at the repository URL, so all internal links

@@ -11,7 +11,9 @@ test.describe("Primary navigation", () => {
     page,
   }) => {
     await page.goto("/");
-    const launchButtons = page.getByRole("link", { name: /launch dapp/i });
+    const launchButtons = page.getByRole("link", {
+      name: /open celoht dapp/i,
+    });
     await expect(launchButtons.first()).toBeVisible();
     const href = await launchButtons.first().getAttribute("href");
     expect(href).toMatch(/^https?:\/\//);
@@ -37,7 +39,7 @@ test.describe("Primary navigation", () => {
       page.getByRole("heading", { name: "The CeloHT ecosystem", exact: true }),
     ).toBeVisible();
     await expect(
-      page.getByRole("link", { name: "Explore Public Resources" }),
+      page.getByRole("link", { name: /Explore Public Resources/ }).first(),
     ).toHaveAttribute("href", "#public-resources");
   });
 

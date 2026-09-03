@@ -24,7 +24,6 @@ Specs live in `e2e/`:
 
 - `navigation.spec.ts` - homepage loads, Launch dApp button is present
   and points to an absolute URL, primary nav works, 404 renders correctly
-- `theme-toggle.spec.ts` - light/dark mode toggles and persists across reload
 - `search.spec.ts` - search dialog opens and navigates to a result
 
 **Important caveat**: these specs are written and structurally complete,

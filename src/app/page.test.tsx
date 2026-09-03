@@ -7,7 +7,10 @@ describe("HomePage", () => {
     render(<HomePage />);
 
     expect(screen.getByText(/CeloHT Platform/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/Connect Wallet/i).length).toBeGreaterThan(0);
+    expect(screen.getByRole("link", { name: /open wallet/i })).toHaveAttribute(
+      "href",
+      expect.stringContaining("https://"),
+    );
     expect(screen.getByText(/The CeloHT product layer/i)).toBeInTheDocument();
     expect(screen.queryByText(/demo data/i)).not.toBeInTheDocument();
     expect(
