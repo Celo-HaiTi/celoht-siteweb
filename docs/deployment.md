@@ -23,26 +23,28 @@ npx serve out
 ## GitHub Pages
 
 The workflow in `.github/workflows/deploy-pages.yml` builds and publishes
-`out/` on every push to `main`. It creates both a root export for `celoht.com`
-and a project-path export under `/celoht-siteweb/`, so internal links and
-assets work at both public URLs.
+`out/` on every push to `main` with the `/celoht-siteweb` project base path.
+GitHub Pages mounts this artifact at the repository URL, so all internal links
+and assets resolve correctly there.
 
 Enable **Settings > Pages > GitHub Actions** once in the repository settings.
 
 ### Custom domain
 
-Configure `celoht.com` as the custom domain in **Settings > Pages** and keep
-the `public/CNAME` file in the repository. The deployment workflow already
-builds the root and project-path variants:
+The custom domain is a separate root deployment of this same repository. Use
+Vercel, Netlify, Cloudflare Pages, or another static host for `celoht.com` and
+build it without `GITHUB_PAGES`:
 
 ```yaml
-GITHUB_PAGES: false
 NEXT_PUBLIC_SITE_URL: https://celoht.com
 ```
 
-The second build uses `GITHUB_PAGES: true` and is copied under
-`/celoht-siteweb/`. `NEXT_PUBLIC_USE_PROJECT_BASE_PATH` remains supported for
-backwards compatibility. Add the DNS records GitHub provides for `celoht.com`.
+The GitHub Pages workflow uses `GITHUB_PAGES: true` and publishes the project
+variant. Do not configure `celoht.com` as the GitHub Pages custom domain: one
+GitHub Pages artifact cannot expose two different base paths at once, and that
+setting redirects or breaks the project URL. Point `celoht.com` to the root
+deployment host instead. `NEXT_PUBLIC_USE_PROJECT_BASE_PATH` remains supported
+as a backwards-compatible alias.
 
 ## Vercel
 
