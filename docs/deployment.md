@@ -23,26 +23,25 @@ npx serve out
 ## GitHub Pages
 
 The workflow in `.github/workflows/deploy-pages.yml` builds and publishes
-`out/` on every push to `main`. During that build, `GITHUB_REPOSITORY` is
-used to set the repository `basePath`, so internal links and assets work at
-`/<repository-name>/` as well as at the root on custom domains.
+`out/` on every push to `main`. It creates both a root export for `celoht.com`
+and a project-path export under `/celoht-siteweb/`, so internal links and
+assets work at both public URLs.
 
 Enable **Settings > Pages > GitHub Actions** once in the repository settings.
 
 ### Custom domain
 
-Before connecting `celoht.com`, update the `Build site` environment values in
-`.github/workflows/deploy-pages.yml`:
+Configure `celoht.com` as the custom domain in **Settings > Pages** and keep
+the `public/CNAME` file in the repository. The deployment workflow already
+builds the root and project-path variants:
 
 ```yaml
 NEXT_PUBLIC_SITE_URL: https://celoht.com
-NEXT_PUBLIC_USE_PROJECT_BASE_PATH: false
+NEXT_PUBLIC_USE_PROJECT_BASE_PATH: false # custom-domain build
 ```
 
-Then configure `celoht.com` as the custom domain in **Settings > Pages** and
-add the DNS records GitHub provides. Keep the project-path values enabled until
-the custom domain is ready, because project URLs need the `/celoht-siteweb/`
-asset prefix while custom domains need root paths.
+The second build uses `NEXT_PUBLIC_USE_PROJECT_BASE_PATH: true` and is copied
+under `/celoht-siteweb/`. Add the DNS records GitHub provides for `celoht.com`.
 
 ## Vercel
 
@@ -79,11 +78,11 @@ it broadly.
 
 Every push and Pull Request to `main` runs:
 
-- **`ci.yml`**  -  typecheck, lint, format check, build, unit tests
-- **`codeql.yml`**  -  static security analysis
-- **`secret-scanning.yml`**  -  Gitleaks scan
-- **`dependency-review.yml`**  -  blocks high-severity vulnerable dependencies
-- **`e2e.yml`**  -  Playwright end-to-end tests (requires a runner with
-  internet access to install browser binaries  -  GitHub-hosted runners
+- **`ci.yml`** - typecheck, lint, format check, build, unit tests
+- **`codeql.yml`** - static security analysis
+- **`secret-scanning.yml`** - Gitleaks scan
+- **`dependency-review.yml`** - blocks high-severity vulnerable dependencies
+- **`e2e.yml`** - Playwright end-to-end tests (requires a runner with
+  internet access to install browser binaries - GitHub-hosted runners
   have this by default)
-- **`lighthouse.yml`**  -  Lighthouse CI budget check
+- **`lighthouse.yml`** - Lighthouse CI budget check

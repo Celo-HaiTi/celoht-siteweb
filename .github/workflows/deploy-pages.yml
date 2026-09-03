@@ -30,13 +30,32 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build site
+      - name: Build custom-domain site
+        env:
+          GITHUB_ACTIONS: true
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          NEXT_PUBLIC_SITE_URL: https://celoht.com
+          NEXT_PUBLIC_USE_PROJECT_BASE_PATH: false
+        run: npm run build
+
+      - name: Preserve custom-domain export
+        run: mv out out-root
+
+      - name: Build project-path site
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
           NEXT_PUBLIC_SITE_URL: https://celoht.com
           NEXT_PUBLIC_USE_PROJECT_BASE_PATH: true
         run: npm run build
+
+      - name: Combine both site paths
+        run: |
+          mv out out-project
+          mkdir -p out/celoht-siteweb
+          cp -a out-root/. out/
+          cp -a out-project/. out/celoht-siteweb/
+          rm -rf out-root out-project
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
