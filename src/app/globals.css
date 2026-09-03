@@ -69,6 +69,7 @@ html {
 
 body {
   background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.025), transparent 34%),
     radial-gradient(
       circle at 88% 0%,
       rgba(111, 196, 155, 0.08),
@@ -81,6 +82,7 @@ body {
     ),
     var(--color-bg);
   color: var(--color-text);
+  letter-spacing: 0;
 }
 
 h1,
@@ -110,10 +112,10 @@ button {
   background: linear-gradient(
     145deg,
     rgba(21, 48, 75, 0.72),
-    rgba(7, 21, 37, 0.9)
+    rgba(7, 21, 37, 0.94)
   );
   border: 1px solid var(--color-border);
-  box-shadow: 0 22px 70px rgba(1, 8, 18, 0.2);
+  box-shadow: 0 18px 50px rgba(1, 8, 18, 0.2);
 }
 
 .celoht-grid {
@@ -122,6 +124,88 @@ button {
     linear-gradient(90deg, rgba(199, 218, 232, 0.045) 1px, transparent 1px);
   background-size: 3rem 3rem;
   mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.celoht-pillar-card,
+.celoht-step-card,
+.celoht-metric-card,
+.celoht-resource-card,
+.celoht-market-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.celoht-pillar-card::before,
+.celoht-step-card::before,
+.celoht-metric-card::before,
+.celoht-resource-card::before,
+.celoht-market-card::before {
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(248, 211, 79, 0.7),
+    transparent
+  );
+  content: "";
+  opacity: 0.7;
+}
+
+.celoht-pillar-card:hover,
+.celoht-step-card:hover,
+.celoht-metric-card:hover,
+.celoht-resource-card:hover,
+.celoht-market-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(248, 211, 79, 0.35);
+}
+
+.celoht-step-card {
+  min-height: 11rem;
+}
+
+.celoht-market-card {
+  background: linear-gradient(
+    145deg,
+    rgba(21, 48, 75, 0.86),
+    rgba(13, 33, 55, 0.72)
+  );
+}
+
+.celoht-resource-card {
+  min-height: 12rem;
+}
+
+@media (max-width: 639px) {
+  .celoht-step-card {
+    min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celoht-pillar-card,
+  .celoht-step-card,
+  .celoht-metric-card,
+  .celoht-resource-card,
+  .celoht-market-card {
+    transition: none;
+  }
+
+  .celoht-pillar-card:hover,
+  .celoht-step-card:hover,
+  .celoht-metric-card:hover,
+  .celoht-resource-card:hover,
+  .celoht-market-card:hover {
+    transform: none;
+  }
 }
 
 @keyframes celoht-hero-reveal {
@@ -291,7 +375,10 @@ button {
 }
 
 .celoht-hero-visual {
-  animation: celoht-hero-visual-drift 12s ease-in-out infinite;
+  animation: celoht-hero-visual-drift 18s ease-in-out infinite;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 30px 100px rgba(2, 8, 20, 0.42);
 }
 
 .celoht-halo-ring {
@@ -339,7 +426,6 @@ button {
 }
 
 .celoht-header-cta {
-  animation: celoht-header-glow 2.8s ease-in-out infinite;
   isolation: isolate;
 }
 
@@ -356,7 +442,7 @@ button {
     transparent 60%
   );
   transform: translate3d(-130%, 0, 0) rotate(14deg);
-  animation: celoht-header-shine 3s ease-in-out infinite;
+  animation: celoht-header-shine 6s ease-in-out infinite;
 }
 
 .celoht-header-cta:hover {

@@ -21,7 +21,8 @@ export function Section({
       className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24 ${className}`}
     >
       {eyebrow && (
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
+        <p className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
+          <span className="h-px w-8 bg-gold-300/60" aria-hidden="true" />
           {eyebrow}
         </p>
       )}

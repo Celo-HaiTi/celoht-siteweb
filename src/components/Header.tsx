@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,10 +11,24 @@ import { SearchDialog } from "@/components/SearchDialog";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const handleScroll = () => setHasScrolled(window.scrollY > 12);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-parchment-100/15 bg-navy-950/90 text-parchment-50 shadow-[0_8px_30px_rgba(1,8,18,0.18)] backdrop-blur-xl">
+    <header
+      className={`sticky top-0 z-40 border-b text-parchment-50 backdrop-blur-xl transition-[background-color,box-shadow,border-color] duration-300 ${
+        hasScrolled
+          ? "border-parchment-100/15 bg-navy-950/95 shadow-[0_8px_30px_rgba(1,8,18,0.18)]"
+          : "border-transparent bg-navy-950/65"
+      }`}
+    >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:py-4">
         <Link
           href="/"

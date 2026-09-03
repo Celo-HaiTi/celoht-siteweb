@@ -106,7 +106,17 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="celoht-hero-visual relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[2rem] border border-parchment-100/15 bg-[radial-gradient(circle_at_50%_35%,rgba(245,200,66,0.22),transparent_24%),linear-gradient(160deg,#0b1120_0%,#0f172a_36%,#111827_100%)] p-4 shadow-[0_30px_100px_rgba(2,8,20,0.42)] lg:min-h-[30rem]">
+          <div className="celoht-hero-visual relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[1.75rem] border border-parchment-100/15 bg-[radial-gradient(circle_at_50%_35%,rgba(245,200,66,0.22),transparent_24%),linear-gradient(160deg,#0b1120_0%,#0f172a_36%,#111827_100%)] p-4 lg:min-h-[30rem]">
+            <div className="absolute left-5 right-5 top-5 flex items-center justify-between border-b border-parchment-100/10 pb-3 font-mono text-[0.55rem] uppercase tracking-[0.18em] text-parchment-100/45 sm:left-7 sm:right-7 sm:top-7">
+              <span>Product preview</span>
+              <span className="inline-flex items-center gap-2 text-forest-400">
+                <span
+                  className="h-1.5 w-1.5 rounded-full bg-forest-400"
+                  aria-hidden="true"
+                />
+                Open ecosystem
+              </span>
+            </div>
             <div className="absolute inset-0 opacity-90">
               <div className="celoht-halo-ring absolute inset-x-10 top-10 h-52 rounded-full border border-gold-400/25" />
               <div className="celoht-halo-ring celoht-halo-ring-2 absolute inset-x-16 top-16 h-40 rounded-full border border-parchment-100/15" />

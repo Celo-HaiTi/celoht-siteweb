@@ -125,7 +125,7 @@ export default function HomePage() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800"
+                  className="celoht-pillar-card group bg-navy-950 p-6 transition-colors hover:bg-navy-800 sm:p-7"
                 >
                   <Icon
                     size={24}
@@ -330,7 +330,7 @@ export default function HomePage() {
             ].map((step) => (
               <div
                 key={step.number}
-                className="rounded-2xl border border-navy-700/15 bg-parchment-100/30 p-5"
+                className="celoht-step-card rounded-2xl border border-navy-700/15 bg-parchment-100/30 p-5"
               >
                 <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-gold-800">
                   {step.number}
@@ -457,7 +457,7 @@ export default function HomePage() {
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800"
+                    className="celoht-pillar-card group bg-navy-950 p-6 transition-colors hover:bg-navy-800"
                   >
                     {content}
                   </a>
@@ -467,7 +467,7 @@ export default function HomePage() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="group bg-navy-950 p-6 transition-colors hover:bg-navy-800"
+                  className="celoht-pillar-card group bg-navy-950 p-6 transition-colors hover:bg-navy-800"
                 >
                   {content}
                 </Link>

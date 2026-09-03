@@ -74,7 +74,7 @@ function AssetTile({
           : "bg-parchment-100/10 text-parchment-100/80 ring-parchment-100/20";
 
   return (
-    <article className="rounded-2xl border border-parchment-100/15 bg-navy-900/80 p-5 shadow-[0_18px_40px_rgba(2,8,20,0.2)] transition-colors duration-200 hover:border-gold-500/30 hover:bg-navy-900">
+    <article className="celoht-market-card rounded-2xl border border-parchment-100/15 p-3.5 shadow-[0_18px_40px_rgba(2,8,20,0.2)] sm:p-5">
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-parchment-100/55">
@@ -82,7 +82,7 @@ function AssetTile({
           </p>
           <div className="mt-3 flex items-center gap-2">
             <span
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-navy-950 text-gold-300"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-navy-950 text-gold-300 sm:h-9 sm:w-9"
               aria-hidden="true"
             >
               {icon === "celo" ? (
@@ -91,7 +91,7 @@ function AssetTile({
                 <CircleDollarSign size={16} />
               )}
             </span>
-            <span className="font-display text-xl font-semibold text-parchment-50">
+            <span className="font-display text-lg font-semibold text-parchment-50 sm:text-xl">
               {symbol}
             </span>
           </div>
@@ -109,7 +109,7 @@ function AssetTile({
       </div>
 
       <div className="mt-5">
-        <p className="text-2xl font-semibold leading-none tracking-tight text-parchment-50 sm:text-3xl">
+        <p className="break-words text-xl font-semibold leading-tight tracking-tight text-parchment-50 sm:text-3xl">
           {value}
         </p>
         <p className="mt-3 text-[0.7rem] uppercase tracking-[0.14em] text-parchment-100/55">
@@ -230,7 +230,7 @@ export function LiveInfoBar() {
     <section
       aria-label="Live CeloHT market data"
       aria-live="polite"
-      className="border-b border-parchment-100/10 bg-navy-950 text-parchment-50"
+      className="border-b border-parchment-100/10 bg-navy-950/95 text-parchment-50"
     >
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -238,7 +238,7 @@ export function LiveInfoBar() {
             <Activity size={10} aria-hidden="true" className="text-gold-300" />
             Live market
           </div>
-          <p className="text-[0.62rem] text-parchment-100/60">
+          <p className="font-mono text-[0.58rem] uppercase tracking-[0.14em] text-parchment-100/45">
             Real-time Celo ecosystem market data
           </p>
         </div>
@@ -248,13 +248,13 @@ export function LiveInfoBar() {
             role="status"
             aria-live="polite"
             aria-label="Loading live market data"
-            className="grid gap-3 md:grid-cols-2"
+            className="grid grid-cols-2 gap-2 sm:gap-3"
           >
             <span className="sr-only">Loading live market data</span>
             {Array.from({ length: 2 }).map((_, index) => (
               <div
                 key={index}
-                className="animate-pulse rounded-2xl border border-parchment-100/15 bg-navy-900/80 p-5"
+                className="animate-pulse rounded-2xl border border-parchment-100/15 bg-navy-900/80 p-3.5 sm:p-5"
               >
                 <div className="h-3 w-20 rounded bg-parchment-100/15" />
                 <div className="mt-4 h-8 w-28 rounded bg-parchment-100/15" />
@@ -279,7 +279,7 @@ export function LiveInfoBar() {
               </div>
             ) : null}
 
-            <div className="grid gap-3 md:grid-cols-2">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               {marketData.map((tile) => (
                 <AssetTile
                   key={tile.label}

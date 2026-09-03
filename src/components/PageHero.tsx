@@ -13,13 +13,13 @@ const toneClasses: Record<NonNullable<Props["tone"]>, string> = {
 
 export function PageHero({ eyebrow, title, lead, tone = "navy" }: Props) {
   return (
-    <div className="relative overflow-hidden border-b border-navy-800 bg-navy-950 text-parchment-50">
+    <div className="relative overflow-hidden border-b border-navy-800 bg-[linear-gradient(135deg,#071525_0%,#0b1d31_58%,#071525_100%)] text-parchment-50">
       <div
         className="celoht-grid pointer-events-none absolute inset-0 opacity-60"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-gold-500/10 blur-3xl"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/60 to-transparent"
         aria-hidden="true"
       />
       <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 lg:pb-24 lg:pt-20">

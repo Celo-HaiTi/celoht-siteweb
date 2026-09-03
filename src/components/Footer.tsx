@@ -104,7 +104,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800"
+                  className="celoht-resource-card group bg-navy-950 p-5 transition-colors hover:bg-navy-800"
                 >
                   {content}
                   <ArrowUpRight
@@ -117,7 +117,7 @@ export function Footer() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800"
+                  className="celoht-resource-card group bg-navy-950 p-5 transition-colors hover:bg-navy-800"
                 >
                   {content}
                   <ArrowRight
