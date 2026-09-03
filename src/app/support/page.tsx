@@ -44,13 +44,15 @@ export default function SupportPage() {
             .
           </li>
           <li>
-            DApp problem: include the relevant screen, browser, and steps you followed at the same address.
+            DApp problem: include the relevant screen, browser, and steps you
+            followed at the same address.
           </li>
           <li>
             Documentation or governance question: consult the{" "}
             <Link href="/faq" className="underline underline-offset-2">
               FAQ
-              </Link>{" "}or email hello@celoht.com.
+            </Link>{" "}
+            or email hello@celoht.com.
           </li>
         </ul>
       </Section>

@@ -55,8 +55,12 @@ export default function NewsPage() {
               <time className="font-mono text-xs uppercase tracking-wide text-ink-soft dark:text-parchment-100/50">
                 {post.date}
               </time>
-              <h2 className="mt-1 font-display text-2xl font-semibold">{post.title}</h2>
-              <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">{post.body}</p>
+              <h2 className="mt-1 font-display text-2xl font-semibold">
+                {post.title}
+              </h2>
+              <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
+                {post.body}
+              </p>
             </li>
           ))}
         </ol>

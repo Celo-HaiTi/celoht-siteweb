@@ -81,7 +81,11 @@ export default function ContactPage() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={item.label === "Discord" ? "Join CeloHT on Discord" : item.label}
+                aria-label={
+                  item.label === "Discord"
+                    ? "Join CeloHT on Discord"
+                    : item.label
+                }
                 className="inline-flex items-center rounded-full border border-navy-700/20 px-4 py-2 text-sm hover:bg-navy-700/10 dark:border-parchment-100/20 dark:hover:bg-parchment-100/10"
               >
                 {item.label}
@@ -101,7 +105,8 @@ export default function ContactPage() {
           <Link href="/support" className="underline underline-offset-2">
             Support
           </Link>{" "}
-          before writing to us. These pages collect the available answers and paths.
+          before writing to us. These pages collect the available answers and
+          paths.
         </p>
       </Section>
     </>

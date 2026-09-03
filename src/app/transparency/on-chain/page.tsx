@@ -22,30 +22,51 @@ const topics = [
 export default function OnChainTransparencyPage() {
   return (
     <>
-      <Breadcrumbs items={[{ label: "Transparency", href: "/transparency" }, { label: "On-chain" }]} />
+      <Breadcrumbs
+        items={[
+          { label: "Transparency", href: "/transparency" },
+          { label: "On-chain" },
+        ]}
+      />
       <PageHero
         eyebrow="On-chain transparency"
         title="Public records, when the data is genuinely public"
         lead="CeloHT’s transparency model relies on public accountability and honest clarity about what is independently verifiable versus what remains off-chain or unpublished."
       />
 
-      <Section eyebrow="What is verifiable" title="Independent checks we can point to">
+      <Section
+        eyebrow="What is verifiable"
+        title="Independent checks we can point to"
+      >
         <div className="grid gap-3 md:grid-cols-2">
           {topics.map((item) => (
-            <div key={item} className="rounded-xl border border-navy-700/15 p-4 text-sm text-ink-soft">
+            <div
+              key={item}
+              className="rounded-xl border border-navy-700/15 p-4 text-sm text-ink-soft"
+            >
               {item}
             </div>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Important caveat" title="Not everything is public by default">
+      <Section
+        eyebrow="Important caveat"
+        title="Not everything is public by default"
+      >
         <div className="max-w-3xl space-y-4 text-ink-soft">
           <p>
-            Some actions are inherently public on a blockchain, but not every project decision, personal record, or operational detail is intended for public disclosure. Transparent governance means publishing what can be responsibly shared without exposing sensitive information or creating security risks.
+            Some actions are inherently public on a blockchain, but not every
+            project decision, personal record, or operational detail is intended
+            for public disclosure. Transparent governance means publishing what
+            can be responsibly shared without exposing sensitive information or
+            creating security risks.
           </p>
           <p>
-            The project does not claim on-chain data where it has not been published or verified. Where addresses or explorer links are not yet confirmed, this website will clearly state that the information is pending publication rather than inventing it.
+            The project does not claim on-chain data where it has not been
+            published or verified. Where addresses or explorer links are not yet
+            confirmed, this website will clearly state that the information is
+            pending publication rather than inventing it.
           </p>
         </div>
       </Section>
@@ -53,7 +74,10 @@ export default function OnChainTransparencyPage() {
       <CTASection
         title="Need the broader accountability framework?"
         description="Financial transparency, governance, and security practices are all part of the same public accountability model."
-        primary={{ label: "Read financial transparency", href: "/transparency/financial" }}
+        primary={{
+          label: "Read financial transparency",
+          href: "/transparency/financial",
+        }}
         secondary={{ label: "Visit security", href: "/security" }}
       />
     </>

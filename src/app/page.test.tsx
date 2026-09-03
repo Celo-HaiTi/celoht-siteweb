@@ -10,7 +10,9 @@ describe("HomePage", () => {
     expect(screen.getAllByText(/Connect Wallet/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/The CeloHT product layer/i)).toBeInTheDocument();
     expect(screen.queryByText(/demo data/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/illustrative interface/i)).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(/illustrative interface/i),
+    ).not.toBeInTheDocument();
     expect(screen.queryByText(/\$1,240\.80/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/42\.4/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/trees tracked/i)).not.toBeInTheDocument();

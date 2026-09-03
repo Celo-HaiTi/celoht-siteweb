@@ -6,7 +6,8 @@ import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Accessibility Statement",
-  description: "CeloHT's accessibility commitment and current status against WCAG 2.1 AA.",
+  description:
+    "CeloHT's accessibility commitment and current status against WCAG 2.1 AA.",
   alternates: { canonical: "/accessibility" },
 };
 
@@ -23,18 +24,25 @@ export default function AccessibilityPage() {
       <Section title="What we've implemented">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>A skip-to-content link for keyboard and screen reader users</li>
-          <li>Semantic HTML  -  nav, main, section, and headings that increment logically</li>
           <li>
-            A visible focus outline on every interactive element, not just default browser styling
-          </li>
-          <li>Full keyboard operability, including the search dialog and mobile menu</li>
-          <li>
-            Color contrast checked against WCAG AA ratios for every text/background pairing in our
-            palette
+            Semantic HTML - nav, main, section, and headings that increment
+            logically
           </li>
           <li>
-            <code>prefers-reduced-motion</code> respected globally, including in the animated hero
-            section
+            A visible focus outline on every interactive element, not just
+            default browser styling
+          </li>
+          <li>
+            Full keyboard operability, including the search dialog and mobile
+            menu
+          </li>
+          <li>
+            Color contrast checked against WCAG AA ratios for every
+            text/background pairing in our palette
+          </li>
+          <li>
+            <code>prefers-reduced-motion</code> respected globally, including in
+            the animated hero section
           </li>
           <li>ARIA labels on icon-only buttons, including the mobile menu</li>
         </ul>
@@ -42,8 +50,9 @@ export default function AccessibilityPage() {
 
       <Section title="Known gaps">
         <p className="max-w-2xl text-sm text-ink-soft dark:text-parchment-100/70">
-          Automated accessibility auditing (e.g. axe-core in CI) is not yet wired into our pipeline.
-          We track this point in the site&apos;s technical roadmap.
+          Automated accessibility auditing (e.g. axe-core in CI) is not yet
+          wired into our pipeline. We track this point in the site&apos;s
+          technical roadmap.
         </p>
       </Section>
 

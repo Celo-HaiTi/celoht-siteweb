@@ -25,7 +25,8 @@ export default function TransparencyPage() {
       <Section eyebrow="What's public today" title="Open by default">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
-            Every CeloHT repository  -  flagship documentation, this website, and the dApp  -  in full
+            Every CeloHT repository - flagship documentation, this website, and
+            the dApp - in full
           </li>
           <li>Automated checks used for delivery quality and security</li>
           <li>All Pull Request and Issue history</li>
@@ -39,28 +40,35 @@ export default function TransparencyPage() {
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
             <h3 className="font-semibold">Monthly community updates</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              A recurring, dated summary of progress across all three pillars, shared through our
-              social channels and repositories.
+              A recurring, dated summary of progress across all three pillars,
+              shared through our social channels and repositories.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
-            <h3 className="font-semibold">Annual transparency & impact report</h3>
+            <h3 className="font-semibold">
+              Annual transparency & impact report
+            </h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Starting in Phase 3 of our roadmap: a published, dated report covering education,
-              agent network, and reforestation metrics together.
+              Starting in Phase 3 of our roadmap: a published, dated report
+              covering education, agent network, and reforestation metrics
+              together.
             </p>
           </div>
         </div>
       </Section>
 
-      <Section eyebrow="Financial transparency" title="No token, no hidden allocation">
+      <Section
+        eyebrow="Financial transparency"
+        title="No token, no hidden allocation"
+      >
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
-          CeloHT is a community-driven initiative, not a company issuing equity or promising
-          returns, and it has never created a token. Funding comes from ecosystem grants,
-          partnerships, and voluntary community contributions  -  see our{" "}
-            <Link href="/documentation" className="underline underline-offset-2">
+          CeloHT is a community-driven initiative, not a company issuing equity
+          or promising returns, and it has never created a token. Funding comes
+          from ecosystem grants, partnerships, and voluntary community
+          contributions - see our{" "}
+          <Link href="/documentation" className="underline underline-offset-2">
             public documentation
-            </Link>{" "}
+          </Link>{" "}
           for the funding model documented alongside the codebase.
         </p>
       </Section>

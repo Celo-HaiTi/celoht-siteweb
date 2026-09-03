@@ -2,10 +2,13 @@
 
 /* CeloHT visual system: deep blue foundation, warm signal, and living green. */
 @theme {
-  --font-display: "Space Grotesk", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
-  --font-body: "DM Sans", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
+  --font-display:
+    "Space Grotesk", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
+  --font-body:
+    "DM Sans", "IBM Plex Sans", "Avenir Next", ui-sans-serif, sans-serif;
   --font-mono:
-    ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", monospace;
+    ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas,
+    "Liberation Mono", monospace;
 
   --color-bg: #071525;
   --color-surface: #0d2137;
@@ -66,8 +69,16 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 88% 0%, rgba(111, 196, 155, 0.08), transparent 24rem),
-    radial-gradient(circle at 8% 16%, rgba(248, 211, 79, 0.05), transparent 28rem),
+    radial-gradient(
+      circle at 88% 0%,
+      rgba(111, 196, 155, 0.08),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 8% 16%,
+      rgba(248, 211, 79, 0.05),
+      transparent 28rem
+    ),
     var(--color-bg);
   color: var(--color-text);
 }
@@ -87,18 +98,27 @@ p {
 
 a,
 button {
-  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
-    box-shadow 180ms ease, transform 180ms ease;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .celoht-surface {
-  background: linear-gradient(145deg, rgba(21, 48, 75, 0.72), rgba(7, 21, 37, 0.9));
+  background: linear-gradient(
+    145deg,
+    rgba(21, 48, 75, 0.72),
+    rgba(7, 21, 37, 0.9)
+  );
   border: 1px solid var(--color-border);
   box-shadow: 0 22px 70px rgba(1, 8, 18, 0.2);
 }
 
 .celoht-grid {
-  background-image: linear-gradient(rgba(199, 218, 232, 0.045) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(199, 218, 232, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(199, 218, 232, 0.045) 1px, transparent 1px);
   background-size: 3rem 3rem;
   mask-image: linear-gradient(to bottom, black, transparent 88%);
@@ -189,11 +209,17 @@ button {
 @keyframes celoht-header-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 24px rgba(8, 18, 37, 0.18), 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 10px 24px rgba(8, 18, 37, 0.18),
+      0 0 0 rgba(255, 255, 255, 0);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 18px 36px rgba(8, 18, 37, 0.25), 0 0 24px rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.12),
+      0 18px 36px rgba(8, 18, 37, 0.25),
+      0 0 24px rgba(255, 255, 255, 0.12);
     transform: scale(1.02);
   }
 }
@@ -217,19 +243,24 @@ button {
 
 @keyframes celoht-wallet-orbit {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem)
+      rotate(0deg);
   }
   25% {
-    transform: translate(-50%, -50%) rotate(90deg) translateX(8.2rem) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(90deg) translateX(8.2rem)
+      rotate(-90deg);
   }
   50% {
-    transform: translate(-50%, -50%) rotate(180deg) translateX(8.2rem) rotate(-180deg);
+    transform: translate(-50%, -50%) rotate(180deg) translateX(8.2rem)
+      rotate(-180deg);
   }
   75% {
-    transform: translate(-50%, -50%) rotate(270deg) translateX(8.2rem) rotate(-270deg);
+    transform: translate(-50%, -50%) rotate(270deg) translateX(8.2rem)
+      rotate(-270deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(8.2rem) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateX(8.2rem)
+      rotate(-360deg);
   }
 }
 
@@ -317,7 +348,13 @@ button {
   inset: -35% -15%;
   z-index: 0;
   display: block;
-  background: linear-gradient(110deg, transparent 32%, rgba(255, 255, 255, 0.7) 46%, rgba(255, 255, 255, 0.2) 52%, transparent 60%);
+  background: linear-gradient(
+    110deg,
+    transparent 32%,
+    rgba(255, 255, 255, 0.7) 46%,
+    rgba(255, 255, 255, 0.2) 52%,
+    transparent 60%
+  );
   transform: translate3d(-130%, 0, 0) rotate(14deg);
   animation: celoht-header-shine 3s ease-in-out infinite;
 }
@@ -386,7 +423,8 @@ button {
   }
 
   .celoht-wallet-orbit {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(8.2rem)
+      rotate(0deg);
   }
 
   .celoht-hero-reveal {
@@ -431,7 +469,11 @@ footer {
 }
 
 .bg-navy-800 {
-  background-color: color-mix(in srgb, var(--color-surface) 86%, white 14%) !important;
+  background-color: color-mix(
+    in srgb,
+    var(--color-surface) 86%,
+    white 14%
+  ) !important;
 }
 
 .bg-navy-700\/5,

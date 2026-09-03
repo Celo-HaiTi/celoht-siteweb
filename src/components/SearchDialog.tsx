@@ -81,7 +81,11 @@ export function SearchDialog() {
         }}
       >
         <div className="flex items-center gap-3 border-b border-navy-700/10 px-4 py-3 dark:border-parchment-100/10">
-          <Search size={18} aria-hidden="true" className="shrink-0 opacity-60" />
+          <Search
+            size={18}
+            aria-hidden="true"
+            className="shrink-0 opacity-60"
+          />
           <input
             ref={inputRef}
             type="text"
@@ -119,7 +123,9 @@ export function SearchDialog() {
               >
                 <span className="block text-sm font-medium">{item.label}</span>
                 {item.description && (
-                  <span className="block text-xs text-ink-soft">{item.description}</span>
+                  <span className="block text-xs text-ink-soft">
+                    {item.description}
+                  </span>
                 )}
               </Link>
             </li>

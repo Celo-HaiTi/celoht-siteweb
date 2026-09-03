@@ -19,17 +19,20 @@ const modules = [
   },
   {
     title: "Blockchain & Web3 fundamentals",
-    detail: "What a blockchain is and how a transaction works, in plain language.",
+    detail:
+      "What a blockchain is and how a transaction works, in plain language.",
     before: "Wallet setup",
   },
   {
     title: "Hands-on Valora/USDm use",
-    detail: "Step-by-step guided use, with heavy emphasis on seed-phrase security.",
+    detail:
+      "Step-by-step guided use, with heavy emphasis on seed-phrase security.",
     before: "First live transaction",
   },
   {
     title: "Crypto risk awareness",
-    detail: "Volatility, common scams, and never risking more than you can afford to lose.",
+    detail:
+      "Volatility, common scams, and never risking more than you can afford to lose.",
     before: "Reinforced on an ongoing basis",
   },
 ];
@@ -52,7 +55,9 @@ export default function EducationPage() {
               key={module.title}
               className="rounded-2xl border border-gold-500/30 p-6 dark:border-gold-500/20"
             >
-              <h3 className="font-display text-xl font-semibold">{module.title}</h3>
+              <h3 className="font-display text-xl font-semibold">
+                {module.title}
+              </h3>
               <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
                 {module.detail}
               </p>
@@ -66,9 +71,10 @@ export default function EducationPage() {
 
       <Section eyebrow="Delivery" title="Written, visual, and in person">
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
-          Material combines written guides, visual diagrams, and in-person community sessions  - 
-          deliberately not confined to a single digital channel, since not every participant has
-          reliable connectivity at the point they need the material most.
+          Material combines written guides, visual diagrams, and in-person
+          community sessions - deliberately not confined to a single digital
+          channel, since not every participant has reliable connectivity at the
+          point they need the material most.
         </p>
       </Section>
 
@@ -84,7 +90,10 @@ export default function EducationPage() {
         title="Education leads into the agent network"
         description="Once someone completes core training, the next step is understanding how community agents put that knowledge to work."
         primary={{ label: "Meet the agent network", href: "/agent-network" }}
-        secondary={{ label: "See the technology behind it", href: "/technology" }}
+        secondary={{
+          label: "See the technology behind it",
+          href: "/technology",
+        }}
       />
     </>
   );

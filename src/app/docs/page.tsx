@@ -59,15 +59,26 @@ export default function DocumentationHubPage() {
         lead="CeloHT’s website is the place to understand the mission, the product, the community model, and the governance structure before exploring technical source code."
       />
 
-      <Section eyebrow="Browse by audience" title="Documentation built for real users">
+      <Section
+        eyebrow="Browse by audience"
+        title="Documentation built for real users"
+      >
         <div className="grid gap-8 lg:grid-cols-3">
           {audiences.map((group) => (
-            <div key={group.heading} className="rounded-2xl border border-navy-700/15 p-6">
-              <h2 className="font-display text-2xl font-semibold">{group.heading}</h2>
+            <div
+              key={group.heading}
+              className="rounded-2xl border border-navy-700/15 p-6"
+            >
+              <h2 className="font-display text-2xl font-semibold">
+                {group.heading}
+              </h2>
               <ul className="mt-5 space-y-3">
                 {group.items.map((item) => (
                   <li key={item.title}>
-                    <Link href={item.href} className="text-sm text-ink-soft underline-offset-2 hover:text-ink hover:underline">
+                    <Link
+                      href={item.href}
+                      className="text-sm text-ink-soft underline-offset-2 hover:text-ink hover:underline"
+                    >
                       {item.title}
                     </Link>
                   </li>
@@ -78,24 +89,34 @@ export default function DocumentationHubPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Documentation principles" title="Clear before technical">
+      <Section
+        eyebrow="Documentation principles"
+        title="Clear before technical"
+      >
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-navy-700/15 p-6">
-            <h3 className="font-display text-xl font-semibold">Understand first</h3>
+            <h3 className="font-display text-xl font-semibold">
+              Understand first
+            </h3>
             <p className="mt-3 text-sm text-ink-soft">
-              The website explains what CeloHT is, why it exists, and what problems it is trying to solve.
+              The website explains what CeloHT is, why it exists, and what
+              problems it is trying to solve.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6">
             <h3 className="font-display text-xl font-semibold">Verify next</h3>
             <p className="mt-3 text-sm text-ink-soft">
-              Governance, security, and transparency pages show the published framework behind each decision.
+              Governance, security, and transparency pages show the published
+              framework behind each decision.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6">
-            <h3 className="font-display text-xl font-semibold">Act with context</h3>
+            <h3 className="font-display text-xl font-semibold">
+              Act with context
+            </h3>
             <p className="mt-3 text-sm text-ink-soft">
-              The site pages provide useful context before any action or contact.
+              The site pages provide useful context before any action or
+              contact.
             </p>
           </div>
         </div>

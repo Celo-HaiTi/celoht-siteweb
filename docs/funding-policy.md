@@ -4,16 +4,16 @@
 
 CeloHT is funded through:
 
-1. **Celo ecosystem grants**  -  the Celo Foundation and aligned programs
-2. **Strategic partnerships**  -  funding tied to specific projects
-3. **Voluntary community contributions**  -  e.g. GitHub Sponsors
-4. **Direct donations**  -  routed through the dApp's `DonationManager`
+1. **Celo ecosystem grants** - the Celo Foundation and aligned programs
+2. **Strategic partnerships** - funding tied to specific projects
+3. **Voluntary community contributions** - e.g. GitHub Sponsors
+4. **Direct donations** - routed through the dApp's `DonationManager`
    contract to a specific, registered project (see [`/donate`](https://celoht.com/donate))
 
 ## What Funding Is Not
 
 CeloHT does not raise funds by selling a token, running an ICO or IDO, or
-offering any investment product  -  see
+offering any investment product - see
 [`no-token-policy.md`](no-token-policy.md).
 
 ## Allocation
@@ -28,7 +28,7 @@ offering any investment product  -  see
 ## Long-Term Sustainability
 
 The goal is to reduce dependence on grants over time through reasonable,
-transparent service fees within the agent network  -  see the flagship
+transparent service fees within the agent network - see the flagship
 repository's
 [`docs/business-model.md`](https://github.com/Celo-HaiTi/CeloHT/blob/main/docs/business-model.md)
 for the full model.

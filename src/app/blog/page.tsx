@@ -7,7 +7,8 @@ import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Longer-form posts from the CeloHT team on our mission, technology, and programs.",
+  description:
+    "Longer-form posts from the CeloHT team on our mission, technology, and programs.",
   alternates: { canonical: "/blog" },
 };
 
@@ -36,7 +37,9 @@ export default function BlogIndexPage() {
                   day: "numeric",
                 })}
               </time>
-              <h2 className="mt-2 font-display text-2xl font-semibold">{post.title}</h2>
+              <h2 className="mt-2 font-display text-2xl font-semibold">
+                {post.title}
+              </h2>
               <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
                 {post.excerpt}
               </p>

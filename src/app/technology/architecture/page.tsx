@@ -62,7 +62,10 @@ export default function ArchitecturePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Technical description" title="How the system is organized">
+      <Section
+        eyebrow="Technical description"
+        title="How the system is organized"
+      >
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl border border-navy-700/15 p-6">
             <h2 className="font-display text-2xl font-semibold">
@@ -91,9 +94,9 @@ export default function ArchitecturePage() {
               Community layer
             </h2>
             <p className="mt-3 text-sm text-ink-soft">
-              Agents and local participants turn technical access
-              into practical literacy and local trust. This is where the system
-              becomes useful in real communities.
+              Agents and local participants turn technical access into practical
+              literacy and local trust. This is where the system becomes useful
+              in real communities.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6">

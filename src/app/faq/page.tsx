@@ -16,7 +16,10 @@ const faqs = [
     q: "Is CeloHT a cryptocurrency or a token?",
     a: "No. CeloHT uses Celo ecosystem infrastructure (CELO, USDm) but is not itself a token or blockchain, and has never created a token.",
   },
-  { q: "Can I invest in CeloHT?", a: "No. CeloHT offers no investment product of any kind." },
+  {
+    q: "Can I invest in CeloHT?",
+    a: "No. CeloHT offers no investment product of any kind.",
+  },
   {
     q: "Does CeloHT own or operate Valora?",
     a: "No. CeloHT builds compatible educational content and application features; Valora is developed and operated independently.",
@@ -80,7 +83,9 @@ export default function FAQPage() {
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-sm text-ink-soft dark:text-parchment-100/70">{faq.a}</p>
+              <p className="mt-3 text-sm text-ink-soft dark:text-parchment-100/70">
+                {faq.a}
+              </p>
             </details>
           ))}
         </div>

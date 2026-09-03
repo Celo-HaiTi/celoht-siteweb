@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, BookOpen, Code2, Leaf, UsersRound, WalletCards } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BookOpen,
+  Code2,
+  Leaf,
+  UsersRound,
+  WalletCards,
+} from "lucide-react";
 import { footerNav } from "@/lib/nav";
 import {
   DAPP_URL,
@@ -14,41 +22,110 @@ export function Footer() {
     <footer className="mt-24 border-t border-navy-700/10 bg-navy-950 text-parchment-100 dark:border-parchment-100/10">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="rounded-2xl border border-gold-500/20 bg-gold-500/5 p-6">
-          <p className="font-display text-xl font-semibold">Start with the ecosystem.</p>
+          <p className="font-display text-xl font-semibold">
+            Start with the ecosystem.
+          </p>
           <p className="mt-1 max-w-2xl text-sm text-parchment-100/70">
-            Learn the fundamentals, explore the dApp, and see how CeloHT connects education,
-            community access, and reforestation.
+            Learn the fundamentals, explore the dApp, and see how CeloHT
+            connects education, community access, and reforestation.
           </p>
         </div>
 
-        <section aria-labelledby="footer-ecosystem-title" className="mt-12 border-y border-parchment-100/10 py-10">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Open ecosystem</p>
-          <h2 id="footer-ecosystem-title" className="mt-2 max-w-3xl font-display text-3xl font-semibold">
+        <section
+          aria-labelledby="footer-ecosystem-title"
+          className="mt-12 border-y border-parchment-100/10 py-10"
+        >
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
+            Open ecosystem
+          </p>
+          <h2
+            id="footer-ecosystem-title"
+            className="mt-2 max-w-3xl font-display text-3xl font-semibold"
+          >
             Explore the CeloHT ecosystem
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-parchment-100/70">
-            CeloHT is an open-source Haitian Web3 initiative connecting digital tools, learning, community participation, and local impact.
+            CeloHT is an open-source Haitian Web3 initiative connecting digital
+            tools, learning, community participation, and local impact.
           </p>
           <div className="mt-7 grid gap-px overflow-hidden border border-parchment-100/15 bg-parchment-100/15 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              { icon: WalletCards, title: "CeloHT DApp", copy: "Payments, wallet connections, and Web3 services.", href: DAPP_URL, external: true },
-              { icon: BookOpen, title: "Web3 Education", copy: "Resources for learning about blockchain, digital assets, and digital payments.", href: "/education" },
-              { icon: UsersRound, title: "Agent Network", copy: "Community infrastructure that brings digital and financial services closer to people.", href: "/agent-network" },
-              { icon: Leaf, title: "Reforestation and Impact", copy: "Tree planting, growth monitoring, and environmental impact.", href: "/reforestation" },
-              { icon: Code2, title: "Open Source", copy: "Understand CeloHT's code, documentation, and public methods.", href: "/open-source" },
+              {
+                icon: WalletCards,
+                title: "CeloHT DApp",
+                copy: "Payments, wallet connections, and Web3 services.",
+                href: DAPP_URL,
+                external: true,
+              },
+              {
+                icon: BookOpen,
+                title: "Web3 Education",
+                copy: "Resources for learning about blockchain, digital assets, and digital payments.",
+                href: "/education",
+              },
+              {
+                icon: UsersRound,
+                title: "Agent Network",
+                copy: "Community infrastructure that brings digital and financial services closer to people.",
+                href: "/agent-network",
+              },
+              {
+                icon: Leaf,
+                title: "Reforestation and Impact",
+                copy: "Tree planting, growth monitoring, and environmental impact.",
+                href: "/reforestation",
+              },
+              {
+                icon: Code2,
+                title: "Open Source",
+                copy: "Understand CeloHT's code, documentation, and public methods.",
+                href: "/open-source",
+              },
             ].map((item) => {
               const Icon = item.icon;
               const content = (
                 <>
-                  <Icon size={20} className="text-gold-300" aria-hidden="true" />
-                  <h3 className="mt-5 font-display text-lg font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-5 text-parchment-100/65">{item.copy}</p>
+                  <Icon
+                    size={20}
+                    className="text-gold-300"
+                    aria-hidden="true"
+                  />
+                  <h3 className="mt-5 font-display text-lg font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-5 text-parchment-100/65">
+                    {item.copy}
+                  </p>
                 </>
               );
               return item.external ? (
-                <a key={item.title} href={item.href} target="_blank" rel="noreferrer" className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800">{content}<ArrowUpRight size={15} className="mt-5 text-gold-300" aria-hidden="true" /></a>
+                <a
+                  key={item.title}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800"
+                >
+                  {content}
+                  <ArrowUpRight
+                    size={15}
+                    className="mt-5 text-gold-300"
+                    aria-hidden="true"
+                  />
+                </a>
               ) : (
-                <Link key={item.title} href={item.href} className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800">{content}<ArrowRight size={15} className="mt-5 text-gold-300" aria-hidden="true" /></Link>
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="group bg-navy-950 p-5 transition-colors hover:bg-navy-800"
+                >
+                  {content}
+                  <ArrowRight
+                    size={15}
+                    className="mt-5 text-gold-300"
+                    aria-hidden="true"
+                  />
+                </Link>
               );
             })}
           </div>
@@ -57,7 +134,9 @@ export function Footer() {
         <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-5">
           {footerNav.map((group) => (
             <div key={group.heading}>
-              <h2 className="font-display text-lg font-semibold text-gold-300">{group.heading}</h2>
+              <h2 className="font-display text-lg font-semibold text-gold-300">
+                {group.heading}
+              </h2>
               <ul className="mt-3 space-y-2">
                 {group.items.map((item) => (
                   <li key={item.href}>
@@ -86,13 +165,19 @@ export function Footer() {
             <div>
               <p className="font-display text-lg font-semibold">CeloHT</p>
               <p className="mt-1 max-w-md text-sm text-parchment-100/60">
-                A community-driven, open-source initiative built on the Celo ecosystem. Not a
-                blockchain, a token, an ICO, or an investment platform.
+                A community-driven, open-source initiative built on the Celo
+                ecosystem. Not a blockchain, a token, an ICO, or an investment
+                platform.
               </p>
             </div>
           </div>
           <div className="flex gap-4 text-sm">
-            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer" className="text-gold-300 hover:text-gold-500">
+            <a
+              href={GITHUB_ORG_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-gold-300 hover:text-gold-500"
+            >
               GitHub →
             </a>
             <a
@@ -115,10 +200,11 @@ export function Footer() {
         </div>
 
         <p className="mt-8 text-xs text-parchment-100/50">
-          © {new Date().getFullYear()} CeloHT. Open source and community driven. Code licensed under Apache 2.0.
-          &ldquo;Celo,&rdquo; &ldquo;USDm,&rdquo; and &ldquo;Valora&rdquo; are marks of their
-          respective owners; CeloHT builds compatible tools and content and is not affiliated with
-          or endorsed by them unless explicitly documented.
+          © {new Date().getFullYear()} CeloHT. Open source and community driven.
+          Code licensed under Apache 2.0. &ldquo;Celo,&rdquo;
+          &ldquo;USDm,&rdquo; and &ldquo;Valora&rdquo; are marks of their
+          respective owners; CeloHT builds compatible tools and content and is
+          not affiliated with or endorsed by them unless explicitly documented.
         </p>
       </div>
     </footer>

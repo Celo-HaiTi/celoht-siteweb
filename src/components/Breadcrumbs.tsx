@@ -2,9 +2,18 @@ import Link from "next/link";
 
 type Crumb = { label: string; href?: string };
 
-export function Breadcrumbs({ items, homeLabel = "Home" }: { items: Crumb[]; homeLabel?: string }) {
+export function Breadcrumbs({
+  items,
+  homeLabel = "Home",
+}: {
+  items: Crumb[];
+  homeLabel?: string;
+}) {
   return (
-    <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-6 text-sm sm:px-6">
+    <nav
+      aria-label="Breadcrumb"
+      className="mx-auto max-w-6xl px-4 pt-6 text-sm sm:px-6"
+    >
       <ol className="flex flex-wrap items-center gap-1 text-muted">
         <li>
           <Link href="/" className="hover:text-navy-900">

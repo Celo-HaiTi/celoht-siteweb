@@ -33,8 +33,8 @@ export default function SecurityPage() {
             </a>
           </li>
           <li>
-            For a sensitive issue, use the private address above and never share personal data, a
-            private key, or a recovery phrase.
+            For a sensitive issue, use the private address above and never share
+            personal data, a private key, or a recovery phrase.
           </li>
         </ul>
       </Section>
@@ -68,10 +68,7 @@ export default function SecurityPage() {
         </ul>
       </Section>
 
-      <Section
-        eyebrow="User protection"
-        title="Simple, verifiable rules"
-      >
+      <Section eyebrow="User protection" title="Simple, verifiable rules">
         <p className="max-w-2xl text-sm leading-6 text-ink-soft dark:text-parchment-100/70">
           CeloHT never asks for a recovery phrase, private key, or password. The{" "}
           <Link href="/support" className="underline underline-offset-2">

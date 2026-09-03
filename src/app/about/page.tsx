@@ -25,15 +25,17 @@ export default function AboutPage() {
       <Section title="A community initiative, not a company">
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
-            CeloHT is a community-driven, open-source initiative built on top of the Celo ecosystem.
-            It exists to expand financial inclusion through three permanent pillars: education, a
-            decentralized network of community agents, and reforestation. This website is the
-            public place to understand the mission, programs, safeguards, and progress.
+            CeloHT is a community-driven, open-source initiative built on top of
+            the Celo ecosystem. It exists to expand financial inclusion through
+            three permanent pillars: education, a decentralized network of
+            community agents, and reforestation. This website is the public
+            place to understand the mission, programs, safeguards, and progress.
           </p>
           <p>
-            We&rsquo;re explicit about what CeloHT is not, because the distinction matters  -  both
-            legally and to the communities we serve, many of whom have seen fintech and crypto
-            projects overpromise before.
+            We&rsquo;re explicit about what CeloHT is not, because the
+            distinction matters - both legally and to the communities we serve,
+            many of whom have seen fintech and crypto projects overpromise
+            before.
           </p>
         </div>
       </Section>
@@ -54,10 +56,15 @@ export default function AboutPage() {
               key={item}
               className="flex items-start gap-3 rounded-xl border border-navy-700/15 p-4 text-sm dark:border-parchment-100/10"
             >
-              <span aria-hidden="true" className="mt-0.5 text-navy-500 dark:text-parchment-100/40">
-                 - 
+              <span
+                aria-hidden="true"
+                className="mt-0.5 text-navy-500 dark:text-parchment-100/40"
+              >
+                -
               </span>
-              <span className="text-ink-soft dark:text-parchment-100/70">{item}</span>
+              <span className="text-ink-soft dark:text-parchment-100/70">
+                {item}
+              </span>
             </div>
           ))}
         </div>
@@ -66,15 +73,18 @@ export default function AboutPage() {
       <Section eyebrow="Origin" title="From Léogâne outward">
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
-            The founder, Johnny Dubic, identified Celo as a good technical fit because of its low
-            transaction fees and mobile-first design. Its native token, CELO, and its stablecoin,
-            USDm, are both accessible through the Valora wallet. From there, CeloHT built outward:
-            first education material in Haitian Creole, then the framework for a trained agent
-            network, then a reforestation program tying environmental action to financial reward.
+            The founder, Johnny Dubic, identified Celo as a good technical fit
+            because of its low transaction fees and mobile-first design. Its
+            native token, CELO, and its stablecoin, USDm, are both accessible
+            through the Valora wallet. From there, CeloHT built outward: first
+            education material in Haitian Creole, then the framework for a
+            trained agent network, then a reforestation program tying
+            environmental action to financial reward.
           </p>
           <p>
-            CeloHT was featured in a Celo Forum &ldquo;Founders&rdquo; post in March 2026  -  a small
-            but real marker of recognition within the broader Celo ecosystem.
+            CeloHT was featured in a Celo Forum &ldquo;Founders&rdquo; post in
+            March 2026 - a small but real marker of recognition within the
+            broader Celo ecosystem.
           </p>
         </div>
       </Section>
@@ -91,7 +101,12 @@ export default function AboutPage() {
           For the legal detail behind these claims, see{" "}
           <Link href="/governance" className="underline underline-offset-2">
             Governance
-          </Link>{" "}and our <Link href="/transparency" className="underline underline-offset-2">transparency pages</Link>.
+          </Link>{" "}
+          and our{" "}
+          <Link href="/transparency" className="underline underline-offset-2">
+            transparency pages
+          </Link>
+          .
         </p>
       </Section>
     </>

@@ -61,7 +61,10 @@ export default function DAppDeploymentPage() {
         },
       ]}
       previous={{ label: "DApp services", href: "/dapp/services" }}
-      next={{ label: "Technical architecture", href: "/technology/architecture" }}
+      next={{
+        label: "Technical architecture",
+        href: "/technology/architecture",
+      }}
     />
   );
 }

@@ -19,10 +19,22 @@ const phases = [
     goal: "Establish a credible, transparent base  -  documentation, first agents, first partners.",
     milestones: [
       { text: "Publish the official flagship repository", done: true },
-      { text: "Core financial & Web3 training material in Haitian Creole", done: true },
-      { text: "Publish this website and the CeloHT dApp repository", done: true },
-      { text: "Recruit and train the first cohort of community agents (Léogâne)", done: false },
-      { text: "Land first grants/partnerships within the Celo ecosystem", done: false },
+      {
+        text: "Core financial & Web3 training material in Haitian Creole",
+        done: true,
+      },
+      {
+        text: "Publish this website and the CeloHT dApp repository",
+        done: true,
+      },
+      {
+        text: "Recruit and train the first cohort of community agents (Léogâne)",
+        done: false,
+      },
+      {
+        text: "Land first grants/partnerships within the Celo ecosystem",
+        done: false,
+      },
     ],
   },
   {
@@ -31,10 +43,19 @@ const phases = [
     status: "Planned",
     goal: "Prove the model works end-to-end in a single pilot area before spending resources on expansion.",
     milestones: [
-      { text: "First complete cash-in/cash-out cycle handled entirely by agents", done: false },
-      { text: "First reforestation pilot with USDm-based rewards", done: false },
+      {
+        text: "First complete cash-in/cash-out cycle handled entirely by agents",
+        done: false,
+      },
+      {
+        text: "First reforestation pilot with USDm-based rewards",
+        done: false,
+      },
       { text: "dApp deployed to Celo Sepolia testnet (planned)", done: false },
-      { text: "Formal agent code of conduct and verification process live", done: false },
+      {
+        text: "Formal agent code of conduct and verification process live",
+        done: false,
+      },
     ],
   },
   {
@@ -43,10 +64,16 @@ const phases = [
     status: "Planned",
     goal: "Expand beyond the pilot once the operational model is proven.",
     milestones: [
-      { text: "Expand agent network across multiple departments in Haiti", done: false },
+      {
+        text: "Expand agent network across multiple departments in Haiti",
+        done: false,
+      },
       { text: "Translate core curriculum into Spanish", done: false },
       { text: "dApp deployed to Celo mainnet", done: false },
-      { text: "Publish first annual transparency & impact report", done: false },
+      {
+        text: "Publish first annual transparency & impact report",
+        done: false,
+      },
     ],
   },
   {
@@ -55,9 +82,18 @@ const phases = [
     status: "Planned",
     goal: "A self-sustaining ecosystem with mature governance, rather than grant-dependent.",
     milestones: [
-      { text: "Transition toward a more decentralized governance model", done: false },
-      { text: "Agent network reaches meaningful fee-based self-sustainability", done: false },
-      { text: "Recognized educational certification program with external partners", done: false },
+      {
+        text: "Transition toward a more decentralized governance model",
+        done: false,
+      },
+      {
+        text: "Agent network reaches meaningful fee-based self-sustainability",
+        done: false,
+      },
+      {
+        text: "Recognized educational certification program with external partners",
+        done: false,
+      },
     ],
   },
 ];
@@ -80,7 +116,9 @@ export default function RoadmapPage() {
               className="border border-parchment-100 bg-white p-6 shadow-[0_12px_30px_rgba(8,18,37,0.06)] sm:p-8"
             >
               <div className="flex flex-wrap items-center justify-between gap-3">
-                <h2 className="font-display text-2xl font-semibold sm:text-3xl">{phase.name}</h2>
+                <h2 className="font-display text-2xl font-semibold sm:text-3xl">
+                  {phase.name}
+                </h2>
                 <span className="rounded-md bg-gold-500/20 px-3 py-2 font-mono text-xs font-semibold uppercase tracking-wide text-gold-800">
                   {phase.window} · {phase.status}
                 </span>
@@ -90,7 +128,10 @@ export default function RoadmapPage() {
               </p>
               <ul className="mt-5 space-y-2">
                 {phase.milestones.map((milestone) => (
-                  <li key={milestone.text} className="flex items-start gap-3 text-sm">
+                  <li
+                    key={milestone.text}
+                    className="flex items-start gap-3 text-sm"
+                  >
                     <span
                       aria-hidden="true"
                       className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold ${
@@ -111,7 +152,7 @@ export default function RoadmapPage() {
                       {milestone.text}
                       <span className="sr-only">
                         {" "}
-                         -  {milestone.done ? "done" : "not yet started"}
+                        - {milestone.done ? "done" : "not yet started"}
                       </span>
                     </span>
                   </li>
@@ -125,7 +166,10 @@ export default function RoadmapPage() {
       <CTASection
         title="Track progress as it happens"
         description="Monthly community updates and our annual transparency report will keep this page current."
-        primary={{ label: "Read transparency practices", href: "/transparency" }}
+        primary={{
+          label: "Read transparency practices",
+          href: "/transparency",
+        }}
         secondary={{ label: "View current impact", href: "/impact" }}
       />
     </>

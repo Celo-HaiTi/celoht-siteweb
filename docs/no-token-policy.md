@@ -14,7 +14,7 @@ about-page copy, so it can be linked to directly.
 - No page on this website, in the dApp, or in any CeloHT documentation
   offers, sells, or facilitates the purchase of a CeloHT token.
 - Governance voting (see the dApp's `GovernanceVoting` contract) is
-  role-based, one-address-one-vote  -  not token-weighted  -  specifically
+  role-based, one-address-one-vote - not token-weighted - specifically
   because there is no token to weight votes by.
 
 ## Why we publish this as its own policy
@@ -22,7 +22,7 @@ about-page copy, so it can be linked to directly.
 Fintech and crypto-adjacent projects have historically pivoted to token
 issuance after building a community. We publish this policy separately,
 and reference it from multiple pages, so that any future change would be
-a visible, deliberate departure from a stated commitment  -  not a quiet
+a visible, deliberate departure from a stated commitment - not a quiet
 addition.
 
 ## Changing this policy

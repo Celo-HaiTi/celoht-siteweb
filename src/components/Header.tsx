@@ -15,7 +15,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-parchment-100/15 bg-navy-950/90 text-parchment-50 shadow-[0_8px_30px_rgba(1,8,18,0.18)] backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:py-4">
-        <Link href="/" className="group flex min-w-0 shrink items-center gap-3 rounded-md">
+        <Link
+          href="/"
+          className="group flex min-w-0 shrink items-center gap-3 rounded-md"
+        >
           <Image
             src={assetPath("/celoht-logo.png")}
             alt="CeloHT"
@@ -31,7 +34,8 @@ export function Header() {
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-1 rounded-full border border-parchment-100/10 bg-white/[0.03] p-1">
             {primaryNav.map((item) => {
-              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              const active =
+                pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
                 <li key={item.href}>
                   <Link
@@ -51,7 +55,7 @@ export function Header() {
           </ul>
         </nav>
 
-  <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <a
             href={DAPP_URL}
             target="_blank"
@@ -76,8 +80,14 @@ export function Header() {
             onClick={() => setMenuOpen((v) => !v)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-parchment-100/25 text-parchment-50 transition-colors hover:border-gold-500 hover:text-gold-300 lg:hidden"
           >
-            <span className="sr-only">{menuOpen ? "Close menu" : "Open menu"}</span>
-            {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+            <span className="sr-only">
+              {menuOpen ? "Close menu" : "Open menu"}
+            </span>
+            {menuOpen ? (
+              <X size={20} aria-hidden="true" />
+            ) : (
+              <Menu size={20} aria-hidden="true" />
+            )}
           </button>
         </div>
       </div>
@@ -93,7 +103,12 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  aria-current={pathname === item.href || pathname.startsWith(`${item.href}/`) ? "page" : undefined}
+                  aria-current={
+                    pathname === item.href ||
+                    pathname.startsWith(`${item.href}/`)
+                      ? "page"
+                      : undefined
+                  }
                   onClick={() => setMenuOpen(false)}
                   className="block rounded-md px-3 py-3 text-sm text-parchment-100/75 hover:bg-navy-800 hover:text-parchment-50"
                 >

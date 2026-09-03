@@ -24,10 +24,16 @@ export default function MediaKitPage() {
 
       <Section eyebrow="Logo" title="">
         <div className="flex items-center gap-6 rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
-          <Image src={assetPath("/celoht-logo.png")} alt="CeloHT logo" width={96} height={96} />
+          <Image
+            src={assetPath("/celoht-logo.png")}
+            alt="CeloHT logo"
+            width={96}
+            height={96}
+          />
           <p className="max-w-md text-sm text-ink-soft dark:text-parchment-100/70">
-            Use the logo unmodified, with adequate clear space. See our full logo usage policy in
-            the flagship repository&rsquo;s documentation for what requires written permission.
+            Use the logo unmodified, with adequate clear space. See our full
+            logo usage policy in the flagship repository&rsquo;s documentation
+            for what requires written permission.
           </p>
         </div>
       </Section>
@@ -59,20 +65,27 @@ export default function MediaKitPage() {
       <Section eyebrow="Standard descriptions" title="For republication">
         <div className="max-w-2xl space-y-4 text-sm text-ink-soft dark:text-parchment-100/70">
           <div>
-            <p className="font-medium text-ink dark:text-parchment-100">Short (one sentence)</p>
+            <p className="font-medium text-ink dark:text-parchment-100">
+              Short (one sentence)
+            </p>
             <p className="mt-1">
-              CeloHT is a community-driven, open-source initiative built on the Celo ecosystem to
-              expand financial inclusion in Haiti and the wider Caribbean.
+              CeloHT is a community-driven, open-source initiative built on the
+              Celo ecosystem to expand financial inclusion in Haiti and the
+              wider Caribbean.
             </p>
           </div>
           <div>
-            <p className="font-medium text-ink dark:text-parchment-100">Medium (one paragraph)</p>
+            <p className="font-medium text-ink dark:text-parchment-100">
+              Medium (one paragraph)
+            </p>
             <p className="mt-1">
-              CeloHT combines financial education in Haitian Creole, a decentralized network of
-              community agents, and environmental reforestation programs  -  all built on Celo, USDm,
-              and Valora-compatible infrastructure. Founded by Johnny Dubic in Léogâne, Haiti,
-              CeloHT aims to make modern financial tools accessible to communities with limited
-              access to traditional banking.
+              CeloHT combines financial education in Haitian Creole, a
+              decentralized network of community agents, and environmental
+              reforestation programs - all built on Celo, USDm, and
+              Valora-compatible infrastructure. Founded by Johnny Dubic in
+              Léogâne, Haiti, CeloHT aims to make modern financial tools
+              accessible to communities with limited access to traditional
+              banking.
             </p>
           </div>
         </div>

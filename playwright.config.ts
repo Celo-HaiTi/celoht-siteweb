@@ -22,7 +22,9 @@ export default defineConfig({
     { name: "mobile-chrome", use: { ...devices["Pixel 7"] } },
   ],
   webServer: {
-    command: process.env.CI ? "npx --yes serve@14.2.6 out -l 3000" : "npm run dev",
+    command: process.env.CI
+      ? "npx --yes serve@14.2.6 out -l 3000"
+      : "npm run dev",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

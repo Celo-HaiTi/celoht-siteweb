@@ -20,8 +20,16 @@ describe("LiveInfoBar", () => {
           return {
             ok: true,
             json: async () => ({
-              celo: { usd: 0.065, usd_24h_change: 2.8, last_updated_at: 1710000000 },
-              "celo-dollar": { usd: 0.999, usd_24h_change: 0.2, last_updated_at: 1710000001 },
+              celo: {
+                usd: 0.065,
+                usd_24h_change: 2.8,
+                last_updated_at: 1710000000,
+              },
+              "celo-dollar": {
+                usd: 0.999,
+                usd_24h_change: 0.2,
+                last_updated_at: 1710000001,
+              },
             }),
           } as unknown as Response;
         }
@@ -41,7 +49,9 @@ describe("LiveInfoBar", () => {
 
     expect(screen.getByText(/loading/i)).toBeInTheDocument();
 
-    await waitFor(() => expect(screen.getAllByText("CELO").length).toBeGreaterThan(0));
+    await waitFor(() =>
+      expect(screen.getAllByText("CELO").length).toBeGreaterThan(0),
+    );
     expect(screen.getByText("$0.065")).toBeInTheDocument();
     expect(screen.getAllByText("USDm").length).toBeGreaterThan(0);
     expect(screen.getByText(/live market/i)).toBeInTheDocument();
@@ -64,7 +74,11 @@ describe("LiveInfoBar", () => {
 
     render(<LiveInfoBar />);
 
-    await waitFor(() => expect(screen.getByText(/Market data is temporarily unavailable/i)).toBeInTheDocument());
+    await waitFor(() =>
+      expect(
+        screen.getByText(/Market data is temporarily unavailable/i),
+      ).toBeInTheDocument(),
+    );
     expect(screen.queryByText(/Celo Network/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/Latest block/i)).not.toBeInTheDocument();
   });

@@ -47,7 +47,10 @@ export default function AgentsPage() {
       <Section eyebrow="What agents do" title="Core responsibilities">
         <div className="grid gap-3 md:grid-cols-2">
           {agentDuties.map((item) => (
-            <div key={item} className="rounded-xl border border-navy-700/15 p-4 text-sm text-ink-soft">
+            <div
+              key={item}
+              className="rounded-xl border border-navy-700/15 p-4 text-sm text-ink-soft"
+            >
               {item}
             </div>
           ))}
@@ -57,8 +60,13 @@ export default function AgentsPage() {
       <Section eyebrow="How it works" title="A local, trusted bridge">
         <div className="grid gap-6 md:grid-cols-3">
           {agentPrinciples.map((item) => (
-            <div key={item.title} className="rounded-2xl border border-navy-700/15 p-6">
-              <h2 className="font-display text-2xl font-semibold">{item.title}</h2>
+            <div
+              key={item.title}
+              className="rounded-2xl border border-navy-700/15 p-6"
+            >
+              <h2 className="font-display text-2xl font-semibold">
+                {item.title}
+              </h2>
               <p className="mt-3 text-sm text-ink-soft">{item.text}</p>
             </div>
           ))}
@@ -68,12 +76,23 @@ export default function AgentsPage() {
       <Section eyebrow="Participation" title="How someone can become an agent">
         <div className="max-w-3xl space-y-4 text-ink-soft">
           <p>
-            The exact agent recruitment and training process is documented as part of the project’s public governance and program material. At this stage, the model is designed to be community-based and locally accountable.
+            The exact agent recruitment and training process is documented as
+            part of the project’s public governance and program material. At
+            this stage, the model is designed to be community-based and locally
+            accountable.
           </p>
           <p>
-            A prospective agent should expect to complete onboarding, receive core training, and be prepared to support users with attention to security, trust, and community context. A formal revenue or commission model is not presented here as a confirmed public policy; that information is still described as under development or not yet finalized where appropriate.
+            A prospective agent should expect to complete onboarding, receive
+            core training, and be prepared to support users with attention to
+            security, trust, and community context. A formal revenue or
+            commission model is not presented here as a confirmed public policy;
+            that information is still described as under development or not yet
+            finalized where appropriate.
           </p>
-          <p className="font-medium text-ink">Coming soon: finalized agent operating policy, onboarding requirements, and compensation framework.</p>
+          <p className="font-medium text-ink">
+            Coming soon: finalized agent operating policy, onboarding
+            requirements, and compensation framework.
+          </p>
         </div>
       </Section>
 

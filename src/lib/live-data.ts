@@ -69,8 +69,10 @@ async function fetchMarketData(): Promise<Pick<LiveData, "celo" | "usdm">> {
   const usdm = data?.["celo-dollar"] ?? {};
   const toPriceEntry = (entry: Record<string, unknown>): PriceEntry => ({
     usd: typeof entry.usd === "number" ? entry.usd : null,
-    change: typeof entry.usd_24h_change === "number" ? entry.usd_24h_change : null,
-    updatedAt: typeof entry.last_updated_at === "number" ? entry.last_updated_at : null,
+    change:
+      typeof entry.usd_24h_change === "number" ? entry.usd_24h_change : null,
+    updatedAt:
+      typeof entry.last_updated_at === "number" ? entry.last_updated_at : null,
   });
 
   return { celo: toPriceEntry(celo), usdm: toPriceEntry(usdm) };
@@ -96,8 +98,14 @@ export function refreshLiveData() {
     .then(([marketResult]) => {
       const current = readCache();
       const data: LiveData = {
-        celo: marketResult.status === "fulfilled" ? marketResult.value.celo : current?.celo ?? null,
-        usdm: marketResult.status === "fulfilled" ? marketResult.value.usdm : current?.usdm ?? null,
+        celo:
+          marketResult.status === "fulfilled"
+            ? marketResult.value.celo
+            : (current?.celo ?? null),
+        usdm:
+          marketResult.status === "fulfilled"
+            ? marketResult.value.usdm
+            : (current?.usdm ?? null),
       };
       writeCache(data);
       return {

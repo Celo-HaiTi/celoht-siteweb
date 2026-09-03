@@ -12,8 +12,8 @@ export default function NotFound() {
         This page hasn&rsquo;t taken root yet
       </h1>
       <p className="mt-4 max-w-md text-ink-soft dark:text-parchment-100/70">
-        The page you&rsquo;re looking for doesn&rsquo;t exist, or it moved. Try the homepage, or
-        search for what you need.
+        The page you&rsquo;re looking for doesn&rsquo;t exist, or it moved. Try
+        the homepage, or search for what you need.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <Link

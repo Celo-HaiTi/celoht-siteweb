@@ -27,20 +27,21 @@ export default function MissionPage() {
       <Section title="Why this order matters">
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
-            Education is named first because we treat it as a prerequisite, not a companion feature.
-            Nobody should use a financial tool they don&rsquo;t understand  -  so every CeloHT program
-            starts with a curriculum, in Haitian Creole, before Valora or USDm ever enters the
+            Education is named first because we treat it as a prerequisite, not
+            a companion feature. Nobody should use a financial tool they
+            don&rsquo;t understand - so every CeloHT program starts with a
+            curriculum, in Haitian Creole, before Valora or USDm ever enters the
             conversation.
           </p>
           <p>
-            The agent network comes second because trust is a human problem, not just a design
-            problem. An app alone doesn&rsquo;t build confidence in a new financial tool; a trained
-            person from the community does.
+            The agent network comes second because trust is a human problem, not
+            just a design problem. An app alone doesn&rsquo;t build confidence
+            in a new financial tool; a trained person from the community does.
           </p>
           <p>
-            Reforestation is third  -  not because it matters less, but because it&rsquo;s the pillar
-            most directly tied to the long-term economic security of the same communities the first
-            two pillars serve.
+            Reforestation is third - not because it matters less, but because
+            it&rsquo;s the pillar most directly tied to the long-term economic
+            security of the same communities the first two pillars serve.
           </p>
         </div>
       </Section>
@@ -53,7 +54,13 @@ export default function MissionPage() {
             description="Creole-language curriculum on financial literacy, blockchain and Web3 fundamentals, and hands-on Valora/USDm use."
             href="/education"
             accent="gold"
-            icon={<BookOpen size={22} aria-hidden="true" className="text-gold-700" />}
+            icon={
+              <BookOpen
+                size={22}
+                aria-hidden="true"
+                className="text-gold-700"
+              />
+            }
           />
           <PillarCard
             number="02"
@@ -61,7 +68,13 @@ export default function MissionPage() {
             description="Trained community members who handle cash-in/cash-out, transfers, and local support."
             href="/agent-network"
             accent="navy"
-            icon={<Handshake size={22} aria-hidden="true" className="text-navy-700" />}
+            icon={
+              <Handshake
+                size={22}
+                aria-hidden="true"
+                className="text-navy-700"
+              />
+            }
           />
           <PillarCard
             number="03"
@@ -69,7 +82,9 @@ export default function MissionPage() {
             description="Coordinated tree-planting tied to verified activity and rewarded through USDm."
             href="/reforestation"
             accent="forest"
-            icon={<Leaf size={22} aria-hidden="true" className="text-forest-600" />}
+            icon={
+              <Leaf size={22} aria-hidden="true" className="text-forest-600" />
+            }
           />
         </div>
       </Section>

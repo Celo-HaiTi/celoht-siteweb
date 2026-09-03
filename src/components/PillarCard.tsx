@@ -16,7 +16,14 @@ const accentClasses: Record<Props["accent"], string> = {
   navy: "border-navy-600/40 hover:border-navy-600",
 };
 
-export function PillarCard({ number, title, description, href, accent, icon }: Props) {
+export function PillarCard({
+  number,
+  title,
+  description,
+  href,
+  accent,
+  icon,
+}: Props) {
   return (
     <Link
       href={href}
@@ -29,7 +36,9 @@ export function PillarCard({ number, title, description, href, accent, icon }: P
         <span className="font-mono text-xs text-muted">{number}</span>
       </div>
       <h3 className="mt-4 font-display text-2xl font-semibold">{title}</h3>
-      <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">{description}</p>
+      <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">
+        {description}
+      </p>
       <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-navy-900 group-hover:gap-2">
         Learn more
         <span aria-hidden="true">→</span>

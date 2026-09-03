@@ -7,7 +7,17 @@
   "background_color": "#0B1120",
   "theme_color": "#0B1120",
   "icons": [
-    { "src": "./celoht-logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    {
+      "src": "./celoht-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
   ]
 }

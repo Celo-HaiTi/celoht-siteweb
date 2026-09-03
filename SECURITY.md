@@ -33,7 +33,7 @@ database, and no user authentication. Relevant scope includes:
   (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`,
   `Permissions-Policy`, `Strict-Transport-Security`) are set in
   `next.config.ts`.
-- No secrets are committed  -  environment variables only, and none are
+- No secrets are committed - environment variables only, and none are
   currently required for this repository to build or run.
 - CodeQL static analysis and Gitleaks secret scanning run on every change.
 - The service worker only caches a small, explicit allowlist of static
@@ -43,7 +43,7 @@ database, and no user authentication. Relevant scope includes:
 
 The security of the Celo network, the Valora application, the CeloHT
 dApp, and the flagship repository's infrastructure are out of scope
-here  -  see their respective `SECURITY.md` files.
+here - see their respective `SECURITY.md` files.
 
 ## Supported Versions
 

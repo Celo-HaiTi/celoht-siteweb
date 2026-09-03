@@ -56,24 +56,43 @@ export default function DAppPage() {
         lead="The CeloHT DApp is the user-facing application where the education, payment, agent, donation, and impact model come together."
       />
 
-      <Section eyebrow="What it does" title="Built to help real people participate">
+      <Section
+        eyebrow="What it does"
+        title="Built to help real people participate"
+      >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {features.map((feature) => (
-            <div key={feature.title} className="rounded-2xl border border-navy-700/15 p-6">
-              <h2 className="font-display text-2xl font-semibold">{feature.title}</h2>
-              <p className="mt-3 text-sm text-ink-soft">{feature.description}</p>
+            <div
+              key={feature.title}
+              className="rounded-2xl border border-navy-700/15 p-6"
+            >
+              <h2 className="font-display text-2xl font-semibold">
+                {feature.title}
+              </h2>
+              <p className="mt-3 text-sm text-ink-soft">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Product positioning" title="A core CeloHT experience, not a side feature">
+      <Section
+        eyebrow="Product positioning"
+        title="A core CeloHT experience, not a side feature"
+      >
         <div className="max-w-3xl space-y-4 text-ink-soft">
           <p>
-            The DApp is not a technical appendix to the website. It is one of the core public experiences through which people can learn, connect, transact, support initiatives, and participate in community processes.
+            The DApp is not a technical appendix to the website. It is one of
+            the core public experiences through which people can learn, connect,
+            transact, support initiatives, and participate in community
+            processes.
           </p>
           <p>
-            It works best in relation to the wider CeloHT ecosystem: education teaches the fundamentals, agents provide trusted local support, payments flow through wallet-compatible tools, and transparent reporting keeps the larger mission understandable.
+            It works best in relation to the wider CeloHT ecosystem: education
+            teaches the fundamentals, agents provide trusted local support,
+            payments flow through wallet-compatible tools, and transparent
+            reporting keeps the larger mission understandable.
           </p>
         </div>
       </Section>
@@ -81,11 +100,18 @@ export default function DAppPage() {
       <Section eyebrow="Launch" title="Try the product">
         <div className="rounded-2xl border border-gold-500/30 bg-gold-500/10 p-6 sm:p-8">
           <p className="max-w-2xl text-ink-soft">
-            Use the DApp to explore the product experience, connect a wallet, and continue into the broader CeloHT ecosystem with appropriate wallet and network guidance.
+            Use the DApp to explore the product experience, connect a wallet,
+            and continue into the broader CeloHT ecosystem with appropriate
+            wallet and network guidance.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <LaunchDappButton size="lg" />
-            <a href={DAPP_URL} target="_blank" rel="noreferrer" className="text-sm font-semibold underline-offset-4 hover:underline">
+            <a
+              href={DAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold underline-offset-4 hover:underline"
+            >
               Open directly
             </a>
           </div>

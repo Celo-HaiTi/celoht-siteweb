@@ -15,19 +15,23 @@ export const metadata: Metadata = {
 const paths = [
   {
     title: "Learn",
-    detail: "Discover Web3, digital payments, blockchain, and the CeloHT ecosystem.",
+    detail:
+      "Discover Web3, digital payments, blockchain, and the CeloHT ecosystem.",
   },
   {
     title: "Participate",
-    detail: "Take part in community, education, environmental, and entrepreneurship initiatives.",
+    detail:
+      "Take part in community, education, environmental, and entrepreneurship initiatives.",
   },
   {
     title: "Become an agent",
-    detail: "Discover how to bring digital and financial services closer to local communities.",
+    detail:
+      "Discover how to bring digital and financial services closer to local communities.",
   },
   {
     title: "Share an initiative",
-    detail: "Propose an idea, initiative, or collaboration that could advance CeloHT's mission.",
+    detail:
+      "Propose an idea, initiative, or collaboration that could advance CeloHT's mission.",
   },
 ];
 
@@ -53,7 +57,9 @@ export default function CommunityPage() {
               key={path.title}
               className="flex flex-col rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10"
             >
-              <h3 className="font-display text-2xl font-semibold">{path.title}</h3>
+              <h3 className="font-display text-2xl font-semibold">
+                {path.title}
+              </h3>
               <p className="mt-2 flex-1 text-sm text-ink-soft dark:text-parchment-100/70">
                 {path.detail}
               </p>
@@ -76,7 +82,11 @@ export default function CommunityPage() {
                 href={channel.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={channel.label === "Discord" ? "Join CeloHT on Discord" : channel.label}
+                aria-label={
+                  channel.label === "Discord"
+                    ? "Join CeloHT on Discord"
+                    : channel.label
+                }
                 className="inline-flex items-center rounded-full border border-navy-700/20 px-4 py-2 text-sm hover:bg-navy-700/10 dark:border-parchment-100/20 dark:hover:bg-parchment-100/10"
               >
                 {channel.label}
@@ -85,7 +95,6 @@ export default function CommunityPage() {
           ))}
         </ul>
       </Section>
-
     </>
   );
 }

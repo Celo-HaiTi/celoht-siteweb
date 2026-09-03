@@ -16,7 +16,9 @@ describe("PillarCard", () => {
     );
 
     expect(screen.getByText("Education")).toBeInTheDocument();
-    expect(screen.getByText("Financial literacy and Web3 fundamentals.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Financial literacy and Web3 fundamentals."),
+    ).toBeInTheDocument();
     expect(screen.getByRole("link")).toHaveAttribute("href", "/education");
   });
 });

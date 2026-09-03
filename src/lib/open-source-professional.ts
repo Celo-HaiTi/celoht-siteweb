@@ -21,27 +21,33 @@ export type Principle = {
 export const openSourcePrinciples: Principle[] = [
   {
     title: "Transparency",
-    description: "Important public information is documented and made accessible.",
+    description:
+      "Important public information is documented and made accessible.",
   },
   {
     title: "Verifiability",
-    description: "Public claims should be supported by information that can be independently examined.",
+    description:
+      "Public claims should be supported by information that can be independently examined.",
   },
   {
     title: "Accountability",
-    description: "Project decisions, policies and development status should be clearly documented.",
+    description:
+      "Project decisions, policies and development status should be clearly documented.",
   },
   {
     title: "Documentation",
-    description: "Important knowledge should exist in durable public documentation.",
+    description:
+      "Important knowledge should exist in durable public documentation.",
   },
   {
     title: "Open Development",
-    description: "The project should distinguish publicly between current work, planned work and completed work.",
+    description:
+      "The project should distinguish publicly between current work, planned work and completed work.",
   },
   {
     title: "Long-Term Sustainability",
-    description: "Public documentation and infrastructure should remain understandable and maintainable over time.",
+    description:
+      "Public documentation and infrastructure should remain understandable and maintainable over time.",
   },
 ];
 
@@ -64,37 +70,43 @@ export const whatWePublic: PublicResource[] = [
   {
     title: "Documentation",
     icon: "BookOpen",
-    description: "Architecture, technical references, educational resources and project documentation.",
+    description:
+      "Architecture, technical references, educational resources and project documentation.",
     internalLink: "/docs",
   },
   {
     title: "Governance",
     icon: "Users",
-    description: "Public governance principles, decision frameworks and organizational documentation.",
+    description:
+      "Public governance principles, decision frameworks and organizational documentation.",
     internalLink: "/governance",
   },
   {
     title: "Security",
     icon: "ShieldCheck",
-    description: "Security policies, responsible disclosure and security practices.",
+    description:
+      "Security policies, responsible disclosure and security practices.",
     internalLink: "/security",
   },
   {
     title: "Research",
     icon: "Search",
-    description: "Technical research, specifications, analysis and evidence-based work.",
+    description:
+      "Technical research, specifications, analysis and evidence-based work.",
     internalLink: "/research",
   },
   {
     title: "Education",
     icon: "Lightbulb",
-    description: "Educational resources related to blockchain, digital finance and CeloHT programs.",
+    description:
+      "Educational resources related to blockchain, digital finance and CeloHT programs.",
     internalLink: "/education",
   },
   {
     title: "Policies",
     icon: "FileText",
-    description: "Public rules covering governance, security, privacy, accessibility and other relevant areas.",
+    description:
+      "Public rules covering governance, security, privacy, accessibility and other relevant areas.",
     internalLink: "/open-source#policies",
   },
   {
@@ -106,14 +118,16 @@ export const whatWePublic: PublicResource[] = [
   {
     title: "Brand Resources",
     icon: "Lightbulb",
-    description: "Official visual identity, brand story and public media resources.",
+    description:
+      "Official visual identity, brand story and public media resources.",
     internalLink: "/brand-identity",
   },
 ];
 
 // === PROJECT STATUS ===
 
-export type ProjectStatus = "ACTIVE" | "IN_DEVELOPMENT" | "PLANNED" | "EXPERIMENTAL" | "ARCHIVED";
+export type ProjectStatus =
+  "ACTIVE" | "IN_DEVELOPMENT" | "PLANNED" | "EXPERIMENTAL" | "ARCHIVED";
 
 export type PublicProject = {
   name: string;
@@ -128,14 +142,16 @@ export type PublicProject = {
 export const publicProjects: PublicProject[] = [
   {
     name: "CeloHT Core",
-    purpose: "Flagship project repository containing fundamental information about CeloHT's direction, governance, and ecosystem context.",
+    purpose:
+      "Flagship project repository containing fundamental information about CeloHT's direction, governance, and ecosystem context.",
     role: "Central documentation and governance repository",
     status: "ACTIVE",
     documentation: GITHUB_FLAGSHIP_URL,
   },
   {
     name: "CeloHT Website",
-    purpose: "Official static-first website built for transparency, documentation, and direct community communication.",
+    purpose:
+      "Official static-first website built for transparency, documentation, and direct community communication.",
     role: "Public information layer",
     status: "ACTIVE",
     technology: "TypeScript / Next.js",
@@ -143,14 +159,16 @@ export const publicProjects: PublicProject[] = [
   },
   {
     name: "CeloHT Documentation",
-    purpose: "Comprehensive technical documentation, architecture guides, APIs, and educational materials.",
+    purpose:
+      "Comprehensive technical documentation, architecture guides, APIs, and educational materials.",
     role: "Technical knowledge base",
     status: "ACTIVE",
     documentation: GITHUB_DOCS_URL,
   },
   {
     name: "CeloHT DApp",
-    purpose: "Public DApp providing services, education interfaces, and participation mechanisms.",
+    purpose:
+      "Public DApp providing services, education interfaces, and participation mechanisms.",
     role: "Public application layer",
     status: "ACTIVE",
     technology: "TypeScript / Web3",
@@ -158,7 +176,8 @@ export const publicProjects: PublicProject[] = [
   },
   {
     name: "CeloHT Smart Contracts",
-    purpose: "Solidity contracts for education programs, community agents, impact tracking, and infrastructure.",
+    purpose:
+      "Solidity contracts for education programs, community agents, impact tracking, and infrastructure.",
     role: "On-chain infrastructure",
     status: "ACTIVE",
     technology: "Solidity",
@@ -166,21 +185,24 @@ export const publicProjects: PublicProject[] = [
   },
   {
     name: "CeloHT Research",
-    purpose: "Research papers, RFCs, technical specifications, security studies, and evidence-based analysis.",
+    purpose:
+      "Research papers, RFCs, technical specifications, security studies, and evidence-based analysis.",
     role: "Technical research and analysis",
     status: "ACTIVE",
     documentation: GITHUB_RESEARCH_URL,
   },
   {
     name: "CeloHT Brand",
-    purpose: "Official logos, brand guidelines, messaging standards, typography, colors, and media assets.",
+    purpose:
+      "Official logos, brand guidelines, messaging standards, typography, colors, and media assets.",
     role: "Visual and brand resources",
     status: "ACTIVE",
     documentation: GITHUB_BRAND_URL,
   },
   {
     name: "CeloHT Demo",
-    purpose: "Interactive demonstration of CeloHT wallet, education interfaces, agents, and workflows.",
+    purpose:
+      "Interactive demonstration of CeloHT wallet, education interfaces, agents, and workflows.",
     role: "Interactive demonstration",
     status: "EXPERIMENTAL",
     technology: "TypeScript",
@@ -202,7 +224,10 @@ export const documentationCategories: DocumentationCategory[] = [
     description: "How the public CeloHT ecosystem is structured.",
     items: [
       { label: "System Architecture", href: "/technology" },
-      { label: "Smart Contract Architecture", href: "/technology/smart-contracts" },
+      {
+        label: "Smart Contract Architecture",
+        href: "/technology/smart-contracts",
+      },
     ],
   },
   {
@@ -216,30 +241,22 @@ export const documentationCategories: DocumentationCategory[] = [
   {
     title: "Governance Documentation",
     description: "Public governance information.",
-    items: [
-      { label: "Governance Framework", href: "/governance" },
-    ],
+    items: [{ label: "Governance Framework", href: "/governance" }],
   },
   {
     title: "Security Documentation",
     description: "Security policies and procedures.",
-    items: [
-      { label: "Security Policy", href: "/security" },
-    ],
+    items: [{ label: "Security Policy", href: "/security" }],
   },
   {
     title: "Education",
     description: "Educational resources.",
-    items: [
-      { label: "Education Resources", href: "/education" },
-    ],
+    items: [{ label: "Education Resources", href: "/education" }],
   },
   {
     title: "Research",
     description: "Research and technical analysis.",
-    items: [
-      { label: "Research Repository", href: "/research" },
-    ],
+    items: [{ label: "Research Repository", href: "/research" }],
   },
 ];
 
@@ -255,13 +272,15 @@ export type GovernanceSection = {
 export const governanceInfo: GovernanceSection[] = [
   {
     title: "Organizational Structure",
-    description: "CeloHT's organization is documented in the public governance repository.",
+    description:
+      "CeloHT's organization is documented in the public governance repository.",
     status: "OPERATIONAL",
     link: "/governance",
   },
   {
     title: "Decision-Making Principles",
-    description: "Public principles guide decision-making and organizational evolution.",
+    description:
+      "Public principles guide decision-making and organizational evolution.",
     status: "OPERATIONAL",
     link: "/governance",
   },
@@ -285,7 +304,8 @@ export type TransparencyArea = {
 export const transparencyAreas: TransparencyArea[] = [
   {
     title: "Project Transparency",
-    description: "Current work is distinguished from planned work and completed work.",
+    description:
+      "Current work is distinguished from planned work and completed work.",
     status: "ACTIVE",
     link: "/roadmap",
   },
@@ -552,11 +572,16 @@ export const publicResourceDirectory: ResourceCategory[] = [
 
 export function getStatusColor(status: ProjectStatus): string {
   const colors: Record<ProjectStatus, string> = {
-    ACTIVE: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
-    IN_DEVELOPMENT: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30",
-    PLANNED: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
-    EXPERIMENTAL: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30",
-    ARCHIVED: "bg-gray-500/10 text-gray-600 dark:text-gray-400 border-gray-500/30",
+    ACTIVE:
+      "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+    IN_DEVELOPMENT:
+      "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30",
+    PLANNED:
+      "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
+    EXPERIMENTAL:
+      "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30",
+    ARCHIVED:
+      "bg-gray-500/10 text-gray-600 dark:text-gray-400 border-gray-500/30",
   };
   return colors[status];
 }

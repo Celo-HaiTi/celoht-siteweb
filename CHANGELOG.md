@@ -14,24 +14,24 @@ All notable changes to the CeloHT website are documented here, following
 
 ### Added
 
-  posts), covering every page in the requested site structure  -  Home,
-  About, Mission, Vision, Education, Agent Network, Reforestation,
-  Technology, Impact, Community, Partners, Roadmap, Governance,
-  Transparency, Documentation, Media Kit, Blog, News, FAQ,
-  Support, Donate, Contact, Privacy, Terms, Cookies, Security,
-  Accessibility, Code of Conduct, and a custom 404.
-  mobile menu, linking to `NEXT_PUBLIC_DAPP_URL`.
-  `prefers-reduced-motion`.
-  worker for offline resilience of static assets.
-  JSON-LD (Organization on the homepage, FAQPage on `/faq`),
-  `sitemap.xml`, `robots.txt`.
-  test suite (Playwright, 3 spec files covering navigation, theming, and
-  search).
-  Lighthouse CI workflow.
+posts), covering every page in the requested site structure - Home,
+About, Mission, Vision, Education, Agent Network, Reforestation,
+Technology, Impact, Community, Partners, Roadmap, Governance,
+Transparency, Documentation, Media Kit, Blog, News, FAQ,
+Support, Donate, Contact, Privacy, Terms, Cookies, Security,
+Accessibility, Code of Conduct, and a custom 404.
+mobile menu, linking to `NEXT_PUBLIC_DAPP_URL`.
+`prefers-reduced-motion`.
+worker for offline resilience of static assets.
+JSON-LD (Organization on the homepage, FAQPage on `/faq`),
+`sitemap.xml`, `robots.txt`.
+test suite (Playwright, 3 spec files covering navigation, theming, and
+search).
+Lighthouse CI workflow.
 
 ### Removed
 
-  zero at the maintainers' request, after the prior build was found not
-  to meet quality expectations.
+zero at the maintainers' request, after the prior build was found not
+to meet quality expectations.
 [Unreleased]: https://github.com/Celo-HaiTi/celoht-siteweb/compare/main...HEAD
 [2.0.0]: https://github.com/Celo-HaiTi/celoht-siteweb/releases/tag/v2.0.0

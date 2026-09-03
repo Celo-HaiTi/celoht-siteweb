@@ -1,8 +1,19 @@
 "use client";
 
-import { Activity, AlertTriangle, ArrowUpRight, CircleDollarSign, Coins } from "lucide-react";
+import {
+  Activity,
+  AlertTriangle,
+  ArrowUpRight,
+  CircleDollarSign,
+  Coins,
+} from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { getCachedLiveData, isLiveDataStale, refreshLiveData, type LiveData } from "@/lib/live-data";
+import {
+  getCachedLiveData,
+  isLiveDataStale,
+  refreshLiveData,
+  type LiveData,
+} from "@/lib/live-data";
 
 type LiveState = LiveData & {
   loading: boolean;
@@ -70,21 +81,40 @@ function AssetTile({
             {label}
           </p>
           <div className="mt-3 flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-navy-950 text-gold-300" aria-hidden="true">
-              {icon === "celo" ? <Coins size={16} /> : <CircleDollarSign size={16} />}
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-navy-950 text-gold-300"
+              aria-hidden="true"
+            >
+              {icon === "celo" ? (
+                <Coins size={16} />
+              ) : (
+                <CircleDollarSign size={16} />
+              )}
             </span>
-            <span className="font-display text-xl font-semibold text-parchment-50">{symbol}</span>
+            <span className="font-display text-xl font-semibold text-parchment-50">
+              {symbol}
+            </span>
           </div>
         </div>
-        <span className={`inline-flex items-center gap-1 rounded-full px-2 py-1 text-[0.62rem] font-semibold ring-1 ${accentClass}`}>
-          {state === "down" ? <ArrowUpRight size={10} aria-hidden="true" className="rotate-90" /> : <ArrowUpRight size={10} aria-hidden="true" />}
+        <span
+          className={`inline-flex items-center gap-1 rounded-full px-2 py-1 text-[0.62rem] font-semibold ring-1 ${accentClass}`}
+        >
+          {state === "down" ? (
+            <ArrowUpRight size={10} aria-hidden="true" className="rotate-90" />
+          ) : (
+            <ArrowUpRight size={10} aria-hidden="true" />
+          )}
           {change}
         </span>
       </div>
 
       <div className="mt-5">
-        <p className="text-2xl font-semibold leading-none tracking-tight text-parchment-50 sm:text-3xl">{value}</p>
-        <p className="mt-3 text-[0.7rem] uppercase tracking-[0.14em] text-parchment-100/55">{updatedAt}</p>
+        <p className="text-2xl font-semibold leading-none tracking-tight text-parchment-50 sm:text-3xl">
+          {value}
+        </p>
+        <p className="mt-3 text-[0.7rem] uppercase tracking-[0.14em] text-parchment-100/55">
+          {updatedAt}
+        </p>
       </div>
     </article>
   );
@@ -145,7 +175,10 @@ export function LiveInfoBar() {
     }, 0);
 
     const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible" && isLiveDataStale(getCachedLiveData())) {
+      if (
+        document.visibilityState === "visible" &&
+        isLiveDataStale(getCachedLiveData())
+      ) {
         void load();
       }
       scheduleRefresh();
@@ -162,7 +195,9 @@ export function LiveInfoBar() {
   }, []);
 
   const marketData = useMemo<MarketTile[]>(() => {
-    const tileState = (value: number | null): "up" | "down" | "neutral" | "error" => {
+    const tileState = (
+      value: number | null,
+    ): "up" | "down" | "neutral" | "error" => {
       if (value === null) return "error";
       return value >= 0 ? "up" : "down";
     };
@@ -192,21 +227,35 @@ export function LiveInfoBar() {
   const isShowingError = state.marketError || !state.celo || !state.usdm;
 
   return (
-    <section aria-label="Live CeloHT market data" aria-live="polite" className="border-b border-parchment-100/10 bg-navy-950 text-parchment-50">
+    <section
+      aria-label="Live CeloHT market data"
+      aria-live="polite"
+      className="border-b border-parchment-100/10 bg-navy-950 text-parchment-50"
+    >
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-parchment-100/70">
             <Activity size={10} aria-hidden="true" className="text-gold-300" />
             Live market
           </div>
-          <p className="text-[0.62rem] text-parchment-100/60">Real-time Celo ecosystem market data</p>
+          <p className="text-[0.62rem] text-parchment-100/60">
+            Real-time Celo ecosystem market data
+          </p>
         </div>
 
         {state.loading && !state.celo && !state.usdm ? (
-          <div role="status" aria-live="polite" aria-label="Loading live market data" className="grid gap-3 md:grid-cols-2">
+          <div
+            role="status"
+            aria-live="polite"
+            aria-label="Loading live market data"
+            className="grid gap-3 md:grid-cols-2"
+          >
             <span className="sr-only">Loading live market data</span>
             {Array.from({ length: 2 }).map((_, index) => (
-              <div key={index} className="animate-pulse rounded-2xl border border-parchment-100/15 bg-navy-900/80 p-5">
+              <div
+                key={index}
+                className="animate-pulse rounded-2xl border border-parchment-100/15 bg-navy-900/80 p-5"
+              >
                 <div className="h-3 w-20 rounded bg-parchment-100/15" />
                 <div className="mt-4 h-8 w-28 rounded bg-parchment-100/15" />
                 <div className="mt-5 h-4 w-32 rounded bg-parchment-100/15" />
@@ -216,8 +265,16 @@ export function LiveInfoBar() {
         ) : (
           <>
             {isShowingError ? (
-              <div className="mb-3 flex items-center gap-2 rounded-xl border border-gold-500/20 bg-gold-500/10 px-3 py-2 text-sm text-parchment-100/80" role="status" aria-live="polite">
-                <AlertTriangle size={16} aria-hidden="true" className="text-gold-300" />
+              <div
+                className="mb-3 flex items-center gap-2 rounded-xl border border-gold-500/20 bg-gold-500/10 px-3 py-2 text-sm text-parchment-100/80"
+                role="status"
+                aria-live="polite"
+              >
+                <AlertTriangle
+                  size={16}
+                  aria-hidden="true"
+                  className="text-gold-300"
+                />
                 Market data is temporarily unavailable.
               </div>
             ) : null}

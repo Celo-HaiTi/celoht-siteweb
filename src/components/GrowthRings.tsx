@@ -8,7 +8,12 @@ type Props = { className?: string };
  */
 export function GrowthRings({ className }: Props) {
   return (
-    <svg viewBox="0 0 480 480" fill="none" aria-hidden="true" className={className}>
+    <svg
+      viewBox="0 0 480 480"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
       <circle
         cx="240"
         cy="240"

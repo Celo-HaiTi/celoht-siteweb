@@ -22,7 +22,12 @@ const topics = [
 export default function FinancialTransparencyPage() {
   return (
     <>
-      <Breadcrumbs items={[{ label: "Transparency", href: "/transparency" }, { label: "Financial" }]} />
+      <Breadcrumbs
+        items={[
+          { label: "Transparency", href: "/transparency" },
+          { label: "Financial" },
+        ]}
+      />
       <PageHero
         eyebrow="Financial transparency"
         title="Clear public reporting without sharing sensitive private detail"
@@ -32,7 +37,10 @@ export default function FinancialTransparencyPage() {
       <Section eyebrow="What this includes" title="The public-facing model">
         <div className="grid gap-3 md:grid-cols-2">
           {topics.map((item) => (
-            <div key={item} className="rounded-xl border border-navy-700/15 p-4 text-sm text-ink-soft">
+            <div
+              key={item}
+              className="rounded-xl border border-navy-700/15 p-4 text-sm text-ink-soft"
+            >
               {item}
             </div>
           ))}
@@ -42,10 +50,16 @@ export default function FinancialTransparencyPage() {
       <Section eyebrow="Key principle" title="No hidden allocation">
         <div className="max-w-3xl space-y-4 text-ink-soft">
           <p>
-            Transparency is more important than perfect reporting in one moment. The goal is to make the logic of funding and allocation understandable to ordinary users, even when a project does not publish every internal financial detail in public.
+            Transparency is more important than perfect reporting in one moment.
+            The goal is to make the logic of funding and allocation
+            understandable to ordinary users, even when a project does not
+            publish every internal financial detail in public.
           </p>
           <p>
-            That means distinguishing between genuinely public information, operationally sensitive information, and future reporting priorities. CeloHT does not invent revenue, user growth, or treasury figures it cannot verify.
+            That means distinguishing between genuinely public information,
+            operationally sensitive information, and future reporting
+            priorities. CeloHT does not invent revenue, user growth, or treasury
+            figures it cannot verify.
           </p>
         </div>
       </Section>

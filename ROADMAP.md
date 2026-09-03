@@ -4,7 +4,7 @@ This roadmap covers the website specifically. For the ecosystem-wide
 roadmap, see the flagship repository's
 [`ROADMAP.md`](https://github.com/Celo-HaiTi/CeloHT/blob/main/ROADMAP.md).
 
-## Phase 1  -  Foundation (current)
+## Phase 1 - Foundation (current)
 
 - [x] Full 33-page site: all core pages, blog (MDX), Launch dApp entry points
 - [x] Light/dark theme, site search, PWA manifest + service worker
@@ -13,7 +13,7 @@ roadmap, see the flagship repository's
 - [x] Unit test suite (Vitest) and e2e test suite (Playwright, config + specs)
 - [x] CI/CD: build/lint/typecheck/test workflow, CodeQL, Dependabot
 
-## Phase 2  -  Validation
+## Phase 2 - Validation
 
 - [ ] Automated accessibility auditing (axe-core) in CI
 - [ ] Lighthouse CI running against key pages with a defined score budget
@@ -23,7 +23,7 @@ roadmap, see the flagship repository's
 - [ ] Internationalization: Spanish translation, following the flagship
       repository's Caribbean expansion plan
 
-## Phase 3  -  Growth
+## Phase 3 - Growth
 
 - [ ] Real map integration on any location-based content (coordinating
       with the dApp's agent map)
