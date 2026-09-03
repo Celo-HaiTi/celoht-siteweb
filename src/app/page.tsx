@@ -6,6 +6,7 @@ import {
   Code2,
   Globe2,
   Leaf,
+  LockKeyhole,
   UsersRound,
   WalletCards,
 } from "lucide-react";
@@ -169,98 +170,8 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[2rem] border border-navy-700/15 bg-navy-950 p-4 shadow-[0_24px_80px_rgba(2,12,24,0.18)] sm:p-6">
-              <div className="mb-5 flex items-center justify-between gap-4">
-                <div>
-                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-300">
-                    CeloHT Platform
-                  </p>
-                  <p className="mt-2 text-lg font-semibold text-parchment-50">
-                    Wallet access and community tools
-                  </p>
-                </div>
-                <span className="inline-flex items-center gap-2 rounded-full border border-forest-500/35 bg-forest-500/10 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-forest-300">
-                  <span
-                    className="h-1.5 w-1.5 rounded-full bg-forest-400"
-                    aria-hidden="true"
-                  />
-                  Celo Mainnet
-                </span>
-              </div>
-
-              <div className="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
-                <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">
-                      Wallet
-                    </p>
-                    <Link
-                      href={DAPP_URL}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-full bg-gold-500 px-3 py-1.5 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-navy-950"
-                    >
-                      Open Wallet
-                    </Link>
-                  </div>
-                  <div className="mt-4 rounded-xl border border-dashed border-parchment-100/15 bg-navy-800/80 p-3 text-sm text-parchment-100/70">
-                    No wallet connected yet.
-                  </div>
-                  <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-parchment-100/75">
-                    <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
-                      <p>CELO</p>
-                      <p className="mt-2 font-bold text-parchment-50">—</p>
-                    </div>
-                    <div className="rounded-xl border border-parchment-100/10 bg-navy-800 p-3">
-                      <p>USDm</p>
-                      <p className="mt-2 font-bold text-parchment-50">—</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
-                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">
-                      Quick actions
-                    </p>
-                    <div className="mt-3 space-y-2 text-sm text-parchment-50">
-                      <Link
-                        href="/education"
-                        className="block rounded-lg border border-parchment-100/10 bg-navy-800/75 px-3 py-2 hover:border-gold-500/40"
-                      >
-                        Learn
-                      </Link>
-                      <Link
-                        href="/agent-network"
-                        className="block rounded-lg border border-parchment-100/10 bg-navy-800/75 px-3 py-2 hover:border-gold-500/40"
-                      >
-                        Agents
-                      </Link>
-                      <Link
-                        href="/reforestation"
-                        className="block rounded-lg border border-parchment-100/10 bg-navy-800/75 px-3 py-2 hover:border-gold-500/40"
-                      >
-                        Reforest
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-parchment-100/15 bg-navy-900 p-4">
-                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-parchment-100/55">
-                      Education
-                    </p>
-                    <p className="mt-3 text-base font-semibold text-parchment-50">
-                      Continue learning
-                    </p>
-                    <p className="mt-1 text-xs text-parchment-100/65">
-                      Course modules and wallet foundations.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-[2rem] border border-navy-700/15 bg-white p-6 shadow-[0_24px_80px_rgba(2,12,24,0.08)]">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">
+            <div className="rounded-[1.75rem] border border-navy-700/15 bg-white p-6 shadow-[0_24px_80px_rgba(2,12,24,0.08)] sm:p-8">
               <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-gold-800">
                 Product foundations
               </p>
@@ -287,9 +198,176 @@ export default function HomePage() {
                 href="/dapp"
                 className="mt-8 inline-flex items-center gap-2 font-semibold text-ink underline-offset-4 hover:underline"
               >
-                Learn more about the platform{" "}
+                Learn more about the platform
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
+            </div>
+
+            <div className="celoht-phone-stage flex justify-center lg:justify-end">
+              <div className="celoht-phone-shell relative w-full max-w-[24rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2 shadow-[0_32px_90px_rgba(2,12,24,0.32)] sm:p-2.5">
+                <div
+                  className="celoht-phone-frame pointer-events-none absolute inset-0 rounded-[3rem] border border-gold-300/15"
+                  aria-hidden="true"
+                />
+                <div className="celoht-phone-screen relative overflow-hidden rounded-[2.45rem] border border-white/10 bg-navy-950">
+                  <div
+                    className="celoht-phone-island absolute left-1/2 top-3 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-[#050b14] shadow-inner shadow-white/5"
+                    aria-hidden="true"
+                  />
+                  <div className="px-5 pb-6 pt-12 sm:px-6">
+                    <div className="flex items-center justify-between text-[0.58rem] text-parchment-100/55">
+                      <span className="font-mono">09:41</span>
+                      <span className="inline-flex items-center gap-1.5">
+                        <LockKeyhole size={10} aria-hidden="true" /> Secure
+                        preview
+                      </span>
+                    </div>
+                    <div className="mt-7 flex items-end justify-between gap-3">
+                      <div>
+                        <p className="font-mono text-[0.58rem] uppercase tracking-[0.18em] text-gold-300">
+                          CeloHT Platform
+                        </p>
+                        <p className="mt-2 font-display text-2xl font-semibold text-parchment-50">
+                          Your access layer.
+                        </p>
+                        <p className="mt-1 text-[0.62rem] leading-5 text-parchment-100/60">
+                          Wallet access and community tools
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-end gap-2">
+                        <span className="celoht-demo-badge rounded-full border border-gold-300/25 bg-gold-500/10 px-2 py-1 font-mono text-[0.52rem] uppercase tracking-[0.14em] text-gold-300">
+                          Preview
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 text-[0.55rem] text-forest-400">
+                          <span
+                            className="h-1.5 w-1.5 rounded-full bg-forest-400"
+                            aria-hidden="true"
+                          />
+                          Celo Mainnet
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 rounded-2xl border border-gold-300/20 bg-[linear-gradient(145deg,rgba(248,211,79,0.16),rgba(13,33,55,0.86))] p-4">
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                          Wallet
+                        </p>
+                        <div className="flex items-center gap-2">
+                          <WalletCards
+                            size={15}
+                            className="text-gold-300"
+                            aria-hidden="true"
+                          />
+                          <Link
+                            href={DAPP_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="rounded-full bg-gold-500 px-2.5 py-1.5 text-[0.52rem] font-semibold uppercase tracking-[0.1em] text-navy-950 hover:bg-gold-300"
+                          >
+                            Open Wallet
+                          </Link>
+                        </div>
+                      </div>
+                      <p className="mt-5 font-mono text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                        Available balance
+                      </p>
+                      <p className="mt-1 font-display text-3xl font-semibold text-parchment-50">
+                        —
+                      </p>
+                      <p className="mt-2 text-xs text-parchment-100/60">
+                        No wallet connected yet.
+                      </p>
+                    </div>
+
+                    <div className="mt-4 grid grid-cols-2 gap-3">
+                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900 p-3">
+                        <p className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                          CELO
+                        </p>
+                        <p className="mt-2 font-display text-lg font-semibold text-parchment-50">
+                          —
+                        </p>
+                      </div>
+                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900 p-3">
+                        <p className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                          USDm
+                        </p>
+                        <p className="mt-2 font-display text-lg font-semibold text-parchment-50">
+                          —
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 rounded-2xl border border-parchment-100/10 bg-navy-900/75 p-4">
+                      <div className="flex items-center justify-between gap-3">
+                        <div>
+                          <p className="font-mono text-[0.55rem] uppercase tracking-[0.16em] text-parchment-100/50">
+                            Sessions
+                          </p>
+                          <p className="mt-2 font-display text-xl font-semibold text-parchment-50">
+                            03{" "}
+                            <span className="text-sm font-normal text-parchment-100/55">
+                              Active
+                            </span>
+                          </p>
+                        </div>
+                        <span
+                          className="h-2 w-2 rounded-full bg-forest-400 shadow-[0_0_0_4px_rgba(111,196,155,0.12)]"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="mt-4 space-y-2">
+                        {[
+                          ["CeloHT Preview", "Celo Mainnet"],
+                          ["Valora Preview", "Celo Mainnet"],
+                          ["MiniPay Preview", "Celo Mainnet"],
+                        ].map(([name, network]) => (
+                          <div
+                            key={name}
+                            className="flex items-center justify-between gap-2 border-t border-parchment-100/10 pt-2 text-[0.62rem]"
+                          >
+                            <span className="text-parchment-100/80">
+                              {name}
+                            </span>
+                            <span className="text-forest-400">{network}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <p className="mt-5 font-mono text-[0.55rem] uppercase tracking-[0.16em] text-parchment-100/45">
+                      Quick actions
+                    </p>
+                    <div className="mt-3 grid grid-cols-3 gap-2">
+                      {[
+                        ["Learn", "/education"],
+                        ["Agents", "/agent-network"],
+                        ["Reforest", "/reforestation"],
+                      ].map(([label, href]) => (
+                        <Link
+                          key={label}
+                          href={href}
+                          className="rounded-xl border border-parchment-100/10 bg-navy-900 px-2 py-2.5 text-center text-[0.62rem] font-semibold text-parchment-50 hover:border-gold-500/40 hover:text-gold-300"
+                        >
+                          {label}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-4 rounded-xl border border-parchment-100/10 bg-navy-900 px-3 py-3">
+                      <p className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                        Education
+                      </p>
+                      <p className="mt-2 text-sm font-semibold text-parchment-50">
+                        Continue learning
+                      </p>
+                      <p className="mt-1 text-[0.62rem] leading-5 text-parchment-100/60">
+                        Course modules and wallet foundations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

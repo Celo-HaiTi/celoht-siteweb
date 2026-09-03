@@ -184,6 +184,46 @@ button {
   min-height: 12rem;
 }
 
+.celoht-phone-stage {
+  perspective: 1200px;
+}
+
+.celoht-phone-shell {
+  animation: celoht-phone-enter 700ms 120ms ease-out both;
+  transform: rotateY(-5deg) rotateX(1deg);
+  will-change: transform;
+}
+
+.celoht-phone-shell::after {
+  position: absolute;
+  inset: 0.35rem;
+  border-radius: 2.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  content: "";
+  pointer-events: none;
+}
+
+.celoht-phone-frame {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset -5px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.celoht-phone-screen {
+  min-height: 39rem;
+}
+
+@keyframes celoht-phone-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) rotateY(-5deg) rotateX(1deg) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(-5deg) rotateX(1deg) scale(1);
+  }
+}
+
 @media (max-width: 639px) {
   .celoht-step-card {
     min-height: auto;
@@ -197,6 +237,11 @@ button {
   .celoht-resource-card,
   .celoht-market-card {
     transition: none;
+  }
+
+  .celoht-phone-shell {
+    animation: none;
+    transform: none;
   }
 
   .celoht-pillar-card:hover,
