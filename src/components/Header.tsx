@@ -14,16 +14,18 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-parchment-100/15 bg-navy-950/90 text-parchment-50 shadow-[0_8px_30px_rgba(1,8,18,0.18)] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:py-4">
-        <Link href="/" className="group flex items-center gap-3 rounded-md">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:py-4">
+        <Link href="/" className="group flex min-w-0 shrink items-center gap-3 rounded-md">
           <Image
             src={assetPath("/celoht-logo.png")}
             alt="CeloHT"
             width={38}
             height={38}
-            className="rounded-xl ring-1 ring-gold-300/20 transition-transform duration-300 group-hover:scale-105"
+            className="h-auto w-[clamp(2rem,8vw,2.375rem)] max-w-full shrink-0 rounded-xl ring-1 ring-gold-300/20 transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="font-display text-xl font-semibold tracking-tight text-parchment-50 transition-colors group-hover:text-gold-300">CeloHT</span>
+          <span className="min-w-0 truncate font-display text-xl font-semibold tracking-tight text-parchment-50 transition-colors group-hover:text-gold-300">
+            CeloHT
+          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">
@@ -49,7 +51,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+  <div className="flex shrink-0 items-center gap-2">
           <a
             href={DAPP_URL}
             target="_blank"
