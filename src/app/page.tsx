@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
+  ArrowDownToLine,
+  ArrowUpFromLine,
   BookOpen,
   Code2,
   Globe2,
@@ -303,13 +305,10 @@ export default function HomePage() {
                       <div className="flex items-center justify-between gap-3">
                         <div>
                           <p className="font-mono text-[0.55rem] uppercase tracking-[0.16em] text-parchment-100/50">
-                            Sessions
+                            Wallet actions
                           </p>
-                          <p className="mt-2 font-display text-xl font-semibold text-parchment-50">
-                            03{" "}
-                            <span className="text-sm font-normal text-parchment-100/55">
-                              Active
-                            </span>
+                          <p className="mt-2 text-xs text-parchment-100/60">
+                            Move value across the Celo ecosystem.
                           </p>
                         </div>
                         <span
@@ -317,22 +316,21 @@ export default function HomePage() {
                           aria-hidden="true"
                         />
                       </div>
-                      <div className="mt-4 space-y-2">
-                        {[
-                          ["CeloHT Preview", "Celo Mainnet"],
-                          ["Valora Preview", "Celo Mainnet"],
-                          ["MiniPay Preview", "Celo Mainnet"],
-                        ].map(([name, network]) => (
-                          <div
-                            key={name}
-                            className="flex items-center justify-between gap-2 border-t border-parchment-100/10 pt-2 text-[0.62rem]"
-                          >
-                            <span className="text-parchment-100/80">
-                              {name}
-                            </span>
-                            <span className="text-forest-400">{network}</span>
-                          </div>
-                        ))}
+                      <div className="mt-4 grid grid-cols-2 gap-2">
+                        <button
+                          type="button"
+                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gold-300/25 bg-gold-500/10 px-2 py-2.5 text-[0.62rem] font-semibold text-gold-300 hover:border-gold-300 hover:bg-gold-500/20"
+                        >
+                          <ArrowUpFromLine size={13} aria-hidden="true" />
+                          Send
+                        </button>
+                        <button
+                          type="button"
+                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-parchment-100/15 bg-parchment-100/5 px-2 py-2.5 text-[0.62rem] font-semibold text-parchment-50 hover:border-gold-300 hover:text-gold-300"
+                        >
+                          <ArrowDownToLine size={13} aria-hidden="true" />
+                          Receive
+                        </button>
                       </div>
                     </div>
 
