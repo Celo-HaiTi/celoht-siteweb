@@ -80,9 +80,9 @@ alias for `GITHUB_PAGES`.
 
 ## Security Headers & CSP
 
-Set in `next.config.ts`. If you add a third-party script or font
-provider, update the relevant CSP directive there rather than loosening
-it broadly.
+For static hosting, configure security headers at the hosting provider or
+reverse proxy. If you add a third-party script or font provider, update the
+CSP there rather than loosening it broadly.
 
 ## CI/CD
 
