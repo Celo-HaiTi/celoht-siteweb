@@ -207,41 +207,41 @@ export default function HomePage() {
             </div>
 
             <div className="celoht-phone-stage flex justify-center lg:justify-end">
-              <div className="celoht-phone-shell relative w-full max-w-[24rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2 shadow-[0_32px_90px_rgba(2,12,24,0.32)] sm:p-2.5">
+              <div className="celoht-phone-shell relative w-full max-w-[24rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2.5 shadow-[0_32px_90px_rgba(2,12,24,0.32)] sm:p-3">
                 <div
-                  className="celoht-phone-frame pointer-events-none absolute inset-0 rounded-[3rem] border border-gold-300/15"
+                  className="celoht-phone-frame pointer-events-none absolute inset-0 rounded-[3rem] border border-gold-300/10"
                   aria-hidden="true"
                 />
-                <div className="celoht-phone-screen relative overflow-hidden rounded-[2.45rem] border border-white/10 bg-navy-950">
+                <div className="celoht-phone-screen relative overflow-hidden rounded-[2.45rem] border border-white/10 bg-gradient-to-b from-navy-950 to-[#0a1420] shadow-inner">
                   <div
-                    className="celoht-phone-island absolute left-1/2 top-3 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-[#050b14] shadow-inner shadow-white/5"
+                    className="celoht-island absolute left-1/2 top-3 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-[#050b14] shadow-[inset_0_1px_2px_rgba(255,255,255,0.12),_0_0_12px_rgba(111,196,155,0.08)]"
                     aria-hidden="true"
                   />
-                  <div className="px-5 pb-6 pt-12 sm:px-6">
-                    <div className="flex items-center justify-between text-[0.58rem] text-parchment-100/55">
-                      <span className="font-mono">09:41</span>
+                  <div className="px-5 pb-5 pt-12 sm:px-6 sm:pb-6">
+                    <div className="flex items-center justify-between text-[0.56rem] font-medium text-parchment-100/55">
+                      <span className="font-mono tracking-wide">09:41</span>
                       <span className="inline-flex items-center gap-1.5">
                         <LockKeyhole size={10} aria-hidden="true" /> Secure
                         preview
                       </span>
                     </div>
-                    <div className="mt-7 flex items-end justify-between gap-3">
+                    <div className="mt-6 flex items-end justify-between gap-4">
                       <div>
-                        <p className="font-mono text-[0.58rem] uppercase tracking-[0.18em] text-gold-300">
+                        <p className="font-mono text-[0.56rem] uppercase tracking-[0.18em] text-gold-300">
                           CeloHT Platform
                         </p>
-                        <p className="mt-2 font-display text-2xl font-semibold text-parchment-50">
+                        <p className="mt-2 font-display text-xl font-semibold leading-tight text-parchment-50">
                           Your access layer.
                         </p>
-                        <p className="mt-1 text-[0.62rem] leading-5 text-parchment-100/60">
+                        <p className="mt-1.5 text-[0.61rem] leading-5 text-parchment-100/60">
                           Wallet access and community tools
                         </p>
                       </div>
                       <div className="flex flex-col items-end gap-2">
-                        <span className="celoht-demo-badge rounded-full border border-gold-300/25 bg-gold-500/10 px-2 py-1 font-mono text-[0.52rem] uppercase tracking-[0.14em] text-gold-300">
+                        <span className="celoht-demo-badge rounded-full border border-gold-300/25 bg-gold-500/10 px-2 py-1 font-mono text-[0.51rem] uppercase tracking-[0.14em] text-gold-300">
                           Preview
                         </span>
-                        <span className="inline-flex items-center gap-1.5 text-[0.55rem] text-forest-400">
+                        <span className="inline-flex items-center gap-1.5 text-[0.54rem] text-forest-400">
                           <span
                             className="h-1.5 w-1.5 rounded-full bg-forest-400"
                             aria-hidden="true"
@@ -251,9 +251,9 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-5 rounded-2xl border border-gold-300/20 bg-[linear-gradient(145deg,rgba(248,211,79,0.16),rgba(13,33,55,0.86))] p-4">
+                    <div className="mt-5 rounded-2xl border border-gold-300/20 bg-[linear-gradient(145deg,rgba(248,211,79,0.14),rgba(13,33,55,0.8))] p-4 shadow-sm">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                        <p className="text-[0.57rem] uppercase tracking-[0.16em] font-medium text-parchment-100/55">
                           Wallet
                         </p>
                         <div className="flex items-center gap-2">
@@ -266,16 +266,16 @@ export default function HomePage() {
                             href={DAPP_URL}
                             target="_blank"
                             rel="noreferrer"
-                            className="rounded-full bg-gold-500 px-2.5 py-1.5 text-[0.52rem] font-semibold uppercase tracking-[0.1em] text-navy-950 hover:bg-gold-300"
+                            className="rounded-full bg-gold-500 px-2.5 py-1.5 text-[0.51rem] font-semibold uppercase tracking-[0.1em] text-navy-950 transition-colors hover:bg-gold-300"
                           >
                             Open Wallet
                           </Link>
                         </div>
                       </div>
-                      <p className="mt-5 font-mono text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                      <p className="mt-5 font-mono text-[0.57rem] uppercase tracking-[0.16em] font-medium text-parchment-100/55">
                         Available balance
                       </p>
-                      <p className="mt-1 font-display text-3xl font-semibold text-parchment-50">
+                      <p className="mt-1.5 font-display text-3xl font-semibold text-parchment-50">
                         —
                       </p>
                       <p className="mt-2 text-xs text-parchment-100/60">
@@ -284,31 +284,31 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-4 grid grid-cols-2 gap-3">
-                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900 p-3">
-                        <p className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900/60 p-3 shadow-sm">
+                        <p className="font-mono text-[0.54rem] uppercase tracking-[0.14em] font-medium text-parchment-100/50">
                           CELO
                         </p>
-                        <p className="mt-2 font-display text-lg font-semibold text-parchment-50">
+                        <p className="mt-2.5 font-display text-lg font-semibold text-parchment-50">
                           —
                         </p>
                       </div>
-                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900 p-3">
-                        <p className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900/60 p-3 shadow-sm">
+                        <p className="font-mono text-[0.54rem] uppercase tracking-[0.14em] font-medium text-parchment-100/50">
                           USDm
                         </p>
-                        <p className="mt-2 font-display text-lg font-semibold text-parchment-50">
+                        <p className="mt-2.5 font-display text-lg font-semibold text-parchment-50">
                           —
                         </p>
                       </div>
                     </div>
 
-                    <div className="mt-4 rounded-2xl border border-parchment-100/10 bg-navy-900/75 p-4">
+                    <div className="mt-4 rounded-2xl border border-parchment-100/10 bg-navy-900/50 p-4 shadow-sm">
                       <div className="flex items-center justify-between gap-3">
                         <div>
-                          <p className="font-mono text-[0.55rem] uppercase tracking-[0.16em] text-parchment-100/50">
+                          <p className="font-mono text-[0.54rem] uppercase tracking-[0.16em] font-medium text-parchment-100/50">
                             Wallet actions
                           </p>
-                          <p className="mt-2 text-xs text-parchment-100/60">
+                          <p className="mt-1.5 text-xs text-parchment-100/60">
                             Move value across the Celo ecosystem.
                           </p>
                         </div>
@@ -320,42 +320,22 @@ export default function HomePage() {
                       <div className="mt-4 grid grid-cols-2 gap-2">
                         <button
                           type="button"
-                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gold-300/25 bg-gold-500/10 px-2 py-2.5 text-[0.62rem] font-semibold text-gold-300 hover:border-gold-300 hover:bg-gold-500/20"
+                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gold-300/25 bg-gold-500/10 px-2 py-2.5 text-[0.61rem] font-semibold text-gold-300 transition-all hover:border-gold-300 hover:bg-gold-500/20 active:scale-95"
                         >
                           <ArrowUpFromLine size={13} aria-hidden="true" />
                           Send
                         </button>
                         <button
                           type="button"
-                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-parchment-100/15 bg-parchment-100/5 px-2 py-2.5 text-[0.62rem] font-semibold text-parchment-50 hover:border-gold-300 hover:text-gold-300"
+                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-parchment-100/15 bg-parchment-100/5 px-2 py-2.5 text-[0.61rem] font-semibold text-parchment-50 transition-all hover:border-gold-300 hover:text-gold-300 active:scale-95"
                         >
                           <ArrowDownToLine size={13} aria-hidden="true" />
                           Receive
                         </button>
                       </div>
                     </div>
-                    <div
-                      aria-label="03 active preview sessions"
-                      className="mt-3 flex items-center justify-between rounded-xl border border-parchment-100/10 bg-navy-900/45 px-3 py-2.5"
-                    >
-                      <div className="flex items-center gap-2">
-                        <span
-                          className="h-1.5 w-1.5 rounded-full bg-forest-400"
-                          aria-hidden="true"
-                        />
-                        <span className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
-                          Sessions
-                        </span>
-                      </div>
-                      <span className="font-display text-sm font-semibold text-parchment-50">
-                        03{" "}
-                        <span className="text-[0.62rem] font-normal text-parchment-100/55">
-                          Active
-                        </span>
-                      </span>
-                    </div>
 
-                    <p className="mt-5 font-mono text-[0.55rem] uppercase tracking-[0.16em] text-parchment-100/45">
+                    <p className="mt-5 font-mono text-[0.54rem] uppercase tracking-[0.16em] font-medium text-parchment-100/45">
                       Quick actions
                     </p>
                     <div className="mt-3 grid grid-cols-3 gap-2">
@@ -367,26 +347,26 @@ export default function HomePage() {
                         <Link
                           key={label}
                           href={href}
-                          className="rounded-xl border border-parchment-100/10 bg-navy-900 px-2 py-2.5 text-center text-[0.62rem] font-semibold text-parchment-50 hover:border-gold-500/40 hover:text-gold-300"
+                          className="rounded-xl border border-parchment-100/10 bg-navy-900/60 px-2 py-2.5 text-center text-[0.61rem] font-semibold text-parchment-50 transition-all hover:border-gold-500/40 hover:text-gold-300 hover:bg-navy-800 shadow-sm"
                         >
                           {label}
                         </Link>
                       ))}
                     </div>
-                    <div className="mt-4 rounded-xl border border-parchment-100/10 bg-navy-900 px-3 py-3">
-                      <p className="font-mono text-[0.55rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                    <div className="mt-4 rounded-xl border border-parchment-100/10 bg-navy-900/60 px-3 py-3.5 shadow-sm">
+                      <p className="font-mono text-[0.54rem] uppercase tracking-[0.14em] font-medium text-parchment-100/50">
                         Education
                       </p>
                       <p className="mt-2 text-sm font-semibold text-parchment-50">
                         Continue learning
                       </p>
-                      <p className="mt-1 text-[0.62rem] leading-5 text-parchment-100/60">
+                      <p className="mt-1 text-[0.61rem] leading-5 text-parchment-100/60">
                         Course modules and wallet foundations.
                       </p>
                     </div>
                     <nav
                       aria-label="CeloHT preview navigation"
-                      className="mt-5 grid grid-cols-4 gap-1 border-t border-parchment-100/10 pt-4"
+                      className="mt-5 grid grid-cols-4 gap-1.5 border-t border-parchment-100/10 pt-4"
                     >
                       {[
                         { icon: WalletCards, label: "Wallet", href: "/dapp" },
@@ -407,9 +387,9 @@ export default function HomePage() {
                             key={label}
                             href={href}
                             aria-current={index === 0 ? "page" : undefined}
-                            className={`flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl text-[0.52rem] font-semibold transition-colors ${
+                            className={`flex min-h-11 flex-col items-center justify-center gap-0.5 rounded-xl text-[0.51rem] font-semibold transition-colors ${
                               index === 0
-                                ? "bg-gold-500/12 text-gold-300"
+                                ? "bg-gold-500/12 text-gold-300 shadow-sm"
                                 : "text-parchment-100/45 hover:bg-parchment-100/5 hover:text-parchment-50"
                             }`}
                           >

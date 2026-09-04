@@ -190,37 +190,80 @@ button {
 
 .celoht-phone-shell {
   animation: celoht-phone-enter 700ms 120ms ease-out both;
-  transform: rotateY(-5deg) rotateX(1deg);
+  transform: rotateY(-4deg) rotateX(2deg) rotateZ(0deg);
   will-change: transform;
+  background: linear-gradient(
+    135deg,
+    #1a252f 0%,
+    #0f1820 25%,
+    #0a0f15 50%,
+    #0d1218 75%,
+    #151d28 100%
+  );
+  box-shadow:
+    0 32px 90px rgba(2, 12, 24, 0.48),
+    0 16px 40px rgba(2, 12, 24, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.celoht-phone-shell::before {
+  position: absolute;
+  inset: 0;
+  border-radius: 3rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  content: "";
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .celoht-phone-shell::after {
   position: absolute;
-  inset: 0.35rem;
+  inset: 0.375rem;
   border-radius: 2.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.08),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.2);
   content: "";
   pointer-events: none;
 }
 
 .celoht-phone-frame {
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
-    inset -5px 0 12px rgba(0, 0, 0, 0.2);
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 3px rgba(0, 0, 0, 0.3),
+    inset -0.5px 0 2px rgba(0, 0, 0, 0.15);
 }
 
 .celoht-phone-screen {
   min-height: 39rem;
+  box-shadow: inset 0 0.5px 0 rgba(255, 255, 255, 0.08);
 }
 
 @keyframes celoht-phone-enter {
   from {
     opacity: 0;
-    transform: translate3d(0, 18px, 0) rotateY(-5deg) rotateX(1deg) scale(0.98);
+    transform: translate3d(0, 24px, -20px) rotateY(-4deg) rotateX(2deg) scale(0.96);
   }
   to {
     opacity: 1;
-    transform: rotateY(-5deg) rotateX(1deg) scale(1);
+    transform: rotateY(-4deg) rotateX(2deg) rotateZ(0deg) scale(1);
+  }
+}
+
+@keyframes celoht-island-pulse {
+  0%,
+  100% {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.12), 0 0 12px rgba(111, 196, 155, 0.08);
+  }
+  50% {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.16), 0 0 16px rgba(111, 196, 155, 0.12);
   }
 }
 
