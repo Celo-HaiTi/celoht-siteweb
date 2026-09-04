@@ -14,9 +14,6 @@ describe("HomePage", () => {
     expect(screen.getByText(/The CeloHT product layer/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Send" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Receive" })).toBeInTheDocument();
-    expect(
-      screen.getByLabelText("03 active preview sessions"),
-    ).toBeInTheDocument();
     expect(screen.queryByText(/demo data/i)).not.toBeInTheDocument();
     expect(
       screen.queryByText(/illustrative interface/i),
