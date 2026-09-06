@@ -241,12 +241,12 @@ export default function HomePage() {
                         <span className="celoht-demo-badge rounded-full border border-gold-300/25 bg-gold-500/10 px-2 py-1 font-mono text-[0.51rem] uppercase tracking-[0.14em] text-gold-300">
                           Preview
                         </span>
-                        <span className="inline-flex items-center gap-1.5 text-[0.54rem] text-forest-400">
+                        <span className="inline-flex items-center gap-1.5 text-[0.54rem] text-parchment-100/55">
                           <span
-                            className="h-1.5 w-1.5 rounded-full bg-forest-400"
+                            className="h-1.5 w-1.5 rounded-full bg-parchment-100/40"
                             aria-hidden="true"
                           />
-                          Celo Mainnet
+                          Network not connected
                         </span>
                       </div>
                     </div>

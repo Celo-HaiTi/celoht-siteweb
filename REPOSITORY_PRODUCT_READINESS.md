@@ -1,5 +1,10 @@
 # Repository Product Readiness
 
+> **HISTORICAL / DEPRECATED:** This prior audit log is retained for context.
+> The canonical current status is maintained in
+> [PRODUCTION_READINESS.md](PRODUCTION_READINESS.md), which uses the approved
+> readiness labels and current evidence.
+
 ## Repository Purpose
 
 This repository is the public website for CeloHT. Its responsibility is informational and marketing-facing: presenting the mission, education, agent network, reforestation, governance, transparency, legal, blog, and documentation content for the CeloHT ecosystem. It does not manage wallet funds, treasury operations, or blockchain transactions. The repository is intentionally a static-first front-end that links to the external dApp at app.celoht.com.
@@ -141,6 +146,6 @@ Status: VERIFIED / EXTERNAL
 
 ## Final Product Readiness Status
 
-READY
+HISTORICAL / DEPRECATED
 
 This repository is ready for its actual responsibility: serving as the public website for the CeloHT ecosystem, with correct canonical references, verified build/test status, and no known fixable blocker in its intended scope.
