@@ -33,10 +33,11 @@ export default function DAppDeploymentPage() {
           title: "Network and deployment status",
           children: (
             <p className="max-w-3xl text-ink-soft">
-              The roadmap distinguishes planned testnet and mainnet milestones
-              from completed work. A contract address, network deployment, or
-              production capability is not treated as confirmed until CeloHT
-              publishes the relevant evidence.
+              The current DApp and contract deployment path is Celo Sepolia,
+              chain ID 11142220. The official smart-contract repository records
+              five verified testnet contracts. Mainnet is not enabled or
+              claimed; any future deployment requires independent audit and
+              operational approval.
             </p>
           ),
         },

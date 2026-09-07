@@ -20,9 +20,9 @@ const features = [
       "Connect an approved wallet and use the app in a way that matches the Celo ecosystem’s mobile-first access model.",
   },
   {
-    title: "Send and receive",
+    title: "USDm contributions",
     description:
-      "Support for transfer flows and digital payments is the core practical layer that turns wallet knowledge into everyday use.",
+      "The current product path supports USDm contributions on Celo Sepolia, subject to wallet, network, and contract availability.",
   },
   {
     title: "Education and onboarding",
@@ -35,9 +35,9 @@ const features = [
       "The agent model ties into the product experience by helping users understand how to access assistance locally.",
   },
   {
-    title: "Donations",
+    title: "Service payments",
     description:
-      "The donation flow is designed to channel support toward specific community and ecosystem goals with transparent public visibility where applicable.",
+      "The current contract stack includes service-payment flows; the public DApp and contracts repositories remain the source of truth for availability.",
   },
   {
     title: "Reforestation and impact",

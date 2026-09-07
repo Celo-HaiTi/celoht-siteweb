@@ -69,7 +69,10 @@ const phases = [
         done: false,
       },
       { text: "Translate core curriculum into Spanish", done: false },
-      { text: "dApp deployed to Celo mainnet", done: false },
+      {
+        text: "Evaluate Mainnet readiness after independent audit and operational approval",
+        done: false,
+      },
       {
         text: "Publish first annual transparency & impact report",
         done: false,
