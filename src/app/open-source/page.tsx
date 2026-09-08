@@ -162,47 +162,79 @@ export default function OpenSourcePage() {
           and infrastructure. Each project serves a specific role and carries a
           status designation indicating its current state.
         </p>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {publicProjects.map((project) => (
-            <div
-              key={project.name}
-              className="flex flex-col rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex-1">
-                  <h3 className="font-display text-lg font-semibold">
-                    {project.name}
-                  </h3>
-                  <p className="mt-2 text-xs leading-5 text-ink-soft dark:text-parchment-100/70">
-                    {project.purpose}
-                  </p>
-                </div>
-                <span
-                  className={`whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-semibold ${getStatusColor(project.status)}`}
-                >
-                  {getStatusLabel(project.status)}
-                </span>
-              </div>
+        <div className="space-y-10">
+          {[
+            "Core & Public Layer",
+            "Production Infrastructure",
+            "Governance, Research & Ecosystem",
+          ].map((category) => {
+            const projects = publicProjects.filter(
+              (project) => project.category === category,
+            );
 
-              <div className="mt-4 space-y-2 border-t border-navy-700/15 pt-4 dark:border-parchment-100/10">
-                <p className="text-sm font-semibold text-gold-500">Role</p>
-                <p className="text-sm text-ink-soft dark:text-parchment-100/70">
-                  {project.role}
-                </p>
-              </div>
+            return (
+              <div key={category}>
+                <h3 className="mb-4 font-display text-xl font-semibold">
+                  {category}
+                </h3>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {projects.map((project) => (
+                    <div
+                      key={project.name}
+                      className="flex flex-col rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <h4 className="font-display text-lg font-semibold">
+                            {project.name}
+                          </h4>
+                          <p className="mt-2 text-xs leading-5 text-ink-soft dark:text-parchment-100/70">
+                            {project.purpose}
+                          </p>
+                        </div>
+                        <span
+                          className={`whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-semibold ${getStatusColor(project.status)}`}
+                        >
+                          {getStatusLabel(project.status)}
+                        </span>
+                      </div>
 
-              {project.technology && (
-                <div className="mt-3 space-y-2">
-                  <p className="text-sm font-semibold text-gold-500">
-                    Technology
-                  </p>
-                  <p className="text-sm text-ink-soft dark:text-parchment-100/70">
-                    {project.technology}
-                  </p>
+                      <div className="mt-4 space-y-2 border-t border-navy-700/15 pt-4 dark:border-parchment-100/10">
+                        <p className="text-sm font-semibold text-gold-500">
+                          Role
+                        </p>
+                        <p className="text-sm text-ink-soft dark:text-parchment-100/70">
+                          {project.role}
+                        </p>
+                      </div>
+
+                      {project.technology && (
+                        <div className="mt-3 space-y-2">
+                          <p className="text-sm font-semibold text-gold-500">
+                            Technology
+                          </p>
+                          <p className="text-sm text-ink-soft dark:text-parchment-100/70">
+                            {project.technology}
+                          </p>
+                        </div>
+                      )}
+
+                      {project.documentation && (
+                        <a
+                          href={project.documentation}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-5 inline-flex w-fit rounded-md border border-gold-500/40 px-3 py-2 text-sm font-semibold text-gold-500 hover:border-gold-500 hover:text-gold-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+                        >
+                          View repository <span aria-hidden="true">→</span>
+                        </a>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </Section>
 

@@ -2,12 +2,19 @@
 
 import {
   GITHUB_BRAND_URL,
+  GITHUB_ADMIN_URL,
+  GITHUB_BACKEND_URL,
   GITHUB_CONTRACTS_URL,
   GITHUB_DAPP_URL,
   GITHUB_DEMO_URL,
   GITHUB_DOCS_URL,
   GITHUB_FLAGSHIP_URL,
+  GITHUB_GOVERNANCE_URL,
+  GITHUB_INDEXER_URL,
+  GITHUB_ORG_INFRASTRUCTURE_URL,
   GITHUB_RESEARCH_URL,
+  GITHUB_BOOK_URL,
+  GITHUB_SUPABASE_URL,
   GITHUB_WEBSITE_URL,
 } from "@/lib/constants";
 
@@ -137,76 +144,158 @@ export type PublicProject = {
   technology?: string;
   documentation?: string;
   lastUpdated?: string;
+  category?: string;
 };
 
 export const publicProjects: PublicProject[] = [
   {
     name: "CeloHT Core",
     purpose:
-      "Flagship project repository containing fundamental information about CeloHT's direction, governance, and ecosystem context.",
-    role: "Central documentation and governance repository",
+      "Flagship CeloHT repository containing the project's institutional context, governance, technical direction, policies, roadmap, and ecosystem documentation.",
+    role: "Core project and institutional reference",
     status: "ACTIVE",
+    technology: "Markdown / Documentation / Governance",
     documentation: GITHUB_FLAGSHIP_URL,
+    category: "Core & Public Layer",
   },
   {
     name: "CeloHT Website",
     purpose:
-      "Official static-first website built for transparency, documentation, and direct community communication.",
+      "Official public website for CeloHT, providing the public information, transparency, documentation, ecosystem and community communication layer.",
     role: "Public information layer",
     status: "ACTIVE",
     technology: "TypeScript / Next.js",
     documentation: GITHUB_WEBSITE_URL,
+    category: "Core & Public Layer",
   },
   {
     name: "CeloHT Documentation",
     purpose:
-      "Comprehensive technical documentation, architecture guides, APIs, and educational materials.",
+      "Central technical documentation covering architecture, governance, APIs, developer resources, education, research, policies and ecosystem documentation.",
     role: "Technical knowledge base",
     status: "ACTIVE",
+    technology: "Markdown / Documentation",
     documentation: GITHUB_DOCS_URL,
+    category: "Core & Public Layer",
   },
   {
     name: "CeloHT DApp",
     purpose:
-      "Public DApp providing services, education interfaces, and participation mechanisms.",
+      "CeloHT's public application layer connecting users with education, digital payments, wallet functionality, agent infrastructure and ecosystem services.",
     role: "Public application layer",
-    status: "ACTIVE",
-    technology: "TypeScript / Web3",
+    status: "IN_DEVELOPMENT",
+    technology: "TypeScript / React / Web3",
     documentation: GITHUB_DAPP_URL,
-  },
-  {
-    name: "CeloHT Smart Contracts",
-    purpose:
-      "Solidity contracts for education programs, community agents, impact tracking, and infrastructure.",
-    role: "On-chain infrastructure",
-    status: "ACTIVE",
-    technology: "Solidity",
-    documentation: GITHUB_CONTRACTS_URL,
-  },
-  {
-    name: "CeloHT Research",
-    purpose:
-      "Research papers, RFCs, technical specifications, security studies, and evidence-based analysis.",
-    role: "Technical research and analysis",
-    status: "ACTIVE",
-    documentation: GITHUB_RESEARCH_URL,
-  },
-  {
-    name: "CeloHT Brand",
-    purpose:
-      "Official logos, brand guidelines, messaging standards, typography, colors, and media assets.",
-    role: "Visual and brand resources",
-    status: "ACTIVE",
-    documentation: GITHUB_BRAND_URL,
+    category: "Core & Public Layer",
   },
   {
     name: "CeloHT Demo",
     purpose:
-      "Interactive demonstration of CeloHT wallet, education interfaces, agents, and workflows.",
-    role: "Interactive demonstration",
+      "Experimental interactive demonstration of CeloHT workflows, interfaces and ecosystem concepts.",
+    role: "Experimental demonstration",
     status: "EXPERIMENTAL",
-    technology: "TypeScript",
+    technology: "TypeScript / Web application",
     documentation: GITHUB_DEMO_URL,
+    category: "Core & Public Layer",
+  },
+  {
+    name: "CeloHT Backend",
+    purpose:
+      "Backend service layer providing authenticated APIs and application services connecting the CeloHT frontend, data layer and blockchain infrastructure.",
+    role: "Backend application infrastructure",
+    status: "IN_DEVELOPMENT",
+    technology: "TypeScript / Node.js / HTTP API",
+    documentation: GITHUB_BACKEND_URL,
+    category: "Production Infrastructure",
+  },
+  {
+    name: "CeloHT Indexer",
+    purpose:
+      "Blockchain indexing infrastructure responsible for processing relevant Celo network activity and making indexed data available to CeloHT application services.",
+    role: "Blockchain data infrastructure",
+    status: "IN_DEVELOPMENT",
+    technology: "TypeScript / Celo RPC / PostgreSQL or Supabase",
+    documentation: GITHUB_INDEXER_URL,
+    category: "Production Infrastructure",
+  },
+  {
+    name: "CeloHT Supabase",
+    purpose:
+      "Persistent data infrastructure containing database schema, migrations, Row Level Security and supporting data-layer configuration for CeloHT services.",
+    role: "Persistent data layer",
+    status: "IN_DEVELOPMENT",
+    technology: "PostgreSQL / Supabase / RLS",
+    documentation: GITHUB_SUPABASE_URL,
+    category: "Production Infrastructure",
+  },
+  {
+    name: "CeloHT Admin",
+    purpose:
+      "Administrative interface for authorized CeloHT operators and governance-controlled operational workflows.",
+    role: "Administrative operations layer",
+    status: "IN_DEVELOPMENT",
+    technology: "TypeScript / React / Web application",
+    documentation: GITHUB_ADMIN_URL,
+    category: "Production Infrastructure",
+  },
+  {
+    name: "CeloHT Smart Contracts",
+    purpose:
+      "On-chain smart contract infrastructure supporting CeloHT programs and blockchain-integrated functionality.",
+    role: "On-chain infrastructure",
+    status: "IN_DEVELOPMENT",
+    technology: "Solidity / Hardhat / OpenZeppelin",
+    documentation: GITHUB_CONTRACTS_URL,
+    category: "Production Infrastructure",
+  },
+  {
+    name: "CeloHT Governance",
+    purpose:
+      "Dedicated governance infrastructure for CeloHT decision-making, proposals, authorization, governance workflows and community-controlled operations.",
+    role: "Governance infrastructure",
+    status: "IN_DEVELOPMENT",
+    technology: "Documentation / Governance tooling / Web3 infrastructure",
+    documentation: GITHUB_GOVERNANCE_URL,
+    category: "Governance, Research & Ecosystem",
+  },
+  {
+    name: "CeloHT Research",
+    purpose:
+      "Public research repository containing technical research, specifications, RFCs, security analysis and evidence-based work related to the CeloHT ecosystem.",
+    role: "Research and technical analysis",
+    status: "ACTIVE",
+    technology: "Markdown / Research / Technical Specifications",
+    documentation: GITHUB_RESEARCH_URL,
+    category: "Governance, Research & Ecosystem",
+  },
+  {
+    name: "CeloHT Brand",
+    purpose:
+      "Official visual identity, logos, typography, colors, brand guidelines and approved visual resources.",
+    role: "Brand and visual infrastructure",
+    status: "ACTIVE",
+    technology: "Design / Documentation / Brand Assets",
+    documentation: GITHUB_BRAND_URL,
+    category: "Governance, Research & Ecosystem",
+  },
+  {
+    name: "CeloHT Investor Book",
+    purpose:
+      "Public institutional and ecosystem information resource explaining the CeloHT project, its model, development, infrastructure and opportunities for ecosystem support.",
+    role: "Institutional and ecosystem resource",
+    status: "ACTIVE",
+    documentation: GITHUB_BOOK_URL,
+    category: "Governance, Research & Ecosystem",
+  },
+  {
+    name: "CeloHT Organization Infrastructure",
+    purpose:
+      "Organization-wide GitHub community health files, contribution standards, security policies, issue templates and repository governance defaults.",
+    role: "Organization-level open-source infrastructure",
+    status: "ACTIVE",
+    technology: "GitHub / Markdown / Repository Governance",
+    documentation: GITHUB_ORG_INFRASTRUCTURE_URL,
+    category: "Governance, Research & Ecosystem",
   },
 ];
 

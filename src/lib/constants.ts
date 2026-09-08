@@ -30,3 +30,14 @@ export const GITHUB_RESEARCH_URL =
 export const GITHUB_DEMO_URL = "https://github.com/Celo-HaiTi/celoht-demo";
 export const GITHUB_BOOK_URL =
   "https://github.com/Celo-HaiTi/celoht-investor-book";
+export const GITHUB_BACKEND_URL =
+  "https://github.com/Celo-HaiTi/celoht-backend";
+export const GITHUB_INDEXER_URL =
+  "https://github.com/Celo-HaiTi/celoht-indexer";
+export const GITHUB_SUPABASE_URL =
+  "https://github.com/Celo-HaiTi/celoht-supabase";
+export const GITHUB_ADMIN_URL = "https://github.com/Celo-HaiTi/celoht-admin";
+export const GITHUB_GOVERNANCE_URL =
+  "https://github.com/Celo-HaiTi/celoht-governance";
+export const GITHUB_ORG_INFRASTRUCTURE_URL =
+  "https://github.com/Celo-HaiTi/.github";
