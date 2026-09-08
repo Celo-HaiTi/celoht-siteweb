@@ -35,7 +35,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Projects & Public Infrastructure"
         title="CeloHT is more than a website or a dApp."
-        lead="The CeloHT ecosystem is built in public across documentation, applications, backend services, data infrastructure, governance, research, and community resources. Each repository has a defined role and an honest maturity label."
+        lead="CeloHT is built as an open-source ecosystem of public software, applications, and infrastructure. Its work is rooted in Haiti and designed around practical real-world access, while its open architecture can evolve beyond a single geography. Each repository has a defined role and an honest maturity label."
       />
 
       <Section

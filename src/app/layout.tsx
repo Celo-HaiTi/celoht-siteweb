@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s  -  CeloHT",
   },
   description:
-    "CeloHT is an open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
+    "CeloHT is an open-source Web3 initiative rooted in Haiti, focused on financial inclusion, blockchain education, digital payments, and practical real-world access within the Celo ecosystem.",
   keywords: [
     "CeloHT",
     "Celo",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "CeloHT",
     title: "CeloHT | Open-Source Haitian Web3 Initiative",
     description:
-      "An open-source Haitian Web3 initiative focused on financial inclusion, blockchain education, digital payments, and entrepreneurship within the Celo ecosystem.",
+      "An open-source Web3 initiative rooted in Haiti, focused on financial inclusion, blockchain education, digital payments, and practical real-world access within the Celo ecosystem.",
     images: [
       {
         url: assetPath("/og-image.svg"),

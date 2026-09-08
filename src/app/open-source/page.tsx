@@ -36,12 +36,12 @@ export const metadata: Metadata = {
   title:
     "CeloHT Open Source | Official Public Documentation & Transparency Center",
   description:
-    "CeloHT Open Source Center: explore public code, governance, transparency, security, research, policies, and project infrastructure. An independent, professional open-source information resource.",
+    "Explore CeloHT's open-source code, governance, research, and public infrastructure rooted in Haiti and designed for practical real-world access.",
   alternates: { canonical: "/open-source" },
   openGraph: {
     title: "CeloHT Open Source",
     description:
-      "Official CeloHT Open Source Center: public documentation, governance, and transparency.",
+      "CeloHT's public code, documentation, governance, research, and infrastructure ecosystem.",
     url: `${SITE_URL}/open-source/`,
     type: "website",
   },

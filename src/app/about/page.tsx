@@ -30,6 +30,9 @@ export default function AboutPage() {
             three permanent pillars: education, a decentralized network of
             community agents, and reforestation. This website is the public
             place to understand the mission, programs, safeguards, and progress.
+            CeloHT is rooted in Haiti, with Haiti as its starting point and
+            real-world context, while its open-source infrastructure is designed
+            for broader applicability as the ecosystem develops.
           </p>
           <p>
             We&rsquo;re explicit about what CeloHT is not, because the

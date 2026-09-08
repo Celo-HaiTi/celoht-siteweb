@@ -22,7 +22,7 @@ import { publicProjects } from "@/lib/open-source-professional";
 export const metadata: Metadata = {
   title: "CeloHT | Open-source Haitian Web3 infrastructure",
   description:
-    "CeloHT is an open-source Haitian Web3 initiative grounded in three pillars: education, an agent network, and reforestation, built on the Celo ecosystem.",
+    "CeloHT is an open-source Web3 initiative rooted in Haiti, building practical infrastructure for education, financial access, community participation, and real-world use.",
   alternates: { canonical: "/" },
 };
 
@@ -33,7 +33,7 @@ const jsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}${assetPath("/celoht-logo.png")}`,
   description:
-    "An open-source Haitian Web3 initiative grounded in three pillars: education, an agent network, and reforestation, built on the Celo ecosystem.",
+    "An open-source Web3 initiative rooted in Haiti, building practical infrastructure for education, financial access, community participation, and real-world use.",
   sameAs: [DISCORD_URL, "https://medium.com/@celoht3"],
 };
 

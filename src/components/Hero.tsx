@@ -58,13 +58,15 @@ export function Hero() {
               id="hero-title"
               className="celoht-hero-reveal celoht-hero-reveal-2 mt-5 max-w-3xl font-display text-5xl font-bold leading-[0.96] tracking-[-0.05em] text-parchment-50 sm:text-6xl lg:text-7xl"
             >
-              Web3 infrastructure built for real access in Haiti.
+              Web3 infrastructure built in Haiti, designed for real-world access
+              everywhere.
             </h1>
 
             <p className="celoht-hero-reveal celoht-hero-reveal-3 mt-6 max-w-2xl text-lg leading-8 text-parchment-100/75">
-              CeloHT connects education, wallet access, community agents,
-              digital payments, and reforestation through an open-source
-              ecosystem built on Celo.
+              CeloHT is an open-source Web3 initiative rooted in Haiti. It
+              connects education, wallet access, community agents, digital
+              payments, and reforestation through practical infrastructure that
+              can evolve beyond a single geography.
             </p>
 
             <div className="celoht-hero-reveal celoht-hero-reveal-4 mt-8 flex flex-wrap gap-3">
