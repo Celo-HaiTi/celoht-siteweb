@@ -42,11 +42,14 @@ export default function SecurityPage() {
       <Section eyebrow="This website" title="Practices">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
-            Strict Content Security Policy and standard security headers (see
-            next.config.ts)
+            Security headers are configured for supported hosts; static hosting
+            uses the public host policy in <code>public/_headers</code>.
           </li>
           <li>No secrets committed - environment variables only</li>
-          <li>CodeQL static analysis and Dependabot on every change</li>
+          <li>
+            Dependency and repository security practices are documented in the
+            public GitHub organization and repository policies.
+          </li>
         </ul>
       </Section>
 
@@ -60,10 +63,9 @@ export default function SecurityPage() {
             DonationManager&rsquo;s platform fee is hard-capped at 5% directly
             in the contract code
           </li>
-          <li>Every contract has pause/unpause gated to an admin role</li>
           <li>
-            30 passing tests across the contract suite, run on every Pull
-            Request
+            Contract deployment and test claims are maintained in the dedicated
+            smart-contract repository, not represented as website activity.
           </li>
         </ul>
       </Section>

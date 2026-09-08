@@ -23,7 +23,7 @@ export default function NotFound() {
           Back to home
         </Link>
         <Link
-          href="/documentation"
+          href="/docs"
           className="rounded-full border border-navy-700/20 px-6 py-3 text-sm font-semibold hover:bg-navy-700/10 dark:border-parchment-100/20 dark:hover:bg-parchment-100/10"
         >
           Browse documentation

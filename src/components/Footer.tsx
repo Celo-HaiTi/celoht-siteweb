@@ -81,6 +81,12 @@ export function Footer() {
                 copy: "Understand CeloHT's code, documentation, and public methods.",
                 href: "/open-source",
               },
+              {
+                icon: Code2,
+                title: "Projects",
+                copy: "Explore the public repositories and infrastructure layers.",
+                href: "/projects",
+              },
             ].map((item) => {
               const Icon = item.icon;
               const content = (

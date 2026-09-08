@@ -12,6 +12,11 @@ export const primaryNav: NavItem[] = [
     description: "How the ecosystem works on Celo",
   },
   {
+    label: "Projects",
+    href: "/projects",
+    description: "Public repositories and infrastructure across CeloHT",
+  },
+  {
     label: "Impact",
     href: "/impact",
     description: "Public evidence of the programs in motion",
@@ -42,6 +47,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Vision", href: "/vision" },
       { label: "Governance", href: "/governance" },
       { label: "Transparency", href: "/transparency" },
+      { label: "Projects", href: "/projects" },
       { label: "Roadmap", href: "/roadmap" },
     ],
   },
@@ -236,6 +242,11 @@ export const searchIndex: NavItem[] = [
     label: "Open Source",
     href: "/open-source",
     description: "The repositories and resources built in public",
+  },
+  {
+    label: "Projects",
+    href: "/projects",
+    description: "Public repositories and infrastructure across CeloHT",
   },
   {
     label: "Documents",

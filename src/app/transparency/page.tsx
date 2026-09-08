@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { GITHUB_ORG_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Transparency",
@@ -25,14 +26,41 @@ export default function TransparencyPage() {
       <Section eyebrow="What's public today" title="Open by default">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
           <li>
-            Every CeloHT repository - flagship documentation, this website, and
-            the dApp - in full
+            Public repositories covering the core project, website, dApp,
+            infrastructure, governance, research, and documentation
           </li>
           <li>Automated checks used for delivery quality and security</li>
           <li>All Pull Request and Issue history</li>
           <li>Governance decisions, discussed publicly before being applied</li>
           <li>Every smart contract&rsquo;s source code and test suite</li>
         </ul>
+      </Section>
+
+      <Section
+        eyebrow="Infrastructure register"
+        title="Inspect the public system"
+      >
+        <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
+          Projects and infrastructure are listed with their role and maturity so
+          that a repository is not mistaken for a production guarantee. Live
+          data, deployment evidence, and credentials remain separate concerns.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-4">
+          <Link
+            href="/projects"
+            className="font-semibold text-ink underline-offset-4 hover:text-gold-800 hover:underline dark:text-parchment-50 dark:hover:text-gold-300"
+          >
+            View Projects &amp; Public Infrastructure
+          </Link>
+          <a
+            href={GITHUB_ORG_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-ink underline-offset-4 hover:text-gold-800 hover:underline dark:text-parchment-50 dark:hover:text-gold-300"
+          >
+            Inspect the GitHub organization <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </Section>
 
       <Section eyebrow="Reporting cadence" title="Two recurring commitments">

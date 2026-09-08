@@ -16,7 +16,8 @@ import {
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { StatGrid } from "@/components/StatGrid";
-import { DISCORD_URL, SITE_URL, DAPP_URL } from "@/lib/constants";
+import { assetPath, DISCORD_URL, SITE_URL, DAPP_URL } from "@/lib/constants";
+import { publicProjects } from "@/lib/open-source-professional";
 
 export const metadata: Metadata = {
   title: "CeloHT | Open-source Haitian Web3 infrastructure",
@@ -30,7 +31,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "CeloHT",
   url: SITE_URL,
-  logo: `${SITE_URL}/celoht-logo.png`,
+  logo: `${SITE_URL}${assetPath("/celoht-logo.png")}`,
   description:
     "An open-source Haitian Web3 initiative grounded in three pillars: education, an agent network, and reforestation, built on the Celo ecosystem.",
   sameAs: [DISCORD_URL, "https://medium.com/@celoht3"],
@@ -109,6 +110,41 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </Section>
+      </section>
+
+      <section className="bg-white">
+        <Section
+          eyebrow="Open-source ecosystem"
+          title="Public infrastructure that can be inspected, discussed, and improved."
+        >
+          <div className="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-end">
+            <p className="max-w-xl text-base leading-7 text-ink-soft dark:text-parchment-100/70">
+              CeloHT is not only a public website or an application. Its
+              documentation, backend, indexer, data layer, governance tools,
+              research, and community resources are developed in public.
+            </p>
+            <div className="grid gap-px overflow-hidden border border-navy-700/15 bg-navy-700/15 sm:grid-cols-3 dark:border-parchment-100/10 dark:bg-parchment-100/10">
+              {publicProjects.slice(0, 3).map((project) => (
+                <div
+                  key={project.name}
+                  className="bg-white p-5 dark:bg-navy-950"
+                >
+                  <p className="font-display font-semibold">{project.name}</p>
+                  <p className="mt-2 text-xs leading-5 text-ink-soft dark:text-parchment-100/65">
+                    {project.role}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <Link
+            href="/projects"
+            className="mt-8 inline-flex items-center gap-2 font-semibold text-ink underline-offset-4 hover:underline dark:text-parchment-50"
+          >
+            Explore Projects &amp; Public Infrastructure
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
         </Section>
       </section>
 

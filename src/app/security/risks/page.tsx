@@ -52,8 +52,9 @@ export default function RisksAndProtectionsPage() {
                 Content Security Policy and security headers for the website.
               </li>
               <li>
-                Automated typecheck, lint, tests, build verification, CodeQL,
-                and dependency review in the project workflow.
+                Automated typecheck, lint, tests, and build verification in the
+                project workflow; additional host or repository controls should
+                be verified in the relevant public configuration.
               </li>
               <li>Education that explains risks before encouraging use.</li>
               <li>

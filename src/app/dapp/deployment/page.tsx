@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DocumentationArticle } from "@/components/DocumentationArticle";
 import { LaunchDappButton } from "@/components/LaunchDappButton";
+import { GITHUB_CONTRACTS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "DApp Deployment and Availability",
@@ -32,13 +33,25 @@ export default function DAppDeploymentPage() {
         {
           title: "Network and deployment status",
           children: (
-            <p className="max-w-3xl text-ink-soft">
-              The current DApp and contract deployment path is Celo Sepolia,
-              chain ID 11142220. The official smart-contract repository records
-              five verified testnet contracts. Mainnet is not enabled or
-              claimed; any future deployment requires independent audit and
-              operational approval.
-            </p>
+            <div>
+              <p className="max-w-3xl text-ink-soft">
+                The current DApp and contract deployment path is documented as
+                Celo Sepolia, chain ID 11142220. Consult the official
+                smart-contract repository for the current deployment manifest
+                and verification evidence. Mainnet is not enabled or claimed;
+                any future deployment requires independent audit and operational
+                approval.
+              </p>
+              <a
+                href={GITHUB_CONTRACTS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex font-semibold text-gold-800 underline-offset-4 hover:underline"
+              >
+                Review contract deployment evidence{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           ),
         },
         {

@@ -16,6 +16,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { SITE_URL } from "@/lib/constants";
 import {
   openSourcePrinciples,
   whatWePublic,
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     title: "CeloHT Open Source",
     description:
       "Official CeloHT Open Source Center: public documentation, governance, and transparency.",
-    url: "https://celoht.com/open-source/",
+    url: `${SITE_URL}/open-source/`,
     type: "website",
   },
 };
@@ -51,8 +52,8 @@ const jsonLd = {
   "@type": "WebPage",
   name: "CeloHT Open Source",
   description: metadata.description,
-  url: "https://celoht.com/open-source/",
-  isPartOf: { "@type": "WebSite", name: "CeloHT", url: "https://celoht.com/" },
+  url: `${SITE_URL}/open-source/`,
+  isPartOf: { "@type": "WebSite", name: "CeloHT", url: `${SITE_URL}/` },
 };
 
 export default function OpenSourcePage() {

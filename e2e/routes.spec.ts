@@ -32,6 +32,7 @@ const publicRoutes = [
   "/news",
   "/no-token-policy",
   "/open-source",
+  "/projects",
   "/partners",
   "/privacy",
   "/project-vision",

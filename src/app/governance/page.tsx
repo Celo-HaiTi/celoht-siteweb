@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { GITHUB_GOVERNANCE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Governance",
@@ -92,6 +93,26 @@ export default function GovernancePage() {
           </Link>{" "}
           for the technical detail.
         </p>
+      </Section>
+
+      <Section
+        eyebrow="Public implementation"
+        title="The governance layer is documented in public"
+      >
+        <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
+          The dedicated governance repository documents the proposal lifecycle,
+          authorization boundaries, treasury approvals, and audit trail. Its
+          implementation status should be read from the repository itself; this
+          page does not claim that every workflow is live in production.
+        </p>
+        <a
+          href={GITHUB_GOVERNANCE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex font-semibold text-ink underline-offset-4 hover:text-gold-800 hover:underline dark:text-parchment-50 dark:hover:text-gold-300"
+        >
+          Review the governance repository <span aria-hidden="true">↗</span>
+        </a>
       </Section>
 
       <CTASection
