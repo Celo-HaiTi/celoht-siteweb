@@ -276,7 +276,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,211,79,0.15),_transparent_32%),radial-gradient(circle_at_bottom,_rgba(111,196,155,0.12),_transparent_38%)]" />
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#071525] to-transparent opacity-90" />
 
-                  <div className="relative z-10 px-4 pb-4 pt-10 sm:px-5 sm:pb-5">
+                  <div className="relative z-10 px-3 pb-3 pt-8 sm:px-4 sm:pb-4">
                     <div className="flex items-center justify-between text-[0.56rem] font-medium text-parchment-100/60">
                       <span className="font-mono tracking-[0.2em]">09:41</span>
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-forest-400/20 bg-forest-400/10 px-1.5 py-0.5 text-[0.46rem] font-medium uppercase tracking-[0.12em] text-forest-300">
@@ -285,7 +285,7 @@ export default function HomePage() {
                       </span>
                     </div>
 
-                    <div className="mt-5 flex items-center justify-between gap-3">
+                    <div className="mt-4 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5">
                         <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gold-300/30 bg-[linear-gradient(135deg,rgba(248,211,79,0.2),rgba(13,33,55,0.75))] text-[0.7rem] font-bold text-gold-300">
                           C
@@ -308,7 +308,7 @@ export default function HomePage() {
                       </button>
                     </div>
 
-                    <div className="mt-4 rounded-[1.3rem] border border-gold-300/15 bg-[linear-gradient(145deg,rgba(248,211,79,0.06),rgba(13,33,55,0.82))] p-3.5 shadow-[0_10px_30px_rgba(4,17,31,0.2)]">
+                    <div className="mt-3 rounded-[1.2rem] border border-gold-300/15 bg-[linear-gradient(145deg,rgba(248,211,79,0.06),rgba(13,33,55,0.82))] p-3 shadow-[0_10px_30px_rgba(4,17,31,0.2)]">
                       <div className="flex items-center justify-between gap-2">
                         <div>
                           <p className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
@@ -324,7 +324,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-4 rounded-[1.5rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(9,22,37,0.96))] p-4 shadow-[0_16px_32px_rgba(5,13,24,0.28)]">
+                    <div className="mt-3 rounded-[1.35rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(9,22,37,0.96))] p-3 shadow-[0_16px_32px_rgba(5,13,24,0.28)]">
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
                           <span className="inline-flex h-2.5 w-2.5 rounded-full bg-forest-400 shadow-[0_0_0_5px_rgba(111,196,155,0.12)]" aria-hidden="true" />
@@ -354,7 +354,7 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <div className="mt-4 grid grid-cols-2 gap-3">
+                    <div className="mt-3 grid grid-cols-2 gap-2">
                       <div className="rounded-[1.15rem] border border-parchment-100/10 bg-navy-900/55 p-3 shadow-sm">
                         <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/50">
                           CELO
@@ -380,7 +380,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-4 grid grid-cols-2 gap-2">
+                    <div className="mt-3 grid grid-cols-2 gap-2">
                       <button
                         type="button"
                         className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gold-300/25 bg-gold-500/12 px-2 py-2.5 text-[0.6rem] font-semibold text-gold-300 transition-all hover:border-gold-300 hover:bg-gold-500/18 active:scale-95"
@@ -397,7 +397,7 @@ export default function HomePage() {
                       </button>
                     </div>
 
-                    <div className="mt-4 rounded-[1.3rem] border border-parchment-100/10 bg-navy-900/50 p-3 shadow-sm">
+                    <div className="mt-3 rounded-[1.2rem] border border-parchment-100/10 bg-navy-900/50 p-2.5 shadow-sm">
                       <div className="flex items-center justify-between gap-2">
                         <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/55">
                           Timeline
@@ -445,7 +445,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-4 grid grid-cols-4 gap-2">
+                    <div className="mt-3 grid grid-cols-4 gap-1.5">
                       {[
                         ["USDm transferred", "$1,280.50"],
                         ["Transactions completed", "18"],
@@ -468,7 +468,7 @@ export default function HomePage() {
 
                     <nav
                       aria-label="CeloHT preview navigation"
-                      className="mt-4 grid grid-cols-4 gap-1.5 border-t border-parchment-100/10 pt-3"
+                      className="mt-3 grid grid-cols-4 gap-1.5 border-t border-parchment-100/10 pt-2.5"
                     >
                       {[
                         { icon: WalletCards, label: "Wallet", href: "/dapp" },

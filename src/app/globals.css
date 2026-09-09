@@ -253,7 +253,7 @@ button {
 }
 
 .celoht-phone-screen {
-  min-height: clamp(31rem, 68vw, 39rem);
+  min-height: clamp(28rem, 58vw, 36rem);
   border-radius: 2.55rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
