@@ -14,8 +14,12 @@ describe("HomePage", () => {
     expect(screen.getByText(/Wallet connected/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Send" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Receive" })).toBeInTheDocument();
-    expect(screen.queryByText(/network not connected/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/no wallet connected yet/i)).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(/network not connected/i),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(/no wallet connected yet/i),
+    ).not.toBeInTheDocument();
     expect(screen.queryByText(/mockup/i)).not.toBeInTheDocument();
   });
 });

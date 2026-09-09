@@ -241,8 +241,8 @@ export default function HomePage() {
                       CeloHT · Finance
                     </p>
                     <p className="mt-2 text-sm leading-6 text-parchment-100/80">
-                      A premium access layer for learning, wallets, and real-world
-                      participation.
+                      A premium access layer for learning, wallets, and
+                      real-world participation.
                     </p>
                   </div>
                   <span className="celoht-demo-badge rounded-full border border-gold-300/30 bg-gold-500/10 px-2.5 py-1.5 font-mono text-[0.5rem] uppercase tracking-[0.12em] text-gold-300">
@@ -327,7 +327,10 @@ export default function HomePage() {
                     <div className="mt-2.5 rounded-[1.18rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.86),rgba(10,27,43,0.98),rgba(6,17,29,1))] p-2.25 shadow-[0_16px_28px_rgba(5,13,24,0.30),inset_0_1px_0_rgba(255,255,255,0.06)] ring-1 ring-white/5">
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
-                          <span className="inline-flex h-2.5 w-2.5 rounded-full bg-forest-400 shadow-[0_0_0_5px_rgba(111,196,155,0.12)]" aria-hidden="true" />
+                          <span
+                            className="inline-flex h-2.5 w-2.5 rounded-full bg-forest-400 shadow-[0_0_0_5px_rgba(111,196,155,0.12)]"
+                            aria-hidden="true"
+                          />
                           <p className="font-mono text-[0.52rem] uppercase tracking-[0.16em] text-parchment-100/70">
                             Celo Sepolia
                           </p>
@@ -349,8 +352,8 @@ export default function HomePage() {
                         </p>
                       </div>
                       <p className="mt-2 text-[0.56rem] leading-4 text-parchment-100/60">
-                        ≈ Local currency estimate unavailable until a price feed is
-                        configured.
+                        ≈ Local currency estimate unavailable until a price feed
+                        is configured.
                       </p>
                     </div>
 
@@ -413,9 +416,21 @@ export default function HomePage() {
 
                       <div className="mt-3 space-y-2.5">
                         {[
-                          { label: "Received", amount: "+$250.00", meta: "Jean • 10:42 AM" },
-                          { label: "Sent", amount: "-$75.00", meta: "Marie • 09:12 AM" },
-                          { label: "Pending", amount: "-$35.00", meta: "Agent payment • 07:54 AM" },
+                          {
+                            label: "Received",
+                            amount: "+$250.00",
+                            meta: "Jean • 10:42 AM",
+                          },
+                          {
+                            label: "Sent",
+                            amount: "-$75.00",
+                            meta: "Marie • 09:12 AM",
+                          },
+                          {
+                            label: "Pending",
+                            amount: "-$35.00",
+                            meta: "Agent payment • 07:54 AM",
+                          },
                         ].map((item) => (
                           <div
                             key={item.label}
