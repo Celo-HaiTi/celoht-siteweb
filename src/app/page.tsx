@@ -483,7 +483,7 @@ export default function HomePage() {
 
                     <nav
                       aria-label="CeloHT preview navigation"
-                      className="sticky bottom-0 z-20 mt-auto grid grid-cols-4 gap-1 border-t border-parchment-100/10 bg-[#071525]/95 pt-2 backdrop-blur-sm"
+                      className="sticky bottom-0 z-20 mt-auto grid grid-cols-4 gap-1.5 rounded-t-[1.15rem] border border-white/10 bg-[linear-gradient(180deg,rgba(7,21,37,0.92),rgba(10,27,43,0.98))] p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_-12px_28px_rgba(2,12,24,0.38)] backdrop-blur-sm"
                     >
                       {[
                         { icon: WalletCards, label: "Wallet", href: "/dapp" },
@@ -504,13 +504,13 @@ export default function HomePage() {
                             key={label}
                             href={href}
                             aria-current={index === 0 ? "page" : undefined}
-                            className={`flex min-h-11 flex-col items-center justify-center gap-0.5 rounded-xl text-[0.5rem] font-semibold transition-colors ${
+                            className={`flex min-h-[3.75rem] flex-col items-center justify-center gap-0.5 rounded-[0.95rem] border px-1 text-[0.5rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
                               index === 0
-                                ? "bg-gold-500/12 text-gold-300 shadow-sm"
-                                : "text-parchment-100/50 hover:bg-parchment-100/5 hover:text-parchment-50"
+                                ? "border-gold-300/35 bg-[linear-gradient(180deg,rgba(248,211,79,0.18),rgba(17,39,58,0.72))] text-gold-300 shadow-[0_10px_20px_rgba(248,211,79,0.12)]"
+                                : "border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,39,58,0.44),rgba(9,22,37,0.7))] text-parchment-100/60 hover:border-gold-300/30 hover:bg-[linear-gradient(180deg,rgba(17,39,58,0.68),rgba(9,22,37,0.9))] hover:text-parchment-50"
                             }`}
                           >
-                            <NavIcon size={14} aria-hidden="true" />
+                            <NavIcon size={15} aria-hidden="true" />
                             {label}
                           </Link>
                         );
