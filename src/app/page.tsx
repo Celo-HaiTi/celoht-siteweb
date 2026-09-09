@@ -504,7 +504,7 @@ export default function HomePage() {
                             key={label}
                             href={href}
                             aria-current={index === 0 ? "page" : undefined}
-                            className={`flex min-h-[3.75rem] flex-col items-center justify-center gap-0.5 rounded-[0.95rem] border px-1 text-[0.5rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
+                            className={`flex min-h-[3.25rem] flex-col items-center justify-center gap-0.5 rounded-[0.95rem] border px-1 text-[0.42rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 sm:min-h-[3.75rem] sm:text-[0.5rem] ${
                               index === 0
                                 ? "border-gold-300/35 bg-[linear-gradient(180deg,rgba(248,211,79,0.18),rgba(17,39,58,0.72))] text-gold-300 shadow-[0_10px_20px_rgba(248,211,79,0.12)]"
                                 : "border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,39,58,0.44),rgba(9,22,37,0.7))] text-parchment-100/60 hover:border-gold-300/30 hover:bg-[linear-gradient(180deg,rgba(17,39,58,0.68),rgba(9,22,37,0.9))] hover:text-parchment-50"
