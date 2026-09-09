@@ -261,7 +261,7 @@ export default function HomePage() {
             </div>
 
             <div className="celoht-phone-stage flex justify-center lg:justify-end">
-              <div className="celoht-phone-shell relative w-full max-w-[24rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2.5 shadow-[0_32px_90px_rgba(2,12,24,0.32)] sm:p-3">
+              <div className="celoht-phone-shell relative w-full max-w-[25rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2.5 shadow-[0_32px_90px_rgba(2,12,24,0.32)] sm:p-3">
                 <div
                   className="celoht-phone-frame pointer-events-none absolute inset-0 rounded-[3rem] border border-gold-300/10"
                   aria-hidden="true"
