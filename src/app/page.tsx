@@ -308,7 +308,7 @@ export default function HomePage() {
                       </button>
                     </div>
 
-                    <div className="mt-3 rounded-[1.2rem] border border-gold-300/15 bg-[linear-gradient(145deg,rgba(248,211,79,0.06),rgba(13,33,55,0.82))] p-3 shadow-[0_10px_30px_rgba(4,17,31,0.2)]">
+                    <div className="mt-3 rounded-[1.2rem] border border-gold-300/20 bg-[linear-gradient(135deg,rgba(248,211,79,0.08),rgba(31,56,77,0.88),rgba(9,21,35,0.96))] p-3 shadow-[0_16px_34px_rgba(248,211,79,0.08),0_18px_28px_rgba(5,13,24,0.22)] ring-1 ring-white/5">
                       <div className="flex items-center justify-between gap-2">
                         <div>
                           <p className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
@@ -324,7 +324,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-3 rounded-[1.35rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(9,22,37,0.96))] p-3 shadow-[0_16px_32px_rgba(5,13,24,0.28)]">
+                    <div className="mt-3 rounded-[1.35rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(10,27,43,0.96),rgba(6,17,29,1))] p-3 shadow-[0_18px_32px_rgba(5,13,24,0.34),inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/5">
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
                           <span className="inline-flex h-2.5 w-2.5 rounded-full bg-forest-400 shadow-[0_0_0_5px_rgba(111,196,155,0.12)]" aria-hidden="true" />
@@ -454,7 +454,7 @@ export default function HomePage() {
                       ].map(([label, value]) => (
                         <div
                           key={label}
-                          className="min-h-[4.75rem] rounded-xl border border-parchment-100/10 bg-navy-900/50 p-2 text-center"
+                          className="min-h-[4.75rem] rounded-[0.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(17,39,58,0.9),rgba(9,22,37,0.96))] p-2 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                         >
                           <p className="font-display text-sm font-semibold leading-tight text-parchment-50 sm:text-base">
                             {value}
