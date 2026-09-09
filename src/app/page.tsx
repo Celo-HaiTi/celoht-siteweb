@@ -261,7 +261,7 @@ export default function HomePage() {
             </div>
 
             <div className="celoht-phone-stage flex justify-center lg:justify-end">
-              <div className="celoht-phone-shell relative w-full max-w-[23rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2.5 shadow-[0_32px_90px_rgba(2,12,24,0.32)] sm:max-w-[24rem] sm:p-3 lg:max-w-[26rem]">
+              <div className="celoht-phone-shell relative w-full max-w-[21rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2 shadow-[0_28px_80px_rgba(2,12,24,0.32)] sm:max-w-[22rem] sm:p-2.5 lg:max-w-[23.5rem]">
                 <div
                   className="celoht-phone-frame pointer-events-none absolute inset-0 rounded-[3rem] border border-gold-300/10"
                   aria-hidden="true"
@@ -276,16 +276,16 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,211,79,0.15),_transparent_32%),radial-gradient(circle_at_bottom,_rgba(111,196,155,0.12),_transparent_38%)]" />
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#071525] to-transparent opacity-90" />
 
-                  <div className="relative z-10 px-3 pb-3 pt-8 sm:px-4 sm:pb-4">
-                    <div className="flex items-center justify-between text-[0.56rem] font-medium text-parchment-100/60">
+                  <div className="relative z-10 px-2.5 pb-2.5 pt-7 sm:px-3 sm:pb-3">
+                    <div className="flex items-center justify-between text-[0.52rem] font-medium text-parchment-100/60">
                       <span className="font-mono tracking-[0.2em]">09:41</span>
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-forest-400/20 bg-forest-400/10 px-1.5 py-0.5 text-[0.46rem] font-medium uppercase tracking-[0.12em] text-forest-300">
+                      <span className="inline-flex items-center gap-1 rounded-full border border-forest-400/20 bg-forest-400/10 px-1.25 py-0.5 text-[0.42rem] font-medium uppercase tracking-[0.12em] text-forest-300">
                         <LockKeyhole size={9} aria-hidden="true" /> Wallet
                         connected
                       </span>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between gap-3">
+                    <div className="mt-3 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5">
                         <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gold-300/30 bg-[linear-gradient(135deg,rgba(248,211,79,0.2),rgba(13,33,55,0.75))] text-[0.7rem] font-bold text-gold-300">
                           C
@@ -308,23 +308,23 @@ export default function HomePage() {
                       </button>
                     </div>
 
-                    <div className="mt-3 rounded-[1.2rem] border border-gold-300/20 bg-[linear-gradient(135deg,rgba(248,211,79,0.08),rgba(31,56,77,0.88),rgba(9,21,35,0.96))] p-3 shadow-[0_16px_34px_rgba(248,211,79,0.08),0_18px_28px_rgba(5,13,24,0.22)] ring-1 ring-white/5">
+                    <div className="mt-2.5 rounded-[1.08rem] border border-gold-300/20 bg-[linear-gradient(135deg,rgba(248,211,79,0.08),rgba(31,56,77,0.88),rgba(9,21,35,0.96))] p-2.25 shadow-[0_12px_24px_rgba(248,211,79,0.08),0_14px_22px_rgba(5,13,24,0.20)] ring-1 ring-white/5">
                       <div className="flex items-center justify-between gap-2">
                         <div>
-                          <p className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                          <p className="font-mono text-[0.52rem] uppercase tracking-[0.16em] text-parchment-100/55">
                             Connected wallet
                           </p>
-                          <p className="mt-1 font-mono text-[0.58rem] text-parchment-50/90">
+                          <p className="mt-1 font-mono text-[0.52rem] text-parchment-50/90">
                             0xAC4F2AE7…9c94Bb66
                           </p>
                         </div>
-                        <span className="rounded-full border border-gold-300/20 bg-gold-500/10 px-2 py-1 text-[0.46rem] font-medium uppercase tracking-[0.12em] text-gold-300">
+                        <span className="rounded-full border border-gold-300/20 bg-gold-500/10 px-1.75 py-0.75 text-[0.42rem] font-medium uppercase tracking-[0.12em] text-gold-300">
                           Connected
                         </span>
                       </div>
                     </div>
 
-                    <div className="mt-3 rounded-[1.35rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(10,27,43,0.96),rgba(6,17,29,1))] p-3 shadow-[0_18px_32px_rgba(5,13,24,0.34),inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/5">
+                    <div className="mt-2.5 rounded-[1.18rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(10,27,43,0.96),rgba(6,17,29,1))] p-2.25 shadow-[0_14px_24px_rgba(5,13,24,0.28),inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/5">
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
                           <span className="inline-flex h-2.5 w-2.5 rounded-full bg-forest-400 shadow-[0_0_0_5px_rgba(111,196,155,0.12)]" aria-hidden="true" />
@@ -337,11 +337,11 @@ export default function HomePage() {
                         </span>
                       </div>
 
-                      <p className="mt-4 font-mono text-[0.52rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                      <p className="mt-3 font-mono text-[0.5rem] uppercase tracking-[0.16em] text-parchment-100/55">
                         Portfolio balance
                       </p>
                       <div className="mt-2 flex items-end justify-between gap-3">
-                        <p className="font-display text-3xl font-semibold leading-none text-parchment-50">
+                        <p className="font-display text-[2.05rem] font-semibold leading-none text-parchment-50">
                           $0.00
                         </p>
                         <p className="font-mono text-[0.46rem] uppercase tracking-[0.14em] text-gold-300">
@@ -354,27 +354,27 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <div className="mt-3 grid grid-cols-2 gap-2">
-                      <div className="rounded-[1.15rem] border border-parchment-100/10 bg-navy-900/55 p-3 shadow-sm">
-                        <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                    <div className="mt-2.5 grid grid-cols-2 gap-1.5">
+                      <div className="rounded-[1.02rem] border border-parchment-100/10 bg-navy-900/55 p-2.5 shadow-sm">
+                        <p className="font-mono text-[0.46rem] uppercase tracking-[0.14em] text-parchment-100/50">
                           CELO
                         </p>
-                        <p className="mt-2 font-display text-xl font-semibold leading-none text-parchment-50">
+                        <p className="mt-1.5 font-display text-lg font-semibold leading-none text-parchment-50">
                           0.85
                         </p>
-                        <p className="mt-1 text-[0.48rem] uppercase tracking-[0.12em] text-parchment-100/55">
+                        <p className="mt-1 text-[0.42rem] uppercase tracking-[0.12em] text-parchment-100/55">
                           Celo Sepolia
                         </p>
                       </div>
 
-                      <div className="rounded-[1.15rem] border border-parchment-100/10 bg-navy-900/55 p-3 shadow-sm">
-                        <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/50">
+                      <div className="rounded-[1.02rem] border border-parchment-100/10 bg-navy-900/55 p-2.5 shadow-sm">
+                        <p className="font-mono text-[0.46rem] uppercase tracking-[0.14em] text-parchment-100/50">
                           USDm
                         </p>
-                        <p className="mt-2 font-display text-xl font-semibold leading-none text-parchment-50">
+                        <p className="mt-1.5 font-display text-lg font-semibold leading-none text-parchment-50">
                           0.00
                         </p>
-                        <p className="mt-1 text-[0.48rem] uppercase tracking-[0.12em] text-parchment-100/55">
+                        <p className="mt-1 text-[0.42rem] uppercase tracking-[0.12em] text-parchment-100/55">
                           Stable value
                         </p>
                       </div>
@@ -383,21 +383,21 @@ export default function HomePage() {
                     <div className="mt-3 grid grid-cols-2 gap-2">
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gold-300/25 bg-gold-500/12 px-2 py-2.5 text-[0.6rem] font-semibold text-gold-300 transition-all hover:border-gold-300 hover:bg-gold-500/18 active:scale-95"
+                        className="inline-flex items-center justify-center gap-1 rounded-xl border border-gold-300/25 bg-gold-500/12 px-2 py-2 text-[0.56rem] font-semibold text-gold-300 transition-all hover:border-gold-300 hover:bg-gold-500/18 active:scale-95"
                       >
                         <ArrowUpFromLine size={13} aria-hidden="true" />
                         Send
                       </button>
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-parchment-100/15 bg-parchment-100/5 px-2 py-2.5 text-[0.6rem] font-semibold text-parchment-50 transition-all hover:border-gold-300/40 hover:text-gold-300 active:scale-95"
+                        className="inline-flex items-center justify-center gap-1 rounded-xl border border-parchment-100/15 bg-parchment-100/5 px-2 py-2 text-[0.56rem] font-semibold text-parchment-50 transition-all hover:border-gold-300/40 hover:text-gold-300 active:scale-95"
                       >
                         <ArrowDownToLine size={13} aria-hidden="true" />
                         Receive
                       </button>
                     </div>
 
-                    <div className="mt-3 rounded-[1.2rem] border border-parchment-100/10 bg-navy-900/50 p-2.5 shadow-sm">
+                    <div className="mt-2.5 rounded-[1rem] border border-parchment-100/10 bg-navy-900/50 p-2 shadow-sm">
                       <div className="flex items-center justify-between gap-2">
                         <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/55">
                           Timeline
@@ -445,7 +445,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-3 grid grid-cols-2 gap-1.5 md:grid-cols-4">
+                    <div className="mt-2.5 grid grid-cols-2 gap-1.5 md:grid-cols-4">
                       {[
                         ["USDm transferred", "$1,280.50"],
                         ["Transactions completed", "18"],
@@ -456,10 +456,10 @@ export default function HomePage() {
                           key={label}
                           className="min-h-[4.75rem] rounded-[0.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(17,39,58,0.9),rgba(9,22,37,0.96))] p-2 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                         >
-                          <p className="font-display text-sm font-semibold leading-tight text-parchment-50 sm:text-base">
+                          <p className="font-display text-[0.8rem] font-semibold leading-tight text-parchment-50 sm:text-base">
                             {value}
                           </p>
-                          <p className="mt-1 text-[0.42rem] leading-[1.2] text-parchment-100/60 sm:text-[0.47rem]">
+                          <p className="mt-1 text-[0.38rem] leading-[1.15] text-parchment-100/60 sm:text-[0.47rem]">
                             {label}
                           </p>
                         </div>
@@ -468,7 +468,7 @@ export default function HomePage() {
 
                     <nav
                       aria-label="CeloHT preview navigation"
-                      className="mt-3 grid grid-cols-4 gap-1.5 border-t border-parchment-100/10 pt-2.5"
+                      className="mt-2.5 grid grid-cols-4 gap-1 border-t border-parchment-100/10 pt-2"
                     >
                       {[
                         { icon: WalletCards, label: "Wallet", href: "/dapp" },
