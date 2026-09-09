@@ -279,9 +279,9 @@ export default function HomePage() {
                   <div className="relative z-10 px-4 pb-4 pt-10 sm:px-5 sm:pb-5">
                     <div className="flex items-center justify-between text-[0.56rem] font-medium text-parchment-100/60">
                       <span className="font-mono tracking-[0.2em]">09:41</span>
-                      <span className="inline-flex items-center gap-1.5">
-                        <LockKeyhole size={10} aria-hidden="true" /> Secure
-                        preview
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-forest-400/20 bg-forest-400/10 px-1.5 py-0.5 text-[0.46rem] font-medium uppercase tracking-[0.12em] text-forest-300">
+                        <LockKeyhole size={9} aria-hidden="true" /> Wallet
+                        connected
                       </span>
                     </div>
 
@@ -304,7 +304,7 @@ export default function HomePage() {
                         type="button"
                         className="rounded-full border border-parchment-100/15 bg-parchment-100/5 px-2.5 py-1.5 text-[0.5rem] font-medium uppercase tracking-[0.12em] text-parchment-100/75 transition-colors hover:border-gold-300/40 hover:text-gold-300"
                       >
-                        Open menu
+                        Apps
                       </button>
                     </div>
 
@@ -312,18 +312,15 @@ export default function HomePage() {
                       <div className="flex items-center justify-between gap-2">
                         <div>
                           <p className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
-                            Wallet
+                            Connected wallet
                           </p>
                           <p className="mt-1 font-mono text-[0.58rem] text-parchment-50/90">
                             0xAC4F2AE7…9c94Bb66
                           </p>
                         </div>
-                        <button
-                          type="button"
-                          className="rounded-full border border-parchment-100/15 bg-navy-900/70 px-2 py-1 text-[0.5rem] font-medium uppercase tracking-[0.12em] text-parchment-100/80 transition-colors hover:border-gold-300/40 hover:text-gold-300"
-                        >
-                          Disconnect wallet
-                        </button>
+                        <span className="rounded-full border border-gold-300/20 bg-gold-500/10 px-2 py-1 text-[0.46rem] font-medium uppercase tracking-[0.12em] text-gold-300">
+                          Connected
+                        </span>
                       </div>
                     </div>
 
@@ -341,7 +338,7 @@ export default function HomePage() {
                       </div>
 
                       <p className="mt-4 font-mono text-[0.52rem] uppercase tracking-[0.16em] text-parchment-100/55">
-                        Balance
+                        Portfolio balance
                       </p>
                       <div className="mt-2 flex items-end justify-between gap-3">
                         <p className="font-display text-3xl font-semibold leading-none text-parchment-50">
