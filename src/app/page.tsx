@@ -445,7 +445,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-3 grid grid-cols-4 gap-1.5">
+                    <div className="mt-3 grid grid-cols-2 gap-1.5 md:grid-cols-4">
                       {[
                         ["USDm transferred", "$1,280.50"],
                         ["Transactions completed", "18"],
@@ -454,12 +454,12 @@ export default function HomePage() {
                       ].map(([label, value]) => (
                         <div
                           key={label}
-                          className="rounded-xl border border-parchment-100/10 bg-navy-900/50 p-2 text-center"
+                          className="min-h-[4.75rem] rounded-xl border border-parchment-100/10 bg-navy-900/50 p-2 text-center"
                         >
-                          <p className="font-display text-base font-semibold text-parchment-50">
+                          <p className="font-display text-sm font-semibold leading-tight text-parchment-50 sm:text-base">
                             {value}
                           </p>
-                          <p className="mt-1 text-[0.47rem] leading-3 text-parchment-100/60">
+                          <p className="mt-1 text-[0.42rem] leading-[1.2] text-parchment-100/60 sm:text-[0.47rem]">
                             {label}
                           </p>
                         </div>
