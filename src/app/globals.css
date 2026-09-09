@@ -190,24 +190,26 @@ button {
 
 .celoht-phone-shell {
   position: relative;
+  aspect-ratio: 71.5 / 149.6;
+  width: min(100%, 24rem);
   animation: celoht-phone-enter 700ms 120ms ease-out both;
   transform: rotateY(-6deg) rotateX(3deg) rotateZ(0deg);
   will-change: transform;
   background: linear-gradient(
     135deg,
-    #edf1f6 0%,
-    #95a3b0 10%,
-    #2b3948 22%,
-    #111d2d 43%,
-    #0d1727 60%,
-    #182a3d 100%
+    #eef3f8 0%,
+    #b5bec9 12%,
+    #3d4f61 22%,
+    #131f2d 44%,
+    #0f1c2a 60%,
+    #1a2e41 100%
   );
-  border: 1px solid rgba(212, 223, 235, 0.3);
+  border: 1px solid rgba(212, 223, 235, 0.32);
   box-shadow:
-    0 46px 120px rgba(2, 12, 24, 0.6),
-    0 22px 42px rgba(2, 12, 24, 0.34),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    inset 0 -2px 12px rgba(0, 0, 0, 0.4);
+    0 52px 130px rgba(2, 12, 24, 0.62),
+    0 22px 44px rgba(2, 12, 24, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -2px 12px rgba(0, 0, 0, 0.42);
 }
 
 .celoht-phone-shell::before {
@@ -216,14 +218,14 @@ button {
   border-radius: 2.95rem;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.28) 0%,
-    rgba(255, 255, 255, 0.06) 22%,
-    rgba(255, 255, 255, 0.02) 48%,
-    rgba(0, 0, 0, 0.16) 100%
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(255, 255, 255, 0.08) 24%,
+    rgba(255, 255, 255, 0.02) 46%,
+    rgba(0, 0, 0, 0.18) 100%
   );
   content: "";
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .celoht-phone-shell::after {
@@ -257,12 +259,13 @@ button {
   border-radius: 2.55rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
-    radial-gradient(circle at top, rgba(248, 211, 79, 0.14), transparent 30%),
+    radial-gradient(circle at top, rgba(248, 211, 79, 0.16), transparent 30%),
     radial-gradient(circle at bottom, rgba(111, 196, 155, 0.12), transparent 38%),
     linear-gradient(180deg, #081827 0%, #0c1f31 26%, #071525 100%);
   box-shadow:
-    inset 0 0.5px 0 rgba(255, 255, 255, 0.08),
-    inset 0 -18px 30px rgba(0, 0, 0, 0.14);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -18px 30px rgba(0, 0, 0, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .celoht-island {
@@ -308,6 +311,7 @@ button {
   }
 
   .celoht-phone-shell {
+    width: min(84vw, 20.5rem);
     transform: rotateY(-3deg) rotateX(1.5deg) rotateZ(0deg);
     box-shadow:
       0 24px 70px rgba(2, 12, 24, 0.5),
@@ -318,6 +322,12 @@ button {
 
   .celoht-step-card {
     min-height: auto;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .celoht-phone-shell {
+    width: min(62vw, 23rem);
   }
 }
 

@@ -261,7 +261,7 @@ export default function HomePage() {
             </div>
 
             <div className="celoht-phone-stage flex justify-center lg:justify-end">
-              <div className="celoht-phone-shell relative w-full max-w-[21rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2 shadow-[0_28px_80px_rgba(2,12,24,0.32)] sm:max-w-[22rem] sm:p-2.5 lg:max-w-[23.5rem]">
+              <div className="celoht-phone-shell relative w-full max-w-[20.5rem] rounded-[3rem] border border-white/20 bg-[#111b2b] p-2 shadow-[0_30px_90px_rgba(2,12,24,0.36)] ring-1 ring-white/10 sm:max-w-[22rem] sm:p-2.5 md:max-w-[23rem] lg:max-w-[24rem]">
                 <div
                   className="celoht-phone-frame pointer-events-none absolute inset-0 rounded-[3rem] border border-gold-300/10"
                   aria-hidden="true"
@@ -308,7 +308,7 @@ export default function HomePage() {
                       </button>
                     </div>
 
-                    <div className="mt-2.5 rounded-[1.08rem] border border-gold-300/20 bg-[linear-gradient(135deg,rgba(248,211,79,0.08),rgba(31,56,77,0.88),rgba(9,21,35,0.96))] p-2.25 shadow-[0_12px_24px_rgba(248,211,79,0.08),0_14px_22px_rgba(5,13,24,0.20)] ring-1 ring-white/5">
+                    <div className="mt-2.5 rounded-[1.08rem] border border-gold-300/20 bg-[linear-gradient(135deg,rgba(248,211,79,0.12),rgba(31,56,77,0.92),rgba(9,21,35,0.98))] p-2.25 shadow-[0_14px_26px_rgba(248,211,79,0.10),0_16px_28px_rgba(5,13,24,0.22)] ring-1 ring-white/5 backdrop-blur-[1px]">
                       <div className="flex items-center justify-between gap-2">
                         <div>
                           <p className="font-mono text-[0.52rem] uppercase tracking-[0.16em] text-parchment-100/55">
@@ -324,7 +324,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="mt-2.5 rounded-[1.18rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(10,27,43,0.96),rgba(6,17,29,1))] p-2.25 shadow-[0_14px_24px_rgba(5,13,24,0.28),inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/5">
+                    <div className="mt-2.5 rounded-[1.18rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.86),rgba(10,27,43,0.98),rgba(6,17,29,1))] p-2.25 shadow-[0_16px_28px_rgba(5,13,24,0.30),inset_0_1px_0_rgba(255,255,255,0.06)] ring-1 ring-white/5">
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
                           <span className="inline-flex h-2.5 w-2.5 rounded-full bg-forest-400 shadow-[0_0_0_5px_rgba(111,196,155,0.12)]" aria-hidden="true" />
