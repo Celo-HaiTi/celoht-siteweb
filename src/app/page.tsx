@@ -233,6 +233,24 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8 rounded-[1.4rem] border border-gold-300/25 bg-[linear-gradient(145deg,rgba(248,211,79,0.12),rgba(13,33,55,0.82))] p-4 shadow-sm">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="font-mono text-[0.56rem] uppercase tracking-[0.16em] text-gold-300">
+                      CeloHT · Finance
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-parchment-100/80">
+                      A premium access layer for learning, wallets, and real-world
+                      participation.
+                    </p>
+                  </div>
+                  <span className="celoht-demo-badge rounded-full border border-gold-300/30 bg-gold-500/10 px-2.5 py-1.5 font-mono text-[0.5rem] uppercase tracking-[0.12em] text-gold-300">
+                    Live preview
+                  </span>
+                </div>
+              </div>
+
               <Link
                 href="/dapp"
                 className="mt-8 inline-flex items-center gap-2 font-semibold text-ink underline-offset-4 hover:underline"
@@ -248,161 +266,212 @@ export default function HomePage() {
                   className="celoht-phone-frame pointer-events-none absolute inset-0 rounded-[3rem] border border-gold-300/10"
                   aria-hidden="true"
                 />
-                <div className="celoht-phone-screen relative overflow-hidden rounded-[2.45rem] border border-white/10 bg-gradient-to-b from-navy-950 to-[#0a1420] shadow-inner">
+
+                <div className="celoht-phone-screen relative overflow-hidden rounded-[2.45rem] border border-white/10 bg-gradient-to-b from-[#081827] via-[#0c1f31] to-[#071525] shadow-inner">
                   <div
-                    className="celoht-island absolute left-1/2 top-3 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-[#050b14] shadow-[inset_0_1px_2px_rgba(255,255,255,0.12),_0_0_12px_rgba(111,196,155,0.08)]"
+                    className="celoht-island absolute left-1/2 top-3 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-[#040b13] shadow-[inset_0_1px_2px_rgba(255,255,255,0.12),_0_0_12px_rgba(111,196,155,0.08)]"
                     aria-hidden="true"
                   />
-                  <div className="px-5 pb-5 pt-12 sm:px-6 sm:pb-6">
-                    <div className="flex items-center justify-between text-[0.56rem] font-medium text-parchment-100/55">
-                      <span className="font-mono tracking-wide">09:41</span>
+
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,211,79,0.15),_transparent_32%),radial-gradient(circle_at_bottom,_rgba(111,196,155,0.12),_transparent_38%)]" />
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#071525] to-transparent opacity-90" />
+
+                  <div className="relative z-10 px-4 pb-4 pt-10 sm:px-5 sm:pb-5">
+                    <div className="flex items-center justify-between text-[0.56rem] font-medium text-parchment-100/60">
+                      <span className="font-mono tracking-[0.2em]">09:41</span>
                       <span className="inline-flex items-center gap-1.5">
                         <LockKeyhole size={10} aria-hidden="true" /> Secure
                         preview
                       </span>
                     </div>
-                    <div className="mt-6 flex items-end justify-between gap-4">
-                      <div>
-                        <p className="font-mono text-[0.56rem] uppercase tracking-[0.18em] text-gold-300">
-                          CeloHT Platform
-                        </p>
-                        <p className="mt-2 font-display text-xl font-semibold leading-tight text-parchment-50">
-                          Your access layer.
-                        </p>
-                        <p className="mt-1.5 text-[0.61rem] leading-5 text-parchment-100/60">
-                          Wallet access and community tools
-                        </p>
+
+                    <div className="mt-5 flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-2.5">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gold-300/30 bg-[linear-gradient(135deg,rgba(248,211,79,0.2),rgba(13,33,55,0.75))] text-[0.7rem] font-bold text-gold-300">
+                          C
+                        </div>
+                        <div>
+                          <p className="font-display text-sm font-semibold leading-none text-parchment-50">
+                            CeloHT
+                          </p>
+                          <p className="mt-1 font-mono text-[0.48rem] uppercase tracking-[0.16em] text-parchment-100/60">
+                            Finance
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex flex-col items-end gap-2">
-                        <span className="celoht-demo-badge rounded-full border border-gold-300/25 bg-gold-500/10 px-2 py-1 font-mono text-[0.51rem] uppercase tracking-[0.14em] text-gold-300">
-                          Preview
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 text-[0.54rem] text-parchment-100/55">
-                          <span
-                            className="h-1.5 w-1.5 rounded-full bg-parchment-100/40"
-                            aria-hidden="true"
-                          />
-                          Network not connected
-                        </span>
+
+                      <button
+                        type="button"
+                        className="rounded-full border border-parchment-100/15 bg-parchment-100/5 px-2.5 py-1.5 text-[0.5rem] font-medium uppercase tracking-[0.12em] text-parchment-100/75 transition-colors hover:border-gold-300/40 hover:text-gold-300"
+                      >
+                        Open menu
+                      </button>
+                    </div>
+
+                    <div className="mt-4 rounded-[1.3rem] border border-gold-300/15 bg-[linear-gradient(145deg,rgba(248,211,79,0.06),rgba(13,33,55,0.82))] p-3.5 shadow-[0_10px_30px_rgba(4,17,31,0.2)]">
+                      <div className="flex items-center justify-between gap-2">
+                        <div>
+                          <p className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                            Wallet
+                          </p>
+                          <p className="mt-1 font-mono text-[0.58rem] text-parchment-50/90">
+                            0xAC4F2AE7…9c94Bb66
+                          </p>
+                        </div>
+                        <button
+                          type="button"
+                          className="rounded-full border border-parchment-100/15 bg-navy-900/70 px-2 py-1 text-[0.5rem] font-medium uppercase tracking-[0.12em] text-parchment-100/80 transition-colors hover:border-gold-300/40 hover:text-gold-300"
+                        >
+                          Disconnect wallet
+                        </button>
                       </div>
                     </div>
 
-                    <div className="mt-5 rounded-2xl border border-gold-300/20 bg-[linear-gradient(145deg,rgba(248,211,79,0.14),rgba(13,33,55,0.8))] p-4 shadow-sm">
+                    <div className="mt-4 rounded-[1.5rem] border border-parchment-100/10 bg-[linear-gradient(180deg,rgba(17,43,64,0.82),rgba(9,22,37,0.96))] p-4 shadow-[0_16px_32px_rgba(5,13,24,0.28)]">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="text-[0.57rem] uppercase tracking-[0.16em] font-medium text-parchment-100/55">
-                          Wallet
-                        </p>
                         <div className="flex items-center gap-2">
-                          <WalletCards
-                            size={15}
-                            className="text-gold-300"
-                            aria-hidden="true"
-                          />
-                          <Link
-                            href={DAPP_URL}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="rounded-full bg-gold-500 px-2.5 py-1.5 text-[0.51rem] font-semibold uppercase tracking-[0.1em] text-navy-950 transition-colors hover:bg-gold-300"
-                          >
-                            Open Wallet
-                          </Link>
+                          <span className="inline-flex h-2.5 w-2.5 rounded-full bg-forest-400 shadow-[0_0_0_5px_rgba(111,196,155,0.12)]" aria-hidden="true" />
+                          <p className="font-mono text-[0.52rem] uppercase tracking-[0.16em] text-parchment-100/70">
+                            Celo Sepolia
+                          </p>
                         </div>
+                        <span className="rounded-full border border-gold-300/20 bg-gold-500/10 px-1.5 py-0.5 font-mono text-[0.46rem] uppercase tracking-[0.12em] text-gold-300">
+                          Live
+                        </span>
                       </div>
-                      <p className="mt-5 font-mono text-[0.57rem] uppercase tracking-[0.16em] font-medium text-parchment-100/55">
-                        Available balance
+
+                      <p className="mt-4 font-mono text-[0.52rem] uppercase tracking-[0.16em] text-parchment-100/55">
+                        Balance
                       </p>
-                      <p className="mt-1.5 font-display text-3xl font-semibold text-parchment-50">
-                        —
-                      </p>
-                      <p className="mt-2 text-xs text-parchment-100/60">
-                        No wallet connected yet.
+                      <div className="mt-2 flex items-end justify-between gap-3">
+                        <p className="font-display text-3xl font-semibold leading-none text-parchment-50">
+                          $0.00
+                        </p>
+                        <p className="font-mono text-[0.46rem] uppercase tracking-[0.14em] text-gold-300">
+                          USDm
+                        </p>
+                      </div>
+                      <p className="mt-2 text-[0.56rem] leading-4 text-parchment-100/60">
+                        ≈ Local currency estimate unavailable until a price feed is
+                        configured.
                       </p>
                     </div>
 
                     <div className="mt-4 grid grid-cols-2 gap-3">
-                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900/60 p-3 shadow-sm">
-                        <p className="font-mono text-[0.54rem] uppercase tracking-[0.14em] font-medium text-parchment-100/50">
+                      <div className="rounded-[1.15rem] border border-parchment-100/10 bg-navy-900/55 p-3 shadow-sm">
+                        <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/50">
                           CELO
                         </p>
-                        <p className="mt-2.5 font-display text-lg font-semibold text-parchment-50">
-                          —
+                        <p className="mt-2 font-display text-xl font-semibold leading-none text-parchment-50">
+                          0.85
+                        </p>
+                        <p className="mt-1 text-[0.48rem] uppercase tracking-[0.12em] text-parchment-100/55">
+                          Celo Sepolia
                         </p>
                       </div>
-                      <div className="rounded-xl border border-parchment-100/10 bg-navy-900/60 p-3 shadow-sm">
-                        <p className="font-mono text-[0.54rem] uppercase tracking-[0.14em] font-medium text-parchment-100/50">
+
+                      <div className="rounded-[1.15rem] border border-parchment-100/10 bg-navy-900/55 p-3 shadow-sm">
+                        <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/50">
                           USDm
                         </p>
-                        <p className="mt-2.5 font-display text-lg font-semibold text-parchment-50">
-                          —
+                        <p className="mt-2 font-display text-xl font-semibold leading-none text-parchment-50">
+                          0.00
+                        </p>
+                        <p className="mt-1 text-[0.48rem] uppercase tracking-[0.12em] text-parchment-100/55">
+                          Stable value
                         </p>
                       </div>
                     </div>
 
-                    <div className="mt-4 rounded-2xl border border-parchment-100/10 bg-navy-900/50 p-4 shadow-sm">
-                      <div className="flex items-center justify-between gap-3">
-                        <div>
-                          <p className="font-mono text-[0.54rem] uppercase tracking-[0.16em] font-medium text-parchment-100/50">
-                            Wallet actions
-                          </p>
-                          <p className="mt-1.5 text-xs text-parchment-100/60">
-                            Move value across the Celo ecosystem.
-                          </p>
-                        </div>
-                        <span
-                          className="h-2 w-2 rounded-full bg-forest-400 shadow-[0_0_0_4px_rgba(111,196,155,0.12)]"
-                          aria-hidden="true"
-                        />
+                    <div className="mt-4 grid grid-cols-2 gap-2">
+                      <button
+                        type="button"
+                        className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gold-300/25 bg-gold-500/12 px-2 py-2.5 text-[0.6rem] font-semibold text-gold-300 transition-all hover:border-gold-300 hover:bg-gold-500/18 active:scale-95"
+                      >
+                        <ArrowUpFromLine size={13} aria-hidden="true" />
+                        Send
+                      </button>
+                      <button
+                        type="button"
+                        className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-parchment-100/15 bg-parchment-100/5 px-2 py-2.5 text-[0.6rem] font-semibold text-parchment-50 transition-all hover:border-gold-300/40 hover:text-gold-300 active:scale-95"
+                      >
+                        <ArrowDownToLine size={13} aria-hidden="true" />
+                        Receive
+                      </button>
+                    </div>
+
+                    <div className="mt-4 rounded-[1.3rem] border border-parchment-100/10 bg-navy-900/50 p-3 shadow-sm">
+                      <div className="flex items-center justify-between gap-2">
+                        <p className="font-mono text-[0.5rem] uppercase tracking-[0.14em] text-parchment-100/55">
+                          Timeline
+                        </p>
+                        <span className="inline-flex items-center gap-1.5 text-[0.46rem] uppercase tracking-[0.12em] text-parchment-100/60">
+                          <span
+                            className="h-1.5 w-1.5 rounded-full bg-forest-400"
+                            aria-hidden="true"
+                          />
+                          Live
+                        </span>
                       </div>
-                      <div className="mt-4 grid grid-cols-2 gap-2">
-                        <button
-                          type="button"
-                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gold-300/25 bg-gold-500/10 px-2 py-2.5 text-[0.61rem] font-semibold text-gold-300 transition-all hover:border-gold-300 hover:bg-gold-500/20 active:scale-95"
-                        >
-                          <ArrowUpFromLine size={13} aria-hidden="true" />
-                          Send
-                        </button>
-                        <button
-                          type="button"
-                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-parchment-100/15 bg-parchment-100/5 px-2 py-2.5 text-[0.61rem] font-semibold text-parchment-50 transition-all hover:border-gold-300 hover:text-gold-300 active:scale-95"
-                        >
-                          <ArrowDownToLine size={13} aria-hidden="true" />
-                          Receive
-                        </button>
+
+                      <div className="mt-3 space-y-2.5">
+                        {[
+                          { label: "Received", amount: "+$250.00", meta: "Jean • 10:42 AM" },
+                          { label: "Sent", amount: "-$75.00", meta: "Marie • 09:12 AM" },
+                          { label: "Pending", amount: "-$35.00", meta: "Agent payment • 07:54 AM" },
+                        ].map((item) => (
+                          <div
+                            key={item.label}
+                            className="flex items-center justify-between gap-3 rounded-xl border border-parchment-100/8 bg-parchment-100/[0.02] p-2"
+                          >
+                            <div>
+                              <p className="font-mono text-[0.46rem] uppercase tracking-[0.12em] text-parchment-100/55">
+                                {item.label}
+                              </p>
+                              <p className="mt-1 text-[0.54rem] text-parchment-100/70">
+                                {item.meta}
+                              </p>
+                            </div>
+                            <p
+                              className={`font-display text-sm font-semibold ${
+                                item.amount.startsWith("+")
+                                  ? "text-gold-300"
+                                  : item.amount.startsWith("-")
+                                    ? "text-parchment-100"
+                                    : "text-gold-300"
+                              }`}
+                            >
+                              {item.amount}
+                            </p>
+                          </div>
+                        ))}
                       </div>
                     </div>
 
-                    <p className="mt-5 font-mono text-[0.54rem] uppercase tracking-[0.16em] font-medium text-parchment-100/45">
-                      Quick actions
-                    </p>
-                    <div className="mt-3 grid grid-cols-3 gap-2">
+                    <div className="mt-4 grid grid-cols-4 gap-2">
                       {[
-                        ["Learn", "/education"],
-                        ["Agents", "/agent-network"],
-                        ["Reforest", "/reforestation"],
-                      ].map(([label, href]) => (
-                        <Link
+                        ["USDm transferred", "$1,280.50"],
+                        ["Transactions completed", "18"],
+                        ["Education progress", "72%"],
+                        ["Trees supported", "640"],
+                      ].map(([label, value]) => (
+                        <div
                           key={label}
-                          href={href}
-                          className="rounded-xl border border-parchment-100/10 bg-navy-900/60 px-2 py-2.5 text-center text-[0.61rem] font-semibold text-parchment-50 transition-all hover:border-gold-500/40 hover:text-gold-300 hover:bg-navy-800 shadow-sm"
+                          className="rounded-xl border border-parchment-100/10 bg-navy-900/50 p-2 text-center"
                         >
-                          {label}
-                        </Link>
+                          <p className="font-display text-base font-semibold text-parchment-50">
+                            {value}
+                          </p>
+                          <p className="mt-1 text-[0.47rem] leading-3 text-parchment-100/60">
+                            {label}
+                          </p>
+                        </div>
                       ))}
                     </div>
-                    <div className="mt-4 rounded-xl border border-parchment-100/10 bg-navy-900/60 px-3 py-3.5 shadow-sm">
-                      <p className="font-mono text-[0.54rem] uppercase tracking-[0.14em] font-medium text-parchment-100/50">
-                        Education
-                      </p>
-                      <p className="mt-2 text-sm font-semibold text-parchment-50">
-                        Continue learning
-                      </p>
-                      <p className="mt-1 text-[0.61rem] leading-5 text-parchment-100/60">
-                        Course modules and wallet foundations.
-                      </p>
-                    </div>
+
                     <nav
                       aria-label="CeloHT preview navigation"
-                      className="mt-5 grid grid-cols-4 gap-1.5 border-t border-parchment-100/10 pt-4"
+                      className="mt-4 grid grid-cols-4 gap-1.5 border-t border-parchment-100/10 pt-3"
                     >
                       {[
                         { icon: WalletCards, label: "Wallet", href: "/dapp" },
@@ -423,10 +492,10 @@ export default function HomePage() {
                             key={label}
                             href={href}
                             aria-current={index === 0 ? "page" : undefined}
-                            className={`flex min-h-11 flex-col items-center justify-center gap-0.5 rounded-xl text-[0.51rem] font-semibold transition-colors ${
+                            className={`flex min-h-11 flex-col items-center justify-center gap-0.5 rounded-xl text-[0.5rem] font-semibold transition-colors ${
                               index === 0
                                 ? "bg-gold-500/12 text-gold-300 shadow-sm"
-                                : "text-parchment-100/45 hover:bg-parchment-100/5 hover:text-parchment-50"
+                                : "text-parchment-100/50 hover:bg-parchment-100/5 hover:text-parchment-50"
                             }`}
                           >
                             <NavIcon size={14} aria-hidden="true" />
