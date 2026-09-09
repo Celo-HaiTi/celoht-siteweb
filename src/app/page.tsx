@@ -276,7 +276,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,211,79,0.15),_transparent_32%),radial-gradient(circle_at_bottom,_rgba(111,196,155,0.12),_transparent_38%)]" />
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#071525] to-transparent opacity-90" />
 
-                  <div className="relative z-10 px-2.5 pb-2.5 pt-7 sm:px-3 sm:pb-3">
+                  <div className="relative z-10 flex h-full flex-col overflow-y-auto px-2.5 pb-2.5 pt-7 sm:px-3 sm:pb-3">
                     <div className="flex items-center justify-between text-[0.52rem] font-medium text-parchment-100/60">
                       <span className="font-mono tracking-[0.2em]">09:41</span>
                       <span className="inline-flex items-center gap-1 rounded-full border border-forest-400/20 bg-forest-400/10 px-1.25 py-0.5 text-[0.42rem] font-medium uppercase tracking-[0.12em] text-forest-300">
@@ -468,7 +468,7 @@ export default function HomePage() {
 
                     <nav
                       aria-label="CeloHT preview navigation"
-                      className="mt-2.5 grid grid-cols-4 gap-1 border-t border-parchment-100/10 pt-2"
+                      className="mt-auto grid grid-cols-4 gap-1 border-t border-parchment-100/10 pt-2"
                     >
                       {[
                         { icon: WalletCards, label: "Wallet", href: "/dapp" },
