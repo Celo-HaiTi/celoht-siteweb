@@ -483,7 +483,7 @@ export default function HomePage() {
 
                     <nav
                       aria-label="CeloHT preview navigation"
-                      className="mt-auto grid grid-cols-4 gap-1 border-t border-parchment-100/10 pt-2"
+                      className="sticky bottom-0 z-20 mt-auto grid grid-cols-4 gap-1 border-t border-parchment-100/10 bg-[#071525]/95 pt-2 backdrop-blur-sm"
                     >
                       {[
                         { icon: WalletCards, label: "Wallet", href: "/dapp" },
