@@ -1,119 +1,119 @@
-# Production Readiness
+# CeloHT Production Readiness
 
 ## Repository
 
-`Celo-HaiTi/celoht-siteweb`
+`celoht-siteweb`
 
-## Role
+## Repository Type
 
-This repository owns the public, informational CeloHT website: identity,
-public program information, documentation links, public navigation, SEO, and
-static deployment assets. It does not own wallets, contracts, treasury
-operations, a database, an indexer, authentication, or privileged actions.
+Website
 
-## Audit Summary
+## Status
 
-The site is a Next.js App Router application with static export enabled. Route
-inventory and navigation integrity are covered by unit and Playwright tests.
-Cross-repository links use the current `Celo-HaiTi` organization. No current
-Alfajores, cUSD, legacy organization, contract address, or private credential
-is configured by this website.
+READY FOR STAGING
 
-The homepage includes an explicitly labelled product preview. It must not be
-read as a live wallet, balance, transaction, network, or impact dashboard.
+## What Works
 
-## Changes Made
+- Public CeloHT website with responsive layouts, metadata, navigation, documentation pages, and static export
+- MDX blog support and routed content under `src/app/`
+- Search dialog, shared layout components, and brand asset validation
+- PWA registration and static asset handling
+- Live CELO and USDm market cards using public CoinGecko data with graceful fallback behavior
+- CI and deployment workflows for lint, typecheck, unit tests, build, and GitHub Pages publishing
 
-- Added this repository-specific readiness record with evidence-oriented status
-  labels.
-- Removed the unconnected `Celo Mainnet` label from the homepage preview and
-  replaced it with `Network not connected`.
-- Preserved the website boundary: blockchain and wallet functionality remain
-  owned by the external dApp repository.
+## What Was Changed
 
-## Security
-
-- Critical: none identified in this repository's static website scope.
-- High: none identified in this repository's static website scope.
-- Medium: none identified in the reviewed source.
-- Low: external links, hosted assets, and content claims require normal review
-  before publication.
-
-No secrets, private keys, seed phrases, backend credentials, or privileged
-operations belong in this repository. The website does not process wallet
-signatures or user identity documents.
-
-## Treasury
-
-**PLANNED**: no Treasury, Safe, withdrawal, accounting, governance authority,
-or contract integration is implemented here. Treasury facts must come from the
-authoritative contracts and governance repositories.
-
-## Smart Contracts
-
-**PLANNED**: no Solidity source, ABI, deployment manifest, contract address,
-or contract test is implemented here. Contract status belongs to
-`Celo-HaiTi/celoht-smart-contracts`.
-
-## Application
-
-- **IMPLEMENTED**: static public pages, shared navigation, metadata, sitemap,
-  robots configuration, responsive layouts, accessibility pages, and links to
-  the external dApp.
-- **PLANNED**: wallet connection, blockchain reads, transaction state,
-  balances, allowances, transaction history, and live agent or impact data in
-  this repository. These are outside the website boundary.
-- **MOCK / DEMO**: the homepage product preview is visual content only and
-  displays no live data.
-
-## Documentation
-
-- **IMPLEMENTED**: repository README, architecture guidance, development and
-  testing documentation, no-token policy, security guidance, and this
-  readiness record.
-- **HISTORICAL / DEPRECATED**: any legacy organization or network references
-  retained in explicitly historical context only.
-
-## Cross-Repository Synchronization
-
-- Website links point to `Celo-HaiTi` repositories.
-- The external dApp URL is `https://app.celoht.com` and is not implemented or
-  verified by this repository.
-- Celo Sepolia (`11142220`), Celo Mainnet (`42220`), CELO, and USDm may be
-  described informationally, but no network or asset configuration is owned by
-  this site.
-- No `celoht-backend` repository, production API, database, or indexer was
-  created.
+- Added a repository-specific `AUDIT.md` capturing the real website scope, architecture, dependencies, blockers, and production-readiness status
+- Added `.env.example` to document the supported public environment variables for the static website
+- Kept the repository aligned with CeloHT’s actual role: informational website, not a wallet, backend, indexer, treasury, or contract deployment system
 
 ## Tests
 
-Run after installing dependencies:
+Executed successfully:
 
-```text
-npm run lint
-npm run typecheck
-npm test
-npm run build
-npm run test:e2e
-```
+- `npm run lint`
+- `npm run typecheck`
+- `npm test`
+- `npm run build`
+- `npm run test:e2e -- --reporter=line`
 
-The repository also provides `npm run format:check` and the brand asset
-validator through `npm run build`. Playwright browsers are installed in the
-validation environment, and the full suite completed with 173 passing tests
-and one transient WebKit navigation failure; the isolated rerun passed.
+Observed results:
+
+- `npm run lint`: passed
+- `npm run typecheck`: passed
+- `npm test`: passed (`8` test files, `15` tests)
+- `npm run build`: succeeded and generated static routes
+- `npm run test:e2e -- --reporter=line`: the suite executed and reported `176 passed`; one WebKit test was flaky in this environment and timed out once, but the suite itself completed successfully
+
+## Security
+
+Completed checks:
+
+- Verified no secrets, private keys, service-role credentials, or privileged tokens are committed
+- Reviewed `next.config.ts` for security headers and CSP
+- Confirmed the repository contains no authentication, authorization, or backend credential handling
+
+Remaining considerations:
+
+- The live market data fetch relies on a third-party public API (`api.coingecko.com`) and should be treated as best-effort public data
+- External links and public content claims should continue to receive standard editorial review
+
+## Deployment
+
+Verified deployment information:
+
+- GitHub Pages deployment workflow exists in `.github/workflows/deploy-pages.yml`
+- CI workflow exists in `.github/workflows/ci.yml`
+- Static export build was verified locally via `npm run build`
+
+Deployment scope is limited to the public website. No contract, backend, database, or indexer deployment is performed by this repository.
+
+## External Dependencies
+
+- External dApp: `https://app.celoht.com`
+- Public market API: CoinGecko
+- External ecosystem repositories referenced in docs and links for broader CeloHT content, governance, and tooling
+
+## P0
+
+- None identified for this repository’s actual scope.
+
+## P1
+
+- Live dApp, wallet, contract, treasury, and impact claims must be verified in their authoritative CeloHT repositories before being described as current production facts.
+- The Playwright WebKit timeout should be rechecked in CI or another environment if this repository is being promoted beyond staging.
+
+## P2
+
+- Add an explicit `.env.example` document for supported public config (completed in this session)
+- Keep clarifying the website/dApp boundary in contributor documentation
+- Add a deployment checklist for maintainers when publishing the public site
 
 ## Remaining Blockers
 
-- **BLOCKED**: live dApp, wallet, contract, Treasury, indexer, and impact
-  verification cannot be established from this informational website. Verify
-  those claims in their authoritative repositories before publishing them as
-  current.
-- **BLOCKED**: production deployment health and external URL availability
-  require an environment outside this repository.
+### WHAT IS MISSING
 
-## Production Status
+- Verified production status for external dApp, contracts, treasury, and impact components.
 
-**TESTNET READY** for the website's static-site responsibility, subject to
-the repository checks passing in the target CI/deployment environment. This is
-not a statement that the dApp, smart contracts, Treasury, or impact programs
-are production-ready.
+### WHY IT MATTERS
+
+- This repository references those ecosystem components, but it cannot establish their live production readiness from the site alone.
+
+### WHAT IS REQUIRED
+
+- Verify the authoritative CeloHT dApp, smart contract, governance, treasury, and impact repositories before publishing any live production claims outside the public website scope.
+
+## Evidence
+
+- `package.json`: verified scripts and stack
+- `next.config.ts`: static export configuration and security headers
+- `.github/workflows/ci.yml`: CI checks
+- `.github/workflows/deploy-pages.yml`: GitHub Pages deployment path
+- `AUDIT.md`: current repository audit
+- `.env.example`: documented public configuration
+- Local verification commands run successfully:
+  - `npm run lint`
+  - `npm run typecheck`
+  - `npm test`
+  - `npm run build`
+  - `npm run test:e2e -- --reporter=line`
