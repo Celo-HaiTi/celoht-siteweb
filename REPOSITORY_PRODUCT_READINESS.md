@@ -46,14 +46,12 @@ Production dependencies are limited to the website stack. No blockchain dependen
 ## Changes Made
 
 - Corrected repository links to the canonical Celo-HaiTi GitHub org.
-- Replaced outdated legacy `celo-ht` references in README, docs, changelog, roadmap, and support material.
 - Updated roadmap language from outdated Alfajores phrasing to Celo Sepolia wording.
 - Installed and remediated dependency vulnerabilities using the repository’s package manager.
 - Verified lint, typecheck, test, and production build status.
 
 ## Contradictions Found
 
-- Stale GitHub org references used the old `celo-ht` / `Celo-HT` patterns instead of the canonical `Celo-HaiTi` organization.
 - Roadmap wording still referenced Alfajores, which is no longer the current CeloHT testnet expectation.
 - Some historical package metadata and docs still reflected older repository naming conventions.
 
