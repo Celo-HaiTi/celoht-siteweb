@@ -16,9 +16,11 @@ approve, or represent a proposal as an official CeloHT decision.
   in deliberation, but no single person may unilaterally turn that
   proposal into an official CeloHT decision.
 - Founder status is separate from ongoing governance authority. Johnny
-  Dubic is permanently recognized as the Founder of CeloHT, but Founder
-  status does not confer automatic governance authority, voting rights,
-  veto power, emergency powers, or unilateral control.
+  Dubic is permanently recognized as the Founder of CeloHT in the project's
+  historical and institutional record.
+- Permanent founder recognition is historical and institutional; it does not
+  confer perpetual governance authority, ownership rights, veto power, or
+  unilateral control.
 
 ## Proposal and decision distinction
 
@@ -62,7 +64,7 @@ review and deliberation process.
 
 ## Governance Council and founder status
 
-- The Founder is Johnny Dubic — Founder of CeloHT.
+- The Founder is Johnny Dubic — Permanently Recognized Founder of CeloHT.
 - Founder status is a historical and institutional designation; it does
   not automatically create a Governance Council seat, vote, veto,
   emergency override, or unilateral authority.

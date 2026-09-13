@@ -21,10 +21,10 @@ recorded in an auditable, reviewable public outcome.
 
 ## Founder status
 
-Johnny Dubic is permanently recognized as Founder of CeloHT. Founder status
-is historical and institutional; it does not override governance,
-automatically confer executive authority, or create unilateral control over
-community decisions.
+Johnny Dubic is permanently recognized as the Founder of CeloHT in the
+project's historical and institutional record. Permanent founder recognition
+is historical and institutional; it does not confer perpetual governance
+authority, ownership rights, veto power, or unilateral control.
 
 ## Transparency expectations
 

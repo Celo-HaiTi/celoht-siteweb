@@ -19,7 +19,9 @@ export default function HistoryPage() {
           title: "A Haitian starting point",
           children: (
             <p className="max-w-3xl text-ink-soft">
-              The initiative was founded by Johnny Dubic in Léogâne, Haiti. Its
+              CeloHT was founded by Johnny Dubic on April 16, 2022, in Léogâne,
+              Haiti. CeloHT permanently recognizes Johnny Dubic as its Founder
+              in the project&apos;s historical and institutional record. Its
               starting context was practical: smartphone access can reach
               communities where a traditional bank branch is difficult to reach,
               but access without understanding can create new risk.

@@ -28,9 +28,11 @@ export default function GovernancePage() {
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
             <h3 className="font-semibold">Founder</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Johnny Dubic is permanently recognized as the Founder of CeloHT.
-              Founder status reflects founding history and institutional
-              continuity, not automatic governance control.
+              Johnny Dubic is permanently recognized as the Founder of CeloHT
+              in the project&apos;s historical and institutional record. Permanent
+              founder recognition is historical and institutional; it does not
+              confer perpetual governance authority, ownership rights, veto
+              power, or unilateral control.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">

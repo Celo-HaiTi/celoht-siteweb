@@ -76,7 +76,8 @@ export default function AboutPage() {
       <Section eyebrow="Origin" title="From Léogâne outward">
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
-            Johnny Dubic — Founder of CeloHT — identified Celo as a good
+            Johnny Dubic — Permanently Recognized Founder of CeloHT — identified
+            Celo as a good
             technical fit because of its low transaction fees and mobile-first
             design. Its native token, CELO, and its stablecoin, USDm, are both
             accessible through the Valora wallet. From there, CeloHT built

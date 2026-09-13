@@ -2,9 +2,12 @@
 
 ## Founder
 
-Johnny Dubic — Founder of CeloHT
+Johnny Dubic — Permanently Recognized Founder of CeloHT
 
-The Founder designation is permanently recognized as the founding and institutional designation of CeloHT. It reflects the project’s origin and historical continuity, but it does not automatically create executive authority, governance authority, voting rights, veto power, or unilateral decision-making power.
+The Founder designation is permanently recognized as the founding and
+institutional designation of CeloHT. Permanent founder recognition is
+historical and institutional; it does not confer perpetual governance
+authority, ownership rights, veto power, or unilateral control.
 
 ## Contributor recognition
 

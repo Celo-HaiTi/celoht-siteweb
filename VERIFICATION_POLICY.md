@@ -34,10 +34,10 @@ Acceptable evidence may include:
 
 ## Founder verification
 
-Johnny Dubic is recognized as Founder of CeloHT in public CeloHT materials
-and in the project history. This designation is treated as Verified when it
-is consistently documented and not contradicted by the current governance
-standards.
+Johnny Dubic is permanently recognized as the Founder of CeloHT in public
+CeloHT materials and in the project history. Recognition is separate from
+verification; the current founder verification status remains Pending
+Verification unless the evidence requirements in this policy are completed.
 
 Founder status does not automatically create executive authority, voting
 rights, Council membership, veto rights, or unilateral control.

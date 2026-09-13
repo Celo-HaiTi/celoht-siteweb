@@ -83,7 +83,9 @@ export default function MediaKitPage() {
               decentralized network of community agents, and environmental
               reforestation programs - all built on Celo, USDm, and
               Valora-compatible infrastructure. Founded by Johnny Dubic in
-              Léogâne, Haiti, CeloHT aims to make modern financial tools
+              Léogâne, Haiti, CeloHT permanently recognizes Johnny Dubic as
+              its Founder in the project&apos;s historical and institutional record.
+              CeloHT aims to make modern financial tools
               accessible to communities with limited access to traditional
               banking.
             </p>
