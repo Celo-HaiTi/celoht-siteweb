@@ -35,8 +35,17 @@ pillars:
 - Agent Network
 - Reforestation
 
+Johnny Dubic is permanently recognized as the Founder of CeloHT. Founder
+status is historical and institutional, and it does not create automatic
+executive authority, Governance Council membership, voting rights, veto power,
+or unilateral governance control.
+
 CeloHT is a community-driven, open-source initiative on the Celo ecosystem.
 It is not a blockchain, token project, ICO, or investment platform.
+
+CeloHT governance is based on transparent, documented proposals and
+collective decision-making. A proposal is not an official CeloHT decision
+until the documented governance process has been completed.
 
 ## Why this project exists
 

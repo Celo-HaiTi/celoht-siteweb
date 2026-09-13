@@ -23,27 +23,30 @@ export default function GovernancePage() {
         lead="CeloHT is meant to be governed by its community, not run top-down. This model keeps decisions transparent, accountable, and aligned with our three founding pillars."
       />
 
-      <Section eyebrow="Structure" title="Three roles">
+      <Section eyebrow="Structure" title="Core governance model">
         <div className="grid gap-6 sm:grid-cols-3">
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
-            <h3 className="font-semibold">Foundation Director</h3>
+            <h3 className="font-semibold">Founder</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Owns overall strategic vision, represents CeloHT externally, and
-              has the final say when governance reaches a genuine deadlock.
+              Johnny Dubic is permanently recognized as the Founder of CeloHT.
+              Founder status reflects founding history and institutional
+              continuity, not automatic governance control.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
-            <h3 className="font-semibold">Maintainer Council</h3>
+            <h3 className="font-semibold">Proposal authors</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Responsible for technical review, Pull Request approval, and
-              day-to-day repository management across all CeloHT repositories.
+              Individuals may propose ideas or initiate proposals in a public,
+              reviewable process. A proposal remains a proposal until the
+              documented collective process reaches a decision.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
-            <h3 className="font-semibold">Community Participants</h3>
+            <h3 className="font-semibold">Community participants</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Anyone submitting Issues, Pull Requests, or joining Discussions -
-              the entry point to the Maintainer Council.
+              Community members, contributors, maintainers, and working-group
+              participants review proposals, deliberate publicly, and help shape
+              the final governance outcome.
             </p>
           </div>
         </div>
@@ -51,29 +54,35 @@ export default function GovernancePage() {
 
       <Section
         eyebrow="Decision-making"
-        title="Not every decision needs the same process"
+        title="Proposal, review, and collective decision"
       >
         <div className="max-w-3xl space-y-3 text-ink-soft dark:text-parchment-100/75">
           <p>
             <strong className="text-ink dark:text-parchment-100">
-              Minor changes
+              Idea
             </strong>{" "}
-            - typo fixes, documentation improvements - are approved by any
-            maintainer after a standard review.
+            - a possible direction or change.
           </p>
           <p>
             <strong className="text-ink dark:text-parchment-100">
-              Major changes
+              Proposal
             </strong>{" "}
-            - new structure, policy shifts, brand changes - require Maintainer
-            Council consensus, discussed publicly first.
+            - a public, reviewable submission that is not yet an official
+            decision.
           </p>
           <p>
             <strong className="text-ink dark:text-parchment-100">
-              Governance changes
+              Deliberation
             </strong>{" "}
-            - edits to the governance policy itself - require a minimum 14-day
-            public comment period and majority Council approval.
+            - public discussion, review, and refinement under the documented
+            governance process.
+          </p>
+          <p>
+            <strong className="text-ink dark:text-parchment-100">
+              Decision
+            </strong>{" "}
+            - a documented outcome reached through the collective governance
+            process; no single person may declare it unilaterally.
           </p>
         </div>
       </Section>
@@ -83,27 +92,26 @@ export default function GovernancePage() {
         title="Role-based, not token-weighted"
       >
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
-          CeloHT has no token, so community governance votes (in the
-          dApp&rsquo;s GovernanceVoting contract) use one-address-one-vote,
-          restricted to addresses the Maintainer Council has approved - trading
-          permissionless participation for resistance to Sybil and plutocratic
-          attacks. See our{" "}
-          <Link href="/documentation" className="underline underline-offset-2">
-            public documentation
+          CeloHT does not have a native governance token and does not use
+          token-weighted voting. Governance is community-driven and based on
+          the published proposal and review process rather than ownership or
+          token holdings. See our{" "}
+          <Link href="/no-token-policy" className="underline underline-offset-2">
+            no-token policy
           </Link>{" "}
-          for the technical detail.
+          for the public statement.
         </p>
       </Section>
 
       <Section
         eyebrow="Public implementation"
-        title="The governance layer is documented in public"
+        title="The governance model is documented in public"
       >
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
-          The dedicated governance repository documents the proposal lifecycle,
-          authorization boundaries, treasury approvals, and audit trail. Its
-          implementation status should be read from the repository itself; this
-          page does not claim that every workflow is live in production.
+          CeloHT governance is based on transparent proposal review,
+          documented deliberation, and collective decision-making. This page
+          describes the public model; the repository itself should be read for
+          the current status of any implementation details or process updates.
         </p>
         <a
           href={GITHUB_GOVERNANCE_URL}
