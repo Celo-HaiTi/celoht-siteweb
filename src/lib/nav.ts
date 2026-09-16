@@ -256,7 +256,7 @@ export const searchIndex: NavItem[] = [
   {
     label: "Documentation",
     href: "/documentation",
-    description: "Legacy documentation landing page and canonical references",
+    description: "Archived documentation landing page and canonical references",
   },
   {
     label: "Research",
