@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Agent Network",
   description:
-    "A decentralized network of trained community agents who handle cash-in, cash-out, remittances, and hands-on Valora support.",
+    "A planned, designed, and in-development community support network for local onboarding, education, digital payment assistance, and trusted service flows.",
   alternates: { canonical: "/agent-network" },
 };
 
@@ -25,16 +25,16 @@ export default function AgentNetworkPage() {
       <PageHero
         eyebrow="Pillar 02 · Agent Network"
         title="Trust is a human problem, not just a design problem"
-        lead="An app alone doesn't build confidence in a new financial tool. A trained person in the community does  -  that's what CeloHT's agent network is for."
+        lead="An app alone doesn't build confidence in a new financial tool. A trained person in the community does  -  that's what CeloHT's agent network is for. Current Agent Network work remains planned and in development, with operational status reported only when supported by clear public evidence."
       />
 
       <Section eyebrow="What an agent does" title="Four responsibilities">
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-            "Facilitates cash-to-USDm and USDm-to-cash exchanges (cash-in/cash-out)",
-            "Helps new participants set up and understand Valora",
-            "Handles peer-to-peer transfer support",
-            "Acts as a local point of contact for ongoing questions",
+            "Supports local onboarding and education for digital finance tools",
+            "Helps new participants set up and understand supported wallets, including Valora where applicable",
+            "Provides peer-to-peer support and local service-flow guidance",
+            "Acts as a local point of contact for ongoing questions and responsible access",
           ].map((item) => (
             <div
               key={item}

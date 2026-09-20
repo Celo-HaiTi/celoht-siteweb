@@ -500,7 +500,7 @@ export const policies: PolicyItem[] = [
   },
   {
     title: "No-Token Policy",
-    description: "CeloHT's approach to tokenomics and financial structures.",
+    description: "CeloHT's public position on no-token governance and financial accountability.",
     link: "/no-token-policy",
   },
 ];

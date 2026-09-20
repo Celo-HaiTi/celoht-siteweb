@@ -144,7 +144,7 @@ export const searchIndex: NavItem[] = [
   {
     label: "Reforestation",
     href: "/reforestation",
-    description: "Tree planting rewarded in USDm",
+    description: "Community-led environmental restoration and planting support",
   },
   {
     label: "Plant a Tree",
@@ -181,7 +181,7 @@ export const searchIndex: NavItem[] = [
   {
     label: "Impact",
     href: "/impact",
-    description: "Metrics: agents trained, people educated, trees planted",
+    description: "Evidence-based reporting for education, agents, and reforestation",
   },
   {
     label: "Community",

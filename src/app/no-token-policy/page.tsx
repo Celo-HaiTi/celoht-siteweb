@@ -13,15 +13,15 @@ export default function NoTokenPolicyPage() {
     <DocumentationArticle
       eyebrow="Governance and legal"
       title="No-Token Status and Policy"
-      lead="CeloHT has not created, issued, or planned a token of its own. This policy is published separately so the position is easy to find and independently evaluate."
+      lead="CeloHT has not created, issued, or planned a native project token of its own. This policy is published separately so the position is easy to find and independently evaluate."
       sections={[
         {
           title: "What the policy means",
           children: (
             <ul className="max-w-3xl list-disc space-y-3 pl-6 text-ink-soft">
               <li>
-                CeloHT is not a blockchain, Layer 1 network, cryptocurrency,
-                ICO, IDO, NFT project, or investment platform.
+                CeloHT is not a blockchain, Layer 1 network, token project,
+                speculative investment product, or native-coin issuer.
               </li>
               <li>
                 CELO and USDm are assets of the Celo ecosystem, not

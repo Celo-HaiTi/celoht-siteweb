@@ -19,8 +19,8 @@ export default function ImpactPage() {
       <Breadcrumbs items={[{ label: "Impact" }]} />
       <PageHero
         eyebrow="Impact"
-        title="Numbers we can actually verify"
-        lead="CeloHT measures impact in concrete, verifiable terms rather than broad claims. Here's what we track today, and what we commit to reporting as programs scale."
+        title="Public evidence, not inflated claims"
+        lead="CeloHT measures impact in concrete, verifiable terms rather than broad claims. Real public reporting only appears when there is an official reporting period and supporting evidence."
       />
 
       <Section eyebrow="Current phase" title="Foundation, 2026">
@@ -36,43 +36,25 @@ export default function ImpactPage() {
 
       <Section eyebrow="Education" title="What we measure">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-          <li>
-            Module completion count - people who finish at least one training
-            module
-          </li>
-          <li>
-            Knowledge-check pass rate - whether training is actually landing
-          </li>
-          <li>
-            Post-session feedback - qualitative signal on relevance and clarity
-          </li>
+          <li>Training completion and participation records</li>
+          <li>Knowledge-check results and learning progress</li>
+          <li>Session feedback and material relevance</li>
         </ul>
       </Section>
 
       <Section eyebrow="Agent Network" title="What we measure">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-          <li>Active trained agents - network capacity</li>
-          <li>
-            Transaction volume through agents - real usage, not just
-            registrations
-          </li>
-          <li>
-            90-day agent retention - whether the role is sustainable for agents
-            themselves
-          </li>
+          <li>Onboarding and training status</li>
+          <li>Service-related activity and local support patterns</li>
+          <li>Retention and operational quality over time</li>
         </ul>
       </Section>
 
       <Section eyebrow="Reforestation" title="What we measure">
         <ul className="max-w-2xl space-y-2 text-sm text-ink-soft dark:text-parchment-100/70">
-          <li>Trees planted (verified) - direct environmental output</li>
-          <li>
-            Tree survival rate over time - whether planting translates into
-            lasting impact
-          </li>
-          <li>
-            Participants rewarded - reach of the financial-environmental link
-          </li>
+          <li>Planting records and supporting evidence</li>
+          <li>Verification status and monitoring observations</li>
+          <li>Public reporting tied to official reporting periods</li>
         </ul>
       </Section>
 

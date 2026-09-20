@@ -47,8 +47,8 @@ export default function AboutPage() {
         <div className="grid gap-3 sm:grid-cols-2">
           {[
             "A blockchain or a Layer 1 network",
-            "A cryptocurrency, token, or memecoin",
-            "An ICO or an IDO",
+            "A native project token or memecoin",
+            "An ICO or token sale",
             "An NFT project",
             "A staking platform",
             "An investment or trading platform",
@@ -76,14 +76,12 @@ export default function AboutPage() {
       <Section eyebrow="Origin" title="From Léogâne outward">
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
-            Johnny Dubic — Permanently Recognized Founder of CeloHT — identified
-            Celo as a good
-            technical fit because of its low transaction fees and mobile-first
-            design. Its native token, CELO, and its stablecoin, USDm, are both
-            accessible through the Valora wallet. From there, CeloHT built
-            outward: first education material in Haitian Creole, then the
-            framework for a trained agent network, then a reforestation program
-            tying environmental action to financial reward.
+            Johnny Dubic — Founder — identified Celo as a suitable technical
+            environment because of its mobile-first design, public wallet access,
+            and ecosystem compatibility. CeloHT builds on that foundation through
+            education, agent support, and reforestation work while keeping
+            governance, treasury authority, and operational decisions within the
+            project&apos;s documented collective process.
           </p>
           <p>
             CeloHT was featured in a Celo Forum &ldquo;Founders&rdquo; post in

@@ -14,7 +14,7 @@ export default function FundingPage() {
     <DocumentationArticle
       eyebrow="Security and funding"
       title="Funding Model"
-      lead="CeloHT documents how support may reach education, agent operations, reforestation, and public infrastructure without selling a CeloHT token or offering an investment product."
+      lead="CeloHT documents how support may reach education, agent operations, reforestation, and public infrastructure without offering a native project token or investment product."
       sections={[
         {
           title: "Published sources",
@@ -34,8 +34,8 @@ export default function FundingPage() {
           title: "What funding is not",
           children: (
             <p className="max-w-3xl text-ink-soft">
-              CeloHT does not raise funds by selling a token, running an ICO or
-              IDO, or offering an investment product. The{" "}
+              CeloHT does not raise funds by selling a native project token,
+              running an ICO or IDO, or offering an investment product. The{" "}
               <Link
                 href="/no-token-policy"
                 className="font-semibold text-gold-300 hover:text-gold-500"

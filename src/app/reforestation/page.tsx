@@ -8,7 +8,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Reforestation",
   description:
-    "Tree planting, ecological restoration, and environmental education  -  a permanent pillar equal to education and the agent network, rewarded through USDm.",
+    "Community-led environmental restoration, tree planting support, evidence collection, verification, and transparent public reporting for long-term resilience.",
   alternates: { canonical: "/reforestation" },
 };
 
@@ -19,7 +19,7 @@ export default function ReforestationPage() {
       <PageHero
         eyebrow="Pillar 03 · Reforestation"
         title="We treat land the way we treat financial access  -  as infrastructure"
-        lead="Reforestation is a permanent pillar, not a side initiative funded when convenient. The same communities we serve financially are often the ones most exposed to the economic consequences of deforestation."
+        lead="Reforestation is a permanent pillar, not a side initiative funded when convenient. The same communities we serve financially are often the ones most exposed to the economic consequences of deforestation. Current reforestation work is framed as evidence-based restoration, with public reporting only when supported by clear records and official reporting periods."
         tone="forest"
       />
 
@@ -33,34 +33,34 @@ export default function ReforestationPage() {
         </p>
       </Section>
 
-      <Section eyebrow="How it works" title="Four moving parts">
+      <Section eyebrow="How it works" title="Evidence-based workflow">
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-2xl border border-forest-500/30 p-6">
-            <h3 className="font-semibold">Agents as coordinators</h3>
+            <h3 className="font-semibold">Planting activity</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              The same agents who facilitate financial transactions often
-              coordinate local planting activity too.
+              Community-led environmental restoration begins with local planting
+              activity and participation.
             </p>
           </div>
           <div className="rounded-2xl border border-forest-500/30 p-6">
-            <h3 className="font-semibold">Environmental education</h3>
+            <h3 className="font-semibold">Evidence collection</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Training modules covering why trees matter, basic planting
-              technique, and long-term care.
+              Records may include location, species, quantity, participants,
+              photographs, and other appropriate documentation.
             </p>
           </div>
           <div className="rounded-2xl border border-forest-500/30 p-6">
-            <h3 className="font-semibold">USDm rewards</h3>
+            <h3 className="font-semibold">Verification</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Participants who commit to verified planting and tracking can
-              receive symbolic rewards in USDm.
+              Field evidence is reviewed before any program claim is treated as
+              verified impact.
             </p>
           </div>
           <div className="rounded-2xl border border-forest-500/30 p-6">
-            <h3 className="font-semibold">Tracking and transparency</h3>
+            <h3 className="font-semibold">Monitoring and reporting</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Basic photo and geolocation documentation, with periodic public
-              reporting.
+              Long-term monitoring and public reporting help distinguish active
+              restoration from one-time planting activity.
             </p>
           </div>
         </div>
@@ -69,24 +69,26 @@ export default function ReforestationPage() {
       <Section eyebrow="Core principles" title="Structure, not slogans">
         <ul className="max-w-3xl space-y-3 text-ink-soft dark:text-parchment-100/75">
           <li>
-            Every reward is tied to a verifiable action - we don&rsquo;t
-            distribute USDm without structure.
+            Planting activity is only part of the story; evidence, verification,
+            and monitoring matter just as much.
           </li>
           <li>
             The program builds on existing local agricultural knowledge instead
             of importing an outside model without adaptation.
           </li>
           <li>
-            Success is measured by long-term survival rate, not initial planting
-            count alone.
+            Public reporting remains tied to official evidence and reporting
+            periods; no unverified totals are treated as current impact.
           </li>
         </ul>
       </Section>
 
-      <Section eyebrow="Current status" title="Design and pilot phase">
+      <Section eyebrow="Current status" title="Design and pilot planning">
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
-          As of this writing, the reforestation program is in its design and
-          pilot phase, with a full pilot targeted for Phase 2 of our roadmap.
+          As of this writing, the reforestation program remains in design and
+          pilot planning. Verified totals, survival statistics, hectares, and
+          other environmental totals are only reported when they are backed by
+          official reporting periods and appropriate evidence.
         </p>
       </Section>
 

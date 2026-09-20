@@ -7,33 +7,34 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Education",
   description:
-    "Financial literacy, blockchain and Web3 fundamentals, and hands-on Valora/USDm training  -  delivered in Haitian Creole, before any tool is introduced.",
+    "Financial literacy, Web3 education, wallet safety, and practical Celo learning for communities building digital confidence and responsible financial access.",
   alternates: { canonical: "/education" },
 };
 
 const modules = [
   {
-    title: "Basic financial literacy",
-    detail: "Budgeting, saving, risk management, and the concept of interest.",
-    before: "Any wallet setup",
+    title: "Financial literacy",
+    detail:
+      "Budgeting, saving, risk management, and the difference between helpful tools and risky shortcuts.",
+    before: "Any digital financial workflow",
   },
   {
-    title: "Blockchain & Web3 fundamentals",
+    title: "Web3 & blockchain fundamentals",
     detail:
-      "What a blockchain is and how a transaction works, in plain language.",
+      "Plain-language explanations of wallets, onchain records, transaction basics, and digital trust.",
     before: "Wallet setup",
   },
   {
-    title: "Hands-on Valora/USDm use",
+    title: "Wallet safety & digital security",
     detail:
-      "Step-by-step guided use, with heavy emphasis on seed-phrase security.",
-    before: "First live transaction",
+      "Seed phrases, scam awareness, account recovery, and safe use of supported wallets such as Valora, MiniPay, or WalletConnect-compatible options where applicable.",
+    before: "Any live transaction",
   },
   {
-    title: "Crypto risk awareness",
+    title: "Practical Celo education",
     detail:
-      "Volatility, common scams, and never risking more than you can afford to lose.",
-    before: "Reinforced on an ongoing basis",
+      "How the Celo ecosystem fits into digital payments, community services, and responsible everyday access.",
+    before: "Operational participation",
   },
 ];
 
@@ -44,7 +45,7 @@ export default function EducationPage() {
       <PageHero
         eyebrow="Pillar 01 · Education"
         title="Understanding comes before access"
-        lead="Give communities the financial, blockchain, and digital skills they need to use digital financial services with real confidence  -  before they're ever handed a specific tool like Valora or USDm."
+        lead="Give communities the financial, blockchain, and digital skills they need to use digital financial services with real confidence  -  before they're ever handed a specific tool or workflow."
         tone="gold"
       />
 

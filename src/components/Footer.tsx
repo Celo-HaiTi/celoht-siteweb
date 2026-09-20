@@ -172,8 +172,8 @@ export function Footer() {
               <p className="font-display text-lg font-semibold">CeloHT</p>
               <p className="mt-1 max-w-md text-sm text-parchment-100/60">
                 A community-driven, open-source initiative built on the Celo
-                ecosystem. Not a blockchain, a token, an ICO, or an investment
-                platform.
+                ecosystem. Not a blockchain, native token project, or
+                investment platform.
               </p>
             </div>
           </div>

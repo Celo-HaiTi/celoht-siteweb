@@ -28,11 +28,10 @@ export default function GovernancePage() {
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
             <h3 className="font-semibold">Founder</h3>
             <p className="mt-2 text-sm text-ink-soft dark:text-parchment-100/70">
-              Johnny Dubic is permanently recognized as the Founder of CeloHT
-              in the project&apos;s historical and institutional record. Permanent
-              founder recognition is historical and institutional; it does not
-              confer perpetual governance authority, ownership rights, veto
-              power, or unilateral control.
+              Johnny Dubic — Founder. Founder status is historical and
+              institutional recognition. It does not create automatic voting
+              rights, governance-council membership, treasury authority, veto
+              power, or unilateral decision-making authority.
             </p>
           </div>
           <div className="rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10">
@@ -52,6 +51,18 @@ export default function GovernancePage() {
             </p>
           </div>
         </div>
+      </Section>
+
+      <Section
+        eyebrow="Governance Council"
+        title="Highest ongoing collective decision-making body"
+      >
+        <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
+          The Governance Council is the highest ongoing collective
+          decision-making body in the current public governance model. Authority
+          is exercised through documented process, review, and accountability,
+          not unilateral founder control.
+        </p>
       </Section>
 
       <Section
