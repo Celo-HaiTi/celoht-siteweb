@@ -57,7 +57,6 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Education", href: "/education" },
       { label: "Agent Network", href: "/agent-network" },
       { label: "Reforestation", href: "/reforestation" },
-      { label: "Technology", href: "/technology" },
     ],
   },
   {
