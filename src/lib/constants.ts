@@ -5,10 +5,10 @@ export const DAPP_URL =
 export const DISCORD_URL = "https://discord.gg/BZk3nS4KM6";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://celoht.com";
-const isGitHubPages =
-  process.env.GITHUB_PAGES === "true" ||
-  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true";
-export const BASE_PATH = isGitHubPages
+const isProjectBasePath =
+  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true" ||
+  (process.env.GITHUB_PAGES === "true" && SITE_URL.includes("github.io"));
+export const BASE_PATH = isProjectBasePath
   ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb"}`
   : "";
 

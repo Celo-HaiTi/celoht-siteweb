@@ -2,10 +2,11 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, resolve } from "node:path";
 
 const root = process.cwd();
-const isGitHubPages =
-  process.env.GITHUB_PAGES === "true" ||
-  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true";
-const basePath = isGitHubPages
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://celoht.com";
+const isProjectBasePath =
+  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true" ||
+  (process.env.GITHUB_PAGES === "true" && siteUrl.includes("github.io"));
+const basePath = isProjectBasePath
   ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb"}`
   : "";
 const assets = ["celoht-logo.png", "freclean-logo.jpg"];
