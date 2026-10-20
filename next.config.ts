@@ -4,9 +4,11 @@ import createMDX from "@next/mdx";
 const repoName =
   process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://celoht.com";
+const parsedSiteUrl = new URL(siteUrl);
 const isProjectBasePath =
-  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true" ||
-  (process.env.GITHUB_PAGES === "true" && siteUrl.includes("github.io"));
+  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true" &&
+  parsedSiteUrl.hostname.endsWith("github.io") &&
+  parsedSiteUrl.pathname.replace(/\/$/, "") === `/${repoName}`;
 const basePath = isProjectBasePath ? `/${repoName}` : "";
 
 const nextConfig: NextConfig = {

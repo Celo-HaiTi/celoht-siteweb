@@ -30,4 +30,35 @@ describe("constants", () => {
       process.env = previous;
     }
   });
+
+  it("ignores project-base-path opt-in on the custom domain", async () => {
+    const previous = { ...process.env };
+    process.env.NEXT_PUBLIC_SITE_URL = "https://celoht.com";
+    process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH = "true";
+    process.env.GITHUB_REPOSITORY = "Celo-HaiTi/celoht-siteweb";
+
+    try {
+      const { BASE_PATH, assetPath } = await import("@/lib/constants");
+      expect(BASE_PATH).toBe("");
+      expect(assetPath("/favicon.svg")).toBe("/favicon.svg");
+    } finally {
+      process.env = previous;
+    }
+  });
+
+  it("supports an explicit GitHub Pages project-site base path", async () => {
+    const previous = { ...process.env };
+    process.env.NEXT_PUBLIC_SITE_URL =
+      "https://celo-haiti.github.io/celoht-siteweb";
+    process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH = "true";
+    process.env.GITHUB_REPOSITORY = "Celo-HaiTi/celoht-siteweb";
+
+    try {
+      const { BASE_PATH, assetPath } = await import("@/lib/constants");
+      expect(BASE_PATH).toBe("/celoht-siteweb");
+      expect(assetPath("/favicon.svg")).toBe("/celoht-siteweb/favicon.svg");
+    } finally {
+      process.env = previous;
+    }
+  });
 });

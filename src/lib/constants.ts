@@ -5,12 +5,14 @@ export const DAPP_URL =
 export const DISCORD_URL = "https://discord.gg/BZk3nS4KM6";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://celoht.com";
+const repoName =
+  process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb";
+const parsedSiteUrl = new URL(SITE_URL);
 const isProjectBasePath =
-  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true" ||
-  (process.env.GITHUB_PAGES === "true" && SITE_URL.includes("github.io"));
-export const BASE_PATH = isProjectBasePath
-  ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb"}`
-  : "";
+  process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true" &&
+  parsedSiteUrl.hostname.endsWith("github.io") &&
+  parsedSiteUrl.pathname.replace(/\/$/, "") === `/${repoName}`;
+export const BASE_PATH = isProjectBasePath ? `/${repoName}` : "";
 
 export function assetPath(path: string) {
   return `${BASE_PATH}${path.startsWith("/") ? path : `/${path}`}`;
