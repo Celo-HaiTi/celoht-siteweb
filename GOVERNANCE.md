@@ -87,8 +87,8 @@ emergency power.
 ## No token governance
 
 CeloHT does not have a native governance token and does not use
- token-weighted governance. Governance is not based on token ownership,
- token-weighted voting power, or a native CeloHT governance token.
+token-weighted governance. Governance is not based on token ownership,
+token-weighted voting power, or a native CeloHT governance token.
 
 ## Conflict of interest and documentation
 

@@ -71,9 +71,9 @@ export function WalletConnectivitySection() {
           </p>
           <p className="mt-2 text-sm leading-6 text-parchment-100/75">
             Valora is recommended where applicable, but it is not affiliated
-            with CeloHT and is not the project&apos;s exclusive wallet. The wider
-            ecosystem remains open to MiniPay, WalletConnect-compatible wallets,
-            and other supported wallet experiences where appropriate.
+            with CeloHT and is not the project&apos;s exclusive wallet. The
+            wider ecosystem remains open to MiniPay, WalletConnect-compatible
+            wallets, and other supported wallet experiences where appropriate.
           </p>
         </div>
         <a

@@ -71,10 +71,8 @@ export default function GovernancePage() {
       >
         <div className="max-w-3xl space-y-3 text-ink-soft dark:text-parchment-100/75">
           <p>
-            <strong className="text-ink dark:text-parchment-100">
-              Idea
-            </strong>{" "}
-            - a possible direction or change.
+            <strong className="text-ink dark:text-parchment-100">Idea</strong> -
+            a possible direction or change.
           </p>
           <p>
             <strong className="text-ink dark:text-parchment-100">
@@ -106,10 +104,13 @@ export default function GovernancePage() {
       >
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
           CeloHT does not have a native governance token and does not use
-          token-weighted voting. Governance is community-driven and based on
-          the published proposal and review process rather than ownership or
-          token holdings. See our{" "}
-          <Link href="/no-token-policy" className="underline underline-offset-2">
+          token-weighted voting. Governance is community-driven and based on the
+          published proposal and review process rather than ownership or token
+          holdings. See our{" "}
+          <Link
+            href="/no-token-policy"
+            className="underline underline-offset-2"
+          >
             no-token policy
           </Link>{" "}
           for the public statement.
@@ -121,10 +122,10 @@ export default function GovernancePage() {
         title="The governance model is documented in public"
       >
         <p className="max-w-3xl text-ink-soft dark:text-parchment-100/75">
-          CeloHT governance is based on transparent proposal review,
-          documented deliberation, and collective decision-making. This page
-          describes the public model; the repository itself should be read for
-          the current status of any implementation details or process updates.
+          CeloHT governance is based on transparent proposal review, documented
+          deliberation, and collective decision-making. This page describes the
+          public model; the repository itself should be read for the current
+          status of any implementation details or process updates.
         </p>
         <a
           href={GITHUB_GOVERNANCE_URL}

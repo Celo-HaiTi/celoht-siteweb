@@ -20,11 +20,11 @@ The repository uses a public-only configuration model for this website. No secre
 
 The supported public variables are documented in `.env.example`:
 
-| Variable               | Required?                                 | Purpose                             |
-| ---------------------- | ----------------------------------------- | ----------------------------------- |
-| `NEXT_PUBLIC_DAPP_URL` | No - defaults to `https://app.celoht.com` | Where the Launch dApp button points |
-| `NEXT_PUBLIC_SITE_URL` | No - defaults to `https://celoht.com`     | Canonical site URL for metadata      |
-| `NEXT_PUBLIC_USE_PROJECT_BASE_PATH` | No - defaults to `false` | Enables GitHub Pages project-path hosting in non-default scenarios |
+| Variable                            | Required?                                 | Purpose                                                            |
+| ----------------------------------- | ----------------------------------------- | ------------------------------------------------------------------ |
+| `NEXT_PUBLIC_DAPP_URL`              | No - defaults to `https://app.celoht.com` | Where the Launch dApp button points                                |
+| `NEXT_PUBLIC_SITE_URL`              | No - defaults to `https://celoht.com`     | Canonical site URL for metadata                                    |
+| `NEXT_PUBLIC_USE_PROJECT_BASE_PATH` | No - defaults to `false`                  | Enables GitHub Pages project-path hosting in non-default scenarios |
 
 No private credentials are required to build or run this site.
 

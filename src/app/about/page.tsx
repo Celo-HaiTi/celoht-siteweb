@@ -77,11 +77,11 @@ export default function AboutPage() {
         <div className="max-w-3xl space-y-4 text-ink-soft dark:text-parchment-100/75">
           <p>
             Johnny Dubic — Founder — identified Celo as a suitable technical
-            environment because of its mobile-first design, public wallet access,
-            and ecosystem compatibility. CeloHT builds on that foundation through
-            education, agent support, and reforestation work while keeping
-            governance, treasury authority, and operational decisions within the
-            project&apos;s documented collective process.
+            environment because of its mobile-first design, public wallet
+            access, and ecosystem compatibility. CeloHT builds on that
+            foundation through education, agent support, and reforestation work
+            while keeping governance, treasury authority, and operational
+            decisions within the project&apos;s documented collective process.
           </p>
           <p>
             CeloHT was featured in a Celo Forum &ldquo;Founders&rdquo; post in

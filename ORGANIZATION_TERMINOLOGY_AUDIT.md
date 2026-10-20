@@ -13,17 +13,17 @@
 
 ## Change Table
 
-| Repository | File | Line/Section | Previous Usage | New Usage | Reason |
-| ---------- | ---- | ------------ | -------------- | --------- | ------ |
-| celoht-admin | `lib/security/access.ts`, security test | role aliases | Prior role terminology | Previous role terminology | Preserve role normalization while using neutral internal naming. |
-| celoht-admin | `PRODUCTION_MIGRATION_REPORT.md` | migration and risks | Prior public/fixture wording | Previous public/fixture wording | Keep the report factual without prohibited terminology. |
-| celoht-brand | favicon and readiness docs | browser icon and scan notes | Prior browser/scanning wording | Previous/obsolete wording | Describe historical browser support and audit scope neutrally. |
-| celoht-indexer | `src/indexing/persist.ts` | skipped projection event | Retired event label | Previous projection label | Rename an internal log event with no external call sites. |
-| celoht-investor-book | readiness reports | naming and repository history | Prior organization wording | Previous organization wording | Preserve publication history and canonical identity. |
-| celoht-research | readiness and reproducibility docs | findings and asset references | Earlier findings/assets | Earlier findings/assets | Keep historical context technically accurate. |
-| celoht-siteweb | `src/lib/nav.ts` | documentation description | Prior documentation | Archived documentation | Clarify the destination's status. |
-| celoht-smart-contracts | `AUDIT.md` | cleanup report | Self-referential prohibited wording | Prohibited terminology wording | Keep the audit validator/report meaningful without recreating matches. |
-| celoht-supabase | migrations and documentation | profile role function and schema notes | Previous function/schema wording | Previous function/schema wording | Preserve deployed compatibility and avoid destructive schema changes. |
+| Repository             | File                                    | Line/Section                           | Previous Usage                      | New Usage                        | Reason                                                                 |
+| ---------------------- | --------------------------------------- | -------------------------------------- | ----------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
+| celoht-admin           | `lib/security/access.ts`, security test | role aliases                           | Prior role terminology              | Previous role terminology        | Preserve role normalization while using neutral internal naming.       |
+| celoht-admin           | `PRODUCTION_MIGRATION_REPORT.md`        | migration and risks                    | Prior public/fixture wording        | Previous public/fixture wording  | Keep the report factual without prohibited terminology.                |
+| celoht-brand           | favicon and readiness docs              | browser icon and scan notes            | Prior browser/scanning wording      | Previous/obsolete wording        | Describe historical browser support and audit scope neutrally.         |
+| celoht-indexer         | `src/indexing/persist.ts`               | skipped projection event               | Retired event label                 | Previous projection label        | Rename an internal log event with no external call sites.              |
+| celoht-investor-book   | readiness reports                       | naming and repository history          | Prior organization wording          | Previous organization wording    | Preserve publication history and canonical identity.                   |
+| celoht-research        | readiness and reproducibility docs      | findings and asset references          | Earlier findings/assets             | Earlier findings/assets          | Keep historical context technically accurate.                          |
+| celoht-siteweb         | `src/lib/nav.ts`                        | documentation description              | Prior documentation                 | Archived documentation           | Clarify the destination's status.                                      |
+| celoht-smart-contracts | `AUDIT.md`                              | cleanup report                         | Self-referential prohibited wording | Prohibited terminology wording   | Keep the audit validator/report meaningful without recreating matches. |
+| celoht-supabase        | migrations and documentation            | profile role function and schema notes | Previous function/schema wording    | Previous function/schema wording | Preserve deployed compatibility and avoid destructive schema changes.  |
 
 ## Final Verification
 

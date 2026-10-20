@@ -180,7 +180,8 @@ export const searchIndex: NavItem[] = [
   {
     label: "Impact",
     href: "/impact",
-    description: "Evidence-based reporting for education, agents, and reforestation",
+    description:
+      "Evidence-based reporting for education, agents, and reforestation",
   },
   {
     label: "Community",

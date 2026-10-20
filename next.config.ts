@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
-const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb";
+const repoName =
+  process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://celoht.com";
 const isProjectBasePath =
   process.env.NEXT_PUBLIC_USE_PROJECT_BASE_PATH === "true" ||
