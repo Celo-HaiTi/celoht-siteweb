@@ -47,13 +47,13 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Vision", href: "/vision" },
       { label: "Governance", href: "/governance" },
       { label: "Transparency", href: "/transparency" },
-      { label: "Projects", href: "/projects" },
-      { label: "Roadmap", href: "/roadmap" },
     ],
   },
   {
-    heading: "Pillars",
+    heading: "Projects",
     items: [
+      { label: "Roadmap", href: "/roadmap" },
+      { label: "Pillars", href: "/mission" },
       { label: "Education", href: "/education" },
       { label: "Agent Network", href: "/agent-network" },
       { label: "Reforestation", href: "/reforestation" },

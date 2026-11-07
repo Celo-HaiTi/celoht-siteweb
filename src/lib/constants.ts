@@ -19,6 +19,13 @@ export function assetPath(path: string) {
 }
 
 export const GITHUB_ORG_URL = "https://github.com/Celo-HaiTi";
+export const LINKEDIN_URL = "https://linkedin.com/company/celoht";
+export const INSTAGRAM_URL = "https://instagram.com/celoht";
+export const TIKTOK_URL = "https://www.tiktok.com/@celoht";
+export const NEWSLETTER_API_URL =
+  process.env.NEWSLETTER_API_URL ?? process.env.NEXT_PUBLIC_NEWSLETTER_API_URL ?? "";
+export const NEWSLETTER_API_KEY =
+  process.env.NEWSLETTER_API_KEY ?? process.env.NEXT_PUBLIC_NEWSLETTER_API_KEY ?? "";
 export const GITHUB_FLAGSHIP_URL = "https://github.com/Celo-HaiTi/CeloHT";
 export const GITHUB_WEBSITE_URL =
   "https://github.com/Celo-HaiTi/celoht-siteweb";

@@ -1,56 +1,141 @@
 import Image from "next/image";
-import { DISCORD_URL, GITHUB_ORG_URL, assetPath } from "@/lib/constants";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Github,
+  Instagram,
+  Linkedin,
+  Music2,
+  ShieldCheck,
+} from "lucide-react";
+import {
+  DISCORD_URL,
+  GITHUB_ORG_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  TIKTOK_URL,
+  assetPath,
+} from "@/lib/constants";
+import { footerNav } from "@/lib/nav";
+import { NewsletterForm } from "@/components/NewsletterForm";
+
+const socialLinks = [
+  { label: "LinkedIn", href: LINKEDIN_URL, icon: Linkedin },
+  { label: "Instagram", href: INSTAGRAM_URL, icon: Instagram },
+  { label: "GitHub", href: GITHUB_ORG_URL, icon: Github },
+  { label: "TikTok", href: TIKTOK_URL, icon: Music2 },
+];
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-navy-700/10 bg-navy-950 text-parchment-100 dark:border-parchment-100/10">
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 border-t border-parchment-100/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="mt-24 border-t border-navy-700/10 bg-navy-950 text-parchment-100">
+      <div className="mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
+        <div className="rounded-[28px] border border-parchment-100/10 bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.12),_transparent_35%),linear-gradient(180deg,rgba(12,19,33,0.96),rgba(8,16,28,0.98))] p-6 sm:p-8 lg:p-10">
+          <div className="grid gap-10 lg:grid-cols-[1.2fr_2.8fr] lg:items-start">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-3">
+                <Image
+                  src={assetPath("/celoht-logo.png")}
+                  alt="CeloHT logo"
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 rounded-xl ring-1 ring-gold-500/30"
+                />
+                <span className="font-display text-2xl font-semibold tracking-tight text-parchment-100">
+                  CeloHT
+                </span>
+              </div>
+              <p className="max-w-md text-sm leading-6 text-parchment-100/70">
+                CeloHT is a community-driven, open-source initiative rooted in Haiti,
+                building practical digital access, education, and local infrastructure within the Celo ecosystem.
+              </p>
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold-500/20 bg-gold-500/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-gold-300">
+                <ShieldCheck size={14} aria-hidden="true" />
+                Open-source initiative
+              </div>
+            </div>
+
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+              {footerNav.map((group) => (
+                <div key={group.heading}>
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-300">
+                    {group.heading}
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {group.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className="text-sm text-parchment-100/70 transition-colors duration-200 hover:text-parchment-100"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+
+              <div className="sm:col-span-2 lg:col-span-1">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-300">
+                  Contact
+                </h3>
+                <div className="mt-4 flex flex-wrap gap-2.5">
+                  {socialLinks.map(({ label, href, icon: Icon }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-parchment-100/10 bg-navy-900/80 text-parchment-100/80 transition-all duration-200 hover:-translate-y-0.5 hover:border-gold-400/50 hover:bg-gold-500/10 hover:text-gold-300"
+                    >
+                      <Icon size={16} aria-hidden="true" />
+                    </a>
+                  ))}
+                  <a
+                    href={DISCORD_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Discord"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-parchment-100/10 bg-navy-900/80 text-parchment-100/80 transition-all duration-200 hover:-translate-y-0.5 hover:border-gold-400/50 hover:bg-gold-500/10 hover:text-gold-300"
+                  >
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 rounded-[24px] border border-parchment-100/10 bg-navy-900/70 p-5 sm:p-6 lg:p-7">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_2fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-300">
+                Stay Connected with CeloHT
+              </p>
+              <p className="mt-2 max-w-md text-sm leading-6 text-parchment-100/65">
+                Get updates on our initiatives, educational resources, community activities,
+                and ecosystem developments.
+              </p>
+            </div>
+            <NewsletterForm />
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-3 border-t border-parchment-100/10 pt-6 text-sm text-parchment-100/60 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <Image
               src={assetPath("/celoht-logo.png")}
               alt="CeloHT logo"
-              width={52}
-              height={52}
-              className="h-12 w-12 rounded-xl ring-1 ring-gold-500/30"
+              width={28}
+              height={28}
+              className="h-7 w-7 rounded-md"
             />
-            <span className="font-display text-xl font-semibold tracking-tight text-parchment-100">
-              CeloHT
-            </span>
+            <span className="font-display text-lg font-semibold text-parchment-100">CeloHT</span>
           </div>
-
-          <nav aria-label="Social links" className="flex items-center gap-4 text-sm sm:gap-6">
-            <a
-              href={GITHUB_ORG_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gold-300 transition-all duration-200 hover:-translate-y-0.5 hover:text-gold-400"
-            >
-              GitHub
-            </a>
-            <a
-              href={DISCORD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Join CeloHT on Discord"
-              className="text-parchment-100/70 transition-all duration-200 hover:-translate-y-0.5 hover:text-parchment-100"
-            >
-              Discord
-            </a>
-            <a
-              href="https://medium.com/@celoht3"
-              target="_blank"
-              rel="noreferrer"
-              className="text-parchment-100/70 transition-all duration-200 hover:-translate-y-0.5 hover:text-parchment-100"
-            >
-              Medium
-            </a>
-          </nav>
+          <p>© 2026 CeloHT. All rights reserved.</p>
         </div>
-
-        <p className="mt-6 text-xs uppercase tracking-[0.18em] text-parchment-100/55">
-          © 2026 CeloHT. All rights reserved.
-        </p>
       </div>
     </footer>
   );

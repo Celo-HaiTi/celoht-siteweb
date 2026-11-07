@@ -3,36 +3,31 @@ import { describe, expect, it } from "vitest";
 import { Footer } from "@/components/Footer";
 
 describe("Footer", () => {
-  it("renders a minimal brand footer without legacy legal or explanatory copy", () => {
+  it("renders the institutional brand footer, social links, and newsletter form", () => {
     render(<Footer />);
 
-    expect(
-      screen.getByRole("img", { name: /celoht logo/i }),
-    ).toBeInTheDocument();
-    expect(screen.getByText("CeloHT")).toBeInTheDocument();
+    expect(screen.getAllByText("CeloHT").length).toBeGreaterThan(0);
+    expect(screen.getByText(/stay connected with celoht/i)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
+      "href",
+      "https://linkedin.com/company/celoht",
+    );
+    expect(screen.getByRole("link", { name: /instagram/i })).toHaveAttribute(
+      "href",
+      "https://instagram.com/celoht",
+    );
     expect(screen.getByRole("link", { name: /github/i })).toHaveAttribute(
       "href",
-      expect.stringContaining("github.com"),
+      "https://github.com/Celo-HaiTi",
     );
-    expect(screen.getByRole("link", { name: /discord/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /tiktok/i })).toHaveAttribute(
       "href",
-      expect.stringContaining("discord"),
+      "https://www.tiktok.com/@celoht",
     );
-    expect(screen.getByRole("link", { name: /medium/i })).toHaveAttribute(
-      "href",
-      expect.stringContaining("medium.com"),
-    );
-    expect(
-      screen.getByText(/© \d{4} CeloHT\. All rights reserved\./i),
-    ).toBeInTheDocument();
 
-    expect(
-      screen.queryByText(
-        /A community-driven, open-source initiative built on the Celo ecosystem/i,
-      ),
-    ).not.toBeInTheDocument();
-    expect(
-      screen.queryByText(/not affiliated with or endorsed by/i),
-    ).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /subscribe/i })).toBeInTheDocument();
+    expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
+    expect(screen.getByText(/organization/i)).toBeInTheDocument();
+    expect(screen.getByText(/legal/i)).toBeInTheDocument();
   });
 });
