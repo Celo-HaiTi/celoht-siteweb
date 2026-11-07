@@ -1,19 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
-import {
-  BookOpen,
-  Github,
-  Globe,
-  Instagram,
-  Music2,
-} from "lucide-react";
+import { BookOpen, Github, Globe, Instagram, Music2 } from "lucide-react";
 import {
   GITHUB_ORG_URL,
   INSTAGRAM_URL,
   MEDIUM_URL,
   TIKTOK_URL,
   WEBSITE_URL,
-  assetPath,
 } from "@/lib/constants";
 import { footerNav } from "@/lib/nav";
 
@@ -30,26 +22,7 @@ export function Footer() {
     <footer className="mt-24 border-t border-navy-700/10 bg-navy-950 text-parchment-100">
       <div className="mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="rounded-[28px] border border-parchment-100/10 bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.12),_transparent_35%),linear-gradient(180deg,rgba(12,19,33,0.96),rgba(8,16,28,0.98))] p-6 sm:p-8 lg:p-10">
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_2.8fr] lg:items-start">
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-3">
-                <Image
-                  src={assetPath("/celoht-logo.png")}
-                  alt="CeloHT logo"
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 rounded-xl ring-1 ring-gold-500/30"
-                />
-                <span className="font-display text-2xl font-semibold tracking-tight text-parchment-100">
-                  CeloHT
-                </span>
-              </div>
-              <p className="max-w-md text-sm leading-6 text-parchment-100/70">
-                CeloHT is a community-driven, open-source initiative rooted in Haiti,
-                building practical digital access, education, and local infrastructure within the Celo ecosystem.
-              </p>
-            </div>
-
+          <div className="grid gap-10 lg:grid-cols-1 lg:items-start">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
               {footerNav.map((group) => (
                 <div key={group.heading}>

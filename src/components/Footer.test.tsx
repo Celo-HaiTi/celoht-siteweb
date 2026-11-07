@@ -3,11 +3,11 @@ import { describe, expect, it } from "vitest";
 import { Footer } from "@/components/Footer";
 
 describe("Footer", () => {
-  it("renders the institutional brand footer and official social links without the retired newsletter block", () => {
+  it("renders the official social links without the retired footer intro and newsletter block", () => {
     render(<Footer />);
 
-    expect(screen.getAllByText("CeloHT").length).toBeGreaterThan(0);
     expect(screen.queryByText(/stay connected with celoht/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/CeloHT is a community-driven/i)).not.toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /subscribe/i })).not.toBeInTheDocument();
     expect(screen.queryByLabelText(/email address/i)).not.toBeInTheDocument();
 
