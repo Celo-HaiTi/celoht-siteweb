@@ -3,12 +3,23 @@ import { metadata } from "@/app/layout";
 
 describe("application metadata branding", () => {
   it("uses the official CeloHT logo and production URLs for browser and PWA assets", () => {
+    const titleValue = metadata.title;
     const resolvedTitle =
-      (metadata.title as any)?.default ?? (metadata.title as any) ?? "";
+      typeof titleValue === "string"
+        ? titleValue
+        : typeof titleValue === "object" && titleValue !== null && "default" in titleValue
+          ? String(titleValue.default)
+          : "";
+
     expect(resolvedTitle).toBe("CeloHT");
     expect(metadata.applicationName).toBe("CeloHT");
 
-    const icons = metadata.icons as any;
+    const icons = metadata.icons as
+      | {
+          icon?: Array<{ url?: string }>;
+          apple?: string;
+        }
+      | undefined;
 
     expect(metadata.manifest).toBe("https://celoht.com/manifest.json?v=20261107");
     expect(icons?.icon).toEqual(
