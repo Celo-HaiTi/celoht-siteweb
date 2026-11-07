@@ -49,10 +49,6 @@ export function Footer() {
                 CeloHT is a community-driven, open-source initiative rooted in Haiti,
                 building practical digital access, education, and local infrastructure within the Celo ecosystem.
               </p>
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold-500/20 bg-gold-500/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-gold-300">
-                <ShieldCheck size={14} aria-hidden="true" />
-                Open-source initiative
-              </div>
             </div>
 
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
