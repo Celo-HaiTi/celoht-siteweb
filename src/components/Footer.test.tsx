@@ -6,12 +6,20 @@ describe("Footer", () => {
   it("renders the official social links without the retired footer intro and newsletter block", () => {
     render(<Footer />);
 
-    expect(screen.queryByText(/stay connected with celoht/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/CeloHT is a community-driven/i)).not.toBeInTheDocument();
-    expect(screen.queryByRole("button", { name: /subscribe/i })).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(/stay connected with celoht/i),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(/CeloHT is a community-driven/i),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: /subscribe/i }),
+    ).not.toBeInTheDocument();
     expect(screen.queryByLabelText(/email address/i)).not.toBeInTheDocument();
 
-    expect(screen.queryByRole("link", { name: /website/i })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("link", { name: /website/i }),
+    ).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: /github/i })).toHaveAttribute(
       "href",
       "https://github.com/Celo-HaiTi",

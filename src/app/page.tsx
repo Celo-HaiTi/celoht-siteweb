@@ -42,13 +42,7 @@ const jsonLd = {
   logo: `${SITE_URL}${assetPath("/celoht-logo.png")}`,
   description:
     "An open-source Web3 initiative rooted in Haiti, building practical infrastructure for education, financial access, community participation, and real-world use.",
-  sameAs: [
-    SITE_URL,
-    GITHUB_ORG_URL,
-    INSTAGRAM_URL,
-    TIKTOK_URL,
-    MEDIUM_URL,
-  ],
+  sameAs: [SITE_URL, GITHUB_ORG_URL, INSTAGRAM_URL, TIKTOK_URL, MEDIUM_URL],
 };
 
 const ecosystemPaths = [

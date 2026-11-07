@@ -20,5 +20,4 @@ describe("navigation data", () => {
       expect(searchHrefs.has(item.href)).toBe(true);
     }
   });
-
 });

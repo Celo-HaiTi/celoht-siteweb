@@ -35,7 +35,11 @@ export function NewsletterForm() {
       const response = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed, consent: true, source: "footer" }),
+        body: JSON.stringify({
+          email: trimmed,
+          consent: true,
+          source: "footer",
+        }),
       });
 
       const payload = (await response.json()) as {
@@ -45,11 +49,15 @@ export function NewsletterForm() {
 
       if (!response.ok) {
         throw new Error(
-          payload.error ?? payload.message ?? "Unable to submit your email right now.",
+          payload.error ??
+            payload.message ??
+            "Unable to submit your email right now.",
         );
       }
 
-      setSuccess(payload.message ?? "Thanks for subscribing. You are on the list.");
+      setSuccess(
+        payload.message ?? "Thanks for subscribing. You are on the list.",
+      );
       setEmail("");
       setConsent(false);
     } catch (submitError) {
@@ -99,8 +107,12 @@ export function NewsletterForm() {
           className="mt-1 h-4 w-4 rounded border-parchment-100/30 bg-navy-900 text-gold-400"
         />
         <label htmlFor="newsletter-consent">
-          I agree to receive updates from CeloHT and understand I can unsubscribe at any time. See the {" "}
-          <Link href="/privacy" className="text-gold-300 underline-offset-2 hover:underline">
+          I agree to receive updates from CeloHT and understand I can
+          unsubscribe at any time. See the{" "}
+          <Link
+            href="/privacy"
+            className="text-gold-300 underline-offset-2 hover:underline"
+          >
             Privacy Policy
           </Link>
           .

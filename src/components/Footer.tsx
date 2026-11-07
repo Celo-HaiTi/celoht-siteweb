@@ -66,7 +66,9 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-parchment-100/10 pt-6 text-sm text-parchment-100/60">
-          <p className="text-center sm:text-left">© 2026 CeloHT. All rights reserved.</p>
+          <p className="text-center sm:text-left">
+            © 2026 CeloHT. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

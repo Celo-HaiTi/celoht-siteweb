@@ -7,7 +7,9 @@ describe("application metadata branding", () => {
     const resolvedTitle =
       typeof titleValue === "string"
         ? titleValue
-        : typeof titleValue === "object" && titleValue !== null && "default" in titleValue
+        : typeof titleValue === "object" &&
+            titleValue !== null &&
+            "default" in titleValue
           ? String(titleValue.default)
           : "";
 
@@ -21,7 +23,9 @@ describe("application metadata branding", () => {
         }
       | undefined;
 
-    expect(metadata.manifest).toBe("https://celoht.com/manifest.json?v=20261107");
+    expect(metadata.manifest).toBe(
+      "https://celoht.com/manifest.json?v=20261107",
+    );
     expect(icons?.icon).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
