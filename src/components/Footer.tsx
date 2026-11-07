@@ -1,16 +1,14 @@
 import Link from "next/link";
-import { BookOpen, Github, Globe, Instagram, Music2 } from "lucide-react";
+import { BookOpen, Github, Instagram, Music2 } from "lucide-react";
 import {
   GITHUB_ORG_URL,
   INSTAGRAM_URL,
   MEDIUM_URL,
   TIKTOK_URL,
-  WEBSITE_URL,
 } from "@/lib/constants";
 import { footerNav } from "@/lib/nav";
 
 const socialLinks = [
-  { label: "Website", href: WEBSITE_URL, icon: Globe },
   { label: "GitHub", href: GITHUB_ORG_URL, icon: Github },
   { label: "Instagram", href: INSTAGRAM_URL, icon: Instagram },
   { label: "TikTok", href: TIKTOK_URL, icon: Music2 },

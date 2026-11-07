@@ -11,10 +11,7 @@ describe("Footer", () => {
     expect(screen.queryByRole("button", { name: /subscribe/i })).not.toBeInTheDocument();
     expect(screen.queryByLabelText(/email address/i)).not.toBeInTheDocument();
 
-    expect(screen.getByRole("link", { name: /website/i })).toHaveAttribute(
-      "href",
-      "https://celoht.com/",
-    );
+    expect(screen.queryByRole("link", { name: /website/i })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: /github/i })).toHaveAttribute(
       "href",
       "https://github.com/Celo-HaiTi",
