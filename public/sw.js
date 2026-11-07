@@ -3,15 +3,19 @@
 // network-first (falling back to cache) for HTML pages, so content never
 // goes stale silently. This is intentionally conservative: it does not
 // pre-cache every route, and it never intercepts POST/API-style requests.
-const CACHE_NAME = "celoht-static-v4";
+const CACHE_NAME = "celoht-static-v5";
 const BASE_PATH = new URL("./", self.registration.scope).pathname;
 const OFFLINE_PAGE = `${BASE_PATH}404.html`;
-const BRAND_ASSETS = ["celoht-logo.png", "freclean-logo.jpg"].map(
-  (asset) => `${BASE_PATH}${asset}`,
-);
+const BRAND_ASSETS = [
+  "celoht-logo.png",
+  "freclean-logo.jpg",
+  "favicon.ico",
+  "favicon-16x16.png",
+  "favicon-32x32.png",
+  "apple-touch-icon.png",
+].map((asset) => `${BASE_PATH}${asset}`);
 const STATIC_ASSETS = [
   ...BRAND_ASSETS,
-  `${BASE_PATH}favicon.svg`,
   `${BASE_PATH}manifest.json`,
   OFFLINE_PAGE,
 ];

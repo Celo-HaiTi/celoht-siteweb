@@ -1,23 +1,37 @@
 {
   "name": "CeloHT",
   "short_name": "CeloHT",
-  "description": "A community-driven, open-source initiative for financial inclusion, education, agent networks, and reforestation on the Celo ecosystem.",
-  "start_url": "./",
+  "description": "CeloHT is an open-source Web3 initiative rooted in Haiti, focused on financial inclusion, blockchain education, and practical digital access within the Celo ecosystem.",
+  "start_url": "https://celoht.com/?source=pwa",
+  "scope": "https://celoht.com/",
   "display": "standalone",
   "background_color": "#0B1120",
   "theme_color": "#0B1120",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "./celoht-logo.png",
-      "sizes": "512x512",
+      "src": "https://celoht.com/favicon-16x16.png?v=20261107",
+      "sizes": "16x16",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "maskable"
+      "src": "https://celoht.com/favicon-32x32.png?v=20261107",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://celoht.com/apple-touch-icon.png?v=20261107",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://celoht.com/celoht-logo.png?v=20261107",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
