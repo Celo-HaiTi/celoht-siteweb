@@ -35,10 +35,7 @@ const paths = [
   },
 ];
 
-const channels = [
-  { label: "Discord", href: DISCORD_URL },
-  { label: "LinkedIn", href: "https://linkedin.com/company/celoht" },
-];
+const channels = [{ label: "Discord", href: DISCORD_URL }];
 
 export default function CommunityPage() {
   return (

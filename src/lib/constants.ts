@@ -4,7 +4,8 @@ export const DAPP_URL =
   process.env.NEXT_PUBLIC_DAPP_URL ?? "https://app.celoht.com";
 export const DISCORD_URL = "https://discord.gg/BZk3nS4KM6";
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://celoht.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://celoht.com/";
+export const WEBSITE_URL = SITE_URL;
 const repoName =
   process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "celoht-siteweb";
 const parsedSiteUrl = new URL(SITE_URL);
@@ -20,8 +21,9 @@ export function assetPath(path: string) {
 
 export const GITHUB_ORG_URL = "https://github.com/Celo-HaiTi";
 export const LINKEDIN_URL = "https://linkedin.com/company/celoht";
-export const INSTAGRAM_URL = "https://instagram.com/celoht";
+export const INSTAGRAM_URL = "https://www.instagram.com/celohtofficial/";
 export const TIKTOK_URL = "https://www.tiktok.com/@celohtofficial";
+export const MEDIUM_URL = "https://medium.com/@celoht3/";
 export const NEWSLETTER_API_URL =
   process.env.NEWSLETTER_API_URL ?? process.env.NEXT_PUBLIC_NEWSLETTER_API_URL ?? "";
 export const NEWSLETTER_API_KEY =

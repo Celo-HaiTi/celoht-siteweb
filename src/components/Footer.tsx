@@ -1,29 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
+  BookOpen,
   Github,
+  Globe,
   Instagram,
-  Linkedin,
   Music2,
-  ShieldCheck,
 } from "lucide-react";
 import {
-  DISCORD_URL,
   GITHUB_ORG_URL,
   INSTAGRAM_URL,
-  LINKEDIN_URL,
+  MEDIUM_URL,
   TIKTOK_URL,
+  WEBSITE_URL,
   assetPath,
 } from "@/lib/constants";
 import { footerNav } from "@/lib/nav";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 const socialLinks = [
-  { label: "LinkedIn", href: LINKEDIN_URL, icon: Linkedin },
-  { label: "Instagram", href: INSTAGRAM_URL, icon: Instagram },
+  { label: "Website", href: WEBSITE_URL, icon: Globe },
   { label: "GitHub", href: GITHUB_ORG_URL, icon: Github },
+  { label: "Instagram", href: INSTAGRAM_URL, icon: Instagram },
   { label: "TikTok", href: TIKTOK_URL, icon: Music2 },
+  { label: "Medium", href: MEDIUM_URL, icon: BookOpen },
 ];
 
 export function Footer() {
@@ -74,7 +74,7 @@ export function Footer() {
 
               <div className="sm:col-span-2 lg:col-span-1">
                 <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-300">
-                  Contact
+                  Connect With Us
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-2.5">
                   {socialLinks.map(({ label, href, icon: Icon }) => (
@@ -89,15 +89,6 @@ export function Footer() {
                       <Icon size={16} aria-hidden="true" />
                     </a>
                   ))}
-                  <a
-                    href={DISCORD_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Discord"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-parchment-100/10 bg-navy-900/80 text-parchment-100/80 transition-all duration-200 hover:-translate-y-0.5 hover:border-gold-400/50 hover:bg-gold-500/10 hover:text-gold-300"
-                  >
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </a>
                 </div>
               </div>
             </div>

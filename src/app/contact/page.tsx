@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { DISCORD_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -21,9 +20,11 @@ const channels = [
 ];
 
 const social = [
-  { label: "Website", href: "https://celoht.com" },
-  { label: "Medium", href: "https://medium.com/@celoht3" },
-  { label: "Discord", href: DISCORD_URL },
+  { label: "Website", href: "https://celoht.com/" },
+  { label: "GitHub", href: "https://github.com/Celo-HaiTi" },
+  { label: "Instagram", href: "https://www.instagram.com/celohtofficial/" },
+  { label: "TikTok", href: "https://www.tiktok.com/@celohtofficial" },
+  { label: "Medium", href: "https://medium.com/@celoht3/" },
 ];
 
 export default function ContactPage() {
@@ -73,7 +74,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Elsewhere" title="Social and platforms">
+      <Section eyebrow="Connect" title="Connect With CeloHT">
         <ul className="flex flex-wrap gap-3">
           {social.map((item) => (
             <li key={item.href}>
@@ -81,11 +82,7 @@ export default function ContactPage() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={
-                  item.label === "Discord"
-                    ? "Join CeloHT on Discord"
-                    : item.label
-                }
+                aria-label={`Visit CeloHT on ${item.label}`}
                 className="inline-flex items-center rounded-full border border-navy-700/20 px-4 py-2 text-sm hover:bg-navy-700/10 dark:border-parchment-100/20 dark:hover:bg-parchment-100/10"
               >
                 {item.label}

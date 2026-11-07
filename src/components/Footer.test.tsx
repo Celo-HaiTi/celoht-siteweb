@@ -3,26 +3,30 @@ import { describe, expect, it } from "vitest";
 import { Footer } from "@/components/Footer";
 
 describe("Footer", () => {
-  it("renders the institutional brand footer, social links, and newsletter form", () => {
+  it("renders the institutional brand footer, official social links, and newsletter form", () => {
     render(<Footer />);
 
     expect(screen.getAllByText("CeloHT").length).toBeGreaterThan(0);
     expect(screen.getByText(/stay connected with celoht/i)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /website/i })).toHaveAttribute(
       "href",
-      "https://linkedin.com/company/celoht",
-    );
-    expect(screen.getByRole("link", { name: /instagram/i })).toHaveAttribute(
-      "href",
-      "https://instagram.com/celoht",
+      "https://celoht.com/",
     );
     expect(screen.getByRole("link", { name: /github/i })).toHaveAttribute(
       "href",
       "https://github.com/Celo-HaiTi",
     );
+    expect(screen.getByRole("link", { name: /instagram/i })).toHaveAttribute(
+      "href",
+      "https://www.instagram.com/celohtofficial/",
+    );
     expect(screen.getByRole("link", { name: /tiktok/i })).toHaveAttribute(
       "href",
       "https://www.tiktok.com/@celohtofficial",
+    );
+    expect(screen.getByRole("link", { name: /medium/i })).toHaveAttribute(
+      "href",
+      "https://medium.com/@celoht3/",
     );
 
     expect(screen.getByRole("button", { name: /subscribe/i })).toBeInTheDocument();
