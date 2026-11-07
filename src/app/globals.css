@@ -685,8 +685,7 @@ body {
 main,
 section,
 article,
-header,
-footer {
+header {
   background-color: var(--color-bg);
 }
 
