@@ -20,7 +20,6 @@ const channels = [
 ];
 
 const social = [
-  { label: "Website", href: "https://celoht.com/" },
   { label: "GitHub", href: "https://github.com/Celo-HaiTi" },
   { label: "Instagram", href: "https://www.instagram.com/celohtofficial/" },
   { label: "TikTok", href: "https://www.tiktok.com/@celohtofficial" },
