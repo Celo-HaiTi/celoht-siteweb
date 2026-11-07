@@ -22,7 +22,7 @@ describe("Footer", () => {
     );
     expect(screen.getByRole("link", { name: /tiktok/i })).toHaveAttribute(
       "href",
-      "https://www.tiktok.com/@celoht",
+      "https://www.tiktok.com/@celohtofficial",
     );
 
     expect(screen.getByRole("button", { name: /subscribe/i })).toBeInTheDocument();

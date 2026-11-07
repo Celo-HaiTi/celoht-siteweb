@@ -123,18 +123,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-parchment-100/10 pt-6 text-sm text-parchment-100/60 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-3">
-            <Image
-              src={assetPath("/celoht-logo.png")}
-              alt="CeloHT logo"
-              width={28}
-              height={28}
-              className="h-7 w-7 rounded-md"
-            />
-            <span className="font-display text-lg font-semibold text-parchment-100">CeloHT</span>
-          </div>
-          <p>© 2026 CeloHT. All rights reserved.</p>
+        <div className="mt-10 border-t border-parchment-100/10 pt-6 text-sm text-parchment-100/60">
+          <p className="text-center sm:text-left">© 2026 CeloHT. All rights reserved.</p>
         </div>
       </div>
     </footer>
