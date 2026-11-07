@@ -16,7 +16,6 @@ import {
   assetPath,
 } from "@/lib/constants";
 import { footerNav } from "@/lib/nav";
-import { NewsletterForm } from "@/components/NewsletterForm";
 
 const socialLinks = [
   { label: "Website", href: WEBSITE_URL, icon: Globe },
@@ -92,21 +91,6 @@ export function Footer() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-10 rounded-[24px] border border-parchment-100/10 bg-navy-900/70 p-5 sm:p-6 lg:p-7">
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_2fr] lg:items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-300">
-                Stay Connected with CeloHT
-              </p>
-              <p className="mt-2 max-w-md text-sm leading-6 text-parchment-100/65">
-                Get updates on our initiatives, educational resources, community activities,
-                and ecosystem developments.
-              </p>
-            </div>
-            <NewsletterForm />
           </div>
         </div>
 
