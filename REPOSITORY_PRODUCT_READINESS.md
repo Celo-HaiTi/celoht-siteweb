@@ -12,7 +12,7 @@ This repository is the public website for CeloHT. Its responsibility is informat
 ## Architecture
 
 - Next.js App Router site
-- Static export build for GitHub Pages, Vercel, and static hosting
+- Static export build for GitHub Pages and static hosting
 - Server-rendered and prerendered pages with `output: "export"`
 - MDX-based blog content
 - Shared UI patterns through reusable components in `src/components/`

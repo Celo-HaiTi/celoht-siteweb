@@ -2,9 +2,9 @@
 
 ## Production Target
 
-`celoht.com`, deployable to GitHub Pages, Vercel, Netlify, Cloudflare Pages,
-or any static-hosting-capable platform, since this is a fully static Next.js
-site with no server-side runtime requirements.
+`celoht.com`, deployable to GitHub Pages, Netlify, Cloudflare Pages, or any
+static-hosting-capable platform, since this is a fully static Next.js site
+with no server-side runtime requirements.
 
 ## Local
 
@@ -37,9 +37,9 @@ Enable **Settings > Pages > GitHub Actions** once in the repository settings.
 
 ### Custom domain
 
-The custom domain is a separate root deployment of this same repository. Use
-Vercel, Netlify, Cloudflare Pages, or another static host for `celoht.com` and
-build it without `GITHUB_PAGES`:
+The custom domain is a separate root deployment of this same repository. Use a
+static host such as Netlify, Cloudflare Pages, or another root deployment
+platform for `celoht.com` and build it without `GITHUB_PAGES`:
 
 ```yaml
 NEXT_PUBLIC_SITE_URL: https://celoht.com
@@ -51,18 +51,6 @@ GitHub Pages artifact cannot expose two different base paths at once, and that
 setting redirects or breaks the project URL. Point `celoht.com` to the root
 deployment host instead. `NEXT_PUBLIC_USE_PROJECT_BASE_PATH` remains supported
 as a backwards-compatible alias.
-
-## Vercel
-
-Import the repository into Vercel and keep the default build command:
-
-```bash
-npm run build
-```
-
-Vercel serves the generated static export directly. No environment variables
-are required unless the DApp URL changes; in that case set
-`NEXT_PUBLIC_DAPP_URL` in the Vercel project settings.
 
 ## Build
 
