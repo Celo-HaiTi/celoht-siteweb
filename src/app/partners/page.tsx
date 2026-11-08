@@ -66,10 +66,10 @@ export default function PartnersPage() {
       </Section>
 
       <Section eyebrow="Strategic Ecosystem Partner" title="FreClean">
-        <article className="overflow-hidden rounded-[28px] border border-navy-700/15 bg-[linear-gradient(135deg,rgba(255,255,255,0.94),rgba(247,242,235,0.9))] p-4 shadow-[0_18px_45px_rgba(15,23,42,0.06)] dark:border-parchment-100/10 dark:bg-[linear-gradient(135deg,rgba(14,20,30,0.96),rgba(18,28,42,0.96))] sm:p-6">
-          <div className="grid gap-5 sm:grid-cols-[minmax(0,178px)_1fr] sm:items-center">
-            <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-full border border-[#d9eadf] bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,1),rgba(240,245,242,0.98)_40%,rgba(219,232,226,0.95)_100%)] p-3 shadow-[0_16px_34px_rgba(16,24,40,0.10)] ring-6 ring-white/70 dark:border-parchment-100/10 dark:bg-[radial-gradient(circle_at_35%_30%,rgba(11,17,25,1),rgba(15,22,33,0.97)_40%,rgba(18,32,45,0.94)_100%)] dark:ring-[#0b1420]">
-              <div className="absolute inset-2 rounded-full border border-[#afd8c5]/80 dark:border-[#51728a]/60" />
+        <article className="overflow-hidden rounded-[28px] border border-navy-700/15 bg-[linear-gradient(135deg,rgba(255,255,255,0.96),rgba(246,241,234,0.92))] p-4 shadow-[0_18px_45px_rgba(15,23,42,0.06)] dark:border-parchment-100/10 dark:bg-[linear-gradient(135deg,rgba(14,20,30,0.97),rgba(17,27,39,0.96))] sm:p-6">
+          <div className="grid gap-5 sm:grid-cols-[minmax(0,176px)_1fr] sm:items-center">
+            <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-full border border-[#dfeee5] bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,1),rgba(239,245,241,0.98)_42%,rgba(220,234,227,0.95)_100%)] p-3 shadow-[0_16px_32px_rgba(16,24,40,0.10)] ring-6 ring-white/75 dark:border-parchment-100/10 dark:bg-[radial-gradient(circle_at_35%_30%,rgba(10,16,24,1),rgba(17,24,35,0.98)_42%,rgba(20,33,47,0.95)_100%)] dark:ring-[#0d1824]">
+              <div className="absolute inset-2 rounded-full border border-[#afd8c7]/80 dark:border-[#51728a]/65" />
               <Image
                 src={assetPath("/freclean-logo.jpg")}
                 alt="FreClean logo"
