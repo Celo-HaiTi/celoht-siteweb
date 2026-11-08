@@ -66,54 +66,56 @@ export default function PartnersPage() {
       </Section>
 
       <Section eyebrow="Strategic Ecosystem Partner" title="FreClean">
-        <article className="grid gap-6 rounded-2xl border border-navy-700/15 p-5 dark:border-parchment-100/10 sm:grid-cols-[minmax(0,170px)_1fr] sm:items-center sm:p-8">
-          <div className="flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-navy-700/10 bg-gradient-to-br from-white to-[#f5f1ea] p-4 shadow-sm dark:border-parchment-100/10 dark:from-[#0d1320] dark:to-[#111b2a]">
-            <Image
-              src={assetPath("/freclean-logo.jpg")}
-              alt="FreClean logo"
-              width={1536}
-              height={1536}
-              className="h-16 w-16 object-contain sm:h-20 sm:w-20"
-            />
-          </div>
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-gold-800 dark:text-gold-300">
-              Strategic Ecosystem Partner
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-semibold">
-              FreClean
-            </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-ink-soft dark:text-parchment-100/70">
-              FreClean is a Haitian cleaning services and cleaning products
-              company building reliable, professional, and accessible cleaning
-              solutions for homes, businesses, and organizations.
-            </p>
-            <div
-              className="mt-5 flex flex-wrap gap-2"
-              aria-label="Partnership focus"
-            >
-              {[
-                "Cleaning Services",
-                "Consumer Products",
-                "Entrepreneurship",
-                "Digital Payments",
-              ].map((focus) => (
-                <span
-                  key={focus}
-                  className="rounded-full border border-navy-700/15 px-3 py-1.5 text-xs text-ink-soft dark:border-parchment-100/15 dark:text-parchment-100/70"
-                >
-                  {focus}
-                </span>
-              ))}
+        <article className="overflow-hidden rounded-[28px] border border-navy-700/15 bg-[linear-gradient(135deg,rgba(255,255,255,0.92),rgba(245,240,232,0.9))] p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)] dark:border-parchment-100/10 dark:bg-[linear-gradient(135deg,rgba(14,20,30,0.96),rgba(18,28,42,0.96))] sm:grid-cols-[minmax(0,190px)_1fr] sm:p-8">
+          <div className="grid gap-6 sm:grid-cols-[minmax(0,190px)_1fr] sm:items-center">
+            <div className="flex aspect-square items-center justify-center overflow-hidden rounded-[22px] border border-navy-700/10 bg-white/80 p-5 shadow-inner shadow-navy-900/5 dark:border-parchment-100/10 dark:bg-[#0d1520]/80">
+              <Image
+                src={assetPath("/freclean-logo.jpg")}
+                alt="FreClean logo"
+                width={1536}
+                height={1536}
+                className="h-20 w-20 object-contain sm:h-24 sm:w-24"
+              />
             </div>
-            <Link
-              href="https://freclean.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex min-h-12 items-center rounded-md bg-gold-500 px-5 py-3 text-sm font-bold text-navy-950 transition-colors hover:bg-gold-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
-            >
-              Visit FreClean
-            </Link>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold-800 dark:text-gold-300">
+                Strategic Ecosystem Partner
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-950 dark:text-parchment-100 sm:text-4xl">
+                FreClean
+              </h2>
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-ink-soft dark:text-parchment-100/70">
+                FreClean is a Haitian cleaning services and cleaning products
+                company building reliable, professional, and accessible cleaning
+                solutions for homes, businesses, and organizations.
+              </p>
+              <div
+                className="mt-5 flex flex-wrap gap-2"
+                aria-label="Partnership focus"
+              >
+                {[
+                  "Cleaning Services",
+                  "Consumer Products",
+                  "Entrepreneurship",
+                  "Digital Payments",
+                ].map((focus) => (
+                  <span
+                    key={focus}
+                    className="rounded-full border border-navy-700/15 bg-white/70 px-3 py-1.5 text-[11px] font-medium tracking-[0.02em] text-ink-soft shadow-sm dark:border-parchment-100/15 dark:bg-navy-900/60 dark:text-parchment-100/75"
+                  >
+                    {focus}
+                  </span>
+                ))}
+              </div>
+              <Link
+                href="https://freclean.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex min-h-12 items-center rounded-md bg-gold-500 px-5 py-3 text-sm font-bold text-navy-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-gold-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+              >
+                Visit FreClean
+              </Link>
+            </div>
           </div>
         </article>
       </Section>
