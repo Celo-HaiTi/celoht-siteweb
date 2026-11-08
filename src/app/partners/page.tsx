@@ -66,14 +66,14 @@ export default function PartnersPage() {
       </Section>
 
       <Section eyebrow="Strategic Ecosystem Partner" title="FreClean">
-        <article className="grid gap-8 rounded-2xl border border-navy-700/15 p-6 dark:border-parchment-100/10 sm:grid-cols-[minmax(0,220px)_1fr] sm:items-center sm:p-8">
-          <div className="flex aspect-square items-center justify-center rounded-xl bg-white p-5">
+        <article className="grid gap-6 rounded-2xl border border-navy-700/15 p-5 dark:border-parchment-100/10 sm:grid-cols-[minmax(0,170px)_1fr] sm:items-center sm:p-8">
+          <div className="flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-navy-700/10 bg-gradient-to-br from-white to-[#f5f1ea] p-4 shadow-sm dark:border-parchment-100/10 dark:from-[#0d1320] dark:to-[#111b2a]">
             <Image
               src={assetPath("/freclean-logo.jpg")}
               alt="FreClean logo"
               width={1536}
               height={1536}
-              className="h-full w-full object-contain"
+              className="h-16 w-16 object-contain sm:h-20 sm:w-20"
             />
           </div>
           <div>
@@ -107,7 +107,7 @@ export default function PartnersPage() {
               ))}
             </div>
             <Link
-              href="https://freclean.github.io/freclean-website/"
+              href="https://freclean.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex min-h-12 items-center rounded-md bg-gold-500 px-5 py-3 text-sm font-bold text-navy-950 transition-colors hover:bg-gold-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
