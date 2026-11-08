@@ -28,6 +28,10 @@ describe("Footer", () => {
       "href",
       "https://www.instagram.com/celohtofficial/",
     );
+    expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
+      "href",
+      "https://linkedin.com/company/celoht",
+    );
     expect(screen.getByRole("link", { name: /tiktok/i })).toHaveAttribute(
       "href",
       "https://www.tiktok.com/@celohtofficial",

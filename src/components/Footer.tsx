@@ -1,8 +1,15 @@
 import Link from "next/link";
-import { BookOpen, Github, Instagram, Music2 } from "lucide-react";
+import {
+  BookOpen,
+  Github,
+  Instagram,
+  Linkedin,
+  Music2,
+} from "lucide-react";
 import {
   GITHUB_ORG_URL,
   INSTAGRAM_URL,
+  LINKEDIN_URL,
   MEDIUM_URL,
   TIKTOK_URL,
 } from "@/lib/constants";
@@ -11,6 +18,7 @@ import { footerNav } from "@/lib/nav";
 const socialLinks = [
   { label: "GitHub", href: GITHUB_ORG_URL, icon: Github },
   { label: "Instagram", href: INSTAGRAM_URL, icon: Instagram },
+  { label: "LinkedIn", href: LINKEDIN_URL, icon: Linkedin },
   { label: "TikTok", href: TIKTOK_URL, icon: Music2 },
   { label: "Medium", href: MEDIUM_URL, icon: BookOpen },
 ];
